@@ -8,9 +8,9 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="portfolio-cursor min-h-screen bg-[#080808] text-white overflow-x-hidden">
-      <Cursor />
-      <div aria-hidden="true" className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_75%_18%,rgba(0, 114, 252,0.16),transparent_40%)]" />
+    <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111111] overflow-x-hidden">
+      <Cursor light />
+      <div aria-hidden="true" className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_75%_18%,rgba(0, 114, 252,0.07),transparent_40%)]" />
       <Navbar />
       <Hero />
       <About />
