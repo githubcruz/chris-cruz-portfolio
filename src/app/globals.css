@@ -238,3 +238,10 @@ html::-webkit-scrollbar { display: none; }
     padding-top: 80px !important;
   }
 }
+/* Only on homepage with custom Cursor mounted. Other pages retain normal pointers. */
+@media (pointer: fine) {
+  .portfolio-cursor, .portfolio-cursor * { cursor: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-cursor, .portfolio-cursor * { cursor: auto !important; }
+}
