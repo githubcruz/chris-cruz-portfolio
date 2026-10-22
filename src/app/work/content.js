@@ -1,43 +1,37 @@
-// ─────────────────────────────────────────────
-//  WORK SECTION — edit everything here
-// ─────────────────────────────────────────────
-
 export const SECTION = {
   label: "Selected Work",
   heading: "Projects.",
 };
 
+// Case-study links and imagery will be added after approved assets are uploaded.
 export const FALLBACK_PROJECTS = [
   {
-    id: "f1",
+    id: "meta-blueprint",
     num: "01",
-    category: "Web & Interaction",
-    title: "Creative Developer",
-    description:
-      "Crafting immersive websites and digital experiences with smooth interactions, cinematic layouts, and visually rich animations.",
-    tech: "React · Next.js · GSAP",
+    category: "Visual Systems & Digital Learning",
+    title: "Meta Blueprint",
+    description: "Creative direction, UI/UX, motion, and reusable Figma components for scalable digital learning experiences.",
+    tech: "Figma · Visual Design · Motion",
     link: null,
     review: null,
   },
   {
-    id: "f2",
+    id: "bart-fare-gates",
     num: "02",
-    category: "Film & Motion",
-    title: "Motion & Video Editor",
-    description:
-      "Editing cinematic short films, reels, and brand videos with precision color grading, sound design, and visual storytelling.",
-    tech: "DaVinci Resolve · After Effects · Premiere Pro",
+    category: "Product Design & UX",
+    title: "BART Fare Gates",
+    description: "Exploring practical transit interactions through interface design, visual iteration, and user-centered testing.",
+    tech: "Product Design · Research · Prototyping",
     link: null,
     review: null,
   },
   {
-    id: "f3",
+    id: "visual-motion",
     num: "03",
-    category: "E-Commerce",
-    title: "Shopify Development",
-    description:
-      "Building high-converting Shopify stores with custom Liquid themes, app integrations, and seamless checkout experiences.",
-    tech: "Shopify Liquid · JavaScript · Tailwind CSS",
+    category: "Brand & Motion",
+    title: "Motion & Visual Design",
+    description: "Selected motion graphics, digital campaign assets, brand treatments, and visual storytelling.",
+    tech: "After Effects · Illustrator · Photoshop",
     link: null,
     review: null,
   },
