@@ -76,7 +76,7 @@ export default function About({ standalone = false }) {
 
         {/* Left Bio */}
         <div className={`w-full lg:w-[55%] max-w-2xl flex flex-col ${standalone ? "ml-auto lg:pr-10 text-right items-end" : "mr-auto text-left items-start"}`}>
-          <p className="about-label text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-6 font-medium">
+          <p className="about-label text-[10px] text-[#0072FC] tracking-[0.5em] uppercase mb-6 font-medium">
             {SECTION.label}
           </p>
 
@@ -106,7 +106,7 @@ export default function About({ standalone = false }) {
               href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-[#ff6b1a]/30 text-[#ff6b1a] text-xs font-bold uppercase tracking-widest rounded-full hover:bg-[#ff6b1a] hover:text-black transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[#0072FC]/30 text-[#0072FC] text-xs font-bold uppercase tracking-widest rounded-full hover:bg-[#0072FC] hover:text-black transition-colors duration-300"
             >
               View Resume
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -127,7 +127,7 @@ export default function About({ standalone = false }) {
               </p>
               <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
                 {TECH.map((s) => (
-                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#0072FC] hover:border-white cursor-default">
                     <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
                     {s.name}
                   </span>
@@ -141,7 +141,7 @@ export default function About({ standalone = false }) {
               </p>
               <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
                 {CREATIVE.map((s) => (
-                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
+                  <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#0072FC] hover:border-white cursor-default">
                     <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
                     {s.name}
                   </span>
