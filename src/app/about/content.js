@@ -9,7 +9,7 @@ export const BIO = [
   "My work combines *creative direction* with hands-on execution—from early concepts and prototypes to final graphics, video, and interactive experiences.",
   "I also bring experience in *product design* and usability testing, including work related to BART fare gates. I enjoy building clear, memorable experiences and working closely with multidisciplinary teams."
 ];
-export const RESUME_URL = "/resume.pdf";
+export const RESUME_URL = "/resume";
 export const TECH = [
   { name: "HTML5", icon: SiHtml5 },
   { name: "CSS", icon: SiCss },
