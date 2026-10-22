@@ -245,3 +245,28 @@ html::-webkit-scrollbar { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-cursor, .portfolio-cursor * { cursor: auto !important; }
 }
+
+/* Homepage-only light colorway. Other portfolio routes retain the dark theme. */
+.portfolio-light { background: #fff; color: #111; }
+.portfolio-light .text-white { color: #111 !important; }
+.portfolio-light [class~="text-white/80"] { color: rgba(17,17,17,.82) !important; }
+.portfolio-light [class~="text-white/70"] { color: rgba(17,17,17,.72) !important; }
+.portfolio-light [class~="text-white/65"] { color: rgba(17,17,17,.65) !important; }
+.portfolio-light [class~="text-white/60"] { color: rgba(17,17,17,.65) !important; }
+.portfolio-light [class~="text-white/50"] { color: rgba(17,17,17,.58) !important; }
+.portfolio-light [class~="text-white/40"] { color: rgba(17,17,17,.53) !important; }
+.portfolio-light [class~="text-white/35"] { color: rgba(17,17,17,.52) !important; }
+.portfolio-light [class~="text-white/30"] { color: rgba(17,17,17,.5) !important; }
+.portfolio-light [class~="border-white/10"] { border-color: rgba(17,17,17,.12) !important; }
+.portfolio-light [class~="border-white/12"] { border-color: rgba(17,17,17,.15) !important; }
+.portfolio-light [class~="border-white/15"] { border-color: rgba(17,17,17,.17) !important; }
+.portfolio-light [class~="border-white/30"] { border-color: rgba(17,17,17,.22) !important; }
+.portfolio-light [class~="bg-white/15"] { background-color: rgba(17,17,17,.17) !important; }
+.portfolio-light .ghost { -webkit-text-stroke-color: rgba(17,17,17,.5); }
+.portfolio-light nav[aria-label="Main navigation"] {
+  background: linear-gradient(to bottom, rgba(255,255,255,.95), rgba(255,255,255,0));
+}
+.portfolio-light nav[aria-label="Main navigation"] > div[class*="bg-black"] { background: white !important; }
+.portfolio-light .about-skill:hover { background: #111 !important; color: #fff !important; border-color: #111 !important; }
+.portfolio-light a:hover { color: #0072FC; }
+.portfolio-light .about-p a:hover { color: #fff; }

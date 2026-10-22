@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export default function Cursor() {
+export default function Cursor({ light = false }) {
   const cursorRef = useRef(null);
   const [enabled, setEnabled] = useState(false);
 
@@ -29,7 +29,7 @@ export default function Cursor() {
       my = event.clientY;
       const interactive = Boolean(event.target.closest("a, button, [role='button']"));
       targetScale = interactive ? 1.7 : 1;
-      element.style.borderColor = interactive ? "#0072FC" : "#FFFFFF";
+      element.style.borderColor = interactive ? "#0072FC" : (light ? "#111111" : "#FFFFFF");
       element.style.opacity = "1";
     };
     const leave = () => { element.style.opacity = "0"; };
@@ -51,7 +51,7 @@ export default function Cursor() {
       document.removeEventListener("pointerleave", leave);
       document.removeEventListener("pointerenter", enter);
     };
-  }, [enabled]);
+  }, [enabled, light]);
 
   if (!enabled) return null;
   return (
@@ -64,7 +64,7 @@ export default function Cursor() {
         left: 0,
         width: 34,
         height: 34,
-        border: "1px solid #FFFFFF",
+        border: `1px solid ${light ? "#111111" : "#FFFFFF"}`,
         borderRadius: "50%",
         background: "transparent",
         mixBlendMode: "normal",
