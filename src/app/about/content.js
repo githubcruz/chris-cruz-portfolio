@@ -1,4 +1,4 @@
-import { SiFigma, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiFigma, SiHtml5, SiCss } from "react-icons/si";
 import { TbBrandAdobeAfterEffect, TbBrandAdobePremier, TbBrandAdobePhotoshop, TbBrandAdobeIllustrator } from "react-icons/tb";
 
 export const SECTION = { label: "About Me" };
@@ -12,7 +12,7 @@ export const BIO = [
 export const RESUME_URL = "/resume.pdf";
 export const TECH = [
   { name: "HTML5", icon: SiHtml5 },
-  { name: "CSS", icon: SiCss3 },
+  { name: "CSS", icon: SiCss },
 ];
 export const CREATIVE = [
   { name: "Figma", icon: SiFigma },
