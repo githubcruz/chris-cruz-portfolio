@@ -5,10 +5,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // ── Experimental ─────────────────────────────────────────────────
-  experimental: {
-    optimizeCss: true,
-  },
+  // Keep CSS optimization disabled until Tailwind output is verified.
 
   // ── Image optimisation ────────────────────────────────────────────
   images: {
