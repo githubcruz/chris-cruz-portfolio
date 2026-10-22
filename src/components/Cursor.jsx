@@ -62,7 +62,7 @@ export default function Cursor() {
         left: 0,
         width: 34,
         height: 34,
-        border: "2px solid #0072FC",
+        border: "2px solid #FFFFFF",
         borderRadius: "50%",
         background: "transparent",
         mixBlendMode: "normal",
@@ -75,7 +75,7 @@ export default function Cursor() {
         justifyContent: "center",
       }}
     >
-      <span style={{ width: 6, height: 6, background: "#0072FC", borderRadius: "50%" }} />
+      <span style={{ width: 6, height: 6, background: "#FFFFFF", borderRadius: "50%" }} />
     </div>
   );
 }
