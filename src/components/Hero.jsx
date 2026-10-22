@@ -48,7 +48,7 @@ export default function Hero() {
     >
       <div className="relative z-10 max-w-5xl">
         <p className="hero-label text-[10px] md:text-xs text-[#ff6b1a] tracking-[0.2em] uppercase font-bold mb-6">
-          Digital Experience Designer
+          Visual Designer & Creative Technologist
         </p>
 
         <h1
@@ -66,7 +66,7 @@ export default function Hero() {
 
         <div className="max-w-lg hero-sub flex flex-col gap-6">
           <BlurText
-            text="I create *immersive* digital experiences that blend design, motion, and technology into something visually *memorable* and smooth to use. My work focuses on building websites and visuals with strong *atmosphere*, *detail*, and *storytelling*."
+            text="I design *digital experiences* that bring brands, products, and stories to life through *visual design*, *motion*, and creative technology."
             delay={30}
             animateBy="words"
             direction="bottom"
@@ -74,7 +74,7 @@ export default function Hero() {
             className="text-base md:text-[17px] text-white/60 font-medium leading-[1.6]"
           />
           <BlurText
-            text="I mainly work with React, Shopify, Flutter, editing, and visual design, combining development with *cinematic* styling and *modern* user experiences."
+            text="At *Meta Blueprint*, I've helped shape learning experiences, visual systems, and reusable Figma components that make creative production more consistent and efficient."
             delay={22}
             animateBy="words"
             direction="bottom"
@@ -82,7 +82,7 @@ export default function Hero() {
             className="text-xs md:text-sm text-white/40 font-light leading-relaxed"
           />
           <BlurText
-            text="So far, I’ve completed *6* *websites*, edited *75+* *videos*, and created *500+* *photo* *edits* and visual concepts. Currently, I’m focusing on a *job* *app* and a *billing* *app* while continuing to explore *creative* *development* and *interactive* *design*."
+            text="My work spans *brand systems*, *product experiences*, *UI/UX*, and *motion*. Explore selected projects below."
             delay={15}
             animateBy="words"
             direction="bottom"
