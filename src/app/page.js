@@ -1,20 +1,14 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Work from "../components/Work";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#080808] text-white overflow-x-hidden">
-      <div aria-hidden="true" className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_75%_18%,rgba(255,107,26,0.16),transparent_40%)]" />
-      <Navbar />
-      <Hero />
-      <About />
-      <Work />
-      <Contact />
-      <Footer />
-    </main>
-  );
-}
+import styles from "./portfolio.module.css";
+const projects=[
+{num:"01",category:"VISUAL SYSTEMS · DIGITAL LEARNING",title:"Meta Blueprint",description:"Creative direction, reusable Figma components, visual assets, and digital learning experiences designed for consistency at scale.",tools:"Figma / Visual Design / Motion"},
+{num:"02",category:"PRODUCT DESIGN · UX",title:"BART Fare Gates",description:"Improving transit interactions through user-centered research, interface exploration, testing, and thoughtful visual design.",tools:"UI/UX / Prototyping / Research"},
+{num:"03",category:"BRAND · MOTION",title:"Motion & Visual Design",description:"Selected digital visuals, motion graphics, design explorations, and brand storytelling across formats.",tools:"After Effects / Illustrator / Photoshop"}
+];
+export default function Home(){return <main className={styles.site}>
+<header className={styles.nav}><a className={styles.wordmark} href="#top">CHRIS CRUZ<span style={{color:"#fa8258"}}>.</span></a><nav className={styles.links} aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
+<section id="top" className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>VISUAL DESIGNER & CREATIVE TECHNOLOGIST</p><h1 className={styles.headline}>Hey, I'm<br/><em>Chris.</em></h1><p className={styles.lead}>Designing digital experiences that move people.</p><p className={styles.sub}>I connect visual design, motion, and product thinking to bring brands and ideas to life—from Meta Blueprint to real-world digital experiences.</p><a className={styles.cta} href="#work">Explore selected work ↓</a></div></section>
+<section id="work" className={styles.section}><div className={styles.sectionHead}><div><p className={styles.eyebrow}>CURATED PROJECTS</p><h2 className={styles.sectionTitle}>Selected work.</h2></div><span className={styles.counter}>01 — 03</span></div>{projects.map(p=><article className={styles.project} key={p.num}><span className={styles.number}>{p.num}</span><div><p className={styles.category}>{p.category}</p><h3 className={styles.projectTitle}>{p.title}</h3></div><div className={styles.projectDetail}><p className={styles.description}>{p.description}</p><p className={styles.tools}>{p.tools}</p></div></article>)}</section>
+<section id="about" className={styles.section}><p className={styles.eyebrow}>ABOUT ME</p><div className={styles.aboutGrid}><h2 className={styles.sectionTitle}>Designing<br/>what matters.</h2><div><p className={styles.aboutCopy}>I’m a multidisciplinary visual designer creating thoughtful digital experiences, design systems, branding, and motion.</p><p className={styles.smallCopy}>At Meta Blueprint, I've contributed to digital learning experiences and reusable visual systems. My background spans creative direction, UI/UX, motion graphics, and hands-on production.</p><p className={styles.skills}>FIGMA · AFTER EFFECTS · ILLUSTRATOR · PHOTOSHOP · PREMIERE PRO</p></div></div></section>
+<section id="contact" className={styles.section}><p className={styles.eyebrow}>LET'S CONNECT</p><h2 className={styles.contactTitle}>Let's create something memorable.</h2><a className={styles.cta} href="https://github.com/githubcruz" target="_blank" rel="noopener noreferrer">Connect on GitHub ↗</a></section>
+<footer className={styles.footer}><span>© {new Date().getFullYear()} Chris Cruz</span><span>Visual Design · Creative Direction · Motion</span></footer>
+</main>}
