@@ -29,7 +29,7 @@ export default function Cursor({ light = false }) {
       my = event.clientY;
       const interactive = Boolean(event.target.closest("a, button, [role='button']"));
       targetScale = interactive ? 1.7 : 1;
-      element.style.borderColor = interactive ? "#0072FC" : (light ? "#111111" : "#FFFFFF");
+      element.style.backgroundColor = interactive ? (light ? "rgba(17,17,17,0.28)" : "rgba(255,255,255,0.28)") : (light ? "#111111" : "#FFFFFF");
       element.style.opacity = "1";
     };
     const leave = () => { element.style.opacity = "0"; };
@@ -62,17 +62,17 @@ export default function Cursor({ light = false }) {
         position: "fixed",
         top: 0,
         left: 0,
-        width: 34,
-        height: 34,
-        border: `1px solid ${light ? "#111111" : "#FFFFFF"}`,
+        width: 38,
+        height: 38,
+        border: "none",
         borderRadius: "50%",
-        background: "transparent",
+        background: light ? "#111111" : "#FFFFFF",
         mixBlendMode: "normal",
         pointerEvents: "none",
         zIndex: 99999,
         opacity: 0,
         willChange: "transform",
-        transition: "border-color 180ms ease",
+        transition: "background-color 180ms ease",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
