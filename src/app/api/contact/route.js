@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { supabase } from '@/lib/supabase';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Email integration is optional; do not initialize Resend during the build.
 
 const DAILY_LIMIT = 3;
 
@@ -15,6 +15,10 @@ function getIP(request) {
 }
 
 export async function POST(request) {
+  if (!process.env.RESEND_API_KEY || !process.env.ADMIN_EMAIL) {
+    return NextResponse.json({ error: 'Contact form not configured' }, { status: 503 });
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { name, email, message } = await request.json();
 
   if (!name || !email || !message) {

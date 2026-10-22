@@ -4,7 +4,7 @@ import { jwtVerify } from 'jose';
 import { Resend } from 'resend';
 import { supabase } from '@/lib/supabase';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Email integration is optional; do not initialize Resend during the build.
 
 async function isAdmin() {
   const store = await cookies();
@@ -24,6 +24,10 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json({ error: 'Email service not configured' }, { status: 503 });
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const formData = await request.formData();
     const to = formData.get('to');
