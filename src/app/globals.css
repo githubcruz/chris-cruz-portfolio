@@ -11,12 +11,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Hide native cursor only on real pointer (mouse) devices, not touch */
+/* Use the native pointer throughout the portfolio. The original
+   template hid it for a custom cursor that is no longer mounted. */
 @media (pointer: fine) {
-  * { cursor: none !important; }
-  .admin-cursor, .admin-cursor * { cursor: default !important; }
-  .admin-cursor a, .admin-cursor button, .admin-cursor input, .admin-cursor select, .admin-cursor textarea { cursor: pointer !important; }
-  .admin-cursor input[type="text"], .admin-cursor input[type="password"], .admin-cursor textarea { cursor: text !important; }
+  html, body, * { cursor: auto !important; }
+  a, button, [role="button"], select, summary { cursor: pointer !important; }
+  input, textarea { cursor: text !important; }
 }
 
 html, body {
