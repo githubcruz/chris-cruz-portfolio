@@ -3,80 +3,79 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Cursor() {
   const cursorRef = useRef(null);
-  // null = unknown (SSR), true = touch device, false = mouse device
-  const [isTouch, setIsTouch] = useState(null);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    // pointer: coarse → touchscreen; pointer: fine → mouse/trackpad
-    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+    const fine = window.matchMedia("(pointer: fine)");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setEnabled(fine.matches && !reduced.matches);
+    update();
+    fine.addEventListener("change", update);
+    reduced.addEventListener("change", update);
+    return () => {
+      fine.removeEventListener("change", update);
+      reduced.removeEventListener("change", update);
+    };
   }, []);
 
   useEffect(() => {
-    if (isTouch !== false) return;  // skip if touch OR still unknown
-    const el = cursorRef.current;
-    if (!el) return;
+    if (!enabled || !cursorRef.current) return;
+    const element = cursorRef.current;
+    let mx = -100, my = -100, x = -100, y = -100;
+    let scale = 1, targetScale = 1, raf;
 
-    let mx = -200, my = -200;
-    let cx = -200, cy = -200;
-    let scale = 1;
-    let targetScale = 1;
-    let raf = null;
-
-    const onMove = (e) => { mx = e.clientX; my = e.clientY; };
-    const onEnter = () => { targetScale = 2.6; };
-    const onLeave = () => { targetScale = 1; };
-
-    window.addEventListener("mousemove", onMove, { passive: true });
-    document.querySelectorAll("a, button").forEach((node) => {
-      node.addEventListener("mouseenter", onEnter);
-      node.addEventListener("mouseleave", onLeave);
-    });
-
-    const observer = new MutationObserver(() => {
-      document.querySelectorAll("a:not([data-cur]), button:not([data-cur])").forEach((node) => {
-        node.setAttribute("data-cur", "1");
-        node.addEventListener("mouseenter", onEnter);
-        node.addEventListener("mouseleave", onLeave);
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    const frame = () => {
-      raf = requestAnimationFrame(frame);
-      cx += (mx - cx) * 0.11;
-      cy += (my - cy) * 0.11;
-      scale += (targetScale - scale) * 0.10;
-      el.style.transform =
-        `translate(${cx}px,${cy}px) translate(-50%,-50%) scale(${scale})`;
+    const move = (event) => {
+      mx = event.clientX;
+      my = event.clientY;
+      targetScale = event.target.closest("a, button, [role='button']") ? 1.7 : 1;
+      element.style.opacity = "1";
     };
+    const leave = () => { element.style.opacity = "0"; };
+    const enter = () => { element.style.opacity = "1"; };
+    const frame = () => {
+      x += (mx - x) * 0.18;
+      y += (my - y) * 0.18;
+      scale += (targetScale - scale) * 0.15;
+      element.style.transform = `translate3d(${x}px,${y}px,0) translate(-50%,-50%) scale(${scale})`;
+      raf = requestAnimationFrame(frame);
+    };
+    document.addEventListener("pointermove", move, { passive: true });
+    document.addEventListener("pointerleave", leave);
+    document.addEventListener("pointerenter", enter);
     raf = requestAnimationFrame(frame);
-
     return () => {
       cancelAnimationFrame(raf);
-      observer.disconnect();
-      window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("pointermove", move);
+      document.removeEventListener("pointerleave", leave);
+      document.removeEventListener("pointerenter", enter);
     };
-  }, [isTouch]);
+  }, [enabled]);
 
-  // Render nothing until we know the device type, and nothing on touch devices
-  if (isTouch !== false) return null;
-
+  if (!enabled) return null;
   return (
     <div
       ref={cursorRef}
+      aria-hidden="true"
       style={{
-        position:      "fixed",
-        top:           0,
-        left:          0,
-        width:         38,
-        height:        38,
-        borderRadius:  "50%",
-        background:    "#fff",
-        mixBlendMode:  "difference",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: 34,
+        height: 34,
+        border: "2px solid #0072FC",
+        borderRadius: "50%",
+        background: "transparent",
+        mixBlendMode: "normal",
         pointerEvents: "none",
-        zIndex:        99999,
-        willChange:    "transform",
+        zIndex: 99999,
+        opacity: 0,
+        willChange: "transform",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
-    />
+    >
+      <span style={{ width: 6, height: 6, background: "#0072FC", borderRadius: "50%" }} />
+    </div>
   );
 }
