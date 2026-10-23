@@ -9,14 +9,15 @@ export default function Hero() {
           Designing<br />what&apos;s <span className="text-[#0072FC]">next.</span>
         </h1>
         <p className="text-white/80 text-xl md:text-3xl max-w-3xl leading-snug hero-entrance-lead">
-          Turning complex ideas into intuitive digital experiences.
+          Making complex ideas feel simple, intuitive, and human.
         </p>
         <p className="text-white/50 mt-7 text-base max-w-xl leading-relaxed hero-entrance-desc">
-          I bring product thinking, user-centered research, prototyping, and scalable visual systems together — shaping thoughtful experiences from early concepts to production-ready design.
+          I'm a multidisciplinary designer with 6+ years at Meta, working across digital experiences, interaction design, and scalable visual systems. I connect product thinking with hands-on creative execution, from early exploration to production-ready design.
         </p>
         <a href="#work-section" className="inline-flex items-center gap-3 text-[#0072FC] uppercase tracking-[0.24em] font-semibold text-xs mt-14 hover:text-[#005ACC] transition-colors hero-entrance-cta">
           Explore selected work <span aria-hidden="true" className="hero-cta-arrow">↓</span>
         </a>
+        <a href="/resume" className="inline-flex items-center gap-2 ml-0 sm:ml-8 mt-6 sm:mt-14 text-xs uppercase tracking-[0.2em] font-semibold text-[#0072FC] hover:underline underline-offset-8">View resume ↗</a>
       </div>
       <div aria-hidden="true" className="absolute right-[-10%] top-[20%] w-[min(65vw,700px)] h-[min(65vw,700px)] rounded-full blur-[100px] bg-[#0072FC]/10 pointer-events-none" />
     </section>
