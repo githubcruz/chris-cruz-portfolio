@@ -337,3 +337,13 @@ html::-webkit-scrollbar { display: none; }
   .resume-page > a:first-of-type { display: none; }
   .resume-page .resume-link { text-decoration: none !important; }
 }
+
+/* Editorial About page treatments */
+.about-tool-pill { display:inline-flex; align-items:center; gap:8px; border:1px solid #dedede; border-radius:999px; padding:9px 13px; font-size:11px; color:#555; letter-spacing:.03em; transition:background .2s,color .2s,border-color .2s; }
+.about-tool-pill svg {width:14px;height:14px;flex:none}
+.about-tool-pill:hover { background:#111;color:white;border-color:#111; }
+@media (prefers-reduced-motion:no-preference) {
+ .about-portrait-frame img { transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+ .about-portrait-frame:hover img {transform:scale(1.025)}
+}
+@media print {.about-portrait-frame img {transform:none !important}}
