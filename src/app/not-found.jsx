@@ -1,48 +1,23 @@
 import Link from "next/link";
-
-export const metadata = {
-  title:       "404 — Page Not Found",
-  description: "The page you're looking for doesn't exist.",
-  robots:      { index: false, follow: false },
-};
-
+import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Cursor from "@/components/Cursor";
+export const metadata = { title: "Page Not Found", robots: { index: false, follow: false } };
 export default function NotFound() {
-  return (
-    <main
-      className="min-h-screen flex flex-col justify-center items-center bg-[#080808] px-10"
-      aria-labelledby="not-found-heading"
-    >
-      <p className="text-[11px] text-[#ff6b1a] tracking-[0.45em] uppercase mb-6 font-medium">
-        404
-      </p>
-
-      <h1
-        id="not-found-heading"
-        className="font-black text-white tracking-tighter leading-[0.88] text-center mb-8"
-        style={{ fontSize: "clamp(4rem, 14vw, 10rem)" }}
-      >
-        Lost<br />
-        <span className="text-white/15">in space</span>
-      </h1>
-
-      <p className="text-white/40 text-sm mb-12 text-center max-w-xs leading-relaxed">
-        This page doesn't exist. Head back and keep exploring.
-      </p>
-
-      <Link
-        href="/"
-        className="flex items-center gap-3 px-8 py-3 border border-[#ff6b1a]/50 text-[#ff6b1a] text-[11px] uppercase tracking-[0.32em] rounded-full hover:bg-[#ff6b1a] hover:text-black transition-all duration-500 group"
-      >
-        <svg
-          width="14" height="14" viewBox="0 0 14 14" fill="none"
-          aria-hidden="true"
-          className="transition-transform duration-300 group-hover:-translate-x-1"
-        >
-          <path d="M9 11L4 7l5-4" stroke="currentColor" strokeWidth="1.5"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        Back to home
-      </Link>
-    </main>
-  );
+ return <main className="portfolio-cursor portfolio-light relative min-h-screen overflow-hidden bg-white text-[#111111]">
+  <Cursor light />
+  <Navbar />
+  <section className="relative min-h-screen px-7 md:px-20 pt-40 pb-24 flex flex-col justify-center">
+   <div aria-hidden="true" className="absolute pointer-events-none right-[-14%] top-[20%] w-[min(70vw,720px)] h-[min(70vw,720px)] rounded-full blur-[100px] bg-[#0072FC]/[.06]" />
+   <div className="relative z-10 max-w-5xl">
+    <p className="text-xs uppercase font-semibold text-[#0072FC] tracking-[.35em] mb-7">404 · Page not found</p>
+    <h1 className="font-black tracking-[-.075em] leading-[.95] text-[clamp(4rem,11vw,10rem)] text-[#111111] mb-9">Lost your<br/><span className="text-[#0072FC]">way?</span></h1>
+    <p className="max-w-xl text-lg md:text-2xl text-[#575757] leading-snug">Looks like this page doesn&apos;t exist. Let&apos;s get you back to something worth exploring.</p>
+    <div className="mt-12 flex flex-wrap gap-4">
+     <Link href="/" className="inline-flex items-center rounded-full bg-[#0072FC] text-white px-7 py-3 text-sm font-bold transition-colors hover:bg-[#005acd]">← Back to home</Link>
+     <Link href="/projects" className="inline-flex items-center rounded-full border border-[#0072FC] text-[#0072FC] px-7 py-3 text-sm font-bold transition-colors hover:bg-[#0072FC]/10">Explore work ↗</Link>
+    </div>
+   </div>
+  </section>
+ </main>
 }
