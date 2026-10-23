@@ -306,3 +306,7 @@ html::-webkit-scrollbar { display: none; }
 .portfolio-light .about-skill:not(.rounded-full):hover { background: transparent !important; }
 .portfolio-light .about-skill:not(.rounded-full) p:first-child { transition: color 180ms ease; }
 .portfolio-light .about-skill:not(.rounded-full):hover p:first-child { color: #0072FC !important; }
+
+/* Ensure icon strokes remain legible when Adobe tool chips turn black on hover. */
+.portfolio-light .about-skill.rounded-full:hover svg { color: #fff !important; stroke: currentColor !important; fill: none !important; opacity: 1 !important; }
+.portfolio-light .about-skill.rounded-full:hover { color: #fff !important; }
