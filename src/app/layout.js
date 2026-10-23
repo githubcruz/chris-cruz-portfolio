@@ -3,13 +3,13 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 const inter=Inter({subsets:["latin"],variable:"--font-inter",display:"swap"});
 const playfair=Playfair_Display({subsets:["latin"],style:["normal","italic"],variable:"--font-playfair",display:"swap"});
-export const viewport={themeColor:"#111111"};
+export const viewport={themeColor:"#FFFFFF"};
 export const metadata={
- title:{default:"Chris Cruz — Visual Designer & Creative Technologist",template:"%s | Chris Cruz"},
- description:"Selected work in visual design, UI/UX, creative systems, digital learning, branding, and motion by Chris Cruz.",
+ title:{default:"Chris Cruz — Senior Visual & Product Designer",template:"%s | Chris Cruz"},
+ description:"Portfolio of Chris Cruz, a Bay Area senior visual and product designer specializing in interaction design, design systems, research, prototyping, and motion.",
  authors:[{name:"Chris Cruz"}],
  creator:"Chris Cruz",
  keywords:["Chris Cruz","Visual Designer","Creative Technologist","Meta Blueprint","Motion Design","Product Design","Design Systems"],
- robots:{index:false,follow:false}
+ robots:{index:true,follow:true}
 };
 export default function RootLayout({children}){return <html lang="en" className={`${inter.variable} ${playfair.variable}`}><body>{children}<Analytics/></body></html>;}
