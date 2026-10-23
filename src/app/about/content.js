@@ -4,10 +4,9 @@ import { TbBrandAdobeAfterEffect, TbBrandAdobePremier, TbBrandAdobePhotoshop, Tb
 export const SECTION = { label: "About Me" };
 export const HEADING = { line1: "Designing", line2: "what", line3: "matters." };
 export const BIO = [
-  "I believe the best design makes complex things feel *effortless*.",
-  "Over the past six years, I've worked at *Meta* across visual design, digital learning, interaction design, and design systems. My work spans early concepts and prototypes to production-ready experiences, with a focus on clarity, consistency, and the people using them.",
-  "I enjoy working where *visual craft meets problem-solving*, bringing structure to ambiguous challenges and collaborating across disciplines to make ideas real.",
-  "Outside digital products, my human-centered design experience includes *BART fare gate research* and usability testing."
+  "Over the past six years, I’ve worked at Meta across visual design, digital learning, interaction design, and scalable design systems. My work includes product experiences, reusable Figma components, motion graphics, branded content, and production-ready creative assets.",
+  "I enjoy working at the intersection of product thinking and visual craft — making complex ideas intuitive through clear systems, storytelling, and collaboration.",
+  "Outside work, I enjoy running, exploring new places with my family, and continuously learning new skills."
 ];
 export const RESUME_URL = "/resume";
 export const TECH = [
