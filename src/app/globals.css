@@ -320,3 +320,20 @@ html::-webkit-scrollbar { display: none; }
   .portfolio-light .hero-entrance-label { font-size: 10px; letter-spacing: .16em; }
   .portfolio-light .work-preview-art { padding: 20px; }
 }
+
+/* Resume interactions: understated, accessible, and printable. */
+.resume-page .resume-link { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 5px; transition: color 180ms ease, text-decoration-color 180ms ease; }
+.resume-page .resume-link:hover { color: #005ACC !important; text-decoration-color: currentColor; }
+.resume-page .resume-link:focus-visible { outline: 2px solid #0072FC; outline-offset: 4px; text-decoration-color: currentColor; }
+@media (prefers-reduced-motion: no-preference) {
+  .resume-page > header { animation: resume-enter 650ms both; }
+  .resume-page > section { animation: resume-enter 650ms both; }
+}
+@keyframes resume-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .resume-page .resume-link { transition: none; } }
+@media print {
+  .resume-page { padding: 20px !important; }
+  .resume-page > header, .resume-page > section { animation: none !important; }
+  .resume-page > a:first-of-type { display: none; }
+  .resume-page .resume-link { text-decoration: none !important; }
+}
