@@ -8,6 +8,6 @@ export default function manifest() {
     background_color: "#ffffff",
     theme_color: "#0072FC",
     lang: "en",
-    icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" }],
+    icons: [{ src: "/icon.svg?v=cc-2026", sizes: "any", type: "image/svg+xml", purpose: "any" }],
   };
 }
