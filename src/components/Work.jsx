@@ -63,11 +63,12 @@ export default function Work() {
             <ProjectPreview project={project}/>
             <div className="flex gap-4 justify-between items-start mt-6">
               <div className="min-w-0"><p className="uppercase tracking-[.18em] text-[#0072FC] text-[10px] font-semibold mb-3">{project.category}</p>
-                <h3 className="text-white text-3xl md:text-4xl tracking-tight font-bold">{project.title}</h3></div>
-              <span aria-hidden="true" className="text-[#0072FC] text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                <h3 className="text-white text-3xl md:text-4xl tracking-tight font-bold"><Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title} <span className="sr-only">— read case study</span></Link></h3></div>
+              <Link href={`/projects/${project.id}`} aria-label={`Read ${project.title} overview`} className="text-[#0072FC] text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</Link>
             </div>
             <p className="text-white/65 text-sm md:text-base leading-relaxed mt-4 max-w-xl">{project.description}</p>
             <p className="text-white/40 text-xs tracking-wide mt-4">{project.tech}</p>
+            <Link href={`/projects/${project.id}`} className="inline-block mt-4 text-[#0072FC] text-xs uppercase font-semibold tracking-widest hover:underline underline-offset-4">View project overview ↗</Link>
           </article>)}
         </div>
         <Link href="/projects" className="inline-flex gap-3 items-center mt-16 text-[#0072FC] font-semibold uppercase text-xs tracking-[.2em] hover:underline underline-offset-8">Explore all work <span aria-hidden="true">↗</span></Link>

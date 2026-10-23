@@ -4,10 +4,10 @@ import { TbBrandAdobeAfterEffect, TbBrandAdobePremier, TbBrandAdobePhotoshop, Tb
 export const SECTION = { label: "About Me" };
 export const HEADING = { line1: "Designing", line2: "what", line3: "matters." };
 export const BIO = [
-  "I'm a *visual designer* and creative technologist working across *digital experiences*, *design systems*, *branding*, and *motion*. I care about ideas that look thoughtful and work in the real world.",
-  "At *Meta Blueprint*, I've helped create learning experiences, visual assets, and reusable Figma components supporting production across courses and digital touchpoints.",
-  "My work combines *creative direction* with hands-on execution—from early concepts and prototypes to final graphics, video, and interactive experiences.",
-  "I also bring experience in *product design* and usability testing, including work related to BART fare gates. I enjoy building clear, memorable experiences and working closely with multidisciplinary teams."
+  "I believe the best design makes complex things feel *effortless*.",
+  "Over the past six years, I've worked at *Meta* across visual design, digital learning, interaction design, and design systems. My work spans early concepts and prototypes to production-ready experiences, with a focus on clarity, consistency, and the people using them.",
+  "I enjoy working where *visual craft meets problem-solving*, bringing structure to ambiguous challenges and collaborating across disciplines to make ideas real.",
+  "Outside digital products, my human-centered design experience includes *BART fare gate research* and usability testing."
 ];
 export const RESUME_URL = "/resume";
 export const TECH = [
