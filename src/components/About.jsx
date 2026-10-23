@@ -34,12 +34,9 @@ export default function About({ standalone = false }) {
      </div>
     </div>
     <div className="about-portrait relative isolate w-full max-w-[360px] md:max-w-[380px] mx-auto lg:ml-auto">
-     <div aria-hidden="true" className="absolute -inset-5 rounded-[40px] border border-[#0072FC]/20 rotate-[3deg]"/>
-     <div aria-hidden="true" className="absolute -inset-8 rounded-full bg-[#0072FC]/10 blur-[52px]"/>
-     <div className="about-portrait-frame relative aspect-square overflow-hidden rounded-[26px] bg-white border border-[#DCE7F9] shadow-[0_24px_60px_rgba(18,67,139,.10)]">
+     <div className="about-portrait-frame relative aspect-square overflow-hidden rounded-[18px] bg-white border border-[#E3E6EB] shadow-[0_12px_35px_rgba(15,23,42,.055)]">
       <Image src={photoReady?"/photo/chris-headshot-large.png":"/photo/chris-headshot.png"} onError={()=>setPhotoReady(false)} alt="Chris Cruz, senior visual and product designer" fill sizes="(max-width: 768px) 85vw, 380px" className="object-contain object-center" priority={standalone}/>
      </div>
-     <span aria-hidden="true" className="absolute -top-5 -right-5 w-8 h-8 rounded-full bg-[#0072FC] shadow-[0_8px_28px_rgba(0,114,252,.3)]"/>
      <p className="mt-5 text-[#111] text-base font-bold">Chris Cruz <span className="text-[#858585] font-normal text-sm">— Senior Visual & Product Designer</span></p>
     </div>
    </div>
