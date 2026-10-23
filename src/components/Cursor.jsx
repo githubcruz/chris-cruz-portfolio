@@ -29,7 +29,7 @@ export default function Cursor({ light = false }) {
       my = event.clientY;
       const interactive = Boolean(event.target.closest("a, button, [role='button']"));
       targetScale = interactive ? 1.7 : 1;
-      element.style.backgroundColor = light ? "#0072FC" : (interactive ? "rgba(255,255,255,0.28)" : "#FFFFFF");
+      element.style.backgroundColor = light ? (interactive ? "#111111" : "#0072FC") : (interactive ? "rgba(255,255,255,0.28)" : "#FFFFFF");
       element.style.opacity = "1";
     };
     const leave = () => { element.style.opacity = "0"; };
