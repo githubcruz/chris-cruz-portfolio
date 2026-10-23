@@ -10,7 +10,7 @@ export const metadata={
  authors:[{name:"Chris Cruz"}],
  creator:"Chris Cruz",
  keywords:["Chris Cruz","Visual Designer","Creative Technologist","Meta Blueprint","Motion Design","Product Design","Design Systems"],
- icons:{icon:[{url:"/icon.svg?v=cc-2026",type:"image/svg+xml"}],shortcut:"/icon.svg?v=cc-2026",apple:"/icon.svg?v=cc-2026"},
+ icons:{icon:[{url:"/favicon.ico?v=cc-original-2",type:"image/x-icon",sizes:"any"},{url:"/icon.svg?v=cc-original-2",type:"image/svg+xml"}],shortcut:"/favicon.ico?v=cc-original-2",apple:"/icon.svg?v=cc-original-2"},
  robots:{index:true,follow:true}
 };
 export default function RootLayout({children}){return <html lang="en" className={`${inter.variable} ${playfair.variable}`}><body>{children}<Analytics/></body></html>;}
