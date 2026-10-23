@@ -310,3 +310,13 @@ html::-webkit-scrollbar { display: none; }
 /* Ensure icon strokes remain legible when Adobe tool chips turn black on hover. */
 .portfolio-light .about-skill.rounded-full:hover svg { color: #fff !important; stroke: currentColor !important; fill: none !important; opacity: 1 !important; }
 .portfolio-light .about-skill.rounded-full:hover { color: #fff !important; }
+
+/* Recruiter-ready responsive refinements, light pages */
+.portfolio-light .contact-primary { color: #fff !important; }
+.portfolio-light .contact-primary:hover { color: #fff !important; background: #005acc !important; }
+.portfolio-light a:focus-visible, .portfolio-light button:focus-visible { outline: 2px solid #0072FC; outline-offset: 4px; }
+@media (max-width: 640px) {
+  .portfolio-light .hero-entrance-title { font-size: clamp(3.2rem, 13vw, 5.5rem); overflow-wrap: normal; }
+  .portfolio-light .hero-entrance-label { font-size: 10px; letter-spacing: .16em; }
+  .portfolio-light .work-preview-art { padding: 20px; }
+}
