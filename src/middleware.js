@@ -11,8 +11,8 @@ export async function middleware(request) {
   /\.(?:ico|png|jpg|jpeg|webp|svg|woff2?|css|js|txt|xml|mp4)$/i.test(pathname);
  if (PUBLIC_PATHS.has(pathname) || isStatic || pathname.startsWith("/api/portfolio-access")) return NextResponse.next();
 
- if (passwordConfigured) {
-  const token = request.cookies.get("portfolio_access")?.value;
+ if (true) {
+  const token = passwordConfigured ? request.cookies.get("portfolio_access")?.value : undefined;
   let allowed = false;
   if (token) {
    try {
