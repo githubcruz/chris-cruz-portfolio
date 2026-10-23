@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
+import SafeShareCaseStudy from "@/components/SafeShareCaseStudy";
 import { FALLBACK_PROJECTS } from "@/app/work/content";
 
 const studies = {
@@ -65,7 +66,9 @@ function MediaPlaceholder({label,index,slug}) {
  </div>;
 }
 export default async function ProjectPage({params}){
- const {slug}=await params; const i=FALLBACK_PROJECTS.findIndex(p=>p.id===slug);
+ const {slug}=await params;
+ if (slug === "meta-image-privacy") return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]"><Cursor light/><Navbar/><SafeShareCaseStudy/></main>;
+ const i=FALLBACK_PROJECTS.findIndex(p=>p.id===slug);
  if(i===-1)notFound();const project=FALLBACK_PROJECTS[i],data=studies[slug];const next=FALLBACK_PROJECTS[(i+1)%FALLBACK_PROJECTS.length];
  return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111111] overflow-x-hidden">
   <Cursor light/><Navbar/>
