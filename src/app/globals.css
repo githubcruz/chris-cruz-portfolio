@@ -267,7 +267,7 @@ html::-webkit-scrollbar { display: none; }
   background: linear-gradient(to bottom, rgba(255,255,255,.95), rgba(255,255,255,0));
 }
 .portfolio-light nav[aria-label="Main navigation"] > div[class*="bg-black"] { background: white !important; }
-.portfolio-light .about-skill:hover { background: #111 !important; color: #fff !important; border-color: #111 !important; }
+.portfolio-light .about-skill.rounded-full:hover { background: #111 !important; color: #fff !important; border-color: #111 !important; }
 .portfolio-light a:hover { color: #0072FC; }
 .portfolio-light .about-p a:hover { color: #fff; }
 
@@ -276,7 +276,7 @@ html::-webkit-scrollbar { display: none; }
 .portfolio-light .about-p .font-serif.italic:hover { color: #0072FC !important; }
 .portfolio-light .about-p { color: #606060; }
 .portfolio-light .about-h .ghost { -webkit-text-stroke: 1.5px rgba(17,17,17,.55); }
-.portfolio-light .about-skill:hover { color: #fff !important; }
+.portfolio-light .about-skill.rounded-full:hover { color: #fff !important; }
 .portfolio-light a:focus-visible { outline: 2px solid #0072FC; outline-offset: 5px; border-radius: 4px; }
 /* Restrained entrance motion and refined links; respects accessibility preferences. */
 @media (prefers-reduced-motion: no-preference) {
@@ -301,3 +301,8 @@ html::-webkit-scrollbar { display: none; }
 /* Bio emphasis must be explicitly themed, never near-white on the light homepage. */
 .bio-emphasis { color: #f5f5f5; font-weight: 600; }
 .portfolio-light .about-p .bio-emphasis { color: #181818 !important; font-weight: 600; }
+
+/* Experience rows are not skill pills: keep backgrounds clear and use restrained text emphasis. */
+.portfolio-light .about-skill:not(.rounded-full):hover { background: transparent !important; }
+.portfolio-light .about-skill:not(.rounded-full) p:first-child { transition: color 180ms ease; }
+.portfolio-light .about-skill:not(.rounded-full):hover p:first-child { color: #0072FC !important; }
