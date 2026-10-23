@@ -22,7 +22,7 @@ export const CREATIVE = [
   { name: "Illustrator", icon: TbBrandAdobeIllustrator },
 ];
 export const EXPERIENCE = [
-  { role: "Creative Designer — Meta Blueprint (Contract)", period: "Current" },
+  { role: "Creative Designer — Meta Blueprint", period: "Current" },
   { role: "Content Developer — Meta Blueprint", period: "Previous" },
   { role: "Production Assistant — Meta Blueprint", period: "Previous" },
 ];
