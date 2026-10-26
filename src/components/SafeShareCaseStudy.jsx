@@ -146,6 +146,16 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
+  <section className="mt-16 md:mt-24">
+   <Eyebrow>Motion / product storytelling</Eyebrow>
+   <div className="mt-5 relative aspect-video overflow-hidden rounded-[24px] bg-[#101827] text-white flex flex-col items-center justify-center text-center px-8 border border-[#263246]">
+    <span aria-hidden="true" className="flex items-center justify-center w-16 h-16 rounded-full border border-white/30 bg-[#0072FC]/80 text-2xl">▶</span>
+    <h3 className="text-2xl md:text-3xl font-bold tracking-tight mt-6">SafeShare concept video</h3>
+    <p className="mt-3 max-w-xl text-white/60 text-sm">An approved motion walkthrough will live here — showing the proposed interaction from posting to viewer feedback.</p>
+    <span className="mt-6 text-xs uppercase tracking-[.2em] text-[#80B7FF]">Video export to be added</span>
+   </div>
+  </section>
+
   <section className="mt-24 md:mt-32">
    <SectionHeading index="08" label="Reflection & next steps" title="What this exploration surfaced."/>
    <div className="grid md:grid-cols-3 gap-5 mt-9">
