@@ -38,8 +38,8 @@ function ProjectPreview({ project }) {
         )}
       </div>
       {privacy && hasOriginalImage && <div className="absolute inset-0 z-[1] bg-[#F6F9FF]"><Image src="/safeshare/hero.webp" alt="Screenshot Protection SafeShare mobile interface concepts" fill sizes="(max-width: 768px) 95vw, 600px" className="object-contain" unoptimized onError={()=>setHasOriginalImage(false)}/></div>}
-      <span className={`relative z-[2] absolute bottom-4 left-5 text-[9px] font-bold tracking-[.18em] uppercase ${project.id === "visual-motion" ? "text-white/70" : "text-[#40516c]"}`}>Conceptual preview · Replace with project imagery</span>
-      <span className={`absolute top-5 right-5 text-xs font-bold ${project.id === "visual-motion" ? "text-white/80" : "text-[#0072FC]"}`}>{project.num} / 04</span>
+      <span className={`absolute z-[2] bottom-4 left-5 text-[9px] font-bold tracking-[.18em] uppercase ${project.id === "visual-motion" ? "text-white/70" : "text-[#40516c]"}`}>{privacy && hasOriginalImage ? "SafeShare UI exploration · Concept" : "Conceptual preview · Replace with project imagery"}</span>
+      <span className={`absolute z-[2] top-5 right-5 text-xs font-bold ${project.id === "visual-motion" ? "text-white/80" : "text-[#0072FC]"}`}>{project.num} / 04</span>
     </div>
   );
 }
