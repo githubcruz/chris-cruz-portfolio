@@ -40,3 +40,10 @@ The corresponding optimized WebP files are supplied in the portfolio assets ZIP 
 - Embed the concept video with captions and a poster.
 - Add one honest **decision/outcome** callout showing what options were weighed, what was selected (if known), and what remains unvalidated.
 - Test the mobile and desktop rendering, keyboard focus, performance, and password-protected recruitment workflow.
+
+## Approved design exploration update
+
+- Upload `design-exploration.webp` (2048 × 1564px) to `public/safeshare/` on branch `safeshare-approved-design-exploration`.
+- This updates section 04, replacing the generic comparison schematic with the owner's annotated A/B exploration.
+- Keep the original Figma frames editable. When revising next, make sure the `Learn more` label has independent spacing from the icon and identify the state of the selected toggle.
+- The new code displays a graceful fallback until the image is uploaded. Please upload before merging.
