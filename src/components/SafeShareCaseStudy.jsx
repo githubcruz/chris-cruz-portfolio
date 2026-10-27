@@ -96,28 +96,21 @@ export default function SafeShareCaseStudy(){
   </section>
 
   <section className="mt-24 md:mt-32">
-   <SectionHeading index="04" label="Design exploration" title="How visible should protection be?" description="Two plausible interface directions address a familiar product-design trade-off: make a new control easy to find, or reduce visual clutter by integrating it into existing sharing settings."/>
-   <div className="grid md:grid-cols-2 gap-5 mt-9">
-    <div className="border border-[#DCE5F3] bg-[#F8FAFE] rounded-[22px] p-7">
-      <span className="text-[#0072FC] text-xs font-bold tracking-widest">DIRECTION A</span>
-      <h3 className="mt-4 text-2xl font-bold">Dedicated protection toggle</h3>
-      <p className="mt-3 text-[#5E6774] leading-relaxed">Places protection directly in the new-post interface.</p>
-      <div className="mt-7 rounded-xl bg-white border border-[#E3E8F1] p-4 flex items-center justify-between text-sm"><span>Screenshot protection</span><span className="bg-[#0072FC] text-white rounded-full text-xs px-3 py-1">On</span></div>
-      <p className="mt-5 text-[#444] text-sm"><strong>Advantage:</strong> High discoverability</p>
-      <p className="mt-2 text-[#444] text-sm"><strong>Trade-off:</strong> Adds another decision to the posting flow</p>
-      <p className="text-[#8A8A8A] text-xs mt-5">Simple schematic; full UI variation to be added</p>
+   <SectionHeading index="04" label="Design exploration" title="Where should screenshot protection live?" description="I compared a separate settings entry point with an inline toggle on the posting screen. Both offered a way to introduce protection, but placed different demands on the sharing experience."/>
+   <div className="mt-10">
+    <Asset src="/safeshare/design-exploration.webp" title="Side-by-side screenshot protection design explorations" alt="Two proposed new-post screens compare a separate settings entry point with a selected inline screenshot-protection toggle, with annotated advantages, trade-offs, and final design decision." aspect="aspect-[2048/1564]" caption="Exploratory UI directions and design rationale. No completed usability test or platform implementation is implied."/>
+   </div>
+   <div className="mt-8 grid md:grid-cols-[.9fr_1.1fr] gap-6 items-start">
+    <div className="rounded-[18px] border border-[#DDE6F4] p-6">
+     <p className="text-[#0072FC] text-[10px] font-bold uppercase tracking-[.2em]">Direction selected</p>
+     <h3 className="mt-3 font-bold text-2xl tracking-tight">Inline toggle + Learn more</h3>
+     <p className="mt-3 text-[#666] leading-relaxed">Keeping the control on the posting screen avoids an additional navigation step. An optional explanation offers more context when it's needed.</p>
     </div>
-    <div className="border border-[#DCE5F3] bg-[#F8FAFE] rounded-[22px] p-7">
-      <span className="text-[#0072FC] text-xs font-bold tracking-widest">DIRECTION B</span>
-      <h3 className="mt-4 text-2xl font-bold">Within existing controls</h3>
-      <p className="mt-3 text-[#5E6774] leading-relaxed">Groups protection with audience and other sharing options.</p>
-      <div className="mt-7 rounded-xl bg-white border border-[#E3E8F1] p-4 flex items-center justify-between text-sm"><span>Audience &amp; protection</span><span className="text-[#0072FC] font-bold">›</span></div>
-      <p className="mt-5 text-[#444] text-sm"><strong>Advantage:</strong> Familiar organization and less visual clutter</p>
-      <p className="mt-2 text-[#444] text-sm"><strong>Trade-off:</strong> May be harder to discover</p>
-      <p className="text-[#8A8A8A] text-xs mt-5">Simple schematic; full UI variation to be added</p>
+    <div className="rounded-[18px] bg-[#F3F7FD] p-6">
+     <p className="text-[#0072FC] text-[10px] font-bold uppercase tracking-[.2em]">Trade-off</p>
+     <p className="mt-3 text-[#45556B] leading-relaxed">The inline approach gives users less room to learn about an unfamiliar privacy feature than a dedicated settings screen. It's a design choice to investigate further, rather than a validated performance advantage.</p>
     </div>
    </div>
-   <p className="text-[#777] mt-5 text-sm max-w-4xl">These are design trade-offs, not findings from a completed usability study. The next iteration will show the original alternatives at equal size and explain the direction the team evaluated.</p>
   </section>
 
   <section className="mt-24 md:mt-32">
