@@ -31,9 +31,9 @@ export default function Cursor({ light = false }) {
       my = event.clientY;
       const interactive = Boolean(event.target.closest("a, button, [role='button']"));
       targetScale = interactive ? 1.7 : 1;
-      element.style.backgroundColor = light ? (interactive ? "rgba(0,114,252,0.05)" : "#0072FC") : (interactive ? "rgba(255,255,255,0.28)" : "#FFFFFF");
-      element.style.borderColor = light && interactive ? "#0072FC" : "transparent";
-      if (grain) grain.style.opacity = light && !interactive ? "0.13" : "0";
+      element.style.backgroundColor = interactive ? "transparent" : (light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)");
+      element.style.borderColor = interactive ? (light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)") : "transparent";
+      if (grain) grain.style.opacity = light && !interactive ? "0.08" : "0";
       element.style.opacity = "1";
     };
     const leave = () => { element.style.opacity = "0"; };
@@ -70,7 +70,7 @@ export default function Cursor({ light = false }) {
         height: 38,
         border: "1.5px solid transparent",
         borderRadius: "50%",
-        background: light ? "#0072FC" : "#FFFFFF",
+        background: light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)",
         mixBlendMode: "normal",
         pointerEvents: "none",
         zIndex: 99999,
@@ -82,7 +82,7 @@ export default function Cursor({ light = false }) {
         justifyContent: "center",
       }}
     >
-      {light && <svg ref={grainRef} viewBox="0 0 40 40" aria-hidden="true" style={{position:"absolute",inset:0,width:"100%",height:"100%",borderRadius:"50%",opacity:0.13,overflow:"hidden",pointerEvents:"none",transition:"opacity 180ms ease"}}><defs><filter id="cursor-grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="7"/><feColorMatrix type="saturate" values="0"/></filter><clipPath id="cursor-grain-clip"><circle cx="20" cy="20" r="20"/></clipPath></defs><rect width="40" height="40" fill="white" filter="url(#cursor-grain)" clipPath="url(#cursor-grain-clip)"/></svg>}
+      {light && <svg ref={grainRef} viewBox="0 0 40 40" aria-hidden="true" style={{position:"absolute",inset:0,width:"100%",height:"100%",borderRadius:"50%",opacity:0.08,overflow:"hidden",pointerEvents:"none",transition:"opacity 180ms ease"}}><defs><filter id="cursor-grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="7"/><feColorMatrix type="saturate" values="0"/></filter><clipPath id="cursor-grain-clip"><circle cx="20" cy="20" r="20"/></clipPath></defs><rect width="40" height="40" fill="white" filter="url(#cursor-grain)" clipPath="url(#cursor-grain-clip)"/></svg>}
     </div>
   );
 }
