@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { LuMail, LuLinkedin, LuFileText } from "react-icons/lu";
 export default function Contact(){
- return <section id="contact-section" className="relative min-h-[65vh] px-7 md:px-20 py-28 md:py-36 flex flex-col justify-center">
+ return <section id="contact-section" className="relative min-h-[65vh] px-7 md:px-20 py-24 md:py-32 flex flex-col justify-center">
   <p className="text-[#0072FC] uppercase tracking-[.4em] text-xs mb-8">Get in touch</p>
-  <h2 className="text-white font-black tracking-tighter text-5xl md:text-8xl max-w-4xl leading-[.95]">Let's make something meaningful.</h2>
+  <h2 className="text-white font-black tracking-tighter text-4xl md:text-7xl max-w-4xl leading-[.95]">Let's make something meaningful.</h2>
   <p className="text-white/60 mt-9 max-w-xl leading-relaxed">Exploring a product design opportunity, a creative collaboration, or a challenging idea? I'd love to connect.</p>
   <div className="flex flex-wrap gap-4 mt-9">
     <a href="mailto:chrissscruz@gmail.com?subject=Portfolio%20Inquiry" className="contact-primary inline-flex items-center gap-2 rounded-full bg-[#0072FC] px-6 py-3 text-white text-sm font-semibold hover:bg-[#005dcf] transition-colors"><LuMail size={17} aria-hidden="true" /> Email me ↗</a>

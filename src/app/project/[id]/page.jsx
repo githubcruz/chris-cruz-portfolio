@@ -87,7 +87,7 @@ export default function ProjectPage() {
         {project && (
           <>
             {/* ── HERO ── */}
-            <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+            <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
               {project.image_url || project.mobile_image_url ? (
                 (project.image_url?.includes('.mp4') || project.image_url?.includes('.webm') || project.image_url?.includes('.mov')) ? (
                   <video src={project.image_url} className="absolute inset-0 w-full h-full object-cover" muted loop playsInline autoPlay />
@@ -118,7 +118,7 @@ export default function ProjectPage() {
                   )}
                   <h1
                     className="font-black tracking-tighter leading-[0.88] text-white"
-                    style={{ fontSize: "clamp(2.2rem, 6vw, 5rem)" }}
+                    style={{ fontSize: "clamp(2rem, 5.2vw, 4.3rem)" }}
                   >
                     {project.title}
                   </h1>
@@ -270,7 +270,7 @@ export default function ProjectPage() {
             {/* ── CTA ── */}
             <div className="border-t border-white/5 py-24 px-6 md:px-16 text-center">
               <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-5 font-medium">Start Your Journey</p>
-              <h2 className="font-black tracking-tighter leading-[0.9] mb-8 text-white" style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}>
+              <h2 className="font-black tracking-tighter leading-[0.9] mb-8 text-white" style={{ fontSize: "clamp(2.2rem, 5.2vw, 4.3rem)" }}>
                 Ready to Elevate<br />
                 <span className="ghost-orange italic font-serif">Your Brand Presence?</span>
               </h2>

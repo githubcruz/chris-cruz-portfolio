@@ -18,12 +18,12 @@ export default function About({ standalone = false }) {
   },ref);
   return ()=>ctx.revert();
  },[]);
- return <section id="about-section" ref={ref} className="relative overflow-hidden bg-white px-7 md:px-20 pt-28 pb-24 md:py-36">
+ return <section id="about-section" ref={ref} className="relative overflow-hidden bg-white px-7 md:px-20 pt-24 pb-20 md:py-28">
   <div className="mx-auto max-w-[1440px]">
    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,.88fr)] gap-12 lg:gap-16 xl:gap-24 items-center">
     <div className="relative z-10">
      <p className="text-[#0072FC] tracking-[.32em] text-xs uppercase font-bold mb-6">{SECTION.label}</p>
-     <h2 className="font-black text-[#111111] tracking-[-.07em] leading-[.94] text-[clamp(3.3rem,6.6vw,7.4rem)] mb-9">Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
+     <h2 className="font-black text-[#111111] tracking-[-.07em] leading-[.94] text-[clamp(2.9rem,5.6vw,6.2rem)] mb-9">Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
      <div className="max-w-2xl space-y-5 text-[#595959] text-base md:text-[17px] leading-[1.7]">
       <p className="text-[#303030] text-lg md:text-xl leading-[1.5]">I’m a senior visual and product designer focused on creating thoughtful digital experiences that feel simple, clear, and human.</p>
       {BIO.map((paragraph,i)=><p key={i}>{paragraph}</p>)}

@@ -24,9 +24,9 @@ export default function PortfolioAccess() {
   </header>
   <div className="absolute top-[22%] right-[-12%] w-[min(70vw,760px)] aspect-square rounded-full blur-[110px] bg-[#0072FC]/10 pointer-events-none"/>
   <section className="relative z-10 flex-1 flex flex-col justify-center px-7 md:px-20 py-16">
-   <div className="w-full max-w-[740px]">
+   <div className="w-full max-w-[700px]">
     <p className="text-[#0072FC] uppercase tracking-[.3em] font-bold text-xs mb-8">Private portfolio · Chris Cruz</p>
-    <h1 className="text-[clamp(3.8rem,10vw,8rem)] tracking-[-.075em] font-black leading-[.94]">Good work<br/>starts with <span className="text-[#0072FC]">access.</span></h1>
+    <h1 className="text-[clamp(3.1rem,8vw,6.5rem)] tracking-[-.075em] font-black leading-[.94]">Good work<br/>starts with <span className="text-[#0072FC]">access.</span></h1>
     <p className="mt-8 text-[#666] text-lg md:text-xl max-w-lg">This portfolio is currently private. Enter the password to explore selected work, design thinking, and case studies.</p>
     <form onSubmit={submit} className="mt-10 max-w-md flex flex-col gap-3">
      <label htmlFor="portfolio-pass" className="text-sm font-semibold">Portfolio password</label>
