@@ -72,42 +72,42 @@ export default async function ProjectPage({params}){
  if(i===-1)notFound();const project=FALLBACK_PROJECTS[i],data=studies[slug];const next=FALLBACK_PROJECTS[(i+1)%FALLBACK_PROJECTS.length];
  return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111111] overflow-x-hidden">
   <Cursor light/><Navbar/>
-  <article className="mx-auto max-w-[1500px] px-7 md:px-20 pt-36 md:pt-44 pb-24">
+  <article className="mx-auto max-w-[1340px] px-7 md:px-20 pt-32 md:pt-40 pb-24">
    <Link href="/projects" className="inline-flex text-[#0072FC] text-xs font-semibold uppercase tracking-[.22em] hover:underline underline-offset-4">← All projects</Link>
    <header className="mt-14 max-w-6xl">
     <p className="uppercase text-[#0072FC] text-xs tracking-[.3em] font-bold">{data.eyebrow}</p>
-    <h1 className="font-black tracking-[-.065em] leading-[.97] text-[clamp(3.3rem,8.2vw,8.5rem)] mt-5 max-w-5xl">{project.title}<span className="text-[#0072FC]">.</span></h1>
-    <p className="mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.5rem,3.2vw,2.9rem)] max-w-4xl">{data.heading}</p>
+    <h1 className="font-black tracking-[-.065em] leading-[.97] text-[clamp(2.8rem,6.8vw,6.7rem)] mt-5 max-w-5xl">{project.title}<span className="text-[#0072FC]">.</span></h1>
+    <p className="mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.35rem,2.75vw,2.35rem)] max-w-4xl">{data.heading}</p>
     <p className="mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl">{data.summary}</p>
    </header>
    <div className="mt-14 border-y border-[#DEDEDE] py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
     {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage","Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
    </div>
-   <div className="mt-16 md:mt-24 rounded-[28px] bg-[#0072FC] relative min-h-[300px] md:min-h-[440px] overflow-hidden p-8 md:p-16 flex flex-col justify-end">
+   <div className="mt-16 md:mt-24 rounded-[28px] bg-[#0072FC] relative min-h-[270px] md:min-h-[365px] overflow-hidden p-8 md:p-16 flex flex-col justify-end">
     <div aria-hidden="true" className="absolute inset-0 opacity-70" style={{background:"radial-gradient(circle at 74% 30%, rgba(255,255,255,.28),transparent 45%)"}}/>
     <div aria-hidden="true" className="absolute w-[70%] aspect-square rounded-full border-[35px] md:border-[65px] border-white/10 -right-[20%] -top-[35%]"/>
     <p className="relative text-white/70 uppercase tracking-[.25em] text-xs mb-5">Case study / {project.num}</p>
-    <h2 className="relative text-white font-black leading-[1] tracking-[-.05em] text-[clamp(2.3rem,5.5vw,6rem)] max-w-[920px]">{data.heading}</h2>
+    <h2 className="relative text-white font-black leading-[1] tracking-[-.05em] text-[clamp(2.1rem,4.8vw,4.9rem)] max-w-[920px]">{data.heading}</h2>
     <p className="relative text-white/70 text-xs mt-8">Graphic title treatment · Not a project screenshot</p>
    </div>
-   <section className="grid lg:grid-cols-[.75fr_1.25fr] gap-7 lg:gap-20 mt-24 md:mt-32">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">01 / Context</p><h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">The challenge.</h2></div>
+   <section className="grid lg:grid-cols-[.75fr_1.25fr] gap-7 lg:gap-20 mt-20 md:mt-24">
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">01 / Context</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The challenge.</h2></div>
     <div className="text-lg md:text-xl text-[#535353] leading-[1.7]"><p>{data.problem}</p><p className="mt-7">{data.strategy}</p></div>
    </section>
-   <section className="mt-24 md:mt-32">
+   <section className="mt-20 md:mt-24">
     <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">02 / Design process</p>
-    <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">From question to direction.</h2>
+    <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">From question to direction.</h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">{data.process.map(([heading,body],k)=><div key={heading} className="border border-[#DEDEDE] rounded-2xl p-7 min-h-[245px] transition-colors hover:border-[#0072FC]/50"><p className="text-[#0072FC] text-xs font-bold">{String(k+1).padStart(2,"0")}</p><h3 className="text-[#171717] font-bold text-xl mt-9">{heading}</h3><p className="text-[#676767] leading-relaxed text-sm mt-3">{body}</p></div>)}</div>
    </section>
-   <section className="mt-24 md:mt-32">
-    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / Project visuals</p><h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">Behind the work.</h2></div><p className="max-w-sm text-[#777] text-sm">Original design artifacts will replace these clearly labeled placeholder panels.</p></div>
+   <section className="mt-20 md:mt-24">
+    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / Project visuals</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Behind the work.</h2></div><p className="max-w-sm text-[#777] text-sm">Original design artifacts will replace these clearly labeled placeholder panels.</p></div>
     <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
    </section>
-   <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-24 md:mt-32 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">04 / Role and reflection</p><h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight">The thinking behind it.</h2></div>
+   <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">04 / Role and reflection</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
-   <div className="mt-24 md:mt-32 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+   <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
     <Link href="/projects" className="text-[#0072FC] font-semibold text-sm hover:underline">← All projects</Link>
     <Link href={`/projects/${next.id}`} className="group text-left md:text-right"><span className="block text-[#808080] text-xs uppercase tracking-widest">Next project ↗</span><span className="block text-2xl md:text-3xl font-black mt-2 group-hover:text-[#0072FC] transition-colors">{next.title}</span></Link>
    </div>
