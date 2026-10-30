@@ -54,19 +54,19 @@ export default function Work() {
     return ()=>ctx.revert();
   },[]);
   return (
-    <section id="work-section" ref={ref} className="relative px-7 md:px-20 py-28 md:py-40">
-      <div className="max-w-6xl">
+    <section id="work-section" ref={ref} className="relative px-7 md:px-20 py-24 md:py-32">
+      <div className="max-w-[1080px] mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-14 md:mb-20">
           <div><p className="text-[#0072FC] uppercase tracking-[.4em] text-xs mb-4">{SECTION.label}</p>
-            <h2 className="text-white font-black text-5xl md:text-8xl tracking-tighter leading-none">{SECTION.heading}</h2></div>
+            <h2 className="text-white font-black text-4xl md:text-7xl tracking-tighter leading-none">{SECTION.heading}</h2></div>
           <p className="max-w-[280px] text-sm text-white/50 leading-relaxed">A selection of product thinking, design systems, real-world usability, and visual craft.</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16 md:gap-y-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16">
           {FALLBACK_PROJECTS.map(project=><article className="work-item group min-w-0" key={project.id}>
             <ProjectPreview project={project}/>
             <div className="flex gap-4 justify-between items-start mt-6">
               <div className="min-w-0"><p className="uppercase tracking-[.18em] text-[#0072FC] text-[10px] font-semibold mb-3">{project.category}</p>
-                <h3 className="text-white text-3xl md:text-4xl tracking-tight font-bold"><Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title} <span className="sr-only">— read case study</span></Link></h3></div>
+                <h3 className="text-white text-2xl md:text-3xl tracking-tight font-bold"><Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title} <span className="sr-only">— read case study</span></Link></h3></div>
               <Link href={`/projects/${project.id}`} aria-label={`Read ${project.title} overview`} className="text-[#0072FC] text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</Link>
             </div>
             <p className="text-white/65 text-sm md:text-base leading-relaxed mt-4 max-w-xl">{project.description}</p>
