@@ -26,6 +26,7 @@ function Asset({src,alt,title,caption,aspect="aspect-[8/5]",maxWidth="w-full max
         </div>}
     </div>
     {caption && <figcaption className="mt-3 text-[#7A7A7A] text-xs leading-relaxed">{caption}</figcaption>}
+    {available && <a href={src} target="_blank" rel="noopener noreferrer" className="inline-flex mt-2 text-[#0072FC] text-xs font-semibold hover:underline underline-offset-4">View image full size ↗</a>}
   </figure>;
 }
 function MiniCard({num,title,body}) {
