@@ -9,16 +9,16 @@ function Eyebrow({children}) {
 function SectionHeading({index,label,title,description}) {
   return <div className="max-w-3xl">
     <Eyebrow>{index} / {label}</Eyebrow>
-    <h2 className="mt-4 text-[clamp(2.2rem,4.2vw,4.2rem)] leading-[1.03] font-black tracking-[-.055em]">{title}</h2>
+    <h2 className="mt-4 text-[clamp(1.95rem,3.6vw,3.35rem)] leading-[1.03] font-black tracking-[-.055em]">{title}</h2>
     {description && <p className="mt-5 text-[#5D5D5D] text-lg leading-relaxed">{description}</p>}
   </div>;
 }
 /* The image frames have a graceful fallback until the original approved assets are uploaded. */
-function Asset({src,alt,title,caption,aspect="aspect-[8/5]",maxWidth=""}) {
+function Asset({src,alt,title,caption,aspect="aspect-[8/5]",maxWidth="w-full max-w-[1100px] mx-auto"}) {
   const [available,setAvailable]=useState(true);
   return <figure className={maxWidth}>
     <div className={"relative flex items-center justify-center overflow-hidden rounded-[20px] border border-[#E6EAF0] bg-[#FAFBFD] " + aspect}>
-      {available ? <Image src={src} alt={alt} fill sizes="(max-width: 768px) 95vw, (max-width: 1200px) 85vw, 1300px" className="object-contain" unoptimized onError={()=>setAvailable(false)}/> :
+      {available ? <Image src={src} alt={alt} fill sizes="(max-width: 768px) 94vw, (max-width: 1200px) 84vw, 1100px" className="object-contain" unoptimized onError={()=>setAvailable(false)}/> :
         <div className="px-7 max-w-sm text-center">
           <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D6E5FD] bg-[#EBF3FF] text-[#0072FC] text-2xl">↗</div>
           <p className="text-[#172B4A] font-semibold text-lg">{title}</p>
@@ -36,12 +36,12 @@ function MiniCard({num,title,body}) {
  </div>;
 }
 export default function SafeShareCaseStudy(){
- return <article className="mx-auto max-w-[1500px] px-7 md:px-20 pt-36 md:pt-44 pb-28 text-[#111]">
+ return <article className="mx-auto max-w-[1320px] px-7 md:px-20 pt-32 md:pt-40 pb-28 text-[#111]">
   <Link href="/projects" className="text-[#0072FC] uppercase tracking-[.2em] text-xs font-bold hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-14 max-w-6xl">
    <Eyebrow>SafeShare / Meta concept / UI design + motion</Eyebrow>
-   <h1 className="mt-5 text-[clamp(3.3rem,7.5vw,8rem)] font-black tracking-[-.075em] leading-[.96]">Screenshot<br/><span className="text-[#0072FC]">Protection.</span></h1>
-   <p className="mt-7 max-w-4xl text-[clamp(1.5rem,3vw,2.7rem)] leading-[1.15] tracking-[-.03em] font-medium">Helping parents share family moments with greater confidence.</p>
+   <h1 className="mt-5 text-[clamp(2.85rem,6.6vw,6.4rem)] font-black tracking-[-.075em] leading-[.96]">Screenshot<br/><span className="text-[#0072FC]">Protection.</span></h1>
+   <p className="mt-7 max-w-4xl text-[clamp(1.35rem,2.65vw,2.25rem)] leading-[1.15] tracking-[-.03em] font-medium">Helping parents share family moments with greater confidence.</p>
    <p className="mt-6 max-w-3xl text-[#636363] text-lg leading-relaxed">SafeShare explored how a familiar mobile posting flow could introduce clearer image-protection controls and explain the experience to people viewing protected content. I designed UI concepts and produced a concept video to help communicate the idea.</p>
   </header>
 
@@ -49,11 +49,11 @@ export default function SafeShareCaseStudy(){
    {[["MY ROLE","UI design · Concept video"],["PROJECT","SafeShare / Screenshot Protection"],["PLATFORM","Mobile · Social sharing"],["STATUS","Exploratory concept · Not launched"]].map(([k,v])=><div key={k}><p className="text-[#0072FC] text-[10px] font-bold tracking-[.16em]">{k}</p><p className="mt-2 text-sm leading-relaxed text-[#343434]">{v}</p></div>)}
   </div>
 
-  <section className="mt-16 md:mt-24">
+  <section className="mt-14 md:mt-20">
     <Asset src="/safeshare/hero.webp" title="Screenshot Protection — proposed posting controls" alt="Two mobile new-post screens showing a screenshot protection switch and an opt-in bottom sheet." caption="UI concept: visible protection control and an optional explanation sheet. Proposed interaction, not a launched feature." aspect="aspect-[8/5]"/>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="01" label="The challenge" title="Sharing a photo shouldn't mean losing control." description="Parents may want to share milestone photos with trusted family, but worry those images could be saved, captured, or redistributed beyond their intended audience."/>
    <div className="grid md:grid-cols-3 gap-4 mt-9">
     <MiniCard num="01" title="Beyond the intended audience" body="A shared photo can move outside a private conversation or chosen group."/>
@@ -67,11 +67,11 @@ export default function SafeShareCaseStudy(){
    <p className="text-[#888] text-xs mt-2">Concept tagline — not a user-research quotation or proven outcome.</p>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="02" label="Primary user" title="Designing for parents who value privacy." description="Alex Ruiz is a working design persona representing a parent who wants to share important moments while being more intentional about access and redistribution."/>
    <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,.8fr)] gap-9 lg:gap-12 items-start mt-9">
     <div className="rounded-[22px] overflow-hidden bg-[#FAFBFD] border border-[#E5EAF0]">
-     <Asset src="/safeshare/persona.webp" title="Alex Ruiz — full persona" alt="Alex Ruiz design persona containing family context, goals, frustrations, technology needs, and a representative quote." aspect="aspect-[3/5]"/>
+     <Asset src="/safeshare/persona.webp" title="Alex Ruiz — full persona" alt="Alex Ruiz design persona containing family context, goals, frustrations, technology needs, and a representative quote." aspect="aspect-[3/5]" maxWidth="w-full max-w-[430px] mx-auto"/>
     </div>
     <div className="space-y-7 lg:pt-5">
       <div><h3 className="text-lg font-bold">Goals</h3><p className="mt-2 text-[#646464] leading-relaxed">Share family milestones with trusted people, keep children's images private, and control how content travels.</p></div>
@@ -83,7 +83,7 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="03" label="The solution" title="Make protection part of the posting flow." description="The proposed experience introduces a screenshot-protection decision where the user is already preparing to share. A viewer-facing state explains that the image has protections, instead of silently changing familiar actions."/>
    <div className="grid sm:grid-cols-3 gap-4 mt-10">
     <MiniCard num="01" title="Contextual prompt" body="Explore an optional prompt when a post may contain sensitive family content. Automated detection remains a proposal, not an implemented capability."/>
@@ -95,7 +95,7 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="04" label="Design exploration" title="Where should screenshot protection live?" description="I compared a separate settings entry point with an inline toggle on the posting screen. Both offered a way to introduce protection, but placed different demands on the sharing experience."/>
    <div className="mt-10">
     <Asset src="/safeshare/design-exploration.webp" title="Side-by-side screenshot protection design explorations" alt="Two proposed new-post screens compare a separate settings entry point with a selected inline screenshot-protection toggle, with annotated advantages, trade-offs, and final design decision." aspect="aspect-[2048/1564]" caption="Exploratory UI directions and design rationale. No completed usability test or platform implementation is implied."/>
@@ -113,7 +113,7 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="05" label="Design rationale" title="Why explore this approach?" description="The interaction draws on patterns users already recognize, while acknowledging the need to explain what protection can and cannot do."/>
    <div className="grid md:grid-cols-2 gap-4 mt-9">
     <MiniCard num="01" title="Familiar first" body="Introduce the feature within a known posting experience rather than requiring an unfamiliar workflow."/>
@@ -123,14 +123,14 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="06" label="Key screens" title="From concept to interaction." description="These are the next assets to complete: close-up screen exports, a small set of actual design iterations, and clear annotations for each decision."/>
    <div className="grid md:grid-cols-3 gap-5 mt-9">
      {[["01","Protection enabled","New-post screen with the control visible"],["02","Explanation sheet","Optional prompt explaining the proposed setting"],["03","Viewer feedback","Protected-state messaging and technical caveats"]].map(([num,title,desc])=><div key={num} className="bg-[#F2F6FC] border border-[#DDE7F4] rounded-2xl p-7 min-h-[260px] flex flex-col justify-between"><span className="text-[#0072FC] font-bold text-xs">{num} / 03</span><div><h3 className="font-bold text-xl">{title}</h3><p className="text-[#66758A] text-sm mt-3">{desc}</p><p className="text-[#0072FC] text-[10px] uppercase tracking-widest mt-6">Individual UI export needed</p></div></div>)}
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32 grid lg:grid-cols-2 gap-10 md:gap-16 pt-12 border-t border-[#E2E2E2]">
+  <section className="mt-20 md:mt-24 grid lg:grid-cols-2 gap-10 md:gap-16 pt-12 border-t border-[#E2E2E2]">
    <div><SectionHeading index="07" label="My contribution" title="Bringing a concept to life."/></div>
    <div className="space-y-5 text-[#5C5C5C] leading-relaxed text-lg">
     <p>I designed the UI concepts and created the video presentation used to illustrate how screenshot protection might work within familiar social-sharing experiences.</p>
@@ -139,9 +139,9 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-16 md:mt-24">
+  <section className="mt-14 md:mt-20">
    <Eyebrow>Motion / product storytelling</Eyebrow>
-   <div className="mt-5 relative aspect-video overflow-hidden rounded-[24px] bg-[#101827] text-white flex flex-col items-center justify-center text-center px-8 border border-[#263246]">
+   <div className="mt-5 relative aspect-video w-full max-w-[1040px] mx-auto overflow-hidden rounded-[24px] bg-[#101827] text-white flex flex-col items-center justify-center text-center px-8 border border-[#263246]">
     <span aria-hidden="true" className="flex items-center justify-center w-16 h-16 rounded-full border border-white/30 bg-[#0072FC]/80 text-2xl">▶</span>
     <h3 className="text-2xl md:text-3xl font-bold tracking-tight mt-6">SafeShare concept video</h3>
     <p className="mt-3 max-w-xl text-white/60 text-sm">An approved motion walkthrough will live here — showing the proposed interaction from posting to viewer feedback.</p>
@@ -149,7 +149,7 @@ export default function SafeShareCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-32">
+  <section className="mt-20 md:mt-24">
    <SectionHeading index="08" label="Reflection & next steps" title="What this exploration surfaced."/>
    <div className="grid md:grid-cols-3 gap-5 mt-9">
     <MiniCard num="01" title="Discoverability matters" body="Where a setting lives changes whether people notice it during a routine task."/>
