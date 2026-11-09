@@ -377,3 +377,44 @@ html::-webkit-scrollbar { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-nav-link::after { transition: none; }
 }
+
+
+/* About illustration: only the blue backdrop animates; the portrait itself never moves. */
+.about-illustration-frame {
+  isolation: isolate;
+  transition: background-color .28s ease, box-shadow .28s ease;
+}
+.about-illustration-wave {
+  pointer-events: none;
+  z-index: 0;
+  opacity: .42;
+  background:
+    radial-gradient(ellipse 75% 28% at 18% 88%, rgba(255,255,255,.24), transparent 80%),
+    radial-gradient(ellipse 60% 36% at 80% 95%, rgba(255,255,255,.16), transparent 82%);
+  background-size: 125% 125%;
+  animation: about-background-drift 6s ease-in-out infinite alternate;
+  transition: opacity .28s ease;
+}
+.about-illustration-frame img {
+  transform: none !important;
+  transition: none !important;
+}
+.about-illustration-frame:hover,
+.about-illustration-frame:focus-within {
+  background-color: #fff;
+  box-shadow: 0 12px 30px rgba(0,114,252,.08);
+}
+.about-illustration-frame:hover .about-illustration-wave,
+.about-illustration-frame:focus-within .about-illustration-wave { opacity: 0; }
+@keyframes about-background-drift {
+  from { background-position: 0% 15%; }
+  to { background-position: 100% 85%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-illustration-wave { animation: none; }
+  .about-illustration-frame,
+  .about-illustration-wave { transition: none; }
+}
+@media (hover: none) {
+  .about-illustration-frame { background-color: #0072FC; }
+}

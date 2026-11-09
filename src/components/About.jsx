@@ -34,9 +34,10 @@ export default function About({ standalone = false }) {
       {!standalone && <Link href="/about" className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">More about me ↗</Link>}
      </div>
     </div>
-    <div className="about-portrait relative isolate w-full max-w-[360px] md:max-w-[380px] mx-auto lg:ml-auto">
-     <div className="about-portrait-frame relative aspect-square overflow-hidden rounded-[18px] bg-white border border-[#E3E6EB] shadow-[0_12px_35px_rgba(15,23,42,.055)]">
-      <Image src={photoReady?"/photo/chris-headshot-large.png":"/photo/chris-headshot.png"} onError={()=>setPhotoReady(false)} alt="Chris Cruz, senior visual and product designer" fill sizes="(max-width: 768px) 85vw, 380px" className="object-contain object-center" priority={standalone}/>
+    <div className="about-portrait relative isolate w-full max-w-[330px] md:max-w-[380px] mx-auto lg:ml-auto">
+     <div className="about-illustration-frame relative aspect-square overflow-hidden rounded-full border-[3px] border-[#0072FC] bg-[#0072FC] shadow-[0_14px_40px_rgba(0,114,252,.11)]" aria-label="Illustrated portrait of Chris Cruz">
+      <span aria-hidden="true" className="about-illustration-wave absolute inset-0" />
+      <Image src={photoReady?"/photo/chris-illustrated-cutout.png":"/photo/chris-headshot-large.png"} onError={()=>setPhotoReady(false)} alt="Illustrated portrait of Chris Cruz" fill sizes="(max-width: 768px) 85vw, 380px" className="relative z-10 object-contain object-center" priority={standalone}/>
      </div>
      <p className="mt-5 text-[#111] text-base font-bold">Chris Cruz <span className="text-[#858585] font-normal text-sm">— Senior Visual & Product Designer</span></p>
     </div>
