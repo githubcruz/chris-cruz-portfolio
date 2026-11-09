@@ -12,7 +12,7 @@ export default function Hero() {
           Making complex systems feel simple, intuitive, and human.
         </p>
         <p className="text-white/50 mt-5 text-sm md:text-base max-w-[620px] leading-relaxed hero-entrance-desc">
-          I&rsquo;m a Senior Visual &amp; Product Designer with 6+ years of experience at Meta. I partner with cross-functional teams to bring product strategy to life—guiding projects from raw, early-stage exploration into polished, production-ready experiences used by millions.
+          I&rsquo;m a Senior Visual &amp; Product Designer with 6+ years of experience at Meta. I partner with cross-functional teams to turn product strategy into thoughtful digital experiences—from early exploration to polished, production-ready design.
         </p>
         <a href="#work-section" className="inline-flex items-center gap-3 text-[#0072FC] uppercase tracking-[0.24em] font-semibold text-xs mt-9 hover:text-[#005ACC] transition-colors hero-entrance-cta">
           Explore selected work <span aria-hidden="true" className="hero-cta-arrow">↓</span>
