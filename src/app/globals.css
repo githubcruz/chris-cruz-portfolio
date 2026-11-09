@@ -379,21 +379,59 @@ html::-webkit-scrollbar { display: none; }
 }
 
 
-/* About illustration: only the blue backdrop animates; the portrait itself never moves. */
+/* About illustration: visible, lightweight animation behind the still portrait.
+   The background becomes white with a blue ring on hover. */
 .about-illustration-frame {
   isolation: isolate;
-  transition: background-color .28s ease, box-shadow .28s ease;
+  transition: background-color .3s ease, box-shadow .3s ease;
 }
 .about-illustration-wave {
-  pointer-events: none;
+  position: absolute;
+  inset: 0;
   z-index: 0;
-  opacity: .42;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 1;
   background:
-    radial-gradient(ellipse 75% 28% at 18% 88%, rgba(255,255,255,.24), transparent 80%),
-    radial-gradient(ellipse 60% 36% at 80% 95%, rgba(255,255,255,.16), transparent 82%);
-  background-size: 125% 125%;
-  animation: about-background-drift 6s ease-in-out infinite alternate;
-  transition: opacity .28s ease;
+    radial-gradient(circle at 14% 20%, rgba(255,255,255,.45) 0 5px, transparent 6px),
+    radial-gradient(circle at 89% 38%, rgba(255,255,255,.34) 0 4px, transparent 5px),
+    radial-gradient(circle at 78% 11%, rgba(255,255,255,.18) 0 10px, transparent 12px);
+  transition: opacity .3s ease;
+}
+.about-illustration-wave::before,
+.about-illustration-wave::after {
+  content: "";
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  border-radius: 48%;
+  will-change: transform;
+}
+.about-illustration-wave::before {
+  width: 116%;
+  height: 58%;
+  left: -38%;
+  top: 12%;
+  background: rgba(255,255,255,.23);
+  transform: rotate(-26deg);
+  animation: about-wave-one 5.4s ease-in-out infinite alternate;
+}
+.about-illustration-wave::after {
+  width: 110%;
+  height: 51%;
+  right: -47%;
+  bottom: -5%;
+  background: rgba(255,255,255,.18);
+  transform: rotate(18deg);
+  animation: about-wave-two 6.2s ease-in-out infinite alternate;
+}
+@keyframes about-wave-one {
+  from { transform: translate(-16px, -10px) rotate(-26deg); }
+  to { transform: translate(36px, 24px) rotate(-8deg); }
+}
+@keyframes about-wave-two {
+  from { transform: translate(15px, 24px) rotate(18deg); }
+  to { transform: translate(-30px, -16px) rotate(-5deg); }
 }
 .about-illustration-frame img {
   transform: none !important;
@@ -406,15 +444,9 @@ html::-webkit-scrollbar { display: none; }
 }
 .about-illustration-frame:hover .about-illustration-wave,
 .about-illustration-frame:focus-within .about-illustration-wave { opacity: 0; }
-@keyframes about-background-drift {
-  from { background-position: 0% 15%; }
-  to { background-position: 100% 85%; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .about-illustration-wave { animation: none; }
+  .about-illustration-wave::before,
+  .about-illustration-wave::after { animation: none; will-change: auto; }
   .about-illustration-frame,
   .about-illustration-wave { transition: none; }
-}
-@media (hover: none) {
-  .about-illustration-frame { background-color: #0072FC; }
 }
