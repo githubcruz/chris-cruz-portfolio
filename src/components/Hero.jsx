@@ -5,14 +5,14 @@ export default function Hero() {
         <p className="text-[#0072FC] uppercase tracking-[0.20em] font-bold text-xs mb-6 hero-entrance-label">
           Chris Cruz · Senior Visual & Product Designer
         </p>
-        <h1 className="text-white text-[clamp(3.1rem,7.3vw,6.4rem)] tracking-[-0.075em] leading-[0.95] font-black mb-7 hero-entrance-title">
-          Designing<br />what&apos;s <span className="text-[#0072FC]">next.</span>
+        <h1 className="text-white text-[clamp(2.8rem,6.2vw,5.9rem)] tracking-[-0.075em] leading-[0.95] font-black mb-7 hero-entrance-title">
+          Designing digital<br />products that <span className="text-[#0072FC]">scale.</span>
         </h1>
         <p className="text-white/80 text-lg md:text-[1.45rem] max-w-[690px] leading-snug hero-entrance-lead">
-          Making complex ideas feel simple, intuitive, and human.
+          Making complex systems feel simple, intuitive, and human.
         </p>
         <p className="text-white/50 mt-5 text-sm md:text-base max-w-[620px] leading-relaxed hero-entrance-desc">
-          I'm a multidisciplinary designer with 6+ years at Meta, working across digital experiences, interaction design, and scalable visual systems. I connect product thinking with hands-on creative execution, from early exploration to production-ready design.
+          I&rsquo;m a Senior Visual &amp; Product Designer with 6+ years of experience at Meta. I partner with cross-functional teams to bring product strategy to life—guiding projects from raw, early-stage exploration into polished, production-ready experiences used by millions.
         </p>
         <a href="#work-section" className="inline-flex items-center gap-3 text-[#0072FC] uppercase tracking-[0.24em] font-semibold text-xs mt-9 hover:text-[#005ACC] transition-colors hero-entrance-cta">
           Explore selected work <span aria-hidden="true" className="hero-cta-arrow">↓</span>
