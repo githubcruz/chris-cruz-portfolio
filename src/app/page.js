@@ -13,8 +13,8 @@ export default function Home() {
       <div aria-hidden="true" className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_75%_18%,rgba(0, 114, 252,0.07),transparent_40%)]" />
       <Navbar />
       <Hero />
-      <About />
       <Work />
+      <About />
       <Contact />
       <Footer />
     </main>
