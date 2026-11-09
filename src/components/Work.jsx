@@ -13,7 +13,7 @@ function ProjectPreview({ project }) {
   const blueprint = project.id === "meta-blueprint";
   const bart = project.id === "bart-fare-gates";
   return (
-    <div className={`relative isolate aspect-[16/10] w-full overflow-hidden rounded-[1.35rem] border border-black/5 ${privacy ? "bg-[#e8efff]" : blueprint ? "bg-[#dfeaff]" : bart ? "bg-[#e7ecf1]" : "bg-[#111c35]"}`}>
+    <div className={`project-preview relative isolate aspect-[16/9] w-full overflow-hidden rounded-[1.35rem] border border-black/5 ${privacy ? "bg-[#e8efff]" : blueprint ? "bg-[#dfeaff]" : bart ? "bg-[#e7ecf1]" : "bg-[#111c35]"}`}>
       <div className="absolute inset-0 opacity-70" style={{background:"radial-gradient(circle at 70% 30%, rgba(0,114,252,.19), transparent 55%)"}}/>
       <div className="absolute inset-0 flex items-center justify-center p-10 sm:p-16 work-preview-art" aria-hidden="true">
         {privacy ? (
@@ -49,7 +49,7 @@ export default function Work() {
   useEffect(()=>{
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const ctx=gsap.context(()=>{
-      gsap.from(".work-item",{scrollTrigger:{trigger:ref.current,start:"top 85%"},opacity:0,y:18,duration:.38,stagger:.065,clearProps:"all"});
+      gsap.from(".work-item",{scrollTrigger:{trigger:ref.current,start:"top 85%"},opacity:0,y:18,duration:.38,stagger:.06,clearProps:"all"});
     },ref);
     return ()=>ctx.revert();
   },[]);
@@ -63,7 +63,7 @@ export default function Work() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-7 gap-y-10 md:gap-y-12">
           {FALLBACK_PROJECTS.map(project=><article className="work-item group min-w-0" key={project.id}>
-            <ProjectPreview project={project}/>
+            <Link href={`/projects/${project.id}`} aria-label={`View ${project.title} project`} className="block rounded-[1.35rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0072FC]"><ProjectPreview project={project}/></Link>
             <div className="flex gap-4 justify-between items-start mt-4">
               <div className="min-w-0"><p className="uppercase tracking-[.14em] text-[#0072FC] text-[10px] font-semibold mb-2">{project.category}</p>
                 <h3 className="text-white text-2xl md:text-3xl tracking-tight font-bold"><Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title} <span className="sr-only">— read case study</span></Link></h3></div>
