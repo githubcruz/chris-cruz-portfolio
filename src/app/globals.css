@@ -287,8 +287,9 @@ html::-webkit-scrollbar { display: none; }
   .portfolio-light .hero-entrance-cta { animation: portfolio-rise .85s .4s both; }
   .portfolio-light .hero-cta-arrow { display: inline-block; transition: transform .25s ease; }
   .portfolio-light .hero-entrance-cta:hover .hero-cta-arrow { transform: translateY(6px); }
-  .portfolio-light .work-item { transition: padding-left .3s ease, border-color .3s ease; }
-  .portfolio-light .work-item:hover { padding-left: 10px; border-color: rgba(0,114,252,.45); }
+  .portfolio-light .work-item .project-preview { transition: transform .22s cubic-bezier(.2,.7,.2,1), box-shadow .22s ease, border-color .22s ease; }
+  .portfolio-light .work-item:hover .project-preview, .portfolio-light .work-item:focus-within .project-preview { transform: translateY(-3px); box-shadow: 0 16px 38px rgba(21,44,80,.08); border-color: rgba(0,114,252,.25); }
+  .portfolio-light nav[aria-label="Main navigation"] a { transition: color .15s ease, opacity .15s ease; }
 }
 @keyframes portfolio-rise {
   from { opacity: 0; transform: translateY(20px); }
