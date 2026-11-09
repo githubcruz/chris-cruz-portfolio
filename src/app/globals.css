@@ -348,3 +348,11 @@ html::-webkit-scrollbar { display: none; }
  .about-portrait-frame:hover img {transform:scale(1.025)}
 }
 @media print {.about-portrait-frame img {transform:none !important}}
+
+/* Preserve white Resume CTA text and icon on the light About page.
+   Overrides legacy .portfolio-light .text-white and link hover styles. */
+.portfolio-light .about-resume-button,
+.portfolio-light .about-resume-button:hover,
+.portfolio-light .about-resume-button:focus-visible,
+.portfolio-light .about-resume-button svg { color: #fff !important; }
+.portfolio-light .about-resume-button svg { stroke: currentColor; }
