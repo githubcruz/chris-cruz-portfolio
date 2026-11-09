@@ -1,4 +1,5 @@
-import { SiFigma, SiHtml5, SiCss } from "react-icons/si";
+import { SiFigma, SiHtml5, SiCss, SiGithub, SiSketch, SiFramer } from "react-icons/si";
+import { LuPaintbrush } from "react-icons/lu";
 import { TbBrandAdobeAfterEffect, TbBrandAdobePremier, TbBrandAdobePhotoshop, TbBrandAdobeIllustrator } from "react-icons/tb";
 
 export const SECTION = { label: "About Me" };
@@ -12,13 +13,17 @@ export const RESUME_URL = "/resume";
 export const TECH = [
   { name: "HTML5", icon: SiHtml5 },
   { name: "CSS", icon: SiCss },
+  { name: "GitHub", icon: SiGithub },
 ];
 export const CREATIVE = [
   { name: "Figma", icon: SiFigma },
+  { name: "Framer", icon: SiFramer },
+  { name: "Sketch", icon: SiSketch },
   { name: "After Effects", icon: TbBrandAdobeAfterEffect },
   { name: "Premiere Pro", icon: TbBrandAdobePremier },
   { name: "Photoshop", icon: TbBrandAdobePhotoshop },
   { name: "Illustrator", icon: TbBrandAdobeIllustrator },
+  { name: "Procreate", icon: LuPaintbrush },
 ];
 export const EXPERIENCE = [
   { role: "Creative Designer — Meta Blueprint", period: "Current" },
