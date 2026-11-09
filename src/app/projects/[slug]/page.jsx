@@ -19,14 +19,14 @@ const studies = {
  },
  "meta-blueprint":{
   eyebrow:"02 / DESIGN SYSTEMS",heading:"Making learning experiences work at scale.",
-  summary:"Visual systems and digital learning experiences for Meta Blueprint, with reusable Figma components to support more consistent production.",
+  summary:"A 16-course Meta Blueprint e-learning redesign focused on consistent learning experiences, reusable Figma components, and faster creative production.",
   status:"Professional work",role:"Visual design · Creative direction · Systems",methods:["Figma components","Digital learning","Visual direction","Motion and assets"],
-  problem:"Producing learning experiences across courses and touchpoints requires a consistent visual language without slowing down the people creating them.",
-  strategy:"Develop reusable visual patterns and assets, collaborate across disciplines, and translate complex product topics into clear learning experiences.",
-  contribution:"Creative direction and hands-on production of course visuals, UI assets, multimedia content, and reusable Figma components.",
+  problem:"The 16-course revamp called for a consistent visual system across many lessons, formats and learning touchpoints—without redesigning common elements for each course.",
+  strategy:"Establish reusable Figma components, define a clear visual direction and coordinate production across course pages, thumbnails, media and motion assets.",
+  contribution:"I helped lead the visual design direction and built reusable Figma components alongside production-ready course graphics, instructional video and motion assets.",
   process:[["Audit","Identify recurring assets, patterns, and opportunities to reduce repetitive design work."],["Systemize","Build reusable components and visual conventions that support consistent execution."],["Produce","Create course assets and learning experiences across digital formats."],["Refine","Collaborate with stakeholders on usability, brand alignment, and production improvements."]],
   visual:["Course experience overview","Reusable Figma components","Production workflow examples","Final assets and interaction details"],
-  takeaway:"A 16-course e-learning revamp was highlighted by the recruiter. Specific before/after images and production impact will be added with supporting materials; no unverified improvement figures are stated here."
+  takeaway:"The reusable approach made course production and publishing faster and reduced brand-related inconsistencies. Specific before-and-after visuals and verified production measures will be added alongside the original work."
  },
  "bart-fare-gates":{
   eyebrow:"03 / HUMAN-CENTERED DESIGN",heading:"Designing for the moments that matter in transit.",
