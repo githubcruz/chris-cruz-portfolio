@@ -69,18 +69,9 @@ export default function SafeShareCaseStudy(){
   </section>
 
   <section className="mt-20 md:mt-24">
-   <SectionHeading index="02" label="Primary user" title="Designing for parents who value privacy." description="Alex Ruiz is a working design persona representing a parent who wants to share important moments while being more intentional about access and redistribution."/>
-   <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,.8fr)] gap-9 lg:gap-12 items-start mt-9">
-    <div className="rounded-[22px] overflow-hidden bg-[#FAFBFD] border border-[#E5EAF0]">
-     <Asset src="/safeshare/persona.webp" title="Alex Ruiz — full persona" alt="Alex Ruiz design persona containing family context, goals, frustrations, technology needs, and a representative quote." aspect="aspect-[3/5]" maxWidth="w-full max-w-[430px] mx-auto"/>
-    </div>
-    <div className="space-y-7 lg:pt-5">
-      <div><h3 className="text-lg font-bold">Goals</h3><p className="mt-2 text-[#646464] leading-relaxed">Share family milestones with trusted people, keep children's images private, and control how content travels.</p></div>
-      <div className="border-t border-[#E4E4E4] pt-6"><h3 className="text-lg font-bold">Frustrations</h3><p className="mt-2 text-[#646464] leading-relaxed">Easy screenshots, uncertain re-sharing, and privacy boundaries that relatives may not recognize.</p></div>
-      <div className="border-t border-[#E4E4E4] pt-6"><h3 className="text-lg font-bold">Needs</h3><p className="mt-2 text-[#646464] leading-relaxed">A clear protection decision while posting, understandable feedback, and controls that don't overwhelm less technical family members.</p></div>
-      <div className="rounded-2xl bg-[#EDF4FF] p-6"><p className="text-[#0072FC] text-xs uppercase font-bold tracking-widest">Design implication</p><p className="mt-3 text-[#253A56] font-medium leading-relaxed">Make protection discoverable at the moment of sharing, with clear explanations rather than security promises the technology may not support.</p></div>
-      <p className="text-[#848484] text-xs">Persona used for concept framing; not presented as a validated research participant.</p>
-    </div>
+   <SectionHeading index="02" label="Primary user" title="Designing around a parent's privacy concerns." description="Alex Ruiz is a design persona representing parents who want to share family milestones while retaining greater awareness of how their photos are handled."/>
+   <div className="mt-9">
+    <Asset src="/safeshare/persona-final.webp" title="Alex Ruiz — concise design persona" alt="Alex Ruiz design persona with a family photograph, key goals, pain points and needs, and a design opportunity: help parents protect family photos without complicating sharing." caption="Design persona created to frame user needs and product decisions; not presented as a validated interview participant." aspect="aspect-[2048/1194]" maxWidth="w-full max-w-[1060px] mx-auto"/>
    </div>
   </section>
 
