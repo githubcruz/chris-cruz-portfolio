@@ -49,23 +49,23 @@ export default function Work() {
   useEffect(()=>{
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const ctx=gsap.context(()=>{
-      gsap.from(".work-item",{scrollTrigger:{trigger:ref.current,start:"top 85%"},opacity:0,y:36,duration:.65,stagger:.12,clearProps:"all"});
+      gsap.from(".work-item",{scrollTrigger:{trigger:ref.current,start:"top 85%"},opacity:0,y:18,duration:.38,stagger:.065,clearProps:"all"});
     },ref);
     return ()=>ctx.revert();
   },[]);
   return (
-    <section id="work-section" ref={ref} className="relative px-7 md:px-20 py-24 md:py-32">
-      <div className="max-w-[1080px] mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-14 md:mb-20">
+    <section id="work-section" ref={ref} className="relative px-7 md:px-20 py-16 md:py-20">
+      <div className="max-w-[1180px] mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-10 md:mb-12">
           <div><p className="text-[#0072FC] uppercase tracking-[.4em] text-xs mb-4">{SECTION.label}</p>
-            <h2 className="text-white font-black text-4xl md:text-7xl tracking-tighter leading-none">{SECTION.heading}</h2></div>
+            <h2 className="text-white font-black text-4xl md:text-6xl tracking-tighter leading-none">{SECTION.heading}</h2></div>
           <p className="max-w-[280px] text-sm text-white/50 leading-relaxed">A selection of product thinking, design systems, real-world usability, and visual craft.</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-7 gap-y-10 md:gap-y-12">
           {FALLBACK_PROJECTS.map(project=><article className="work-item group min-w-0" key={project.id}>
             <ProjectPreview project={project}/>
-            <div className="flex gap-4 justify-between items-start mt-6">
-              <div className="min-w-0"><p className="uppercase tracking-[.18em] text-[#0072FC] text-[10px] font-semibold mb-3">{project.category}</p>
+            <div className="flex gap-4 justify-between items-start mt-4">
+              <div className="min-w-0"><p className="uppercase tracking-[.14em] text-[#0072FC] text-[10px] font-semibold mb-2">{project.category}</p>
                 <h3 className="text-white text-2xl md:text-3xl tracking-tight font-bold"><Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title} <span className="sr-only">— read case study</span></Link></h3></div>
               <Link href={`/projects/${project.id}`} aria-label={`Read ${project.title} overview`} className="text-[#0072FC] text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</Link>
             </div>
