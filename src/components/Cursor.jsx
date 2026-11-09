@@ -30,18 +30,18 @@ export default function Cursor({ light = false }) {
       mx = event.clientX;
       my = event.clientY;
       const interactive = Boolean(event.target.closest("a, button, [role='button']"));
-      targetScale = interactive ? 1.7 : 1;
+      targetScale = interactive ? 1.48 : 1;
       element.style.backgroundColor = interactive ? "transparent" : (light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)");
-      element.style.borderColor = interactive ? (light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)") : "transparent";
+      element.style.borderColor = interactive ? "#0072FC" : "transparent";
       if (grain) grain.style.opacity = light && !interactive ? "0.08" : "0";
       element.style.opacity = "1";
     };
     const leave = () => { element.style.opacity = "0"; };
     const enter = () => { element.style.opacity = "1"; };
     const frame = () => {
-      x += (mx - x) * 0.18;
-      y += (my - y) * 0.18;
-      scale += (targetScale - scale) * 0.15;
+      x += (mx - x) * 0.28;
+      y += (my - y) * 0.28;
+      scale += (targetScale - scale) * 0.25;
       element.style.transform = `translate3d(${x}px,${y}px,0) translate(-50%,-50%) scale(${scale})`;
       raf = requestAnimationFrame(frame);
     };
@@ -68,7 +68,7 @@ export default function Cursor({ light = false }) {
         left: 0,
         width: 38,
         height: 38,
-        border: "1.5px solid transparent",
+        border: "2px solid transparent",
         borderRadius: "50%",
         background: light ? "rgba(0,0,0,0.6)" : "rgba(255,255,255,0.6)",
         mixBlendMode: "normal",
@@ -76,7 +76,7 @@ export default function Cursor({ light = false }) {
         zIndex: 99999,
         opacity: 0,
         willChange: "transform",
-        transition: "background-color 180ms ease, border-color 180ms ease",
+        transition: "background-color 120ms ease, border-color 120ms ease",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
