@@ -29,7 +29,7 @@ export default function About({ standalone = false }) {
       {(standalone ? BIO : BIO.slice(0,1)).map((paragraph,i)=><p key={i}>{paragraph}</p>)}
      </div>
      <div className="mt-8 flex flex-wrap gap-3">
-      <Link href="/resume" className="inline-flex items-center gap-2 rounded-full bg-[#0072FC] text-white px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#005ACB]"><LuFileText size={17} aria-hidden="true"/> View Resume ↗</Link>
+      <Link href="/resume" className="about-resume-button inline-flex items-center gap-2 rounded-full bg-[#0072FC] text-white px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#005ACB]"><LuFileText size={17} aria-hidden="true"/> View Resume ↗</Link>
       <a href="mailto:chrissscruz@gmail.com?subject=Portfolio%20Inquiry" className="inline-flex items-center gap-2 rounded-full border border-[#0072FC] text-[#0072FC] px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#EAF3FF]"><LuMail size={17} aria-hidden="true"/> Email me ↗</a>
       {!standalone && <Link href="/about" className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">More about me ↗</Link>}
      </div>
