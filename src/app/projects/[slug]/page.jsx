@@ -117,7 +117,7 @@ export default async function ProjectPage({params}){
      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / CMS course spotlight</p>
      <h2 id="cms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Designing a complete CMS course.</h2>
      <p className="mt-3 text-lg md:text-xl text-[#3B4858] font-medium max-w-4xl">How to create and plan for engaging Instagram posts</p>
-     <p className="mt-5 text-[#616B77] text-base md:text-lg leading-[1.75] max-w-4xl">I owned the course’s visual design—from page hierarchy and component patterns to supporting instructional assets. I worked with instructional designers, legal, brand, and other stakeholders to refine design decisions and guide the experience through review and approval.</p>
+     <p className="mt-5 text-[#616B77] text-base md:text-lg leading-[1.75] max-w-4xl">I designed and built this Meta Blueprint course within a front-end CMS, using Figma and Meta’s existing design library to prepare instructional assets, then implementing the learning layout and components with HTML and CSS. I optimized asset dimensions and file sizes for efficient delivery and partnered with instructional designers, brand, legal, and cross-functional stakeholders through review and approval.</p>
      <figure className="mt-9">
       <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DFE8F6] bg-[#F7FAFF]">
        <Image src="/portfolio-media/blueprint-cms-course-spotlight.webp" alt="Selected real CMS course designs: lesson introduction and overview, modular learning components, instructional visual examples, and course recap with frequently asked questions" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
@@ -129,10 +129,10 @@ export default async function ProjectPage({params}){
      </figure>
      <div className="mt-9 grid sm:grid-cols-2 gap-x-10 gap-y-6">
       {[
-       ["Visual hierarchy","Organized a long-form course into clear content sections, learning examples, and supporting navigation."],
-       ["Component patterns","Applied and designed learning cards, expandable sections, visual examples, recaps, and FAQ patterns."],
-       ["Instructional visuals","Created course imagery, product mockups, and supporting assets to reinforce the learning material."],
-       ["Cross-functional approvals","Worked through feedback with instructional design, legal, brand, and other project stakeholders."]
+       ["Experience design","Structured long-form lessons with clear hierarchy, visual examples, interactive modules, and learning recaps."],
+       ["Hands-on CMS build","Implemented course sections and component markup in the CMS using HTML and CSS, then reviewed the rendered page."],
+       ["Asset-ready production","Prepared course graphics to required dimensions and optimized file sizes to support faster page loading."],
+       ["Brand and stakeholder reviews","Balanced Meta design-system limits with feedback from instructional design, brand, legal, and other partners."]
       ].map(([title,description],index)=>(
        <div key={title} className="border-t border-[#E2E8F0] pt-5">
         <p className="text-[#0072FC] text-xs font-bold">{String(index+1).padStart(2,"0")}</p>
@@ -140,6 +140,34 @@ export default async function ProjectPage({params}){
         <p className="mt-2 text-[#5C6570] leading-relaxed text-sm">{description}</p>
        </div>
       ))}
+     </div>
+     <div className="mt-14 border-t border-[#E4EAF2] pt-11">
+      <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Design to production</p>
+      <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#182C39]">From Figma assets to CMS implementation.</h3>
+      <p className="mt-4 max-w-4xl text-[#64707C] leading-relaxed">This is the work behind the course: preparing and organizing Figma-based instructional assets, translating approved patterns into CMS components, writing the supporting HTML/CSS, and checking the rendered result against brand and performance requirements.</p>
+      <figure className="mt-7">
+       <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[20px] border border-[#DCE7F5] bg-[#F7FAFF]">
+        <Image src="/portfolio-media/blueprint-cms-figma-to-cms.webp" alt="Design-to-production comparison: Figma instructional artboards and UI assets on one side, CMS HTML markup and rendered Meta Blueprint course page on the other" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+       </div>
+       <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[#647487] text-sm">
+        <span>Real Figma and CMS screenshots, arranged for presentation; the CMS view is cropped to focus on layout implementation.</span>
+        <a href="/portfolio-media/blueprint-cms-figma-to-cms.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] font-semibold hover:underline underline-offset-4">Inspect full-size image ↗</a>
+       </figcaption>
+      </figure>
+     </div>
+     <div className="mt-14 border-t border-[#E4EAF2] pt-11">
+      <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Responsive patterns across courses</p>
+      <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#182C39]">The learning system adapts to mobile.</h3>
+      <p className="mt-4 max-w-4xl text-[#64707C] leading-relaxed">A second CMS course—<em>Create better Instagram ads with a test-and-learn strategy</em>—shows how the mobile experience handles course introductions, reusable cards, carousel content, step-by-step lessons, accordions, and end-of-course recaps. These are examples from a different course, not mobile versions of the desktop screens above.</p>
+      <figure className="mt-7">
+       <div className="relative aspect-[2048/1512] w-full overflow-hidden rounded-[20px] border border-[#DCE7F5] bg-[#F7FAFF]">
+        <Image src="/portfolio-media/blueprint-cms-mobile-patterns.webp" alt="Six actual mobile Meta Blueprint course page excerpts featuring a course introduction, learning cards, carousel, steps, accordions, and learning recap" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+       </div>
+       <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[#647487] text-sm">
+        <span>Selected real mobile learning patterns from a separate CMS course.</span>
+        <a href="/portfolio-media/blueprint-cms-mobile-patterns.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] font-semibold hover:underline underline-offset-4">View mobile gallery full size ↗</a>
+       </figcaption>
+      </figure>
      </div>
     </section>
    )}
