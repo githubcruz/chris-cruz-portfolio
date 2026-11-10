@@ -18,15 +18,15 @@ const studies = {
   takeaway:"A concept project. Screens, tested findings, and outcomes will be included once the underlying artifacts are documented; this work is not presented as a shipped feature."
  },
  "meta-blueprint":{
-  eyebrow:"02 / DESIGN SYSTEMS",heading:"Making learning experiences work at scale.",
-  summary:"A 16-course Meta Blueprint e-learning redesign focused on consistent learning experiences, reusable Figma components, and faster creative production.",
-  status:"Professional work",role:"Visual design · Creative direction · Systems",methods:["Figma components","Digital learning","Visual direction","Motion and assets"],
-  problem:"The 16-course revamp called for a consistent visual system across many lessons, formats and learning touchpoints—without redesigning common elements for each course.",
-  strategy:"Establish reusable Figma components, define a clear visual direction and coordinate production across course pages, thumbnails, media and motion assets.",
-  contribution:"I helped lead the visual design direction and built reusable Figma components alongside production-ready course graphics, instructional video and motion assets.",
-  process:[["Audit","Identify recurring assets, patterns, and opportunities to reduce repetitive design work."],["Systemize","Build reusable components and visual conventions that support consistent execution."],["Produce","Create course assets and learning experiences across digital formats."],["Refine","Collaborate with stakeholders on usability, brand alignment, and production improvements."]],
-  visual:["Course experience overview","Reusable Figma components","Production workflow examples","Final assets and interaction details"],
-  takeaway:"The reusable approach made course production and publishing faster and reduced brand-related inconsistencies. Specific before-and-after visuals and verified production measures will be added alongside the original work."
+  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Designing across the Meta Blueprint experience.",
+  summary:"A body of visual and digital design work spanning hundreds of course updates, home and landing pages, instructional videos, and reusable Figma design systems.",
+  status:"Professional work",role:"Visual design · Creative direction · Motion",methods:["Course and web UI","Home and landing pages","Video and motion","Reusable Figma components"],
+  problem:"Meta Blueprint brings small-business learning to people through an evolving catalog of courses, web experiences, and instructional content. Frequent updates across formats called for a clear, cohesive visual language and efficient production.",
+  strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
+  contribution:"My work included updating a catalog of hundreds of courses, designing Blueprint home and landing-page experiences, creating instructional video and visual assets, and building reusable Figma components. A 16-course e-learning revamp is one focused example of that broader contribution.",
+  process:[["Course experiences","Update course visuals, learning layouts, and the digital assets needed across a large catalog."],["Web experiences","Design and refine Blueprint home and landing pages that help learners discover relevant content."],["Motion and storytelling","Produce instructional videos and visual storytelling elements across learning touchpoints."],["Design at scale","Systemize recurring UI and visual patterns in Figma to speed iteration and improve brand consistency."]],
+  visual:["Blueprint home and landing pages","Course catalog and learning experiences","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
+  takeaway:"Across these workstreams, reusable components helped make production and publishing faster with fewer brand inconsistencies. The 16-course redesign provides a concrete example; supporting visuals and verified measures will make the broader impact clear."
  },
  "bart-fare-gates":{
   eyebrow:"03 / HUMAN-CENTERED DESIGN",heading:"Designing for the moments that matter in transit.",
