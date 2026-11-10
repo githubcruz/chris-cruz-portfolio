@@ -142,7 +142,20 @@ export default async function ProjectPage({params}){
       ))}
      </div>
      <div className="mt-14 border-t border-[#E4EAF2] pt-11">
-      <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Design to production</p>
+      <div className="flex flex-wrap items-center gap-3">
+       <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Design to production</p>
+       <div className="inline-flex items-center gap-2" aria-label="Figma design to HTML and CSS implementation">
+        <svg width="15" height="23" viewBox="0 0 38 57" aria-hidden="true" focusable="false">
+         <path d="M0 9.5C0 4.253 4.253 0 9.5 0H19V19H9.5C4.253 19 0 14.747 0 9.5Z" fill="#F24E1E"/>
+         <path d="M19 0H28.5C33.747 0 38 4.253 38 9.5S33.747 19 28.5 19H19V0Z" fill="#FF7262"/>
+         <path d="M0 28.5C0 23.253 4.253 19 9.5 19H19V38H9.5C4.253 38 0 33.747 0 28.5Z" fill="#A259FF"/>
+         <circle cx="28.5" cy="28.5" r="9.5" fill="#1ABCFE"/>
+         <path d="M0 47.5C0 42.253 4.253 38 9.5 38H19V47.5C19 52.747 14.747 57 9.5 57S0 52.747 0 47.5Z" fill="#0ACF83"/>
+        </svg>
+        <span className="text-[#96A2AF] text-base" aria-hidden="true">→</span>
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#0072FC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg>
+       </div>
+      </div>
       <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#182C39]">From Figma assets to CMS implementation.</h3>
       <p className="mt-4 max-w-4xl text-[#64707C] leading-relaxed">This is the work behind the course: preparing and organizing Figma-based instructional assets, translating approved patterns into CMS components, writing the supporting HTML/CSS, and checking the rendered result against brand and performance requirements.</p>
       <figure className="mt-7">
