@@ -113,9 +113,12 @@ export default function SafeShareCaseStudy(){
 
   <section className="mt-20 md:mt-24">
    <SectionHeading index="06" label="Final UI explorations" title="From selecting a photo to seeing feedback." description="Five screens illustrate the proposed experience, from the author’s decision to the viewer-facing protection state and activity concepts."/>
-   <div className="mt-9">
-    <Asset src="/safeshare/final-uis.webp" title="Five final SafeShare UI concept screens" alt="Five mobile concept screens: selecting family photos, adding screenshot protection during posting, a protected Instagram-style feed, a viewer warning dialog, and a proposed activity screen." aspect="aspect-[2048/727]" maxWidth="w-full max-w-[1200px] mx-auto" caption="Final UI concept compositions, not production screenshots. Capture counts, attempted screenshot tracking, and related notifications are illustrative, not implemented or validated product behavior."/>
+   <div className="mt-9 overflow-x-auto rounded-[20px]" role="region" aria-label="Five SafeShare mobile interface concepts; scroll sideways on small screens" tabIndex={0}>
+    <div className="min-w-[1024px] md:min-w-0">
+     <Asset src="/safeshare/final-uis.webp" title="Five final SafeShare UI concept screens" alt="Five mobile concept screens: selecting family photos, adding screenshot protection during posting, a protected Instagram-style feed, a viewer warning dialog, and a proposed activity screen." aspect="aspect-[2048/727]" maxWidth="w-full max-w-[1200px] mx-auto" caption="Final UI concept compositions, not production screenshots. Capture counts, attempted screenshot tracking, and related notifications are illustrative, not implemented or validated product behavior."/>
+    </div>
    </div>
+   <p className="mt-2 text-xs text-[#617287] md:hidden">Swipe sideways to explore all five UI concepts.</p>
    <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[#53667E] text-xs md:text-sm">
     {["01 · Choose photo","02 · Set protection","03 · Protected view","04 · Viewer guidance","05 · Activity concept"].map(step=><span key={step} className="whitespace-nowrap">{step}</span>)}
    </div>
