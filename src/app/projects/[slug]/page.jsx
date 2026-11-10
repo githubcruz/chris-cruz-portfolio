@@ -26,7 +26,7 @@ const studies = {
   strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
   contribution:"My work included updating a catalog of hundreds of courses, designing Blueprint home and landing-page experiences, creating instructional video and visual assets, and building reusable Figma components. A 16-course e-learning revamp is one focused example of that broader contribution.",
   process:[["Course experiences","Update course visuals, learning layouts, and the digital assets needed across a large catalog."],["Web experiences","Design and refine Blueprint home and landing pages that help learners discover relevant content."],["Motion and storytelling","Produce instructional videos and visual storytelling elements across learning touchpoints."],["Design at scale","Systemize recurring UI and visual patterns in Figma to speed iteration and improve brand consistency."]],
-  visual:["Blueprint home and landing pages","Course catalog and learning experiences","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
+  visual:["LMS course design and learning experiences","Blueprint home and landing pages","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
   takeaway:"Across these workstreams, reusable components helped make production and publishing faster with fewer brand inconsistencies. The 16-course redesign provides a concrete example; supporting visuals and verified measures will make the broader impact clear."
  },
  "bart-fare-gates":{
@@ -112,12 +112,43 @@ export default async function ProjectPage({params}){
     <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">From question to direction.</h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">{data.process.map(([heading,body],k)=><div key={heading} className="border border-[#DEDEDE] rounded-2xl p-7 min-h-[245px] transition-colors hover:border-[#0072FC]/50"><p className="text-[#0072FC] text-xs font-bold">{String(k+1).padStart(2,"0")}</p><h3 className="text-[#171717] font-bold text-xl mt-9">{heading}</h3><p className="text-[#676767] leading-relaxed text-sm mt-3">{body}</p></div>)}</div>
    </section>
+   {slug === "meta-blueprint" && (
+    <section className="mt-20 md:mt-24" aria-labelledby="cms-course-heading">
+     <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / CMS course spotlight</p>
+     <h2 id="cms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Designing a complete CMS course.</h2>
+     <p className="mt-3 text-lg md:text-xl text-[#3B4858] font-medium max-w-4xl">How to create and plan for engaging Instagram posts</p>
+     <p className="mt-5 text-[#616B77] text-base md:text-lg leading-[1.75] max-w-4xl">I owned the course’s visual design—from page hierarchy and component patterns to supporting instructional assets. I worked with instructional designers, legal, brand, and other stakeholders to refine design decisions and guide the experience through review and approval.</p>
+     <figure className="mt-9">
+      <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DFE8F6] bg-[#F7FAFF]">
+       <Image src="/portfolio-media/blueprint-cms-course-spotlight.webp" alt="Selected real CMS course designs: lesson introduction and overview, modular learning components, instructional visual examples, and course recap with frequently asked questions" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+      </div>
+      <figcaption className="mt-3 flex flex-wrap justify-between gap-2 text-[#657487] text-sm">
+       <span>Real course screens arranged to show the system, from introduction through learning modules to recap.</span>
+       <a href="/portfolio-media/blueprint-cms-full-course.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] font-semibold hover:underline underline-offset-4">Explore long-form course screenshots ↗</a>
+      </figcaption>
+     </figure>
+     <div className="mt-9 grid sm:grid-cols-2 gap-x-10 gap-y-6">
+      {[
+       ["Visual hierarchy","Organized a long-form course into clear content sections, learning examples, and supporting navigation."],
+       ["Component patterns","Applied and designed learning cards, expandable sections, visual examples, recaps, and FAQ patterns."],
+       ["Instructional visuals","Created course imagery, product mockups, and supporting assets to reinforce the learning material."],
+       ["Cross-functional approvals","Worked through feedback with instructional design, legal, brand, and other project stakeholders."]
+      ].map(([title,description],index)=>(
+       <div key={title} className="border-t border-[#E2E8F0] pt-5">
+        <p className="text-[#0072FC] text-xs font-bold">{String(index+1).padStart(2,"0")}</p>
+        <h3 className="mt-2 font-semibold text-[#1C2936] text-base md:text-lg">{title}</h3>
+        <p className="mt-2 text-[#5C6570] leading-relaxed text-sm">{description}</p>
+       </div>
+      ))}
+     </div>
+    </section>
+   )}
    <section className="mt-20 md:mt-24">
-    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / Project visuals</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Behind the work.</h2></div><p className="max-w-sm text-[#777] text-sm">Original design artifacts will replace these clearly labeled placeholder panels.</p></div>
-    <div className="grid md:grid-cols-2 gap-5 mt-10">{(slug === "meta-blueprint" ? data.visual.slice(1) : data.visual).map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
+    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "04 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: LMS courses, home and landing pages, instructional video, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
+    <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
    </section>
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">04 / Role and reflection</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
    <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
