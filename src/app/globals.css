@@ -379,59 +379,21 @@ html::-webkit-scrollbar { display: none; }
 }
 
 
-/* About illustration: visible, lightweight animation behind the still portrait.
-   The background becomes white with a blue ring on hover. */
+/* About portrait: white background with moving blue-line GIF behind static illustration.
+   On hover, the GIF fades out; the blue outline remains. */
 .about-illustration-frame {
   isolation: isolate;
-  transition: background-color .3s ease, box-shadow .3s ease;
+  background: #fff;
+  transition: box-shadow .25s ease;
 }
 .about-illustration-wave {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
   opacity: 1;
-  background:
-    radial-gradient(circle at 14% 20%, rgba(255,255,255,.45) 0 5px, transparent 6px),
-    radial-gradient(circle at 89% 38%, rgba(255,255,255,.34) 0 4px, transparent 5px),
-    radial-gradient(circle at 78% 11%, rgba(255,255,255,.18) 0 10px, transparent 12px);
-  transition: opacity .3s ease;
-}
-.about-illustration-wave::before,
-.about-illustration-wave::after {
-  content: "";
-  position: absolute;
-  display: block;
-  pointer-events: none;
-  border-radius: 48%;
-  will-change: transform;
-}
-.about-illustration-wave::before {
-  width: 116%;
-  height: 58%;
-  left: -38%;
-  top: 12%;
-  background: rgba(255,255,255,.23);
-  transform: rotate(-26deg);
-  animation: about-wave-one 5.4s ease-in-out infinite alternate;
-}
-.about-illustration-wave::after {
-  width: 110%;
-  height: 51%;
-  right: -47%;
-  bottom: -5%;
-  background: rgba(255,255,255,.18);
-  transform: rotate(18deg);
-  animation: about-wave-two 6.2s ease-in-out infinite alternate;
-}
-@keyframes about-wave-one {
-  from { transform: translate(-16px, -10px) rotate(-26deg); }
-  to { transform: translate(36px, 24px) rotate(-8deg); }
-}
-@keyframes about-wave-two {
-  from { transform: translate(15px, 24px) rotate(18deg); }
-  to { transform: translate(-30px, -16px) rotate(-5deg); }
+  background: #fff url("/portfolio-media/chris-blue-line-background.gif") center / cover no-repeat;
+  transition: opacity .32s ease;
 }
 .about-illustration-frame img {
   transform: none !important;
@@ -439,14 +401,14 @@ html::-webkit-scrollbar { display: none; }
 }
 .about-illustration-frame:hover,
 .about-illustration-frame:focus-within {
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 12px 30px rgba(0,114,252,.08);
 }
 .about-illustration-frame:hover .about-illustration-wave,
-.about-illustration-frame:focus-within .about-illustration-wave { opacity: 0; }
+.about-illustration-frame:focus-within .about-illustration-wave {
+  opacity: 0;
+}
 @media (prefers-reduced-motion: reduce) {
-  .about-illustration-wave::before,
-  .about-illustration-wave::after { animation: none; will-change: auto; }
-  .about-illustration-frame,
-  .about-illustration-wave { transition: none; }
+  .about-illustration-wave { background-image: none; transition: none; }
+  .about-illustration-frame { transition: none; }
 }
