@@ -37,7 +37,7 @@ function ProjectPreview({ project }) {
           <div className="relative w-[68%] max-w-[300px] aspect-square"><div className="absolute inset-0 border-[24px] border-[#0072FC] rounded-full opacity-80"/><div className="absolute inset-[18%] rounded-full border-[10px] border-white/80"/><div className="absolute inset-[35%] rounded-full bg-white"/><div className="absolute -right-4 top-1/2 w-20 h-5 bg-[#729bff] rotate-[-30deg] rounded-full"/></div>
         )}
       </div>
-      {privacy && hasOriginalImage && <div className="absolute inset-0 z-[1] bg-[#F6F9FF]"><Image src="/safeshare/hero-final.webp" alt="Screenshot Protection SafeShare mobile interface concepts" fill sizes="(max-width: 768px) 95vw, 600px" className="object-contain" unoptimized onError={()=>setHasOriginalImage(false)}/></div>}
+      {privacy && hasOriginalImage && <div className="absolute inset-0 z-[1] bg-[#F6F9FF]"><Image src="/portfolio-media/safeshare-hero-final.webp" alt="Screenshot Protection SafeShare mobile interface concepts" fill sizes="(max-width: 768px) 95vw, 600px" className="object-contain" unoptimized onError={()=>setHasOriginalImage(false)}/></div>}
       <span className={`absolute z-[2] bottom-4 left-5 text-[9px] font-bold tracking-[.18em] uppercase ${project.id === "visual-motion" ? "text-white/70" : "text-[#40516c]"}`}>{privacy && hasOriginalImage ? "SafeShare UI exploration · Concept" : "Conceptual preview · Replace with project imagery"}</span>
       <span className={`absolute z-[2] top-5 right-5 text-xs font-bold ${project.id === "visual-motion" ? "text-white/80" : "text-[#0072FC]"}`}>{project.num} / 04</span>
     </div>
