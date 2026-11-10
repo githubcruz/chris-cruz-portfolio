@@ -19,8 +19,8 @@ const studies = {
   takeaway:"A concept project. Screens, tested findings, and outcomes will be included once the underlying artifacts are documented; this work is not presented as a shipped feature."
  },
  "meta-blueprint":{
-  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Designing across the Meta Blueprint experience.",
-  summary:"A body of visual and digital design work spanning hundreds of course updates, home and landing pages, instructional videos, and reusable Figma design systems.",
+  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Visual design across the full learning experience.",
+  summary:"From updating hundreds of courses to designing home and landing pages, instructional videos, and reusable Figma components, my work helped keep Meta Blueprint consistent across formats and easier to produce at scale.",
   status:"Professional work",role:"Visual design · Creative direction · Motion",methods:["Course and web UI","Home and landing pages","Video and motion","Reusable Figma components"],
   problem:"Meta Blueprint brings small-business learning to people through an evolving catalog of courses, web experiences, and instructional content. Frequent updates across formats called for a clear, cohesive visual language and efficient production.",
   strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
@@ -75,11 +75,11 @@ export default async function ProjectPage({params}){
   <Cursor light/><Navbar/>
   <article className="mx-auto max-w-[1340px] px-7 md:px-20 pt-32 md:pt-40 pb-24">
    <Link href="/projects" className="inline-flex text-[#0072FC] text-xs font-semibold uppercase tracking-[.22em] hover:underline underline-offset-4">← All projects</Link>
-   <header className="mt-14 max-w-6xl">
+   <header className={slug === "meta-blueprint" ? "mt-11 max-w-6xl" : "mt-14 max-w-6xl"}>
     <p className="uppercase text-[#0072FC] text-xs tracking-[.3em] font-bold">{data.eyebrow}</p>
-    <h1 className="font-black tracking-[-.065em] leading-[.97] text-[clamp(2.8rem,6.8vw,6.7rem)] mt-5 max-w-5xl">{project.title}<span className="text-[#0072FC]">.</span></h1>
-    <p className="mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.35rem,2.75vw,2.35rem)] max-w-4xl">{data.heading}</p>
-    <p className="mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl">{data.summary}</p>
+    <h1 className={slug === "meta-blueprint" ? "font-black tracking-[-.065em] leading-[1.02] text-[clamp(2.6rem,5.4vw,5.8rem)] mt-5 max-w-5xl" : "font-black tracking-[-.065em] leading-[.97] text-[clamp(2.8rem,6.8vw,6.7rem)] mt-5 max-w-5xl"}>{slug === "meta-blueprint" ? <>Meta <span className="text-[#0072FC]">Blueprint.</span></> : <>{project.title}<span className="text-[#0072FC]">.</span></>}</h1>
+    <p className={slug === "meta-blueprint" ? "mt-6 text-[#262626] font-medium leading-tight text-[clamp(1.3rem,2.15vw,1.85rem)] max-w-4xl" : "mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.35rem,2.75vw,2.35rem)] max-w-4xl"}>{data.heading}</p>
+    <p className={slug === "meta-blueprint" ? "mt-4 text-[#636363] leading-[1.65] text-base md:text-lg max-w-3xl" : "mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl"}>{data.summary}</p>
    </header>
    <div className="mt-14 border-y border-[#DEDEDE] py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
     {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage","Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
