@@ -18,10 +18,10 @@ export const FALLBACK_PROJECTS = [
   {
     id: "meta-blueprint",
     num: "02",
-    category: "Design Systems · Digital Experiences",
+    category: "Digital Learning · Web Design · Motion",
     title: "Meta Blueprint",
-    description: "Visual design for a 16-course Meta Blueprint learning revamp, with reusable Figma components, motion and scalable course assets.",
-    tech: "Figma · Design Systems · UI/UX",
+    description: "Designing across hundreds of course updates, Blueprint home and landing pages, instructional videos, and reusable visual systems.",
+    tech: "Visual Design · Digital Experiences · Figma · Motion",
     link: null,
     review: null,
   },

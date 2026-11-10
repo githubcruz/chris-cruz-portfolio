@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import SafeShareCaseStudy from "@/components/SafeShareCaseStudy";
@@ -18,15 +19,15 @@ const studies = {
   takeaway:"A concept project. Screens, tested findings, and outcomes will be included once the underlying artifacts are documented; this work is not presented as a shipped feature."
  },
  "meta-blueprint":{
-  eyebrow:"02 / DESIGN SYSTEMS",heading:"Making learning experiences work at scale.",
-  summary:"A 16-course Meta Blueprint e-learning redesign focused on consistent learning experiences, reusable Figma components, and faster creative production.",
-  status:"Professional work",role:"Visual design · Creative direction · Systems",methods:["Figma components","Digital learning","Visual direction","Motion and assets"],
-  problem:"The 16-course revamp called for a consistent visual system across many lessons, formats and learning touchpoints—without redesigning common elements for each course.",
-  strategy:"Establish reusable Figma components, define a clear visual direction and coordinate production across course pages, thumbnails, media and motion assets.",
-  contribution:"I helped lead the visual design direction and built reusable Figma components alongside production-ready course graphics, instructional video and motion assets.",
-  process:[["Audit","Identify recurring assets, patterns, and opportunities to reduce repetitive design work."],["Systemize","Build reusable components and visual conventions that support consistent execution."],["Produce","Create course assets and learning experiences across digital formats."],["Refine","Collaborate with stakeholders on usability, brand alignment, and production improvements."]],
-  visual:["Course experience overview","Reusable Figma components","Production workflow examples","Final assets and interaction details"],
-  takeaway:"The reusable approach made course production and publishing faster and reduced brand-related inconsistencies. Specific before-and-after visuals and verified production measures will be added alongside the original work."
+  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Designing across the Meta Blueprint experience.",
+  summary:"A body of visual and digital design work spanning hundreds of course updates, home and landing pages, instructional videos, and reusable Figma design systems.",
+  status:"Professional work",role:"Visual design · Creative direction · Motion",methods:["Course and web UI","Home and landing pages","Video and motion","Reusable Figma components"],
+  problem:"Meta Blueprint brings small-business learning to people through an evolving catalog of courses, web experiences, and instructional content. Frequent updates across formats called for a clear, cohesive visual language and efficient production.",
+  strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
+  contribution:"My work included updating a catalog of hundreds of courses, designing Blueprint home and landing-page experiences, creating instructional video and visual assets, and building reusable Figma components. A 16-course e-learning revamp is one focused example of that broader contribution.",
+  process:[["Course experiences","Update course visuals, learning layouts, and the digital assets needed across a large catalog."],["Web experiences","Design and refine Blueprint home and landing pages that help learners discover relevant content."],["Motion and storytelling","Produce instructional videos and visual storytelling elements across learning touchpoints."],["Design at scale","Systemize recurring UI and visual patterns in Figma to speed iteration and improve brand consistency."]],
+  visual:["Blueprint home and landing pages","Course catalog and learning experiences","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
+  takeaway:"Across these workstreams, reusable components helped make production and publishing faster with fewer brand inconsistencies. The 16-course redesign provides a concrete example; supporting visuals and verified measures will make the broader impact clear."
  },
  "bart-fare-gates":{
   eyebrow:"03 / HUMAN-CENTERED DESIGN",heading:"Designing for the moments that matter in transit.",
@@ -83,6 +84,14 @@ export default async function ProjectPage({params}){
    <div className="mt-14 border-y border-[#DEDEDE] py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
     {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage","Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
    </div>
+   {slug === "meta-blueprint" ? (
+    <figure className="mt-16 md:mt-24">
+     <div className="relative w-full aspect-video overflow-hidden rounded-[28px] border border-[#E9EEF6] bg-white">
+      <Image src="/portfolio-media/meta-blueprint-featured.webp" alt="Selected Meta Blueprint design work, including digital course and social business learning visuals" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-cover" unoptimized priority/>
+     </div>
+     <figcaption className="mt-3 text-[#707070] text-xs">A selection of visuals from work across Meta Blueprint. The full collection and detailed workstreams follow below.</figcaption>
+    </figure>
+   ) : (
    <div className="mt-16 md:mt-24 rounded-[28px] bg-[#0072FC] relative min-h-[270px] md:min-h-[365px] overflow-hidden p-8 md:p-16 flex flex-col justify-end">
     <div aria-hidden="true" className="absolute inset-0 opacity-70" style={{background:"radial-gradient(circle at 74% 30%, rgba(255,255,255,.28),transparent 45%)"}}/>
     <div aria-hidden="true" className="absolute w-[70%] aspect-square rounded-full border-[35px] md:border-[65px] border-white/10 -right-[20%] -top-[35%]"/>
@@ -90,6 +99,7 @@ export default async function ProjectPage({params}){
     <h2 className="relative text-white font-black leading-[1] tracking-[-.05em] text-[clamp(2.1rem,4.8vw,4.9rem)] max-w-[920px]">{data.heading}</h2>
     <p className="relative text-white/70 text-xs mt-8">Graphic title treatment · Not a project screenshot</p>
    </div>
+   )}
    <section className="grid lg:grid-cols-[.75fr_1.25fr] gap-7 lg:gap-20 mt-20 md:mt-24">
     <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">01 / Context</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The challenge.</h2></div>
     <div className="text-lg md:text-xl text-[#535353] leading-[1.7]"><p>{data.problem}</p><p className="mt-7">{data.strategy}</p></div>
@@ -101,7 +111,13 @@ export default async function ProjectPage({params}){
    </section>
    <section className="mt-20 md:mt-24">
     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / Project visuals</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Behind the work.</h2></div><p className="max-w-sm text-[#777] text-sm">Original design artifacts will replace these clearly labeled placeholder panels.</p></div>
-    <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
+    {slug === "meta-blueprint" && <figure className="mt-10">
+      <div className="relative aspect-video w-full overflow-hidden rounded-[22px] border border-[#EBEFF5] bg-white">
+       <Image src="/portfolio-media/meta-blueprint-gallery.webp" alt="Gallery of 21 Meta Blueprint visual design examples spanning Meta tools, digital learning and business-education content" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+      </div>
+      <figcaption className="mt-3 text-sm text-[#666]">A broader selection of visual assets from the Blueprint learning ecosystem. Open the <a href="/portfolio-media/meta-blueprint-gallery.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] hover:underline underline-offset-4">full-size gallery ↗</a> to inspect individual pieces.</figcaption>
+     </figure>}
+    <div className="grid md:grid-cols-2 gap-5 mt-10">{(slug === "meta-blueprint" ? data.visual.slice(1) : data.visual).map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
    </section>
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
     <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">04 / Role and reflection</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
