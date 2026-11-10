@@ -392,7 +392,7 @@ html::-webkit-scrollbar { display: none; }
   z-index: 0;
   pointer-events: none;
   opacity: 1;
-  background: #fff url("/photo/chris-blue-line-background.gif") center / cover no-repeat;
+  background: #fff url("/portfolio-media/chris-blue-line-background.gif") center / cover no-repeat;
   transition: opacity .32s ease;
 }
 .about-illustration-frame img {
