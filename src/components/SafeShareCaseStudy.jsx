@@ -51,7 +51,7 @@ export default function SafeShareCaseStudy(){
   </div>
 
   <section className="mt-14 md:mt-20">
-    <Asset src="/safeshare/hero.webp" title="Screenshot Protection — proposed posting controls" alt="Two mobile new-post screens showing a screenshot protection switch and an opt-in bottom sheet." caption="UI concept: visible protection control and an optional explanation sheet. Proposed interaction, not a launched feature." aspect="aspect-[8/5]"/>
+    <Asset src="/safeshare/hero-final.webp" title="Screenshot Protection — final concept hero" alt="Two overlapping mobile new-post concept screens: an inline screenshot-protection toggle in front and a confirmation sheet behind, against a soft pastel gradient." caption="UI concept: a visible screenshot-protection toggle and supporting explanation sheet, not a launched feature." aspect="aspect-[8/5]"/>
   </section>
 
   <section className="mt-20 md:mt-24">
