@@ -43,7 +43,7 @@ export default function SafeShareCaseStudy(){
    <Eyebrow>SafeShare / Meta concept / UI design + motion</Eyebrow>
    <h1 className="mt-5 text-[clamp(2.85rem,6.6vw,6.4rem)] font-black tracking-[-.075em] leading-[.96]">Screenshot<br/><span className="text-[#0072FC]">Protection.</span></h1>
    <p className="mt-7 max-w-4xl text-[clamp(1.35rem,2.65vw,2.25rem)] leading-[1.15] tracking-[-.03em] font-medium">Helping parents share family moments with greater confidence.</p>
-   <p className="mt-6 max-w-3xl text-[#636363] text-lg leading-relaxed">SafeShare explored how a familiar mobile posting flow could introduce clearer image-protection controls and explain the experience to people viewing protected content. I designed UI concepts and produced a concept video to help communicate the idea.</p>
+   <p className="mt-6 max-w-3xl text-[#636363] text-lg leading-relaxed">SafeShare explores clearer image-protection controls within familiar mobile sharing flows. I designed the UI concepts and a video presentation to communicate the idea. The broader question is how digital products can better safeguard children’s images as content becomes easier to copy, share, and alter with AI.</p>
   </header>
 
   <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 border-y border-[#DDD] py-7">
@@ -55,7 +55,13 @@ export default function SafeShareCaseStudy(){
   </section>
 
   <section className="mt-20 md:mt-24">
-   <SectionHeading index="01" label="The challenge" title="Sharing a photo shouldn't mean losing control." description="Parents may want to share milestone photos with trusted family, but worry those images could be saved, captured, or redistributed beyond their intended audience."/>
+   <SectionHeading index="01" label="The challenge" title="Sharing a photo shouldn't mean losing control." description="Parents want to share family milestones without losing control of where their children's images go or how they are used."/>
+   <div className="mt-8 border-l-[3px] border-[#0072FC] pl-5 md:pl-7 max-w-[930px]">
+    <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.17em]">Why child safety matters beyond one app</p>
+    <h3 className="mt-3 text-[clamp(1.35rem,2.6vw,1.85rem)] leading-snug tracking-tight font-bold text-[#172B37]">A child's photo can travel far beyond its intended audience.</h3>
+    <p className="mt-3 text-[#536273] leading-relaxed">Once an image is shared, it can be saved, reposted, or altered with AI tools—sometimes without the family's knowledge or consent. That makes protecting children's imagery a challenge far bigger than any single social platform.</p>
+    <p className="mt-3 text-[#536273] leading-relaxed">Although these concepts use familiar social-posting interfaces, the larger design opportunity is cross-platform: clearer consent, safer sharing choices, and more transparent responses to misuse. No single setting can guarantee that an image will never be copied or manipulated.</p>
+   </div>
    <div className="mt-9">
     <Asset src="/safeshare/problem-final.webp" title="SafeShare: problem and proposed feedback" alt="Two family-photo states comparing ordinary sharing with an illustrative privacy warning and attempted screenshot notification." caption="Conceptual warning and notification copy. Capture prevention and attempted-screenshot alerts are illustrative; implementation and platform capabilities would require validation." aspect="aspect-[2048/853]"/>
    </div>
@@ -138,7 +144,7 @@ export default function SafeShareCaseStudy(){
    <div className="grid md:grid-cols-3 gap-5 mt-9">
     <MiniCard num="01" title="Make the choice visible" body="People should encounter privacy controls at the moment the decision matters."/>
     <MiniCard num="02" title="Avoid false reassurance" body="Clear limits matter as much as confident messaging; no interface alone can promise universal capture prevention."/>
-    <MiniCard num="03" title="Test before shipping" body="The next step would be to validate comprehension, interaction costs, and technical feasibility with the right teams."/>
+    <MiniCard num="03" title="Think beyond one platform" body="Children's image safety also requires broader approaches to consent, AI-enabled reuse, and abuse reporting—not just an in-app screenshot toggle."/>
    </div>
    <p className="mt-7 text-[#6D6D6D] text-sm">Status: explorations only. These visuals do not represent a released Meta feature, validated technical capability, or measured outcome.</p>
   </section>
