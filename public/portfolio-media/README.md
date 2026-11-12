@@ -24,3 +24,12 @@ After creating PR for branch `blueprint-cms-mobile-and-production-evidence`, upl
 - `blueprint-cms-mobile-patterns.webp` (2048 × 1512) — six mobile learning patterns from a **different course**, **Create better Instagram ads with a test-and-learn strategy**. Do not describe this as the mobile version of the desktop course above.
 
 The images are presentations of the owner's supplied screenshots, not new product designs or live CMS code. Review employer/client permissions before sharing; never include unpublished sensitive IDs, private metrics or credentials. The CMS description credits the owner with course visual design, HTML/CSS implementation, assets, production optimization, and cross-functional approvals without claiming unsupported performance results.
+
+## Meta Blueprint LMS / Evolve spotlight (2026-11)
+
+Before merging the PR for branch `meta-blueprint-evolve-lms-case-study`, upload these two owner-approved image assets from the chat ZIP into this directory, on this branch:
+
+- `blueprint-lms-course-overview.webp` — 2048 × 1280; course overview based on the actual published `Advertising solutions and AI` learning path.
+- `blueprint-lms-three-lessons.webp` — 2048 × 1280; a three-column presentation of original lesson screenshots (AI-based advertising, campaign strategies, and machine learning). The narrow source screenshots are low-resolution, so these are contextual previews rather than full-resolution interface documentation.
+
+The LMS section notes **Evolve** as an authoring tool and provides a link to the published Meta Blueprint course. It also uses a typographic `evolve` label, *not* a claimed official logo; an approved Evolve logo asset can be substituted later. The Meta headline uses an inline Meta symbol from Simple Icons. The designer will add mobile screenshots and Figma/Evolve design-production screens for deeper process documentation. Do not claim unsupported course-level results or individual design ownership before verified with the designer.
