@@ -26,7 +26,7 @@ const studies = {
   strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
   contribution:"My work included updating a catalog of hundreds of courses, designing Blueprint home and landing-page experiences, creating instructional video and visual assets, and building reusable Figma components. A 16-course e-learning revamp is one focused example of that broader contribution.",
   process:[["Course experiences","Update course visuals, learning layouts, and the digital assets needed across a large catalog."],["Web experiences","Design and refine Blueprint home and landing pages that help learners discover relevant content."],["Motion and storytelling","Produce instructional videos and visual storytelling elements across learning touchpoints."],["Design at scale","Systemize recurring UI and visual patterns in Figma to speed iteration and improve brand consistency."]],
-  visual:["LMS course design and learning experiences","Blueprint home and landing pages","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
+  visual:["Blueprint home and landing pages","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
   takeaway:"Across these workstreams, reusable components helped make production and publishing faster with fewer brand inconsistencies. The 16-course redesign provides a concrete example; supporting visuals and verified measures will make the broader impact clear."
  },
  "bart-fare-gates":{
@@ -76,7 +76,15 @@ export default async function ProjectPage({params}){
   <article className="mx-auto max-w-[1340px] px-7 md:px-20 pt-32 md:pt-40 pb-24">
    <Link href="/projects" className="inline-flex text-[#0072FC] text-xs font-semibold uppercase tracking-[.22em] hover:underline underline-offset-4">← All projects</Link>
    <header className={slug === "meta-blueprint" ? "mt-11 max-w-6xl" : "mt-14 max-w-6xl"}>
-    <p className="uppercase text-[#0072FC] text-xs tracking-[.3em] font-bold">{data.eyebrow}</p>
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+     {slug === "meta-blueprint" && (
+      <span className="inline-flex items-center gap-1.5 text-[#172B39] font-semibold text-sm" aria-label="Meta">
+       <svg width="25" height="25" viewBox="0 0 24 24" fill="#0072FC" aria-hidden="true" focusable="false"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg>
+       <span>Meta</span>
+      </span>
+     )}
+     <p className="uppercase text-[#0072FC] text-xs tracking-[.3em] font-bold">{data.eyebrow}</p>
+    </div>
     <h1 className={slug === "meta-blueprint" ? "font-black tracking-[-.065em] leading-[1.02] text-[clamp(2.6rem,5.4vw,5.8rem)] mt-5 max-w-5xl" : "font-black tracking-[-.065em] leading-[.97] text-[clamp(2.8rem,6.8vw,6.7rem)] mt-5 max-w-5xl"}>{slug === "meta-blueprint" ? <>Meta <span className="text-[#0072FC]">Blueprint.</span></> : <>{project.title}<span className="text-[#0072FC]">.</span></>}</h1>
     <p className={slug === "meta-blueprint" ? "mt-6 text-[#262626] font-medium leading-tight text-[clamp(1.3rem,2.15vw,1.85rem)] max-w-4xl" : "mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.35rem,2.75vw,2.35rem)] max-w-4xl"}>{data.heading}</p>
     <p className={slug === "meta-blueprint" ? "mt-4 text-[#636363] leading-[1.65] text-base md:text-lg max-w-3xl" : "mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl"}>{data.summary}</p>
@@ -184,12 +192,57 @@ export default async function ProjectPage({params}){
      </div>
     </section>
    )}
+   {slug === "meta-blueprint" && (
+    <section className="mt-20 md:mt-24" aria-labelledby="lms-course-heading">
+     <div className="flex flex-wrap items-center gap-3">
+      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">04 / LMS learning experiences</p>
+      <span className="inline-flex items-center gap-2 rounded-full border border-[#D8E4F3] bg-[#F4F8FE] px-3 py-1 text-xs font-semibold text-[#2F556E]" aria-label="Evolve Authoring">
+       <span className="font-black tracking-[-.05em] text-[#0072FC]">evolve</span>
+       <span className="text-[#A3B1BF]" aria-hidden="true">·</span>
+       Authoring
+      </span>
+     </div>
+     <h2 id="lms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Learning experiences that connect every lesson.</h2>
+     <p className="mt-4 text-xl md:text-2xl font-semibold tracking-tight text-[#1F3444]">Advertising solutions and AI</p>
+     <p className="mt-4 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.7]">This Meta Blueprint learning path brings together three lessons: AI-based advertising solutions, campaign strategies, and machine learning in ad delivery. It provides a useful example of the structured learning, reusable interactions, and visual storytelling involved in LMS course design.</p>
+     <div className="mt-5 flex flex-wrap items-center gap-3">
+      <span className="text-sm text-[#647287]">35 min · 3 lessons · Intermediate</span>
+      <a href="https://www.facebookblueprint.com/student/path/253144-ai-course" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[#0072FC] font-bold hover:underline underline-offset-4">View live course ↗</a>
+     </div>
+     <figure className="mt-9">
+      <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DCE7F5] bg-[#F7FAFF]">
+       <Image src="/portfolio-media/blueprint-lms-course-overview.webp" alt="Live Meta Blueprint Advertising solutions and AI course overview, highlighting course banner, title, and lesson list" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+      </div>
+      <figcaption className="mt-3 text-sm text-[#657487]">Live course overview — Evolve-authored learning content within the Meta Blueprint LMS experience.</figcaption>
+     </figure>
+     <figure className="mt-9">
+      <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DCE7F5] bg-[#F7FAFF]">
+       <Image src="/portfolio-media/blueprint-lms-three-lessons.webp" alt="Selected original lesson screenshots for AI-based advertising solutions, campaign strategies, and machine learning and the ad delivery system" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+      </div>
+      <figcaption className="mt-3 text-sm text-[#657487]">Selected lesson screens. Additional mobile, Figma, and Evolve authoring evidence will help document individual design decisions.</figcaption>
+     </figure>
+     <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-7">
+      {[
+       ["Structured lessons","An overview introduces the learning path and organizes three lessons into a clear sequence."],
+       ["Interactive modules","Tabs, diagrams, expandable information, and other interactive components help explain complex advertising topics."],
+       ["Knowledge checks","Built-in questions let learners reflect on the material before continuing."],
+       ["End-of-lesson continuity","Key takeaways and related learning links reinforce understanding and guide the next step."]
+      ].map(([title,description],index)=>(
+       <div key={title} className="border-t border-[#E2E8F0] pt-5">
+        <p className="text-xs font-bold text-[#0072FC]">{String(index+1).padStart(2,"0")}</p>
+        <h3 className="mt-2 text-lg font-semibold text-[#1C2936]">{title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-[#5C6570]">{description}</p>
+       </div>
+      ))}
+     </div>
+    </section>
+   )}
    <section className="mt-20 md:mt-24">
-    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "04 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: LMS courses, home and landing pages, instructional video, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
+    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: home and landing pages, instructional videos, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
     <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
    </section>
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "06 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
    <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
