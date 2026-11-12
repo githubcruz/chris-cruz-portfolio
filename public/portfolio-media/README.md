@@ -33,3 +33,13 @@ Before merging the PR for branch `meta-blueprint-evolve-lms-case-study`, upload 
 - `blueprint-lms-three-lessons.webp` — 2048 × 1280; a three-column presentation of original lesson screenshots (AI-based advertising, campaign strategies, and machine learning). The narrow source screenshots are low-resolution, so these are contextual previews rather than full-resolution interface documentation.
 
 The LMS section notes **Evolve** as an authoring tool and provides a link to the published Meta Blueprint course. It also uses a typographic `evolve` label, *not* a claimed official logo; an approved Evolve logo asset can be substituted later. The Meta headline uses an inline Meta symbol from Simple Icons. The designer will add mobile screenshots and Figma/Evolve design-production screens for deeper process documentation. Do not claim unsupported course-level results or individual design ownership before verified with the designer.
+
+## LMS responsive gallery and missing prior LMS media (November 12, 2026)
+
+The Blueprint page includes three media references which must **all** exist under `public/portfolio-media/` on `main`. Earlier PR #64 was merged without its two required media files. The new mobile gallery is added by PR for branch `blueprint-lms-mobile-case-study-final` and also needs an asset upload. Download the provided three-file ZIP and upload the following into this folder on **this PR branch before merging**:
+
+- `blueprint-lms-course-overview.webp` (2048 × 1280) — original published course overview composition, previously missing
+- `blueprint-lms-three-lessons.webp` (2048 × 1280) — selected examples from the three live lessons, previously missing
+- `blueprint-lms-mobile-learning.webp` (2048 × 1280) — diagram, audience comparison, and scenario-based quiz from *Lesson 2* mobile course excerpts; newly created
+
+Each is a presentation graphic made from the designer's own original screenshots (not a screenshot of a single screen). These source images do not establish measured training outcomes. The portfolio text distinguishes the learner-facing course from the designer's role in creating layouts, components, and visual assets in Evolve while collaborating with instructional stakeholders, brand and legal.
