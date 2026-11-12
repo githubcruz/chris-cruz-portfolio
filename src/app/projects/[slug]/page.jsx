@@ -204,7 +204,7 @@ export default async function ProjectPage({params}){
      </div>
      <h2 id="lms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Learning experiences that connect every lesson.</h2>
      <p className="mt-4 text-xl md:text-2xl font-semibold tracking-tight text-[#1F3444]">Advertising solutions and AI</p>
-     <p className="mt-4 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.7]">This Meta Blueprint learning path brings together three lessons: AI-based advertising solutions, campaign strategies, and machine learning in ad delivery. It provides a useful example of the structured learning, reusable interactions, and visual storytelling involved in LMS course design.</p>
+     <p className="mt-4 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.7]">I designed the lesson layouts, reusable components, and instructional assets for this three-part Meta Blueprint course in Evolve. Working with instructional stakeholders, brand, and legal, I translated technical advertising topics into consistent, approachable learning experiences for small and medium-sized businesses.</p>
      <div className="mt-5 flex flex-wrap items-center gap-3">
       <span className="text-sm text-[#647287]">35 min · 3 lessons · Intermediate</span>
       <a href="https://www.facebookblueprint.com/student/path/253144-ai-course" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[#0072FC] font-bold hover:underline underline-offset-4">View live course ↗</a>
@@ -219,12 +219,23 @@ export default async function ProjectPage({params}){
       <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DCE7F5] bg-[#F7FAFF]">
        <Image src="/portfolio-media/blueprint-lms-three-lessons.webp" alt="Selected original lesson screenshots for AI-based advertising solutions, campaign strategies, and machine learning and the ad delivery system" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
       </div>
-      <figcaption className="mt-3 text-sm text-[#657487]">Selected lesson screens. Additional mobile, Figma, and Evolve authoring evidence will help document individual design decisions.</figcaption>
+      <figcaption className="mt-3 text-sm text-[#657487]">Selected desktop lesson screens across the three-part learning path.</figcaption>
      </figure>
+     <div className="mt-14">
+      <p className="text-[#0072FC] uppercase tracking-[.2em] text-xs font-bold">Responsive learning design</p>
+      <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#192F3D]">From visual explanations to applied learning.</h3>
+      <p className="mt-3 max-w-4xl text-[#657487] leading-relaxed">Selected mobile examples from the campaign strategies lesson show three complementary approaches: simplifying complex structures through an infographic, comparing audiences visually, and reinforcing concepts with a scenario-based knowledge check.</p>
+      <figure className="mt-7">
+       <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[24px] border border-[#DCE7F5] bg-[#F7FAFF]">
+        <Image src="/portfolio-media/blueprint-lms-mobile-learning.webp" alt="Three actual mobile course excerpts illustrating campaign structure, audience comparison, and scenario-based knowledge checks in Meta Blueprint LMS" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized/>
+       </div>
+       <figcaption className="mt-3 text-sm text-[#657487]">Cropped examples from the live mobile lesson, arranged for portfolio presentation.</figcaption>
+      </figure>
+     </div>
      <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-7">
       {[
        ["Structured lessons","An overview introduces the learning path and organizes three lessons into a clear sequence."],
-       ["Interactive modules","Tabs, diagrams, expandable information, and other interactive components help explain complex advertising topics."],
+       ["Reusable interaction patterns","Used diagrams, tabs, expandable sections, and other Evolve components to clarify complex advertising concepts."],
        ["Knowledge checks","Built-in questions let learners reflect on the material before continuing."],
        ["End-of-lesson continuity","Key takeaways and related learning links reinforce understanding and guide the next step."]
       ].map(([title,description],index)=>(
