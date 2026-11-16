@@ -6,6 +6,9 @@ import Cursor from "@/components/Cursor";
 import SafeShareCaseStudy from "@/components/SafeShareCaseStudy";
 import { FALLBACK_PROJECTS } from "@/app/work/content";
 
+// Keep the optional Instagram Figma gallery unpublished until its three image assets are uploaded.
+const showInstagramReferenceGallery = false;
+
 const studies = {
  "meta-image-privacy": {
   eyebrow:"01 / PRODUCT DESIGN", heading:"Designing for privacy, clarity, and control.",
@@ -90,8 +93,21 @@ export default async function ProjectPage({params}){
     <p className={slug === "meta-blueprint" ? "mt-4 text-[#636363] leading-[1.65] text-base md:text-lg max-w-3xl" : "mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl"}>{data.summary}</p>
    </header>
    <div className="mt-14 border-y border-[#DEDEDE] py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-    {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage","Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
+    {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage",slug==="meta-blueprint"?"Published learning experiences":"Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
    </div>
+   {slug === "meta-blueprint" && (
+    <nav aria-label="Meta Blueprint case study sections" className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-[#E5EBF3] pb-5 text-sm">
+     <span className="text-xs font-bold uppercase tracking-[.16em] text-[#7A8898]">Explore the work</span>
+     {[
+      ["CMS course","#cms-course-heading"],
+      ["LMS learning","#lms-course-heading"],
+      ["Web experiences","#blueprint-web-experiences"],
+      ["Design guidelines","#blueprint-design-guidelines"]
+     ].map(([label,href])=>(
+      <a key={href} href={href} className="font-semibold text-[#0072FC] underline-offset-4 hover:underline focus-visible:underline">{label} ↗</a>
+     ))}
+    </nav>
+   )}
    {slug === "meta-blueprint" ? (
     <figure className="mt-16 md:mt-24">
      <div className="relative w-full aspect-video overflow-hidden rounded-[28px] border border-[#E9EEF6] bg-white">
@@ -123,7 +139,7 @@ export default async function ProjectPage({params}){
    {slug === "meta-blueprint" && (
     <section className="mt-20 md:mt-24" aria-labelledby="cms-course-heading">
      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / CMS course spotlight</p>
-     <h2 id="cms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Designing a complete CMS course.</h2>
+     <h2 id="cms-course-heading" className="scroll-mt-32 mt-4 text-3xl md:text-4xl font-black tracking-tight">Designing a complete CMS course.</h2>
      <p className="mt-3 text-lg md:text-xl text-[#3B4858] font-medium max-w-4xl">How to create and plan for engaging Instagram posts</p>
      <p className="mt-5 text-[#616B77] text-base md:text-lg leading-[1.75] max-w-4xl">I designed and built this Meta Blueprint course within a front-end CMS, using Figma and Meta’s existing design library to prepare instructional assets, then implementing the learning layout and components with HTML and CSS. I optimized asset dimensions and file sizes for efficient delivery and partnered with instructional designers, brand, legal, and cross-functional stakeholders through review and approval.</p>
      <figure className="mt-9">
@@ -202,7 +218,7 @@ export default async function ProjectPage({params}){
        Authoring
       </span>
      </div>
-     <h2 id="lms-course-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight">Learning experiences that connect every lesson.</h2>
+     <h2 id="lms-course-heading" className="scroll-mt-32 mt-4 text-3xl md:text-4xl font-black tracking-tight">Learning experiences that connect every lesson.</h2>
      <p className="mt-4 text-xl md:text-2xl font-semibold tracking-tight text-[#1F3444]">Advertising solutions and AI</p>
      <p className="mt-4 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.7]">I designed the lesson layouts, reusable components, and instructional assets for this three-part Meta Blueprint course in Evolve. Working with instructional stakeholders, brand, and legal, I translated technical advertising topics into consistent, approachable learning experiences for small and medium-sized businesses.</p>
      <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -288,7 +304,7 @@ export default async function ProjectPage({params}){
     </section>
    )}
    {slug === "meta-blueprint" ? (
-    <section className="mt-20 md:mt-24" id="blueprint-web-experiences" aria-labelledby="blueprint-web-heading">
+    <section className="scroll-mt-32 mt-20 md:mt-24" id="blueprint-web-experiences" aria-labelledby="blueprint-web-heading">
      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">05 / Homepage, webinars &amp; certifications</p>
      <div className="mt-4 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
       <div>
@@ -340,7 +356,7 @@ export default async function ProjectPage({params}){
     </section>
    )}
    {slug === "meta-blueprint" && (
-    <section id="blueprint-design-guidelines" className="mt-20 md:mt-24" aria-labelledby="blueprint-guidelines-heading">
+    <section id="blueprint-design-guidelines" className="scroll-mt-32 mt-20 md:mt-24" aria-labelledby="blueprint-guidelines-heading">
      <div className="max-w-4xl">
       <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">06 / Design guidelines &amp; production systems</p>
       <h2 id="blueprint-guidelines-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">Designing once. Creating consistently.</h2>
@@ -377,6 +393,7 @@ export default async function ProjectPage({params}){
        </figure>
       ))}
      </div>
+     {showInstagramReferenceGallery && (
      <details id="blueprint-instagram-figma-gallery" className="mt-9 rounded-[22px] border border-[#DDE7F3] bg-[#F8FAFE]">
       <summary className="cursor-pointer rounded-[22px] p-5 md:p-7 text-[#213243] hover:text-[#0072FC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0072FC]">
        <span className="block text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Instagram interface explorations · Figma</span>
@@ -403,6 +420,7 @@ export default async function ProjectPage({params}){
       </div>
       <p className="px-5 pb-5 md:px-7 md:pb-7 text-xs leading-relaxed text-[#7B8794]">Figma references prepared for Meta Blueprint training content; not presented as independently shipped Instagram product features.</p>
      </details>
+     )}
      <p className="mt-5 text-sm text-[#7A8591] leading-relaxed">Selected design references and production artifacts from the broader Meta Blueprint workflow. Platform and brand assets are shown to provide professional project context.</p>
     </section>
    )}
