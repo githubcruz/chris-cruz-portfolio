@@ -324,7 +324,7 @@ export default async function ProjectPage({params}){
       <div>
        <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.18em]">Motion &amp; instructional media</p>
        <h3 className="mt-3 text-xl md:text-2xl font-bold tracking-tight text-[#172632]">Making complex ideas easier to follow.</h3>
-       <p className="mt-3 text-[#63707C] leading-relaxed">I also worked on instructional video, motion graphics, and visual storytelling for learning content, translating product information into clear, accessible-looking demonstrations.</p>
+       <p className="mt-3 text-[#63707C] leading-relaxed">I also worked on instructional video, motion graphics, and visual storytelling for learning content, translating product information into clear, easy-to-follow demonstrations.</p>
       </div>
       <div>
        <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.18em]">Scalable visual production</p>
