@@ -21,13 +21,13 @@ const studies = {
  "meta-blueprint":{
   eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Visual design across the full learning experience.",
   summary:"From updating hundreds of courses to designing home and landing pages, instructional videos, and reusable Figma components, my work helped keep Meta Blueprint consistent across formats and easier to produce at scale.",
-  status:"Professional work",role:"Visual design · Creative direction · Motion",methods:["Course and web UI","Home and landing pages","Video and motion","Reusable Figma components"],
+  status:"Professional work",role:"Visual design · Figma systems · CMS/LMS production",methods:["CMS/LMS course design","Responsive UI & HTML/CSS","Visual asset production","Reusable Figma components"],
   problem:"Meta Blueprint brings small-business learning to people through an evolving catalog of courses, web experiences, and instructional content. Frequent updates across formats called for a clear, cohesive visual language and efficient production.",
   strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
-  contribution:"My work included updating a catalog of hundreds of courses, designing Blueprint home and landing-page experiences, creating instructional video and visual assets, and building reusable Figma components. A 16-course e-learning revamp is one focused example of that broader contribution.",
+  contribution:"I contributed across hundreds of Meta Blueprint course updates and Evolve LMS experiences—designing responsive layouts, educational product-UI examples, infographics, and reusable Figma assets. For CMS courses, I also built and adapted front-end HTML/CSS, optimized imagery for different screen sizes and load times, and partnered with instructional designers, brand, legal, and other stakeholders through review and publication. My broader work also included Blueprint home and landing pages and instructional video assets.",
   process:[["Course experiences","Update course visuals, learning layouts, and the digital assets needed across a large catalog."],["Web experiences","Design and refine Blueprint home and landing pages that help learners discover relevant content."],["Motion and storytelling","Produce instructional videos and visual storytelling elements across learning touchpoints."],["Design at scale","Systemize recurring UI and visual patterns in Figma to speed iteration and improve brand consistency."]],
   visual:["Blueprint home and landing pages","Instructional video and motion frames","Reusable Figma systems and 16-course revamp"],
-  takeaway:"Across these workstreams, reusable components helped make production and publishing faster with fewer brand inconsistencies. The 16-course redesign provides a concrete example; supporting visuals and verified measures will make the broader impact clear."
+  takeaway:"Reusable Figma components, responsive specifications, and approved visual patterns made it easier to produce consistent content across platforms and reduce brand-review friction. In the 16-course e-learning revamp, this approach was reported to save several days of production time per course and helped make publishing faster with fewer revisions. The figures describe project production experience, not an independently measured sitewide engagement lift."
  },
  "bart-fare-gates":{
   eyebrow:"03 / HUMAN-CENTERED DESIGN",heading:"Designing for the moments that matter in transit.",
@@ -339,8 +339,75 @@ export default async function ProjectPage({params}){
      <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
     </section>
    )}
+   {slug === "meta-blueprint" && (
+    <section id="blueprint-design-guidelines" className="mt-20 md:mt-24" aria-labelledby="blueprint-guidelines-heading">
+     <div className="max-w-4xl">
+      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">06 / Design guidelines &amp; production systems</p>
+      <h2 id="blueprint-guidelines-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">Designing once. Creating consistently.</h2>
+      <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#5C6876]">Behind the published learning experiences is a practical system of brand references, layout grids, responsive UI patterns, and export specifications. I used these guidelines alongside Meta's component library to make design decisions easier to reproduce across CMS pages, interactive lessons, and visual assets.</p>
+     </div>
+     <figure className="mt-10 overflow-hidden rounded-[22px] border border-[#E3E9F0] bg-[#F7F9FC]">
+      <a href="/portfolio-media/blueprint-design-ui-kit.webp" target="_blank" rel="noopener noreferrer" aria-label="View full UI asset exploration">
+       <Image src="/portfolio-media/blueprint-design-ui-kit.webp" width={1550} height={1471} alt="Figma exploration board showcasing Meta social product UI elements, icons, social cards, messaging components, and visual compositions used as reference patterns." sizes="(max-width: 767px) 92vw, 85vw" className="w-full h-auto object-contain" unoptimized/>
+      </a>
+      <figcaption className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-5 md:px-7 py-5 border-t border-[#E2E8F0] bg-white">
+       <div><p className="text-[#0072FC] text-xs font-bold tracking-[.16em] uppercase">Visual language</p><h3 className="mt-1 text-lg font-bold text-[#1B2835]">A shared library of UI and visual patterns</h3></div>
+       <a href="/portfolio-media/blueprint-design-ui-kit.webp" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">View full image ↗</a>
+      </figcaption>
+     </figure>
+     <div className="mt-5 grid sm:grid-cols-2 gap-5">
+      {[
+       {src:"/portfolio-media/blueprint-design-asset-library.webp",width:1600,height:892,label:"01 / Brand reference",title:"Brand-safe visual examples",description:"Reference imagery and example brands provided a consistent visual starting point across different small-business learning scenarios.",alt:"Figma asset-guidelines board with example small business brand imagery arranged in a multi-row grid."},
+       {src:"/portfolio-media/blueprint-design-layout-grid.webp",width:711,height:2047,label:"02 / Responsive framework",title:"Grids, breakpoints & spacing",description:"Desktop, tablet, and mobile layout guidance helped align modules across screen sizes and CMS templates.",alt:"Blueprint design-system specification showing desktop and mobile 12-column and 6-column grids, breakpoints, and spacing guidelines."},
+       {src:"/portfolio-media/blueprint-design-component-modules.webp",width:940,height:1408,label:"03 / Reusable modules",title:"Carousel & mobile UI patterns",description:"Product-platform carousel examples document how interface modules adapt to different devices and content formats.",alt:"Product platform carousel design guidance showing a Facebook Stories module and iOS and Android reference layouts."},
+       {src:"/portfolio-media/blueprint-design-media-specs.webp",width:840,height:1451,label:"04 / Production handoff",title:"Media formats & export dimensions",description:"A documented set of ratios, sizes, and responsive variants supported predictable asset handoff and page performance.",alt:"Meta media asset guideline board documenting visual dimensions, aspect ratios, and example image crops for CMS."}
+      ].map(item=>(
+       <figure key={item.src} className="group overflow-hidden rounded-[20px] border border-[#E3E9F0] bg-white">
+        <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`View full image for ${item.title}`} className="block bg-[#F5F7FA]">
+         <div className="relative h-[260px] sm:h-[310px] lg:h-[340px] overflow-hidden">
+          <Image src={item.src} alt={item.alt} fill sizes="(max-width: 639px) 92vw, (max-width: 1023px) 48vw, 42vw" className="object-contain object-center p-3 transition-transform duration-500 motion-safe:group-hover:scale-[1.035]" unoptimized/>
+         </div>
+        </a>
+        <figcaption className="p-5 md:p-6 border-t border-[#EBEFF4]">
+         <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.15em]">{item.label}</p>
+         <h3 className="mt-2 text-xl font-bold tracking-tight text-[#1B2835]">{item.title}</h3>
+         <p className="mt-2 text-[#66727D] text-sm leading-relaxed">{item.description}</p>
+         <a href={item.src} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-[#0072FC] text-sm font-semibold hover:underline underline-offset-4">View design artifact ↗</a>
+        </figcaption>
+       </figure>
+      ))}
+     </div>
+     <details id="blueprint-instagram-figma-gallery" className="mt-9 rounded-[22px] border border-[#DDE7F3] bg-[#F8FAFE]">
+      <summary className="cursor-pointer rounded-[22px] p-5 md:p-7 text-[#213243] hover:text-[#0072FC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0072FC]">
+       <span className="block text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Instagram interface explorations · Figma</span>
+       <span className="block mt-2 text-xl md:text-2xl font-bold tracking-tight">Inside the UI reference and component library <span aria-hidden="true" className="ml-2 text-[#0072FC]">+</span></span>
+       <span className="block mt-2 max-w-3xl text-sm md:text-base leading-relaxed text-[#687583] font-normal">Explore additional design boards covering Instagram insights, home/feed interface patterns, and content-creation flows used to illustrate the product in educational experiences.</span>
+      </summary>
+      <div className="grid gap-5 px-4 pb-5 md:px-7 md:pb-7 lg:grid-cols-2">
+       {[
+        {src:"/portfolio-media/blueprint-instagram-insights.webp",label:"01 / Insights & analytics",title:"Mapping product metrics and navigation",alt:"Dark Figma working board mapping Instagram post, story, Reels, insights and professional dashboard screens.",wide:true},
+        {src:"/portfolio-media/blueprint-instagram-ui-components.webp",label:"02 / Interface patterns",title:"Feed, stories, comments & UI elements",alt:"Figma board of Instagram feed variations, story tray, content overlays, comment sheet and action button components.",wide:false},
+        {src:"/portfolio-media/blueprint-instagram-reels.webp",label:"03 / Creation workflows",title:"Reels camera, templates & effects",alt:"Figma storyboard with reference screens for Instagram Reels capture, camera, templates, sound and effects.",wide:false}
+       ].map(item=>(
+        <figure key={item.src} className={`overflow-hidden rounded-[18px] border border-[#E0E7F0] bg-white ${item.wide?"lg:col-span-2":""}`}>
+         <a className="block bg-[#F2F5F9] relative h-[220px] md:h-[300px] lg:h-[320px]" href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`View full Figma board: ${item.title}`}>
+          <Image src={item.src} alt={item.alt} fill sizes={item.wide?"(max-width: 767px) 88vw, 85vw":"(max-width: 767px) 88vw, 43vw"} className="object-contain" unoptimized/>
+         </a>
+         <figcaption className="p-4 md:p-5">
+          <p className="text-[#0072FC] text-xs uppercase tracking-[.14em] font-bold">{item.label}</p>
+          <h4 className="mt-1 text-lg font-semibold tracking-tight text-[#1D2D3C]">{item.title}</h4>
+          <a href={item.src} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">Open working board ↗</a>
+         </figcaption>
+        </figure>
+       ))}
+      </div>
+      <p className="px-5 pb-5 md:px-7 md:pb-7 text-xs leading-relaxed text-[#7B8794]">Figma references prepared for Meta Blueprint training content; not presented as independently shipped Instagram product features.</p>
+     </details>
+     <p className="mt-5 text-sm text-[#7A8591] leading-relaxed">Selected design references and production artifacts from the broader Meta Blueprint workflow. Platform and brand assets are shown to provide professional project context.</p>
+    </section>
+   )}
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "06 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "07 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
    <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
