@@ -464,3 +464,6 @@ html::-webkit-scrollbar { display: none; }
     transition: none !important;
   }
 }
+
+/* Light theme normally turns text-white dark; preserve the portrait card's white glyph. */
+.portfolio-light .contact-portrait-arrow { color: #fff !important; }
