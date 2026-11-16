@@ -339,8 +339,49 @@ export default async function ProjectPage({params}){
      <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
     </section>
    )}
+   {slug === "meta-blueprint" && (
+    <section id="blueprint-design-guidelines" className="mt-20 md:mt-24" aria-labelledby="blueprint-guidelines-heading">
+     <div className="max-w-4xl">
+      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">06 / Design guidelines &amp; production systems</p>
+      <h2 id="blueprint-guidelines-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">Designing once. Creating consistently.</h2>
+      <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#5C6876]">Behind the published learning experiences is a practical system of brand references, layout grids, responsive UI patterns, and export specifications. I used these guidelines alongside Meta's component library to make design decisions easier to reproduce across CMS pages, interactive lessons, and visual assets.</p>
+     </div>
+     <figure className="mt-10 overflow-hidden rounded-[22px] border border-[#E3E9F0] bg-[#F7F9FC]">
+      <a href="/portfolio-media/blueprint-design-ui-kit.webp" target="_blank" rel="noopener noreferrer" aria-label="View full UI asset exploration">
+       <Image src="/portfolio-media/blueprint-design-ui-kit.webp" width={1550} height={1471} alt="Figma exploration board showcasing Meta social product UI elements, icons, social cards, messaging components, and visual compositions used as reference patterns." sizes="(max-width: 767px) 92vw, 85vw" className="w-full h-auto object-contain" unoptimized/>
+      </a>
+      <figcaption className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 px-5 md:px-7 py-5 border-t border-[#E2E8F0] bg-white">
+       <div><p className="text-[#0072FC] text-xs font-bold tracking-[.16em] uppercase">Visual language</p><h3 className="mt-1 text-lg font-bold text-[#1B2835]">A shared library of UI and visual patterns</h3></div>
+       <a href="/portfolio-media/blueprint-design-ui-kit.webp" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">View full image ↗</a>
+      </figcaption>
+     </figure>
+     <div className="mt-5 grid sm:grid-cols-2 gap-5">
+      {[
+       {src:"/portfolio-media/blueprint-design-asset-library.webp",width:1600,height:892,label:"01 / Brand reference",title:"Brand-safe visual examples",description:"Reference imagery and example brands provided a consistent visual starting point across different small-business learning scenarios.",alt:"Figma asset-guidelines board with example small business brand imagery arranged in a multi-row grid."},
+       {src:"/portfolio-media/blueprint-design-layout-grid.webp",width:711,height:2047,label:"02 / Responsive framework",title:"Grids, breakpoints & spacing",description:"Desktop, tablet, and mobile layout guidance helped align modules across screen sizes and CMS templates.",alt:"Blueprint design-system specification showing desktop and mobile 12-column and 6-column grids, breakpoints, and spacing guidelines."},
+       {src:"/portfolio-media/blueprint-design-component-modules.webp",width:940,height:1408,label:"03 / Reusable modules",title:"Carousel & mobile UI patterns",description:"Product-platform carousel examples document how interface modules adapt to different devices and content formats.",alt:"Product platform carousel design guidance showing a Facebook Stories module and iOS and Android reference layouts."},
+       {src:"/portfolio-media/blueprint-design-media-specs.webp",width:840,height:1451,label:"04 / Production handoff",title:"Media formats & export dimensions",description:"A documented set of ratios, sizes, and responsive variants supported predictable asset handoff and page performance.",alt:"Meta media asset guideline board documenting visual dimensions, aspect ratios, and example image crops for CMS."}
+      ].map(item=>(
+       <figure key={item.src} className="group overflow-hidden rounded-[20px] border border-[#E3E9F0] bg-white">
+        <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`View full image for ${item.title}`} className="block bg-[#F5F7FA]">
+         <div className="relative h-[260px] sm:h-[310px] lg:h-[340px] overflow-hidden">
+          <Image src={item.src} alt={item.alt} fill sizes="(max-width: 639px) 92vw, (max-width: 1023px) 48vw, 42vw" className="object-contain object-center p-3 transition-transform duration-500 motion-safe:group-hover:scale-[1.035]" unoptimized/>
+         </div>
+        </a>
+        <figcaption className="p-5 md:p-6 border-t border-[#EBEFF4]">
+         <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.15em]">{item.label}</p>
+         <h3 className="mt-2 text-xl font-bold tracking-tight text-[#1B2835]">{item.title}</h3>
+         <p className="mt-2 text-[#66727D] text-sm leading-relaxed">{item.description}</p>
+         <a href={item.src} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-[#0072FC] text-sm font-semibold hover:underline underline-offset-4">View design artifact ↗</a>
+        </figcaption>
+       </figure>
+      ))}
+     </div>
+     <p className="mt-5 text-sm text-[#7A8591] leading-relaxed">Selected design references and production artifacts from the broader Meta Blueprint workflow. Platform and brand assets are shown to provide professional project context.</p>
+    </section>
+   )}
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "06 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "07 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
    <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
