@@ -287,10 +287,58 @@ export default async function ProjectPage({params}){
      </div>
     </section>
    )}
-   <section className="mt-20 md:mt-24">
-    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: home and landing pages, instructional videos, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
-    <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
-   </section>
+   {slug === "meta-blueprint" ? (
+    <section className="mt-20 md:mt-24" id="blueprint-web-experiences" aria-labelledby="blueprint-web-heading">
+     <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">05 / Homepage, webinars &amp; certifications</p>
+     <div className="mt-4 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
+      <div>
+       <h2 id="blueprint-web-heading" className="text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">One learning ecosystem. More than courses.</h2>
+       <p className="mt-5 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.75]">The Blueprint experience starts long before someone opens a lesson. My web design work extended to the homepage, webinar discovery, and certification experiences—organizing different learning paths through consistent visual systems, page layouts, and assets.</p>
+      </div>
+     </div>
+     <div className="mt-10 grid gap-5 lg:grid-cols-3">
+      {[
+       {src:"/portfolio-media/blueprint-web-home.webp",label:"01 · Course discovery",title:"Meta Blueprint home",description:"A central hub for returning learners, recommended courses, personalized content, and new topics.",alt:"Full-length screenshot of the Meta Blueprint homepage, including personalized learning cards, recommended courses and certifications."},
+       {src:"/portfolio-media/blueprint-web-webinars.webp",label:"02 · Live training",title:"Webinars & workshops",description:"An entry point for upcoming sessions, topic-based browsing, previously recorded webinars, and additional resources.",alt:"Full-length screenshot of the Meta Blueprint webinars landing page, showing the hero, upcoming live sessions and topic categories."},
+       {src:"/portfolio-media/blueprint-web-certifications.webp",label:"03 · Credentials",title:"Certification hub",description:"A structured page for exploring role-based certifications, skill credentials, and specialist badges.",alt:"Full-length screenshot of the Meta Blueprint certification hub, including category introductions and credential badges."}
+      ].map(item=>(
+       <figure key={item.src} className="group overflow-hidden rounded-[22px] border border-[#E5EAF1] bg-white shadow-[0_10px_28px_rgba(18,39,70,0.045)]">
+        <div className="flex items-center gap-3 border-b border-[#E8EDF3] bg-[#F7F9FC] px-4 py-3" aria-hidden="true">
+         <span className="flex gap-1.5"><span className="size-2 rounded-full bg-[#CAD4E2]"/><span className="size-2 rounded-full bg-[#CAD4E2]"/><span className="size-2 rounded-full bg-[#CAD4E2]"/></span>
+         <span className="truncate text-[11px] font-medium tracking-wide text-[#758293]">Meta Blueprint / {item.title}</span>
+        </div>
+        <div className="relative h-[420px] sm:h-[490px] lg:h-[510px] overflow-hidden bg-white">
+         <Image src={item.src} alt={item.alt} fill sizes="(max-width: 1023px) 92vw, 31vw" className="object-cover object-top transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.035]" unoptimized/>
+        </div>
+        <figcaption className="border-t border-[#E8EDF3] px-5 py-6">
+         <p className="text-[#0072FC] text-[11px] font-bold uppercase tracking-[.16em]">{item.label}</p>
+         <h3 className="mt-2 text-xl font-bold tracking-tight text-[#172632]">{item.title}</h3>
+         <p className="mt-2 min-h-[4.5rem] text-sm leading-relaxed text-[#687482]">{item.description}</p>
+         <a href={item.src} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">View full page capture ↗</a>
+        </figcaption>
+       </figure>
+      ))}
+     </div>
+     <p className="mt-4 text-xs leading-relaxed text-[#7E8895]">Published-page screenshots shown for context. Work developed in collaboration with Meta Blueprint's design, content, and cross-functional teams.</p>
+     <div className="mt-14 grid gap-8 md:grid-cols-2 border-t border-[#E1E6ED] pt-8">
+      <div>
+       <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.18em]">Motion &amp; instructional media</p>
+       <h3 className="mt-3 text-xl md:text-2xl font-bold tracking-tight text-[#172632]">Making complex ideas easier to follow.</h3>
+       <p className="mt-3 text-[#63707C] leading-relaxed">I also worked on instructional video, motion graphics, and visual storytelling for learning content, translating product information into clear, accessible-looking demonstrations.</p>
+      </div>
+      <div>
+       <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.18em]">Scalable visual production</p>
+       <h3 className="mt-3 text-xl md:text-2xl font-bold tracking-tight text-[#172632]">Keeping a large content library consistent.</h3>
+       <p className="mt-3 text-[#63707C] leading-relaxed">Reusable Figma components, familiar Meta patterns, and production-ready assets helped keep design decisions consistent across course pages, landing pages, and other formats while working through brand and stakeholder reviews.</p>
+      </div>
+     </div>
+    </section>
+   ) : (
+    <section className="mt-20 md:mt-24">
+     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: home and landing pages, instructional videos, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
+     <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
+    </section>
+   )}
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
     <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "06 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
