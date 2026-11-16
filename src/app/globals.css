@@ -412,3 +412,55 @@ html::-webkit-scrollbar { display: none; }
   .about-illustration-wave { background-image: none; transition: none; }
   .about-illustration-frame { transition: none; }
 }
+
+
+/* CTA interaction: a black fill sweeps left-to-right over the existing blue/outline button.
+   Navigation and plain text links intentionally keep their understated hover treatments. */
+.portfolio-light .portfolio-wipe-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 260ms ease, border-color 260ms ease;
+}
+.portfolio-light .portfolio-wipe-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #111;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 420ms cubic-bezier(.2, .7, .2, 1);
+  pointer-events: none;
+}
+.portfolio-light .portfolio-wipe-button > .portfolio-wipe-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  position: relative;
+  z-index: 1;
+}
+.portfolio-light .portfolio-wipe-button:hover::before,
+.portfolio-light .portfolio-wipe-button:focus-visible::before {
+  transform: scaleX(1);
+}
+.portfolio-light .portfolio-wipe-button:hover,
+.portfolio-light .portfolio-wipe-button:focus-visible {
+  color: #fff !important;
+  border-color: #111 !important;
+}
+.portfolio-light .portfolio-wipe-button.contact-primary:hover {
+  background-color: #0072FC !important;
+}
+.portfolio-light .portfolio-wipe-button:focus-visible {
+  border-radius: 999px !important;
+  outline: 2px solid #0072FC;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-light .portfolio-wipe-button,
+  .portfolio-light .portfolio-wipe-button::before {
+    transition: none !important;
+  }
+}
