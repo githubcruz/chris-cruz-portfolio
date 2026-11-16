@@ -221,6 +221,45 @@ export default async function ProjectPage({params}){
       </div>
       <figcaption className="mt-3 text-sm text-[#657487]">Selected desktop lesson screens across the three-part learning path.</figcaption>
      </figure>
+     <div className="mt-14" id="blueprint-lms-figma-explorations">
+      <p className="text-[#0072FC] uppercase tracking-[.2em] text-xs font-bold">Figma explorations · Design process</p>
+      <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#192F3D]">From exploration to the final learning experience.</h3>
+      <p className="mt-3 max-w-4xl text-[#657487] leading-relaxed">I explored multiple approaches to complex advertising concepts, refining diagrams, instructional graphics, and visual hierarchy in Figma before they became part of the published Evolve lessons. The examples below show early iterations alongside the learner-facing designs.</p>
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+       {[
+        ["/portfolio-media/blueprint-lms-figma-campaign-structure.webp","01 · Campaign hierarchy","Organizing campaign, ad set, and ad-level decisions into a clearer instructional diagram.","Figma exploration and final LMS campaign structure infographic"],
+        ["/portfolio-media/blueprint-lms-figma-funnel-variations.webp","02 · Funnel iterations","Testing hierarchy, contrast, and visual treatments to explain campaign objectives.","Multiple marketing funnel iterations and their selected LMS design"],
+        ["/portfolio-media/blueprint-lms-figma-audience.webp","03 · Audience comparison","Clarifying manual and Advantage+ audiences with a side-by-side comparison.","Figma iterations and the published Advantage+ audience infographic"],
+        ["/portfolio-media/blueprint-lms-figma-placements.webp","04 · Placement illustration","Simplifying an illustrative cost-per-result comparison for a learning module.","Figma iterations and a published placement comparison graphic"]
+       ].map(([file,title,description,alt])=>(
+        <figure key={file} className="min-w-0">
+         <div className="relative aspect-[8/5] w-full overflow-hidden rounded-[20px] border border-[#E3EAF2] bg-white">
+          <Image src={file} alt={alt} fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 42vw, 600px" className="object-contain" unoptimized/>
+         </div>
+         <figcaption className="mt-4">
+          <span className="text-[#1F3444] font-semibold">{title}</span>
+          <span className="block mt-1 text-sm leading-relaxed text-[#657487]">{description}</span>
+         </figcaption>
+        </figure>
+       ))}
+      </div>
+      <details className="mt-9 rounded-[20px] border border-[#E3EAF2] bg-[#F9FBFE]">
+       <summary className="cursor-pointer p-5 md:p-6 font-semibold text-[#1F3444] hover:text-[#0072FC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0072FC] rounded-[20px]">Explore the larger Figma working boards <span className="ml-2 text-[#0072FC]" aria-hidden="true">+</span></summary>
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-5 pb-5 md:px-6 md:pb-6">
+        {[
+         ["/portfolio-media/blueprint-lms-figma-explorations-lesson-1.webp","AI-based advertising concepts and graphic variations","Figma visual explorations for AI instructional diagrams and personalized advertising assets"],
+         ["/portfolio-media/blueprint-lms-figma-explorations-lesson-2.webp","Campaign strategy diagrams and interaction assets","Figma working board for campaign strategy illustrations, UI examples, and lesson assets"]
+        ].map(([file,caption,alt])=>(
+         <figure key={file}>
+          <div className="relative aspect-[8/5] w-full overflow-hidden rounded-xl border border-[#E3EAF2] bg-white">
+           <Image src={file} alt={alt} fill sizes="(max-width: 768px) 88vw, 42vw" className="object-contain" unoptimized/>
+          </div>
+          <figcaption className="mt-2 text-xs text-[#657487]">{caption}</figcaption>
+         </figure>
+        ))}
+       </div>
+      </details>
+     </div>
      <div className="mt-14">
       <p className="text-[#0072FC] uppercase tracking-[.2em] text-xs font-bold">Responsive learning design</p>
       <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-[#192F3D]">From visual explanations to applied learning.</h3>
