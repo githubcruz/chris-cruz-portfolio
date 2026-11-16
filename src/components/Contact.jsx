@@ -51,7 +51,7 @@ export default function Contact({ standalone = false }) {
          <p className="text-base font-bold tracking-tight text-[#172A3C]">Chris Cruz</p>
          <p className="mt-1 text-xs text-[#657487]">Visual &amp; Product Designer</p>
         </div>
-        <span aria-hidden="true" className="flex size-9 items-center justify-center rounded-full bg-[#0072FC] text-lg text-white">↗</span>
+        <span aria-hidden="true" className="contact-portrait-arrow flex size-9 items-center justify-center rounded-full bg-[#0072FC] text-lg text-white">↗</span>
        </div>
       </div>
      </div>
