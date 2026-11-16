@@ -377,6 +377,32 @@ export default async function ProjectPage({params}){
        </figure>
       ))}
      </div>
+     <details id="blueprint-instagram-figma-gallery" className="mt-9 rounded-[22px] border border-[#DDE7F3] bg-[#F8FAFE]">
+      <summary className="cursor-pointer rounded-[22px] p-5 md:p-7 text-[#213243] hover:text-[#0072FC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0072FC]">
+       <span className="block text-[#0072FC] text-xs font-bold uppercase tracking-[.2em]">Instagram interface explorations · Figma</span>
+       <span className="block mt-2 text-xl md:text-2xl font-bold tracking-tight">Inside the UI reference and component library <span aria-hidden="true" className="ml-2 text-[#0072FC]">+</span></span>
+       <span className="block mt-2 max-w-3xl text-sm md:text-base leading-relaxed text-[#687583] font-normal">Explore additional design boards covering Instagram insights, home/feed interface patterns, and content-creation flows used to illustrate the product in educational experiences.</span>
+      </summary>
+      <div className="grid gap-5 px-4 pb-5 md:px-7 md:pb-7 lg:grid-cols-2">
+       {[
+        {src:"/portfolio-media/blueprint-instagram-insights.webp",label:"01 / Insights & analytics",title:"Mapping product metrics and navigation",alt:"Dark Figma working board mapping Instagram post, story, Reels, insights and professional dashboard screens.",wide:true},
+        {src:"/portfolio-media/blueprint-instagram-ui-components.webp",label:"02 / Interface patterns",title:"Feed, stories, comments & UI elements",alt:"Figma board of Instagram feed variations, story tray, content overlays, comment sheet and action button components.",wide:false},
+        {src:"/portfolio-media/blueprint-instagram-reels.webp",label:"03 / Creation workflows",title:"Reels camera, templates & effects",alt:"Figma storyboard with reference screens for Instagram Reels capture, camera, templates, sound and effects.",wide:false}
+       ].map(item=>(
+        <figure key={item.src} className={`overflow-hidden rounded-[18px] border border-[#E0E7F0] bg-white ${item.wide?"lg:col-span-2":""}`}>
+         <a className="block bg-[#F2F5F9] relative h-[220px] md:h-[300px] lg:h-[320px]" href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`View full Figma board: ${item.title}`}>
+          <Image src={item.src} alt={item.alt} fill sizes={item.wide?"(max-width: 767px) 88vw, 85vw":"(max-width: 767px) 88vw, 43vw"} className="object-contain" unoptimized/>
+         </a>
+         <figcaption className="p-4 md:p-5">
+          <p className="text-[#0072FC] text-xs uppercase tracking-[.14em] font-bold">{item.label}</p>
+          <h4 className="mt-1 text-lg font-semibold tracking-tight text-[#1D2D3C]">{item.title}</h4>
+          <a href={item.src} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">Open working board ↗</a>
+         </figcaption>
+        </figure>
+       ))}
+      </div>
+      <p className="px-5 pb-5 md:px-7 md:pb-7 text-xs leading-relaxed text-[#7B8794]">Figma references prepared for Meta Blueprint training content; not presented as independently shipped Instagram product features.</p>
+     </details>
      <p className="mt-5 text-sm text-[#7A8591] leading-relaxed">Selected design references and production artifacts from the broader Meta Blueprint workflow. Platform and brand assets are shown to provide professional project context.</p>
     </section>
    )}
