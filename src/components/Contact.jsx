@@ -62,7 +62,7 @@ export default function Contact({ standalone = false }) {
        <span aria-hidden="true" className="about-illustration-wave absolute inset-0" />
        <Image src="/photo/chris-contact-illustration.png" alt="Black-and-white illustration of Chris Cruz holding a pen and making a thinking gesture" fill sizes="(max-width: 768px) 85vw, 370px" className="relative z-10 object-cover object-center" priority/>
       </div>
-      <figcaption className="mt-5 text-base font-bold text-[#111]">Chris Cruz <span className="text-sm font-normal text-[#858585]">— Visual &amp; Product Designer</span></figcaption>
+      <figcaption className="mt-5 text-base font-bold text-[#111]">Chris Cruz <span className="text-sm font-normal text-[#858585]">— Senior Visual &amp; Product Designer</span></figcaption>
      </figure>
     )}
    </div>
