@@ -43,15 +43,15 @@ const revisions=[
 ];
 
 function Eyebrow({children}){return <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.22em]">{children}</p>}
-function SectionHeading({number,title,children}){return <div className="max-w-4xl"><Eyebrow>{number}</Eyebrow><h2 className="mt-4 text-3xl md:text-5xl font-black leading-[1.05] tracking-[-.055em] text-[#111]">{title}</h2>{children && <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#60707D]">{children}</p>}</div>}
+function SectionHeading({number,title,children}){return <div className="max-w-4xl"><Eyebrow>{number}</Eyebrow><h2 className="portfolio-section-heading mt-4 font-black text-[#111]">{title}</h2>{children && <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#60707D]">{children}</p>}</div>}
 
 export default function BartCaseStudy(){
  return <article className="mx-auto max-w-[1340px] px-7 md:px-20 pb-24 pt-32 md:pt-40">
   <Link href="/projects" className="inline-flex text-xs font-semibold uppercase tracking-[.2em] text-[#0072FC] hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-12 max-w-5xl">
    <Eyebrow>03 / HUMAN-CENTERED PRODUCT DESIGN · 2019 TEAM PROJECT</Eyebrow>
-   <h1 className="mt-5 text-[clamp(3.2rem,7vw,7.3rem)] font-black leading-[.93] tracking-[-.075em] text-[#111]">BART <span className="text-[#0072FC]">Fare Gates.</span></h1>
-   <p className="mt-7 max-w-4xl text-[clamp(1.45rem,2.7vw,2.5rem)] leading-[1.18] font-semibold tracking-tight text-[#263443]">Designing a safer, clearer entrance through research, prototyping, and iteration.</p>
+   <h1 className="portfolio-page-title mt-5 font-black text-[#111]">BART <span className="text-[#0072FC]">Fare Gates.</span></h1>
+   <p className="portfolio-page-lead mt-7 max-w-4xl font-semibold text-[#263443]">Designing a safer, clearer entrance through research, prototyping, and iteration.</p>
    <p className="mt-6 max-w-3xl text-base md:text-lg leading-[1.75] text-[#61707C]">In a Fall 2019 human-centered design course, our three-person team explored how to make bypassing transit fare gates more difficult while keeping the entry experience intuitive. We collaborated across research, ideation, physical prototyping, concept testing, and the final design.</p>
   </header>
 
@@ -241,7 +241,7 @@ export default function BartCaseStudy(){
 
   <div className="mt-20 flex flex-col gap-6 border-t border-[#DCE3EA] pt-10 sm:flex-row sm:items-center sm:justify-between">
    <Link href="/projects" className="text-sm font-semibold text-[#0072FC] hover:underline">← All projects</Link>
-   <Link href="/projects/visual-motion" className="group text-left sm:text-right"><span className="block text-xs uppercase tracking-[.18em] text-[#8695A2]">Next project</span><span className="mt-2 block text-2xl font-black text-[#172A3A] transition-colors group-hover:text-[#0072FC]">Motion & Visual Design ↗</span></Link>
+   <Link href="/projects/meta-blueprint" className="group text-left sm:text-right"><span className="block text-xs uppercase tracking-[.18em] text-[#8695A2]">Next project</span><span className="mt-2 block text-2xl font-black text-[#172A3A] transition-colors group-hover:text-[#0072FC]">Meta Blueprint ↗</span></Link>
   </div>
  </article>
 }

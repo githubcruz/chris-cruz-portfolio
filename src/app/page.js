@@ -1,3 +1,7 @@
+export const metadata = {
+ alternates: { canonical: "/" },
+};
+
 import Navbar from "../components/Navbar";
 import Cursor from "../components/Cursor";
 import Hero from "../components/Hero";

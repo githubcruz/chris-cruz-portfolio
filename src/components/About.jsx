@@ -12,29 +12,29 @@ export default function About({ standalone = false }) {
  const ref=useRef(null);
  const [photoReady,setPhotoReady]=useState(true);
  useEffect(()=>{
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (standalone || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const ctx=gsap.context(()=>{
    gsap.fromTo(".about-portrait",{opacity:0,y:16},{opacity:1,y:0,duration:.5,ease:"power2.out",scrollTrigger:{trigger:ref.current,start:"top 82%",once:true}});
   },ref);
   return ()=>ctx.revert();
- },[]);
- return <section id="about-section" ref={ref} className="relative overflow-hidden bg-white px-7 md:px-20 pt-20 pb-16 md:py-24">
+ },[standalone]);
+ return <section id="about-section" ref={ref} className={`relative overflow-hidden bg-white px-7 md:px-20 ${standalone ? "portfolio-page-enter pt-36 pb-20 md:pt-40 md:pb-24" : "pt-20 pb-16 md:py-24"}`}>
   <div className="mx-auto max-w-[1180px]">
    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,.88fr)] gap-12 lg:gap-16 xl:gap-24 items-center">
     <div className="relative z-10">
-     <p className="text-[#0072FC] tracking-[.32em] text-xs uppercase font-bold mb-6">{SECTION.label}</p>
-     <h2 className="font-black text-[#111111] tracking-[-.07em] leading-[.94] text-[clamp(2.8rem,5.2vw,5.8rem)] mb-7">Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
-     <div className="max-w-2xl space-y-5 text-[#595959] text-base md:text-[17px] leading-[1.7]">
+     <p className="portfolio-eyebrow portfolio-enter-item mb-6 text-[#0072FC]">{SECTION.label}</p>
+     <h2 className="portfolio-page-title portfolio-enter-item mb-7 font-black text-[#111111]" style={{"--enter-delay":"90ms"}}>Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
+     <div className="portfolio-enter-item max-w-2xl space-y-5 text-[#595959] text-base md:text-[17px] leading-[1.75]" style={{"--enter-delay":"170ms"}}>
       <p className="text-[#303030] text-lg md:text-xl leading-[1.5]">I’m a senior visual and product designer focused on creating thoughtful digital experiences that feel simple, clear, and human.</p>
       {(standalone ? BIO : BIO.slice(0,1)).map((paragraph,i)=><p key={i}>{paragraph}</p>)}
      </div>
-     <div className="mt-8 flex flex-wrap gap-3">
+     <div className="portfolio-enter-item mt-8 flex flex-wrap gap-3" style={{"--enter-delay":"260ms"}}>
       <Link href="/resume" className="portfolio-wipe-button about-resume-button inline-flex items-center rounded-full bg-[#0072FC] text-white px-6 py-3 text-sm font-semibold"><span className="portfolio-wipe-content"><LuFileText size={17} aria-hidden="true"/> View Resume <span aria-hidden="true">↗</span></span></Link>
       <a href="mailto:chrissscruz@gmail.com?subject=Portfolio%20Inquiry" className="portfolio-wipe-button inline-flex items-center rounded-full border border-[#0072FC] text-[#0072FC] px-6 py-3 text-sm font-semibold"><span className="portfolio-wipe-content"><LuMail size={17} aria-hidden="true"/> Email me <span aria-hidden="true">↗</span></span></a>
       {!standalone && <Link href="/about" className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">More about me ↗</Link>}
      </div>
     </div>
-    <div className="about-portrait relative isolate w-full max-w-[330px] md:max-w-[380px] mx-auto lg:ml-auto">
+    <div className="about-portrait portfolio-enter-portrait relative isolate w-full max-w-[320px] md:max-w-[370px] mx-auto lg:ml-auto">
      <div className="about-illustration-frame relative aspect-square overflow-hidden rounded-full border-[3px] border-[#0072FC] bg-white shadow-[0_14px_40px_rgba(0,114,252,.11)]" aria-label="Illustrated portrait of Chris Cruz">
       <span aria-hidden="true" className="about-illustration-wave absolute inset-0" />
       <Image src={photoReady?"/photo/chris-illustrated-cutout.png":"/photo/chris-headshot-large.png"} onError={()=>setPhotoReady(false)} alt="Illustrated portrait of Chris Cruz" fill sizes="(max-width: 768px) 85vw, 380px" className="relative z-10 object-contain object-center" priority={standalone}/>

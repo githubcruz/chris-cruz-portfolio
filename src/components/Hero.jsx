@@ -2,10 +2,10 @@ export default function Hero() {
   return (
     <section className="relative min-h-[76svh] px-7 md:px-20 pt-40 md:pt-44 pb-20 md:pb-24 flex flex-col justify-center">
       <div className="relative z-10 mx-auto w-full max-w-[1180px]">
-        <p className="text-[#0072FC] uppercase tracking-[0.20em] font-bold text-xs mb-6 hero-entrance-label">
+        <p className="portfolio-eyebrow text-[#0072FC] mb-6 hero-entrance-label">
           Chris Cruz · Senior Visual & Product Designer
         </p>
-        <h1 className="text-white text-[clamp(2.8rem,6.2vw,5.9rem)] tracking-[-0.075em] leading-[0.95] font-black mb-7 hero-entrance-title">
+        <h1 className="portfolio-page-title text-white font-black mb-7 hero-entrance-title">
           Designing digital<br />products that <span className="text-[#0072FC]">scale.</span>
         </h1>
         <p className="text-white/80 text-lg md:text-[1.45rem] max-w-[690px] leading-snug hero-entrance-lead">
