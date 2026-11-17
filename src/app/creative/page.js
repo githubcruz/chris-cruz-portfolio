@@ -85,7 +85,7 @@ function Artwork({ index, alt }) {
       aria-label={alt}
       className="aspect-[42/29] w-full rounded-[1.1rem] border border-[#E2E7EC] bg-[#F7F8F9] bg-no-repeat"
       style={{
-        backgroundImage: 'url("/creative-media/originals-atlas.avif")',
+        backgroundImage: 'url("/creative-media/originals-atlas-hd.avif")',
         backgroundSize: "300% 300%",
         backgroundPosition: `${col * 50}% ${row * 50}%`,
       }}
