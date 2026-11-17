@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-const LINKS = [{label:"Work",href:"/projects"},{label:"About",href:"/about"},{label:"Contact",href:"/contact"}];
+const LINKS = [{label:"Work",href:"/projects"},{label:"Creative",href:"/creative"},{label:"About",href:"/about"},{label:"Contact",href:"/contact"}];
 export default function Navbar(){
  const [open,setOpen]=useState(false); const pathname=usePathname();
  return <nav aria-label="Main navigation" className="fixed top-0 inset-x-0 z-[60] flex items-center justify-between px-6 md:px-20 py-4 bg-gradient-to-b from-black/80 to-transparent">
