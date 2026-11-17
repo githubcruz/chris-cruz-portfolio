@@ -28,10 +28,10 @@ export const FALLBACK_PROJECTS = [
   {
     id: "bart-fare-gates",
     num: "03",
-    category: "Human-Centered Design · Research",
+    category: "Human-Centered Design · Physical UX",
     title: "BART Fare Gates",
-    description: "Applying usability research and testing to improve real-world transit interactions and inform design decisions.",
-    tech: "User Research · Usability Testing · Product Design",
+    description: "A research-led transit entrance concept shaped by rider insights, physical prototyping, and A/B preference tests.",
+    tech: "User Research · Physical Prototyping · A/B Testing",
     link: null,
     review: null,
   },
