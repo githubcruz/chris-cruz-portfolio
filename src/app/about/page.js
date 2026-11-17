@@ -6,7 +6,8 @@ export const metadata = {
  title: "About",
  description: "Meet Chris Cruz, a Bay Area senior visual and product designer with experience across Meta Blueprint, design systems, and digital learning.",
  alternates: { canonical: "/about" },
- openGraph: { title: "About Chris Cruz", url: "/about" },
+ openGraph: { title: "About Chris Cruz", url: "/about", images: [{ url: "/photo/chris-headshot-large.png", alt: "Portrait of Chris Cruz" }] },
+ twitter: { card: "summary_large_image", images: ["/photo/chris-headshot-large.png"] },
 };
 
 export default function AboutPage() {
