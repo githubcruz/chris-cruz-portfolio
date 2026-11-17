@@ -2,151 +2,107 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
+import CreativeArtwork from "@/components/CreativeArtwork";
+import {creativeProjects} from "@/data/creativeProjects";
+import creativeMedia from "@/data/creativeMedia.json";
 
 export const metadata = {
   title: "Creative Work",
-  description: "Brand identity, visual campaigns, illustration, and interface concepts by Chris Cruz. Original artwork and carefully labeled concept work.",
-  alternates: { canonical: "/creative" },
+  description: "Visual and brand identity work by Chris Cruz: 10 projects, including logo variations, campaigns, print, illustration, and product concepts, displayed using original high-resolution images.",
+  alternates: {canonical:"/creative"},
+};
+const featuredOrder = {
+  "elite-barbershop": [0,7,8],
+  "raices-real-estate": [4,5,6],
 };
 
-const projects = [
-  {
-    title: "Elite Barbershop",
-    type: "Client work · Brand identity",
-    detail: "Original script and circular logo explorations with a traditional red-and-blue barber pole. Signage, apparel, and business-card applications are proposed mockups.",
-    alt: "Elite Barbershop original circular script logo with barber pole",
-    tags: ["Identity", "Logo system", "Signage concepts"],
-  },
-  {
-    title: "Raíces Real Estate",
-    type: "Client work · Identity & campaigns",
-    detail: "A shield-and-roots identity applied to property marketing, listing flyers, and social campaigns for a local real-estate practice.",
-    alt: "Original Raíces Real Estate shield identity and printed listing flyer",
-    tags: ["Brand identity", "Social campaigns", "Web"],
-    url: "https://www.jordanruiz.com/",
-  },
-  {
-    title: "Pekaboo",
-    type: "Concept · Logo & illustration",
-    detail: "An expressive character mark developed through hairstyle and makeup variations, combining playful illustration with a beauty-focused wordmark.",
-    alt: "Original Pekaboo illustrated character and wordmark",
-    tags: ["Illustration", "Identity"],
-  },
-  {
-    title: "The Mexican Museum",
-    type: "Independent concept · Cultural identity",
-    detail: "A geometric, color-led mark exploring Mexican cultural expression. An independent design exploration, not an official museum identity.",
-    alt: "Original geometric multicolor Mexican Museum logo exploration",
-    tags: ["Logo exploration", "Cultural identity"],
-  },
-  {
-    title: "Optik",
-    type: "Student concept · Brand & app",
-    detail: "An identity system, interface explorations, advertising applications, and packaging concepts for a vision-technology idea.",
-    alt: "Original Optik mobile-app interface designs and packaging",
-    tags: ["Branding", "UI", "Campaign"],
-  },
-  {
-    title: "Steamboat",
-    type: "Design concept · Restaurant identity",
-    detail: "Restaurant logo explorations and menu/web presentation studies developed as a cohesive visual identity.",
-    alt: "Original Steamboat restaurant mark and website design exploration",
-    tags: ["Identity", "Web", "Menu"],
-  },
-  {
-    title: "FoodPoint",
-    type: "Student project · UX/UI",
-    detail: "A mobile-app concept for finding and tracking street-food vendors, including research, flows, prototypes, and high-fidelity interfaces.",
-    alt: "Original FoodPoint high-fidelity mobile UI screens",
-    tags: ["UX research", "App design"],
-  },
-  {
-    title: "Litter-Free Foundation",
-    type: "Concept · Identity & applications",
-    detail: "An environmental identity built around a hand and trash-bag symbol, shown on a green collection-bin mockup.",
-    alt: "Original Litter-Free Foundation logo applied to a green bin",
-    tags: ["Logo", "Environmental design"],
-  },
-  {
-    title: "Green & Clean",
-    type: "Concept · Logo & illustration",
-    detail: "A friendly illustrative identity using a spray bottle, globe motif, and sparkling green and blue accents.",
-    alt: "Original illustrated Green and Clean logo",
-    tags: ["Illustration", "Identity"],
-  },
-];
-
-function Artwork({ index, alt }) {
-  const col = index % 3;
-  const row = Math.floor(index / 3);
+function ProjectIntro({project,count,featured=false}) {
   return (
-    <div
-      role="img"
-      aria-label={alt}
-      className="aspect-[42/29] w-full rounded-[1.1rem] border border-[#E2E7EC] bg-[#F7F8F9] bg-no-repeat"
-      style={{
-        backgroundImage: 'url("/creative-media/originals-atlas-hd.avif")',
-        backgroundSize: "300% 300%",
-        backgroundPosition: `${col * 50}% ${row * 50}%`,
-      }}
-    />
+    <div className="flex flex-col items-start">
+      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[.15em] text-[#0072FC]">{project.category}</p>
+      {featured?(
+        <h2 className="max-w-[550px] text-[clamp(2.6rem,5vw,4.8rem)] font-bold leading-[1.05] tracking-[-.055em]">{project.title}</h2>
+      ):(
+        <h3 className="text-[clamp(1.65rem,2.4vw,2.15rem)] font-semibold leading-[1.15] tracking-[-.04em]">{project.title}</h3>
+      )}
+      <p className="mt-5 max-w-[470px] text-sm leading-[1.85] text-[#596976] md:text-base">{project.intro}</p>
+      <p className="mt-5 text-xs font-medium tracking-[.09em] text-[#83909B]">{count} ORIGINAL DESIGNS & APPLICATIONS</p>
+      <Link href={`/creative/${project.slug}`} className="mt-8 inline-flex items-center gap-2 border-b border-[#0072FC] pb-1 text-sm font-semibold text-[#0072FC] transition-colors hover:border-[#111] hover:text-[#111]">
+        View all {count} images <span aria-hidden="true">↗</span>
+      </Link>
+    </div>
+  );
+}
+
+function FeaturedProject({project}) {
+  const media = creativeMedia[project.slug].images;
+  const picks=featuredOrder[project.slug]||[0,1,2];
+  return (
+    <article className="grid gap-10 border-b border-[#DFE5E9] py-14 lg:grid-cols-[minmax(240px,.7fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
+      <div className="lg:pt-3"><ProjectIntro project={project} count={media.length} featured/></div>
+      <div className="grid grid-cols-2 gap-3 sm:gap-5">
+        <CreativeArtwork item={media[picks[0]]} hero className="col-span-2"/>
+        <CreativeArtwork item={media[picks[1]]}/>
+        <CreativeArtwork item={media[picks[2]]}/>
+      </div>
+    </article>
+  );
+}
+
+function ProjectCard({project}) {
+  const media=creativeMedia[project.slug].images;
+  const primary=project.slug==="foodpoint" ? media[3] : project.slug==="litter-free-foundation" ? media[1] : media[0];
+  const secondary=media[1]||null;
+  return (
+    <article className="min-w-0 border-b border-[#E4E9ED] pb-12">
+      <div className="grid grid-cols-2 gap-3">
+        <CreativeArtwork item={primary} hero caption={false} className="col-span-2"/>
+        {secondary && <CreativeArtwork item={secondary} caption={false}/>}
+        {media[2] && <CreativeArtwork item={media[2]} caption={false}/>}
+      </div>
+      <div className="mt-7">
+        <ProjectIntro project={project} count={media.length}/>
+      </div>
+    </article>
   );
 }
 
 export default function CreativePage() {
+  const total=Object.values(creativeMedia).reduce((sum,p)=>sum+p.images.length,0);
   return (
     <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]">
-      <Cursor light />
-      <Navbar />
-      <div className="mx-auto max-w-[1320px] px-7 pb-24 pt-36 md:px-20 md:pt-44">
-        <div className="max-w-[940px]">
-          <p className="portfolio-eyebrow mb-5 text-[#0072FC]">CREATIVE WORK / SELECTED VISUAL EXPLORATIONS</p>
-          <h1 className="portfolio-page-title max-w-[850px] font-bold leading-[1.07] tracking-[-.055em]">
-            Outside the <span className="text-[#0072FC]">case studies.</span>
-          </h1>
-          <p className="mt-7 max-w-[640px] text-[16px] leading-[1.85] text-[#596875] md:text-lg">
-            A curated collection of brand identities, marketing design, illustration, and early product concepts. Built with original artwork and a few clearly identified presentation mockups.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-5 text-xs font-semibold uppercase tracking-[.12em]">
-            <a href="#gallery" className="text-[#0072FC] hover:underline underline-offset-4">Explore the work ↓</a>
-            <Link href="/projects" className="text-[#283542] hover:text-[#0072FC]">View product case studies ↗</Link>
+      <Cursor light/><Navbar/>
+      <div className="mx-auto max-w-[1320px] px-6 pb-24 pt-36 md:px-12 lg:px-16 lg:pt-44">
+        <header className="border-b border-[#DDE4E8] pb-12 md:pb-16">
+          <p className="portfolio-eyebrow mb-6 text-[#0072FC]">CHRIS CRUZ / IDENTITY, CAMPAIGN, DIGITAL & PRINT</p>
+          <h1 className="portfolio-page-title max-w-[1000px] font-bold leading-[1.06] tracking-[-.06em]">Creative <span className="text-[#0072FC]">work.</span></h1>
+          <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <p className="max-w-[730px] text-base leading-[1.85] text-[#536573] md:text-lg">A broader look at my original designs, from the first marks and identity explorations to campaigns, interface work, and branding applications.</p>
+            <p className="shrink-0 text-xs font-semibold uppercase leading-loose tracking-[.14em] text-[#7B8995]">{creativeProjects.length} projects <span className="mx-2 text-[#CBD3DA]">/</span> {total} visuals</p>
           </div>
-        </div>
+          <Link href="/projects" className="mt-8 inline-block text-xs font-semibold uppercase tracking-[.12em] text-[#0072FC] hover:underline underline-offset-4">View product case studies ↗</Link>
+        </header>
 
-        <section id="gallery" aria-label="Creative work gallery" className="mt-16 scroll-mt-28 md:mt-24">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-[#DDE4EA] pb-5">
-            <h2 className="text-2xl font-bold tracking-[-.04em] md:text-3xl">Selected projects <span className="ml-2 align-top text-sm font-medium text-[#7B8894]">/ 09</span></h2>
-            <p className="text-sm text-[#64717D]">Client work & independent explorations</p>
+        <section aria-label="Featured visual identity projects">
+          {creativeProjects.slice(0,2).map(project=><FeaturedProject key={project.slug} project={project}/>)}
+        </section>
+
+        <section aria-label="More creative work" className="pt-12 md:pt-20">
+          <div className="mb-11 flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold tracking-[-.055em]">More explorations</h2>
+            <p className="max-w-xs text-sm leading-relaxed text-[#768591]">Click a project to see all of its logos, artwork, variations, and applications.</p>
           </div>
-          <div className="grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project, index) => (
-              <article key={project.title} className="min-w-0">
-                <Artwork index={index} alt={project.alt} />
-                <div className="pt-5">
-                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-[.13em] text-[#0072FC]">{project.type}</p>
-                  <h3 className="text-[clamp(1.45rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-.04em]">{project.title}</h3>
-                  <p className="mt-3 text-sm leading-[1.8] text-[#596875]">{project.detail}</p>
-                  <p className="mt-4 text-[11px] font-medium uppercase tracking-[.1em] text-[#84909B]">{project.tags.join(" · ")}</p>
-                  {project.url && (
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-xs font-semibold uppercase tracking-[.1em] text-[#0072FC] hover:underline underline-offset-4">
-                      View live brand website ↗
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
+          <div className="grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-2">
+            {creativeProjects.slice(2).map(project=><ProjectCard key={project.slug} project={project}/>)}
           </div>
         </section>
-        <div className="mt-20 border-t border-[#DDE4EA] pt-9 md:mt-28">
-          <p className="max-w-[720px] text-sm leading-[1.8] text-[#65717D]">
-            Some pieces are client work, while others were created as independent or academic concepts. Presented applications are labeled as concepts when they were not produced or launched. Original source artwork takes priority over synthetic mockups.
-          </p>
-          <Link href="/contact" className="mt-8 inline-flex items-center rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005DC8]">
-            Work together ↗
-          </Link>
+
+        <div className="mt-20 border-t border-[#DFE5EA] pt-10">
+          <p className="max-w-[820px] text-sm leading-[1.85] text-[#657583]">Portfolio artwork is displayed from the provided original files. Independent and academic concepts are identified, and unproduced mockups are labeled as conceptual applications. Smaller legacy logo exports are shown at modest sizes to avoid artificial upscaling.</p>
+          <Link href="/contact" className="mt-8 inline-flex items-center rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005DC8]">Work together ↗</Link>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </main>
   );
 }
