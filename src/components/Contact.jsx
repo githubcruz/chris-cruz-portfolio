@@ -32,29 +32,20 @@ export default function Contact({ standalone = false }) {
      {standalone && <p className="mt-8 text-xs font-medium uppercase tracking-[.16em] text-[#86919C]">Visual design · Product thinking · Creative systems</p>}
     </div>
     {standalone && (
-     <div className="relative mx-auto w-full max-w-[430px]">
-      <div aria-hidden="true" className="absolute -inset-4 rotate-[-3deg] rounded-[40px] border border-[#C8DFFF] bg-[#EAF3FF]/70" />
-      <div aria-hidden="true" className="absolute -right-8 -top-9 size-36 rounded-full bg-[#0072FC]/10 blur-2xl" />
-      <div className="relative overflow-hidden rounded-[30px] border border-[#D7E5F7] bg-white p-6 shadow-[0_22px_70px_rgba(20,62,108,.09)] md:p-8">
-       <div className="relative aspect-square overflow-hidden rounded-[22px] bg-white">
-        <Image
-         src="/photo/chris-illustrated-cutout.png"
-         alt="Illustrated portrait of Chris Cruz"
-         fill
-         sizes="(max-width: 1023px) 80vw, 390px"
-         className="object-contain"
-         priority
-        />
-       </div>
-       <div className="mt-6 flex items-end justify-between gap-4 border-t border-[#E6EDF5] pt-5">
-        <div>
-         <p className="text-base font-bold tracking-tight text-[#172A3C]">Chris Cruz</p>
-         <p className="mt-1 text-xs text-[#657487]">Visual &amp; Product Designer</p>
-        </div>
-        <span aria-hidden="true" className="contact-portrait-arrow flex size-9 items-center justify-center rounded-full bg-[#0072FC] text-lg text-white">↗</span>
-       </div>
+     <figure className="contact-portrait relative mx-auto w-full max-w-[380px]">
+      <div className="about-illustration-frame relative aspect-square overflow-hidden rounded-full border-[3px] border-[#0072FC] bg-white shadow-[0_14px_40px_rgba(0,114,252,.11)]" aria-label="Illustrated portrait of Chris Cruz">
+       <span aria-hidden="true" className="about-illustration-wave absolute inset-0" />
+       <Image
+        src="/photo/chris-contact-illustration.png"
+        alt="Black-and-white illustration of Chris Cruz holding a pen and making a thinking gesture"
+        fill
+        sizes="(max-width: 768px) 85vw, 380px"
+        className="relative z-10 object-cover object-center"
+        priority
+       />
       </div>
-     </div>
+      <figcaption className="mt-5 text-base font-bold text-[#111]">Chris Cruz <span className="text-sm font-normal text-[#858585]">— Visual &amp; Product Designer</span></figcaption>
+     </figure>
     )}
    </div>
   </section>
