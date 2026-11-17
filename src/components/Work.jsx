@@ -90,6 +90,12 @@ export default function Work() {
       </article>
      ))}
     </div>
+    <div className="mt-14 border-t border-[#E0E7EE] pt-8 md:mt-16">
+     <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+      <div><p className="mb-2 text-[11px] font-semibold uppercase tracking-[.15em] text-[#0072FC]">Beyond the case studies</p><p className="max-w-lg text-sm leading-relaxed text-[#5E6D7A]">Brand identities, creative campaigns, illustration, and independent concepts.</p></div>
+      <Link href="/creative" className="inline-flex shrink-0 items-center justify-center rounded-full border border-[#0072FC] px-6 py-3 text-xs font-semibold uppercase tracking-[.12em] text-[#0072FC] transition-colors hover:bg-[#0072FC] hover:text-white">Explore creative work ↗</Link>
+     </div>
+    </div>
    </div>
   </section>
  );
