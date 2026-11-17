@@ -21,6 +21,13 @@ const conceptFeatures = [
  {index:"04",heading:"Adaptive access & detection",text:"The concept included reversible entry/exit direction and a proposed sensor alarm if more than one passenger attempted to pass.",evidence:"Proposed behavior · Not field-tested"}
 ];
 
+const conceptTestGallery = [
+ {title:"Single versus double gate",src:"/portfolio-media/bart-ab-configuration.webp",result:"63.6% preferred single gate",detail:"22 participants"},
+ {title:"Clipper reader placement",src:"/portfolio-media/bart-ab-sensor.webp",result:"96.2% preferred top placement",detail:"26 participants"},
+ {title:"Barrier material",src:"/portfolio-media/bart-ab-material.webp",result:"92.3% preferred tempered glass",detail:"A/B concept comparison"},
+ {title:"Opening behavior",src:"/portfolio-media/bart-ab-motion.webp",result:"53.8% preferred sliding doors",detail:"Narrow preference"}
+];
+
 const prototypes=[
  {number:"01",heading:"Storyboard",question:"Does the proposed entrance interaction make sense before anything is built?",detail:"The storyboard was reviewed with 21 participants. The archived presentation reports favorable impressions of ease of use and perceived safety."},
  {number:"02",heading:"Physical mockup",question:"How does a taller barrier feel in a real human-scale interaction?",detail:"An early cardboard prototype made size and physical form easier to respond to."},
@@ -54,10 +61,10 @@ export default function BartCaseStudy(){
   <figure className="mt-12">
    <div className="overflow-hidden rounded-[28px] border border-[#DFE6EE] bg-[#F3F5F7]">
     <div className="relative aspect-[16/9] w-full overflow-hidden">
-     <Image src="/portfolio-media/bart-final-gate.webp" alt="Bargate conceptual 3D rendering showing tall transparent barriers, top-mounted card readers, and a central passage" fill sizes="(max-width: 767px) 94vw, 1180px" className="object-cover object-center" priority unoptimized/>
+     <Image src="/portfolio-media/bart-final-recreated.webp" alt="Recreated presentation image of the Bargate fare-gate concept, with a BART logo and labels identifying the Clipper reader, glass doors, evasion sensor, fare display, and reversible entry sign" fill sizes="(max-width: 767px) 94vw, 1180px" className="object-cover object-center" priority unoptimized/>
     </div>
    </div>
-   <figcaption className="mt-3 flex flex-wrap justify-between gap-2 text-xs text-[#71808E]"><span>Final Bargate concept from the team's project documentation.</span><span>Concept rendering — not a gate deployed by BART.</span></figcaption>
+   <figcaption className="mt-3 flex flex-wrap justify-between gap-2 text-xs text-[#71808E]"><span>Visual recreation of the team’s 2019 Bargate concept, using the original presentation as reference.</span><span>Academic concept · Not an official BART design or deployment.</span></figcaption>
   </figure>
 
   <nav aria-label="Case study sections" className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-b border-[#E5EAF0] pb-6 text-sm font-semibold text-[#0072FC]">
@@ -82,6 +89,17 @@ export default function BartCaseStudy(){
    <SectionHeading number="02 / Discovery & synthesis" title="Understand behavior before designing a solution.">The team used survey research and affinity mapping to organize rider concerns and narrow a broad transit experience challenge into a testable design direction.</SectionHeading>
    <div className="mt-9 grid gap-4 md:grid-cols-3">
     {researchThemes.map((x,i)=><div key={x.heading} className="rounded-[20px] border border-[#E0E7EE] bg-[#F7FAFD] p-6 md:p-7"><p className="text-xs font-bold text-[#0072FC]">{String(i+1).padStart(2,"0")}</p><h3 className="mt-5 text-xl font-bold tracking-tight text-[#1F2D39]">{x.heading}</h3><p className="mt-3 text-sm leading-[1.75] text-[#61717E]">{x.body}</p></div>)}
+   </div>
+   <div className="mt-10 grid gap-5 md:grid-cols-2">
+    {[
+     {src:"/portfolio-media/bart-archival-survey.webp",title:"Rider survey",desc:"Original 2019 research slide with rider responses and key findings."},
+     {src:"/portfolio-media/bart-archival-affinity.webp",title:"Affinity mapping",desc:"Original team synthesis board grouping concerns and observations."}
+    ].map(item=><figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DDE6F0] bg-white">
+     <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open original ${item.title} image in new tab`} className="block cursor-zoom-in bg-[#F6F7F9]">
+      <Image src={item.src} alt={item.desc} width={1400} height={788} sizes="(max-width: 767px) 92vw, 540px" className="h-auto w-full" unoptimized />
+     </a>
+     <figcaption className="p-5"><p className="text-base font-bold text-[#223748]">{item.title}</p><p className="mt-1 text-sm leading-relaxed text-[#6F7F8D]">{item.desc} <span className="text-[#0072FC]">Open full size ↗</span></p></figcaption>
+    </figure>)}
    </div>
    <p className="mt-5 text-sm leading-relaxed text-[#71808B]">The research showed where rider concerns clustered; it did not establish that a redesigned gate would improve real-world safety or reduce fare evasion.</p>
   </section>
@@ -109,6 +127,18 @@ export default function BartCaseStudy(){
    <div className="mt-10 grid gap-4 md:grid-cols-2">
     {prototypes.map(x=><div key={x.number} className="rounded-[22px] border border-[#DFE6ED] p-7 md:p-8"><span className="text-xs font-bold text-[#0072FC]">{x.number}</span><h3 className="mt-4 text-2xl font-bold tracking-tight text-[#182A3A]">{x.heading}</h3><p className="mt-4 text-lg font-medium leading-snug text-[#334A5D]">{x.question}</p><p className="mt-4 text-sm leading-[1.75] text-[#70808C]">{x.detail}</p></div>)}
    </div>
+   <div className="mt-8 grid gap-5 md:grid-cols-2">
+    {[
+      {src:"/portfolio-media/bart-archival-storyboard.webp",title:"Storyboard testing",detail:"2019 storyboard and participant response summary."},
+      {src:"/portfolio-media/bart-archival-prototype-first.webp",title:"First physical mockup",detail:"Team testing a tall cardboard gate at human scale."},
+      {src:"/portfolio-media/bart-archival-prototype-second.webp",title:"Second physical mockup",detail:"Construction and feedback for the alternative configuration."}
+    ].map((item,index)=><figure key={item.src} className={`overflow-hidden rounded-[22px] border border-[#DDE6F0] bg-[#F8FAFC] ${index===0?"md:col-span-2":""}`}>
+     <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} archive image in a new tab`} className="block cursor-zoom-in">
+      <Image src={item.src} alt={item.detail} width={1400} height={788} sizes={index===0?"(max-width:767px) 92vw, 1100px":"(max-width:767px) 92vw, 540px"} className="h-auto w-full" unoptimized />
+     </a>
+     <figcaption className="p-5"><p className="text-base font-bold text-[#243949]">{item.title}</p><p className="mt-1 text-sm leading-relaxed text-[#6C7B88]">{item.detail} <span className="text-[#0072FC]">Open full size ↗</span></p></figcaption>
+    </figure>)}
+   </div>
   </section>
 
   <section id="bart-results" className="scroll-mt-32 mt-24 md:mt-28">
@@ -117,6 +147,20 @@ export default function BartCaseStudy(){
     {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-black tracking-tight tabular-nums text-[#142C40]">{x.value}</p><div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DCE8F6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:x.value}}/></div><p className="mt-4 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
    </div>
    <div className="mt-6 border-l-[3px] border-[#0072FC] bg-[#F4F8FD] px-6 py-5 text-sm leading-[1.8] text-[#526576]"><strong className="text-[#253D51]">What the data actually tells us:</strong> These are participant preferences in a concept-design exercise, not verified reductions in fare evasion, rider errors, or gate congestion. A 53.8% result is a narrow directional preference, and sample sizes for the last two tests were not specified in the source summary.</div>
+   <div className="mt-11">
+    <div className="flex flex-wrap items-end justify-between gap-4">
+      <div><h3 className="text-2xl md:text-3xl font-black tracking-tight text-[#203748]">The design options, side by side.</h3><p className="mt-2 text-sm leading-relaxed text-[#637582]">Recreated comparison visuals, grounded in the team’s original 2019 testing slides and results.</p></div>
+      <span className="text-xs font-bold uppercase tracking-[.12em] text-[#0072FC]">Visual recreations · Not original test photographs</span>
+    </div>
+    <div className="mt-7 grid gap-6 md:grid-cols-2">
+      {conceptTestGallery.map(item=><figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DFE8F0] bg-[#F7F9FC]">
+        <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} recreated concept comparison in a new tab`} className="block cursor-zoom-in">
+          <Image src={item.src} alt={`${item.title}: illustrated concept comparison based on 2019 test results`} width={1400} height={788} sizes="(max-width:767px) 92vw, 560px" className="h-auto w-full" unoptimized/>
+        </a>
+        <figcaption className="p-5"><h4 className="text-base font-bold text-[#1D364A]">{item.title}</h4><p className="mt-1 text-sm text-[#516B7E]">{item.result} · {item.detail}</p><p className="mt-2 text-xs text-[#81909B]">Recreated for legibility from original project documentation. Open full size ↗</p></figcaption>
+      </figure>)}
+    </div>
+   </div>
   </section>
 
   <section className="mt-24 md:mt-28">
@@ -136,7 +180,7 @@ export default function BartCaseStudy(){
     </div>
     <figure className="overflow-hidden rounded-2xl bg-white">
      <Image src="/portfolio-media/bart-final-gate.webp" alt="Team's final Bargate concept rendering" width={760} height={428} className="h-auto w-full object-contain" unoptimized/>
-     <figcaption className="p-4 text-xs leading-relaxed text-[#6B7C8B]">Project concept rendering · Not a production or deployed BART fare gate.</figcaption>
+     <figcaption className="p-4 text-xs leading-relaxed text-[#6B7C8B]">Original 2019 archival rendering retained for source reference; the enhanced version appears above.</figcaption>
     </figure>
    </div>
   </section>
