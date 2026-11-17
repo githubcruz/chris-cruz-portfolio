@@ -88,7 +88,7 @@ export default function BartCaseStudy(){
       <figcaption className="px-4 py-3 text-xs leading-relaxed text-[#647587]">Original ideation photograph and concept voting from the project presentation.</figcaption>
      </figure>
     </div>
-    <div className="flex flex-col justify-center rounded-[24px] bg-[#172B41] p-8 md:p-10 text-white">
+    <div className="flex flex-col justify-center rounded-[24px] bg-[#172B41] p-8 md:p-10 text-[#FFFFFF]">
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8DBEFF]">Selection method</p>
      <h3 className="mt-5 text-2xl md:text-3xl font-bold tracking-tight">Generate → compare → narrow.</h3>
      <p className="mt-5 text-base leading-[1.75] text-[#CDD8E2]">Dot voting and discussion helped identify which concepts were worth testing. The strongest idea was not treated as proven until the next round of feedback.</p>
@@ -119,7 +119,7 @@ export default function BartCaseStudy(){
   </section>
 
   <section className="mt-24 md:mt-28">
-   <div className="grid items-center gap-10 rounded-[28px] bg-[#102B45] p-8 text-white lg:grid-cols-[.85fr_1.15fr] md:p-12">
+   <div className="grid items-center gap-10 rounded-[28px] bg-[#102B45] p-8 text-[#FFFFFF] lg:grid-cols-[.85fr_1.15fr] md:p-12">
     <div>
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8ABBFF]">07 / Final concept · Bargate</p>
      <h2 className="mt-5 text-3xl md:text-4xl font-black tracking-tight">A more defensible entrance concept.</h2>
