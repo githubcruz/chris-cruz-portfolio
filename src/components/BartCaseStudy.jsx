@@ -88,7 +88,6 @@ export default function BartCaseStudy(){
       <figcaption className="px-4 py-3 text-xs leading-relaxed text-[#647587]">Original ideation photograph and concept voting from the project presentation.</figcaption>
      </figure>
     </div>
-    </div>
     <div className="flex flex-col justify-center rounded-[24px] bg-[#172B41] p-8 md:p-10 text-white">
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8DBEFF]">Selection method</p>
      <h3 className="mt-5 text-2xl md:text-3xl font-bold tracking-tight">Generate → compare → narrow.</h3>
