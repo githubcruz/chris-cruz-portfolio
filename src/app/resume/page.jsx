@@ -1,25 +1,112 @@
+import Link from "next/link";
 import Cursor from "@/components/Cursor";
+
 const experience = [
- {name:"Meta",role:"Creative Designer",date:"March 2020 – Present",location:"Menlo Park, CA",bullets:[
- "Built and maintained a Figma component library by auditing assets and standardizing patterns across collaborators.",
- "Designed web and mobile learning experiences for Meta Blueprint, including UI assets, motion graphics, and learning content.",
- "Contributed to initiatives reporting 25% higher user engagement and 30% more website traffic.",
- "Created videos and visual assets that made complex product and marketing topics more accessible.",
- "Collaborated with art directors, designers, and stakeholders to balance usability, brand standards, and delivery.",
- "Led design and prototyping for an image-privacy concept spanning Facebook, Instagram, and WhatsApp."
- ]},
- {name:"BART",role:"Human-Centered Designer",date:"September – December 2019",location:"San Francisco, CA",bullets:[
- "Led user research and usability testing for fare gate improvements and analyzed passenger behavior and errors.",
- "Project-reported outcomes included 25% fewer user errors, 5% higher gate efficiency, and a 55–60% reduction in fare evasion after installation."
- ]}
+ {
+  name: "Meta",
+  role: "Creative Designer (Contractor)",
+  dates: "March 2020 – Present",
+  location: "Menlo Park, California",
+  bullets: [
+   "Led visual design for a 16-course Meta Blueprint learning revamp, building reusable Figma components and responsive patterns.",
+   "Created and implemented web and mobile learning layouts, instructional UI assets, and CMS components using Figma and HTML/CSS.",
+   "Developed and maintained shared visual assets and design patterns that reduced repeated brand revisions and, according to project experience, saved several production days per course.",
+   "Produced motion graphics, instructional video, icons, and digital content to communicate complex product and marketing topics.",
+   "Partnered with instructional designers, creative, brand, legal, and other stakeholders from concept through production."
+  ],
+ },
 ];
-export const metadata={title:"Resume | Chris Cruz",description:"Chris Cruz — senior visual and product designer, experience and skills."};
-export default function ResumePage(){return <main className="portfolio-cursor resume-page" style={{background:"#ffffff",color:"#121212",minHeight:"100vh",fontFamily:"var(--font-inter), Inter, Arial, sans-serif",padding:"48px max(24px,calc((100vw - 900px)/2))"}}>
-<Cursor light />
-<a className="resume-link" href="/" style={{color:"#0072FC",textDecoration:"none",letterSpacing:".1em",fontSize:13,fontWeight:700}}>← BACK TO PORTFOLIO</a>
-<header style={{borderBottom:"1px solid #dedede",padding:"50px 0 32px"}}><h1 style={{fontSize:"clamp(40px,6vw,62px)",letterSpacing:"-.06em",margin:"0 0 12px"}}>Chris Cruz<span style={{color:"#0072FC"}}>.</span></h1><p style={{fontSize:19,margin:"0 0 18px",color:"#333333"}}>Senior Visual & Product Designer · UI/UX · Prototyping · Design Systems</p><p style={{color:"#666666",lineHeight:1.8,margin:0}}>Bay Area, California · <a className="resume-link" style={{color:"#0072FC"}} href="mailto:chrissscruz@gmail.com">chrissscruz@gmail.com</a> · <a className="resume-link" style={{color:"#0072FC"}} href="https://chriscruz.tech">chriscruz.tech</a> · <a className="resume-link" style={{color:"#0072FC"}} href="https://linkedin.com/in/cruzchris">LinkedIn</a></p></header>
-<section style={{paddingTop:32}}><h2 style={{color:"#0072FC",fontSize:13,letterSpacing:".22em"}}>PROFILE</h2><p style={{color:"#333333",lineHeight:1.8}}>Multidisciplinary designer with 6+ years at Meta creating digital products, user experiences, and scalable visual systems. Experienced in UI/UX design, prototyping, user-centered research, and translating complex ideas into intuitive experiences. Works from early concepts through production-ready designs with cross-functional teams.</p></section>
-<section style={{paddingTop:24}}><h2 style={{color:"#0072FC",fontSize:13,letterSpacing:".22em"}}>EXPERIENCE</h2>{experience.map(job=><article key={job.name} style={{margin:"32px 0"}}><h3 style={{fontSize:23,margin:0,color:"#161616"}}>{job.name} — {job.role}</h3><p style={{color:"#777777",fontSize:13}}>{job.location} · {job.date}</p><ul style={{paddingLeft:22,color:"#555555",lineHeight:1.75}}>{job.bullets.map(b=><li key={b} style={{marginBottom:9}}>{b}</li>)}</ul></article>)}</section>
-<section style={{padding:"25px 0"}}><h2 style={{color:"#0072FC",fontSize:13,letterSpacing:".22em"}}>CORE SKILLS</h2><p style={{lineHeight:1.8,color:"#555555"}}><b>Design:</b> Visual design, brand systems, typography, art direction, iconography, digital campaigns</p><p style={{lineHeight:1.8,color:"#555555"}}><b>Product & Systems:</b> Figma component libraries, web/mobile UI, prototyping, user testing, HTML/CSS</p><p style={{lineHeight:1.8,color:"#555555"}}><b>Motion & Content:</b> Motion graphics, video production, multimedia, infographics</p><p style={{lineHeight:1.8,color:"#555555"}}><b>Collaboration:</b> Creative concepting, cross-functional collaboration, stakeholder communication</p></section>
-<section style={{padding:"10px 0 60px"}}><h2 style={{color:"#0072FC",fontSize:13,letterSpacing:".22em"}}>EDUCATION</h2><p style={{color:"#333333"}}>Academy of Art University — MA, Web Design and New Media · San Francisco, CA</p></section>
-<p style={{fontSize:12,color:"#777777"}}>Online resume adapted from the supplied PDF. A downloadable PDF will be added separately.</p></main>}
+const projects = [
+ {
+  name: "SafeShare — Screenshot Protection",
+  type: "Product UI concept · Not launched",
+  href: "/projects/meta-image-privacy",
+  detail: "Explored a family-photo privacy interaction through mobile UI, prototype states, and visual design. The proposed platform capability was conceptual, not shipped.",
+ },
+ {
+  name: "BART Fare Gates",
+  type: "Collaborative academic team project · 2019",
+  href: "/projects/bart-fare-gates",
+  detail: "Researched rider needs, developed sketches and physical mockups, and compared gate concepts with A/B preference testing. This was not deployed to BART.",
+ },
+];
+
+export const metadata = {
+ title: "Resume",
+ description: "Chris Cruz — senior visual and product designer. Meta Blueprint experience, scalable UI systems, and selected design projects.",
+ alternates: { canonical: "/resume" },
+ openGraph: { title: "Chris Cruz | Resume", url: "/resume" },
+};
+
+export default function ResumePage() {
+ return (
+  <main className="portfolio-cursor resume-page min-h-screen bg-white text-[#17232f]">
+   <Cursor light/>
+   <div className="mx-auto max-w-[900px] px-7 pb-24 pt-20 md:px-12 md:pt-24">
+    <Link href="/" className="resume-link text-xs font-bold uppercase tracking-[.16em] text-[#0072FC]">← Portfolio</Link>
+    <header className="mt-12 border-b border-[#E1E7EC] pb-8">
+     <h1 className="portfolio-page-title font-black tracking-[-.07em]">Chris Cruz<span className="text-[#0072FC]">.</span></h1>
+     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[#253849]">Senior Visual &amp; Product Designer</p>
+     <p className="mt-3 text-sm leading-[1.8] text-[#617182]">
+      Bay Area, California · <a className="resume-link text-[#0072FC]" href="mailto:chrissscruz@gmail.com">chrissscruz@gmail.com</a> · <a className="resume-link text-[#0072FC]" href="https://www.linkedin.com/in/cruzchris/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <Link href="/" className="resume-link text-[#0072FC]">Portfolio</Link>
+     </p>
+    </header>
+
+    <section className="mt-10">
+     <h2 className="text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Profile</h2>
+     <p className="mt-3 max-w-3xl text-[15px] leading-[1.85] text-[#354554]">
+      Multidisciplinary designer with 6+ years at Meta Blueprint creating responsive digital learning experiences, visual systems, and instructional media. I work across visual design, user interface patterns, Figma component systems, and front-end CMS production, collaborating with cross-functional teams from early concept through published experiences.
+     </p>
+    </section>
+
+    <section className="mt-10">
+     <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Professional experience</h2>
+     {experience.map(job=>(
+      <article className="mt-6" key={job.name}>
+       <h3 className="text-xl font-bold tracking-tight text-[#1A2B3D]">{job.name} <span className="font-semibold text-[#486072]">| {job.role}</span></h3>
+       <p className="mt-1 text-xs text-[#718496]">{job.dates} · {job.location}</p>
+       <ul className="mt-4 list-disc space-y-2.5 pl-5 text-sm leading-[1.8] text-[#435567] marker:text-[#0072FC]">
+        {job.bullets.map(b=><li key={b}>{b}</li>)}
+       </ul>
+      </article>
+     ))}
+    </section>
+
+    <section className="mt-12">
+     <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Selected projects</h2>
+     <div className="mt-5 space-y-6">
+      {projects.map(project=>(
+       <article key={project.name}>
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+         <h3 className="text-base font-bold text-[#24364A]"><Link href={project.href} className="resume-link text-[#0072FC]">{project.name} ↗</Link></h3>
+         <span className="text-xs text-[#82909C]">{project.type}</span>
+        </div>
+        <p className="mt-2 text-sm leading-[1.8] text-[#4A5F71]">{project.detail}</p>
+       </article>
+      ))}
+     </div>
+    </section>
+
+    <section className="mt-11">
+     <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Skills &amp; tools</h2>
+     <div className="mt-4 space-y-3 text-sm leading-[1.75] text-[#435668]">
+      <p><strong className="text-[#213347]">Design:</strong> Visual design, UI systems, responsive web design, typography, brand identity, prototyping, user research.</p>
+      <p><strong className="text-[#213347]">Software:</strong> Figma, Illustrator, Photoshop, After Effects, Premiere Pro, Sketch, Evolve.</p>
+      <p><strong className="text-[#213347]">Production:</strong> HTML/CSS, CMS/LMS, instructional content, motion design, cross-functional delivery.</p>
+     </div>
+    </section>
+
+    <section className="mt-11">
+     <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Education</h2>
+     <div className="mt-4 space-y-2 text-sm leading-relaxed text-[#435668]">
+      <p><strong className="text-[#24364A]">MA, Web Design &amp; New Media</strong> — Academy of Art University, San Francisco</p>
+      <p><strong className="text-[#24364A]">Bachelor's Degree, Management</strong></p>
+     </div>
+    </section>
+    <div className="mt-16 border-t border-[#E2E7EE] pt-6">
+     <Link href="/contact" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">Let's connect ↗</Link>
+    </div>
+   </div>
+  </main>
+ );
+}
