@@ -90,18 +90,42 @@ export default function BartCaseStudy(){
    <div className="mt-9 grid gap-4 md:grid-cols-3">
     {researchThemes.map((x,i)=><div key={x.heading} className="rounded-[20px] border border-[#E0E7EE] bg-[#F7FAFD] p-6 md:p-7"><p className="text-xs font-bold text-[#0072FC]">{String(i+1).padStart(2,"0")}</p><h3 className="mt-5 text-xl font-bold tracking-tight text-[#1F2D39]">{x.heading}</h3><p className="mt-3 text-sm leading-[1.75] text-[#61717E]">{x.body}</p></div>)}
    </div>
-   <div className="mt-10 grid gap-5 md:grid-cols-2">
+   <div className="mt-10 space-y-9">
     {[
-     {src:"/portfolio-media/bart-archival-survey.webp",title:"Rider survey",desc:"Original 2019 research slide with rider responses and key findings."},
-     {src:"/portfolio-media/bart-archival-affinity.webp",title:"Affinity mapping",desc:"Original team synthesis board grouping concerns and observations."}
-    ].map(item=><figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DDE6F0] bg-white">
-     <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open original ${item.title} image in new tab`} className="block cursor-zoom-in bg-[#F6F7F9]">
-      <Image src={item.src} alt={item.desc} width={1400} height={788} sizes="(max-width: 767px) 92vw, 540px" className="h-auto w-full" unoptimized />
+     {
+      src:"/portfolio-media/bart-survey-findings.svg",
+      original:"/portfolio-media/bart-archival-survey.webp",
+      title:"Rider survey — key findings",
+      desc:"A new, readable visual summary of the 2019 survey. The archived slide reports varied rider ages, common daytime travel, mixed impressions of BART, and safety, cleanliness, and smell as key concerns.",
+      alt:"Reconstructed 2019 BART survey findings: safety, cleanliness and smell were reported concerns; respondents varied by age, often rode in the daytime, and described mixed overall experiences.",
+      width:1600,height:930
+     },
+     {
+      src:"/portfolio-media/bart-affinity-map.svg",
+      original:"/portfolio-media/bart-archival-affinity.webp",
+      title:"Affinity map — five rider themes",
+      desc:"The team's original five categories—schedule, personal belongings, riding experience, clean BART, and BART safety—are recreated with selected rider observations paraphrased from the archived board.",
+      alt:"Readable BART affinity map showing five grouped themes from 2019 rider feedback, with selected paraphrased notes on schedules, belongings, riding experience, hygiene and safety.",
+      width:1810,height:1130
+     }
+    ].map(item=><figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DFE6EF] bg-white">
+     <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${item.title} SVG`} className="block cursor-zoom-in bg-white">
+      <Image src={item.src} alt={item.alt} width={item.width} height={item.height} sizes="(max-width: 767px) 92vw, 1200px" className="h-auto w-full" unoptimized/>
      </a>
-     <figcaption className="p-5"><p className="text-base font-bold text-[#223748]">{item.title}</p><p className="mt-1 text-sm leading-relaxed text-[#6F7F8D]">{item.desc} <span className="text-[#0072FC]">Open full size ↗</span></p></figcaption>
+     <figcaption className="flex flex-col gap-3 border-t border-[#E6EDF3] p-5 md:flex-row md:items-start md:justify-between md:gap-8 md:p-6">
+      <div className="max-w-3xl">
+       <p className="text-lg font-bold tracking-tight text-[#223748]">{item.title}</p>
+       <p className="mt-2 text-sm leading-[1.75] text-[#627585]">{item.desc}</p>
+       <p className="mt-2 text-xs leading-relaxed text-[#8593A0]">Redrawn for clarity from the 2019 project materials. This is not an original screenshot or new rider research.</p>
+      </div>
+      <div className="flex shrink-0 flex-wrap items-center gap-4 text-sm font-semibold text-[#0072FC]">
+       <a href={item.src} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4">Open full size ↗</a>
+       <a href={item.original} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4">Original source ↗</a>
+      </div>
+     </figcaption>
     </figure>)}
    </div>
-   <p className="mt-5 text-sm leading-relaxed text-[#71808B]">The research showed where rider concerns clustered; it did not establish that a redesigned gate would improve real-world safety or reduce fare evasion.</p>
+   <p className="mt-5 text-sm leading-relaxed text-[#71808B]">The visuals above reproduce only findings and themes supported by the archived 2019 project materials. Exact survey chart values were too blurry to verify, so no new counts or percentages have been introduced. These findings do not demonstrate actual fare-evasion reduction.</p>
   </section>
 
   <section className="mt-24 md:mt-28">
