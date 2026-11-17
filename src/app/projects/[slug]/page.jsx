@@ -57,7 +57,27 @@ const studies = {
  }
 };
 export function generateStaticParams(){ return FALLBACK_PROJECTS.map(p=>({slug:p.id})); }
-export async function generateMetadata({params}){const {slug}=await params;const p=FALLBACK_PROJECTS.find(x=>x.id===slug);return {title:p?p.title:"Project",description:p?.description};}
+export async function generateMetadata({params}) {
+ const {slug} = await params;
+ const project = FALLBACK_PROJECTS.find(p=>p.id===slug);
+ if (!project) return { title: "Project" };
+ const images = {
+  "meta-blueprint": "/portfolio-media/meta-blueprint-featured.webp",
+  "meta-image-privacy": "/portfolio-media/safeshare-hero-final.webp",
+  "bart-fare-gates": "/portfolio-media/bart-final-recreated.webp",
+ };
+ const title = project.title + " — Chris Cruz";
+ return {
+  title: project.title,
+  description: project.description,
+  alternates: { canonical: `/projects/${slug}` },
+  openGraph: {
+   title, url: `/projects/${slug}`, description: project.description,
+   images: [{ url: images[slug], width: 2048, height: 1152, alt: project.title + " case study cover" }],
+  },
+  twitter: { card: "summary_large_image", title, description: project.description, images: [images[slug]] },
+ };
+}
 
 function MediaPlaceholder({label,index,slug}) {
  return <div className="group relative overflow-hidden rounded-[20px] bg-[#EFF4FC] border border-[#DDE7F4] aspect-[16/10] flex items-center justify-center">
