@@ -63,7 +63,7 @@ export default function Work() {
     <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:mb-12">
      <div>
       <p className="portfolio-eyebrow mb-4 text-[#0072FC]">{SECTION.label}</p>
-      <h2 id="selected-work-heading" className="portfolio-section-heading font-black text-[#111]">{SECTION.heading}</h2>
+      <h2 id="selected-work-heading" className="portfolio-section-heading font-bold text-[#111]">{SECTION.heading}</h2>
      </div>
      <p className="max-w-[330px] text-sm leading-relaxed text-[#62707D]">
       Professional visual systems, product UI exploration, and research-led prototyping.
@@ -78,7 +78,7 @@ export default function Work() {
        <div className="mt-5 flex items-start justify-between gap-3">
         <div className="min-w-0">
          <p className="mb-2 text-[11px] font-semibold uppercase leading-relaxed tracking-[.1em] text-[#0072FC]">{project.category}</p>
-         <h3 className="text-[clamp(1.4rem,2vw,1.8rem)] font-bold leading-tight tracking-[-.045em] text-[#17212B]">
+         <h3 className="text-[clamp(1.4rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-.045em] text-[#17212B]">
           <Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title}</Link>
          </h3>
         </div>
