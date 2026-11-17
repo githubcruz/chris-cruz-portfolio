@@ -90,12 +90,12 @@ export default async function ProjectPage({params}){
      )}
      <p className="uppercase text-[#0072FC] text-xs tracking-[.3em] font-bold">{data.eyebrow}</p>
     </div>
-    <h1 className={slug === "meta-blueprint" ? "font-black tracking-[-.065em] leading-[1.02] text-[clamp(2.6rem,5.4vw,5.8rem)] mt-5 max-w-5xl" : "font-black tracking-[-.065em] leading-[.97] text-[clamp(2.8rem,6.8vw,6.7rem)] mt-5 max-w-5xl"}>{slug === "meta-blueprint" ? <>Meta <span className="text-[#0072FC]">Blueprint.</span></> : <>{project.title}<span className="text-[#0072FC]">.</span></>}</h1>
-    <p className={slug === "meta-blueprint" ? "mt-6 text-[#262626] font-medium leading-tight text-[clamp(1.3rem,2.15vw,1.85rem)] max-w-4xl" : "mt-8 text-[#262626] font-medium leading-tight text-[clamp(1.35rem,2.75vw,2.35rem)] max-w-4xl"}>{data.heading}</p>
+    <h1 className="portfolio-page-title mt-5 max-w-5xl font-black">{slug === "meta-blueprint" ? <>Meta <span className="text-[#0072FC]">Blueprint.</span></> : <>{project.title}<span className="text-[#0072FC]">.</span></>}</h1>
+    <p className="portfolio-page-lead mt-6 max-w-4xl font-medium text-[#26313D]">{data.heading}</p>
     <p className={slug === "meta-blueprint" ? "mt-4 text-[#636363] leading-[1.65] text-base md:text-lg max-w-3xl" : "mt-6 text-[#636363] leading-relaxed text-lg max-w-3xl"}>{data.summary}</p>
    </header>
    <div className="mt-14 border-y border-[#DEDEDE] py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-    {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage",slug==="meta-blueprint"?"Published learning experiences":"Case study in progress"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
+    {[["Project type",data.status],["My focus",data.role],["Methods",data.methods.slice(0,2).join(" · ")],["Stage",slug==="meta-blueprint"?"Published learning experiences":"Concept project"]].map(([label,value])=><div key={label}><p className="text-[#0072FC] text-[10px] tracking-widest font-bold uppercase mb-2">{label}</p><p className="text-[#2B2B2B] leading-relaxed text-sm">{value}</p></div>)}
    </div>
    {slug === "meta-blueprint" && (
     <nav aria-label="Meta Blueprint case study sections" className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-[#E5EBF3] pb-5 text-sm">
@@ -110,8 +110,27 @@ export default async function ProjectPage({params}){
      ))}
     </nav>
    )}
+   {slug === "meta-blueprint" && (
+    <section aria-label="Meta Blueprint project highlights" className="mt-10 md:mt-12">
+     <h2 className="portfolio-eyebrow mb-4 text-[#0072FC]">Project at a glance</h2>
+     <div className="grid gap-3 sm:grid-cols-3">
+      {[
+       {metric:"16 courses",title:"Learning experience revamp",note:"Coordinated visual design and reusable patterns across the e-learning update."},
+       {metric:"Reusable Figma",title:"Shared visual components",note:"Course assets and patterns that made new work easier to assemble consistently."},
+       {metric:"Days saved",title:"Faster production",note:"The team reported saving several production days per course with fewer brand-review revisions."}
+      ].map(item=>(
+       <div key={item.title} className="rounded-[18px] border border-[#DDE6F0] bg-[#F6F9FE] p-5 md:p-6">
+        <p className="text-[clamp(1.35rem,2.3vw,1.85rem)] font-black tracking-[-.04em] text-[#172A3E]">{item.metric}</p>
+        <h3 className="mt-2 text-sm font-bold text-[#263F55]">{item.title}</h3>
+        <p className="mt-3 text-xs leading-[1.7] text-[#607384]">{item.note}</p>
+       </div>
+      ))}
+     </div>
+     <p className="mt-3 text-xs leading-relaxed text-[#778697]">Time savings are project-reported production experience, not an independently measured business outcome.</p>
+    </section>
+   )}
    {slug === "meta-blueprint" ? (
-    <figure className="mt-16 md:mt-24">
+    <figure className="mt-11 md:mt-14">
      <div className="relative w-full aspect-video overflow-hidden rounded-[28px] border border-[#E9EEF6] bg-white">
       <Image src="/portfolio-media/meta-blueprint-gallery.webp" alt="A broad 21-design overview of Meta Blueprint learning experiences and visual design work" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized priority/>
      </div>
@@ -130,18 +149,18 @@ export default async function ProjectPage({params}){
    </div>
    )}
    <section className="grid lg:grid-cols-[.75fr_1.25fr] gap-7 lg:gap-20 mt-20 md:mt-24">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">01 / Context</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The challenge.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">01 / Context</p><h2 className="portfolio-section-heading mt-4 font-black">The challenge.</h2></div>
     <div className="text-lg md:text-xl text-[#535353] leading-[1.7]"><p>{data.problem}</p><p className="mt-7">{data.strategy}</p></div>
    </section>
    <section className="mt-20 md:mt-24">
     <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">02 / Design process</p>
-    <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">From question to direction.</h2>
+    <h2 className="portfolio-section-heading mt-4 font-black">From question to direction.</h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">{data.process.map(([heading,body],k)=><div key={heading} className="border border-[#DEDEDE] rounded-2xl p-7 min-h-[245px] transition-colors hover:border-[#0072FC]/50"><p className="text-[#0072FC] text-xs font-bold">{String(k+1).padStart(2,"0")}</p><h3 className="text-[#171717] font-bold text-xl mt-9">{heading}</h3><p className="text-[#676767] leading-relaxed text-sm mt-3">{body}</p></div>)}</div>
    </section>
    {slug === "meta-blueprint" && (
     <section className="mt-20 md:mt-24" aria-labelledby="cms-course-heading">
      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">03 / CMS course spotlight</p>
-     <h2 id="cms-course-heading" className="scroll-mt-32 mt-4 text-3xl md:text-4xl font-black tracking-tight">Designing a complete CMS course.</h2>
+     <h2 id="cms-course-heading" className="portfolio-section-heading scroll-mt-32 mt-4 font-black">Designing a complete CMS course.</h2>
      <p className="mt-3 text-lg md:text-xl text-[#3B4858] font-medium max-w-4xl">How to create and plan for engaging Instagram posts</p>
      <p className="mt-5 text-[#616B77] text-base md:text-lg leading-[1.75] max-w-4xl">I designed and built this Meta Blueprint course within a front-end CMS, using Figma and Meta’s existing design library to prepare instructional assets, then implementing the learning layout and components with HTML and CSS. I optimized asset dimensions and file sizes for efficient delivery and partnered with instructional designers, brand, legal, and cross-functional stakeholders through review and approval.</p>
      <figure className="mt-9">
@@ -220,7 +239,7 @@ export default async function ProjectPage({params}){
        Authoring
       </span>
      </div>
-     <h2 id="lms-course-heading" className="scroll-mt-32 mt-4 text-3xl md:text-4xl font-black tracking-tight">Learning experiences that connect every lesson.</h2>
+     <h2 id="lms-course-heading" className="portfolio-section-heading scroll-mt-32 mt-4 font-black">Learning experiences that connect every lesson.</h2>
      <p className="mt-4 text-xl md:text-2xl font-semibold tracking-tight text-[#1F3444]">Advertising solutions and AI</p>
      <p className="mt-4 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.7]">I designed the lesson layouts, reusable components, and instructional assets for this three-part Meta Blueprint course in Evolve. Working with instructional stakeholders, brand, and legal, I translated technical advertising topics into consistent, approachable learning experiences for small and medium-sized businesses.</p>
      <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -310,7 +329,7 @@ export default async function ProjectPage({params}){
      <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">05 / Homepage, webinars &amp; certifications</p>
      <div className="mt-4 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
       <div>
-       <h2 id="blueprint-web-heading" className="text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">One learning ecosystem. More than courses.</h2>
+       <h2 id="blueprint-web-heading" className="portfolio-section-heading font-black text-[#141A22]">One learning ecosystem. More than courses.</h2>
        <p className="mt-5 max-w-4xl text-[#5C6876] text-base md:text-lg leading-[1.75]">The Blueprint experience starts long before someone opens a lesson. My web design work extended to the homepage, webinar discovery, and certification experiences—organizing different learning paths through consistent visual systems, page layouts, and assets.</p>
       </div>
      </div>
@@ -353,7 +372,7 @@ export default async function ProjectPage({params}){
     </section>
    ) : (
     <section className="mt-20 md:mt-24">
-     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: home and landing pages, instructional videos, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
+     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5"><div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "05 / Other Blueprint workstreams" : "03 / Project visuals"}</p><h2 className="portfolio-section-heading mt-4 font-black">{slug === "meta-blueprint" ? "Beyond a single course." : "Behind the work."}</h2></div><p className="max-w-sm text-[#777] text-sm">{slug === "meta-blueprint" ? "Next: home and landing pages, instructional videos, and the Figma system." : "Original design artifacts will replace these clearly labeled placeholder panels."}</p></div>
      <div className="grid md:grid-cols-2 gap-5 mt-10">{data.visual.map((label,k)=><MediaPlaceholder key={label} label={label} index={k} slug={slug}/>)}</div>
     </section>
    )}
@@ -361,7 +380,7 @@ export default async function ProjectPage({params}){
     <section id="blueprint-design-guidelines" className="scroll-mt-32 mt-20 md:mt-24" aria-labelledby="blueprint-guidelines-heading">
      <div className="max-w-4xl">
       <p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">06 / Design guidelines &amp; production systems</p>
-      <h2 id="blueprint-guidelines-heading" className="mt-4 text-3xl md:text-4xl font-black tracking-tight text-[#141A22]">Designing once. Creating consistently.</h2>
+      <h2 id="blueprint-guidelines-heading" className="portfolio-section-heading mt-4 font-black text-[#141A22]">Designing once. Creating consistently.</h2>
       <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#5C6876]">Behind the published learning experiences is a practical system of brand references, layout grids, responsive UI patterns, and export specifications. I used these guidelines alongside Meta's component library to make design decisions easier to reproduce across CMS pages, interactive lessons, and visual assets.</p>
      </div>
      <figure className="mt-10 overflow-hidden rounded-[22px] border border-[#E3E9F0] bg-[#F7F9FC]">
@@ -427,7 +446,7 @@ export default async function ProjectPage({params}){
     </section>
    )}
    <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
-    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "07 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight">The thinking behind it.</h2></div>
+    <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "07 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="portfolio-section-heading mt-4 font-black">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
    <div className="mt-20 md:mt-24 pt-9 border-t border-[#DEDEDE] flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
