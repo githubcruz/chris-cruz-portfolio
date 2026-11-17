@@ -9,7 +9,7 @@ function Eyebrow({children}) {
 function SectionHeading({index,label,title,description}) {
   return <div className="max-w-3xl">
     <Eyebrow>{index} / {label}</Eyebrow>
-    <h2 className="mt-4 text-[clamp(1.95rem,3.6vw,3.35rem)] leading-[1.03] font-black tracking-[-.055em]">{title}</h2>
+    <h2 className="portfolio-section-heading mt-4 font-black">{title}</h2>
     {description && <p className="mt-5 text-[#5D5D5D] text-lg leading-relaxed">{description}</p>}
   </div>;
 }
@@ -41,8 +41,8 @@ export default function SafeShareCaseStudy(){
   <Link href="/projects" className="text-[#0072FC] uppercase tracking-[.2em] text-xs font-bold hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-14 max-w-6xl">
    <Eyebrow>SafeShare / Meta concept / UI design + motion</Eyebrow>
-   <h1 className="mt-5 text-[clamp(2.85rem,6.6vw,6.4rem)] font-black tracking-[-.075em] leading-[.96]">Screenshot<br/><span className="text-[#0072FC]">Protection.</span></h1>
-   <p className="mt-7 max-w-4xl text-[clamp(1.35rem,2.65vw,2.25rem)] leading-[1.15] tracking-[-.03em] font-medium">Helping parents share family moments with greater confidence.</p>
+   <h1 className="portfolio-page-title mt-5 font-black">Screenshot<br/><span className="text-[#0072FC]">Protection.</span></h1>
+   <p className="portfolio-page-lead mt-7 max-w-4xl font-medium">Helping parents share family moments with greater confidence.</p>
    <p className="mt-6 max-w-3xl text-[#636363] text-lg leading-relaxed">SafeShare explores clearer image-protection controls within familiar mobile sharing flows. I designed the UI concepts and a video presentation to communicate the idea. The broader question is how digital products can better safeguard children’s images as content becomes easier to copy, share, and alter with AI.</p>
   </header>
 
