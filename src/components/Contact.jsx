@@ -28,7 +28,7 @@ export default function Contact({ standalone = false }) {
    <div className={`mx-auto w-full max-w-[1180px] ${standalone ? "grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(300px,.75fr)] lg:gap-16" : ""}`}>
     <div className="relative z-10">
      <p className="portfolio-eyebrow portfolio-enter-item mb-6 text-[#0072FC]">Get in touch</p>
-     <h2 id="contact-heading" className="portfolio-page-title portfolio-enter-item max-w-[790px] font-black text-[#111]" style={{"--enter-delay":"90ms"}}>
+     <h2 id="contact-heading" className="portfolio-page-title portfolio-enter-item max-w-[790px] font-bold text-[#111]" style={{"--enter-delay":"90ms"}}>
       Let's make something <span className="text-[#0072FC]">meaningful.</span>
      </h2>
      <p className="portfolio-enter-item mt-6 max-w-[560px] text-base leading-[1.75] text-[#5E6875] md:text-[17px]" style={{"--enter-delay":"170ms"}}>

@@ -45,7 +45,7 @@ export default function ResumePage() {
    <div className="mx-auto max-w-[900px] px-7 pb-24 pt-20 md:px-12 md:pt-24">
     <Link href="/" className="resume-link text-xs font-bold uppercase tracking-[.16em] text-[#0072FC]">← Portfolio</Link>
     <header className="mt-12 border-b border-[#E1E7EC] pb-8">
-     <h1 className="portfolio-page-title font-black tracking-[-.07em]">Chris Cruz<span className="text-[#0072FC]">.</span></h1>
+     <h1 className="portfolio-page-title font-bold tracking-[-.07em]">Chris Cruz<span className="text-[#0072FC]">.</span></h1>
      <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[#253849]">Senior Visual &amp; Product Designer</p>
      <p className="mt-3 text-sm leading-[1.8] text-[#617182]">
       Bay Area, California · <a className="resume-link text-[#0072FC]" href="mailto:chrissscruz@gmail.com">chrissscruz@gmail.com</a> · <a className="resume-link text-[#0072FC]" href="https://www.linkedin.com/in/cruzchris/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <Link href="/" className="resume-link text-[#0072FC]">Portfolio</Link>

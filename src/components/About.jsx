@@ -23,7 +23,7 @@ export default function About({ standalone = false }) {
    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,.88fr)] gap-12 lg:gap-16 xl:gap-24 items-center">
     <div className="relative z-10">
      <p className="portfolio-eyebrow portfolio-enter-item mb-6 text-[#0072FC]">{SECTION.label}</p>
-     <h2 className="portfolio-page-title portfolio-enter-item mb-7 font-black text-[#111111]" style={{"--enter-delay":"90ms"}}>Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
+     <h2 className="portfolio-page-title portfolio-enter-item mb-7 font-bold text-[#111111]" style={{"--enter-delay":"90ms"}}>Designing<br/>what <span className="text-[#0072FC]">matters.</span></h2>
      <div className="portfolio-enter-item max-w-2xl space-y-5 text-[#595959] text-base md:text-[17px] leading-[1.75]" style={{"--enter-delay":"170ms"}}>
       <p className="text-[#303030] text-lg md:text-xl leading-[1.5]">I’m a senior visual and product designer focused on creating thoughtful digital experiences that feel simple, clear, and human.</p>
       {(standalone ? BIO : BIO.slice(0,1)).map((paragraph,i)=><p key={i}>{paragraph}</p>)}

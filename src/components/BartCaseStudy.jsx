@@ -43,14 +43,14 @@ const revisions=[
 ];
 
 function Eyebrow({children}){return <p className="text-[#0072FC] text-xs font-bold uppercase tracking-[.22em]">{children}</p>}
-function SectionHeading({number,title,children}){return <div className="max-w-4xl"><Eyebrow>{number}</Eyebrow><h2 className="portfolio-section-heading mt-4 font-black text-[#111]">{title}</h2>{children && <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#60707D]">{children}</p>}</div>}
+function SectionHeading({number,title,children}){return <div className="max-w-4xl"><Eyebrow>{number}</Eyebrow><h2 className="portfolio-section-heading mt-4 font-bold text-[#111]">{title}</h2>{children && <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#60707D]">{children}</p>}</div>}
 
 export default function BartCaseStudy(){
  return <article className="mx-auto max-w-[1340px] px-7 md:px-20 pb-24 pt-32 md:pt-40">
   <Link href="/projects" className="inline-flex text-xs font-semibold uppercase tracking-[.2em] text-[#0072FC] hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-12 max-w-5xl">
    <Eyebrow>03 / HUMAN-CENTERED PRODUCT DESIGN · 2019 TEAM PROJECT</Eyebrow>
-   <h1 className="portfolio-page-title mt-5 font-black text-[#111]">BART <span className="text-[#0072FC]">Fare Gates.</span></h1>
+   <h1 className="portfolio-page-title mt-5 font-bold text-[#111]">BART <span className="text-[#0072FC]">Fare Gates.</span></h1>
    <p className="portfolio-page-lead mt-7 max-w-4xl font-semibold text-[#263443]">Designing a safer, clearer entrance through research, prototyping, and iteration.</p>
    <p className="mt-6 max-w-3xl text-base md:text-lg leading-[1.75] text-[#61707C]">In a Fall 2019 human-centered design course, our three-person team explored how to make bypassing transit fare gates more difficult while keeping the entry experience intuitive. We collaborated across research, ideation, physical prototyping, concept testing, and the final design.</p>
   </header>
@@ -168,12 +168,12 @@ export default function BartCaseStudy(){
   <section id="bart-results" className="scroll-mt-32 mt-24 md:mt-28">
    <SectionHeading number="05 / Concept testing" title="Turn preference into decisions—not inflated outcomes.">Later tests isolated design choices instead of relying on one broad vote for a finished gate.</SectionHeading>
    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-black tracking-tight tabular-nums text-[#142C40]">{x.value}</p><div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DCE8F6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:x.value}}/></div><p className="mt-4 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
+    {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-bold tracking-tight tabular-nums text-[#142C40]">{x.value}</p><div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DCE8F6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:x.value}}/></div><p className="mt-4 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
    </div>
    <div className="mt-6 border-l-[3px] border-[#0072FC] bg-[#F4F8FD] px-6 py-5 text-sm leading-[1.8] text-[#526576]"><strong className="text-[#253D51]">What the data actually tells us:</strong> These are participant preferences in a concept-design exercise, not verified reductions in fare evasion, rider errors, or gate congestion. A 53.8% result is a narrow directional preference, and sample sizes for the last two tests were not specified in the source summary.</div>
    <div className="mt-11">
     <div className="flex flex-wrap items-end justify-between gap-4">
-      <div><h3 className="text-2xl md:text-3xl font-black tracking-tight text-[#203748]">The design options, side by side.</h3><p className="mt-2 text-sm leading-relaxed text-[#637582]">Recreated comparison visuals, grounded in the team’s original 2019 testing slides and results.</p></div>
+      <div><h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#203748]">The design options, side by side.</h3><p className="mt-2 text-sm leading-relaxed text-[#637582]">Recreated comparison visuals, grounded in the team’s original 2019 testing slides and results.</p></div>
       <span className="text-xs font-bold uppercase tracking-[.12em] text-[#0072FC]">Visual recreations · Not original test photographs</span>
     </div>
     <div className="mt-7 grid gap-6 md:grid-cols-2">
@@ -190,7 +190,7 @@ export default function BartCaseStudy(){
   <section className="mt-24 md:mt-28">
    <SectionHeading number="06 / Iteration" title="Every test changed the next decision.">Rather than polishing a single early idea, the project progressed through specific questions.</SectionHeading>
    <div className="mt-10 overflow-hidden rounded-[24px] border border-[#E1E6EB]">
-    {revisions.map((x,i)=><div key={x.id} className={`grid gap-4 px-6 py-7 md:grid-cols-[65px_230px_1fr] md:items-center md:gap-8 md:px-9 ${i!==revisions.length-1?"border-b border-[#E2E8EE]":""}`}><span className="text-xs font-black tracking-widest text-[#0072FC]">V{x.id}</span><h3 className="text-lg font-semibold text-[#1D2E3D]">{x.title}</h3><p className="text-sm leading-[1.7] text-[#687988]">{x.decision}</p></div>)}
+    {revisions.map((x,i)=><div key={x.id} className={`grid gap-4 px-6 py-7 md:grid-cols-[65px_230px_1fr] md:items-center md:gap-8 md:px-9 ${i!==revisions.length-1?"border-b border-[#E2E8EE]":""}`}><span className="text-xs font-bold tracking-widest text-[#0072FC]">V{x.id}</span><h3 className="text-lg font-semibold text-[#1D2E3D]">{x.title}</h3><p className="text-sm leading-[1.7] text-[#687988]">{x.decision}</p></div>)}
    </div>
   </section>
 
@@ -198,7 +198,7 @@ export default function BartCaseStudy(){
    <div className="grid items-center gap-10 rounded-[28px] bg-[#102B45] p-8 text-[#FFFFFF] lg:grid-cols-[.85fr_1.15fr] md:p-12">
     <div>
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8ABBFF]">07 / Final concept · Bargate</p>
-     <h2 className="mt-5 text-3xl md:text-4xl font-black tracking-tight">A more defensible entrance concept.</h2>
+     <h2 className="mt-5 text-3xl md:text-4xl font-bold tracking-tight">A more defensible entrance concept.</h2>
      <p className="mt-5 text-base leading-[1.75] text-[#D8E4EF]">The team brought its preferred configuration, top-mounted Clipper sensor, tempered-glass doors, and sliding motion together into the Bargate proof of concept.</p>
      <p className="mt-6 text-sm leading-[1.7] text-[#A8C1D3]">The intended benefit was greater resistance to bypassing while maintaining an understandable entry path. Real-world performance remains unvalidated.</p>
     </div>
@@ -213,7 +213,7 @@ export default function BartCaseStudy(){
    <SectionHeading number="08 / Concept interaction" title="Make the secure path easy to understand.">The proof-of-concept presentation expanded the gate beyond its physical form into the rider's interaction: where to tap, what feedback appears, how the gate opens, and how the passage is monitored.</SectionHeading>
    <div className="mt-10 grid gap-4 md:grid-cols-2">
     {conceptFeatures.map(feature=><article key={feature.index} className="rounded-[22px] border border-[#DCE5F0] bg-white p-7 md:p-8">
-     <div className="flex items-center justify-between gap-4"><span className="text-sm font-black text-[#0072FC]">{feature.index}</span><span className="text-[10px] font-semibold uppercase tracking-wide text-[#758899]">{feature.evidence}</span></div>
+     <div className="flex items-center justify-between gap-4"><span className="text-sm font-bold text-[#0072FC]">{feature.index}</span><span className="text-[10px] font-semibold uppercase tracking-wide text-[#758899]">{feature.evidence}</span></div>
      <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#223747]">{feature.heading}</h3>
      <p className="mt-4 text-sm leading-[1.8] text-[#627484]">{feature.text}</p>
     </article>)}
@@ -241,7 +241,7 @@ export default function BartCaseStudy(){
 
   <div className="mt-20 flex flex-col gap-6 border-t border-[#DCE3EA] pt-10 sm:flex-row sm:items-center sm:justify-between">
    <Link href="/projects" className="text-sm font-semibold text-[#0072FC] hover:underline">← All projects</Link>
-   <Link href="/projects/meta-blueprint" className="group text-left sm:text-right"><span className="block text-xs uppercase tracking-[.18em] text-[#8695A2]">Next project</span><span className="mt-2 block text-2xl font-black text-[#172A3A] transition-colors group-hover:text-[#0072FC]">Meta Blueprint ↗</span></Link>
+   <Link href="/projects/meta-blueprint" className="group text-left sm:text-right"><span className="block text-xs uppercase tracking-[.18em] text-[#8695A2]">Next project</span><span className="mt-2 block text-2xl font-bold text-[#172A3A] transition-colors group-hover:text-[#0072FC]">Meta Blueprint ↗</span></Link>
   </div>
  </article>
 }
