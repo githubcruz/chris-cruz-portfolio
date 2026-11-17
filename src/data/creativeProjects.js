@@ -108,5 +108,17 @@ export const creativeProjects = [
     details: ["Built a distinctive hand-drawn symbol around cleaning, care, and environmental awareness.", "Used clear linework and a bright palette to keep the identity friendly and recognizable.", "Product renders are visualizations of possible applications, not real packaged products."],
     status: "Identity concept",
   },
+  {
+    slug: "drone-emblem",
+    title: "Drone Emblem",
+    category: "Independent logo / Aviation identity",
+    intro: "A standalone aviation-inspired emblem exploring a compact symbol with a technical visual language.",
+    role: "Logo illustration, symbol design",
+    tags: ["Logo", "Illustration", "Aviation"],
+    visualLabels: ["Original emblem"],
+    visualNotes: ["Original logo"],
+    details: ["A compact illustrated exploration using an aviation motif."],
+    status: "Independent logo exploration",
+  },
 ];
 export function getCreativeProject(slug) {return creativeProjects.find(project=>project.slug===slug);}
