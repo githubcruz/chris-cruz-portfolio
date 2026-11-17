@@ -39,7 +39,7 @@ function Eyebrow({children}){return <p className="text-[#0072FC] text-xs font-bo
 function SectionHeading({number,title,children}){return <div className="max-w-4xl"><Eyebrow>{number}</Eyebrow><h2 className="mt-4 text-3xl md:text-5xl font-black leading-[1.05] tracking-[-.055em] text-[#111]">{title}</h2>{children && <p className="mt-5 text-base md:text-lg leading-[1.75] text-[#60707D]">{children}</p>}</div>}
 
 export default function BartCaseStudy(){
- return <main className="mx-auto max-w-[1340px] px-7 md:px-20 pb-24 pt-32 md:pt-40">
+ return <article className="mx-auto max-w-[1340px] px-7 md:px-20 pb-24 pt-32 md:pt-40">
   <Link href="/projects" className="inline-flex text-xs font-semibold uppercase tracking-[.2em] text-[#0072FC] hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-12 max-w-5xl">
    <Eyebrow>03 / HUMAN-CENTERED PRODUCT DESIGN · 2019 TEAM PROJECT</Eyebrow>
@@ -114,7 +114,7 @@ export default function BartCaseStudy(){
   <section id="bart-results" className="scroll-mt-32 mt-24 md:mt-28">
    <SectionHeading number="05 / Concept testing" title="Turn preference into decisions—not inflated outcomes.">Later tests isolated design choices instead of relying on one broad vote for a finished gate.</SectionHeading>
    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-black tracking-tight tabular-nums text-[#142C40]">{x.value}</p><p className="mt-3 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
+    {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-black tracking-tight tabular-nums text-[#142C40]">{x.value}</p><div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DCE8F6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:x.value}}/></div><p className="mt-4 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
    </div>
    <div className="mt-6 border-l-[3px] border-[#0072FC] bg-[#F4F8FD] px-6 py-5 text-sm leading-[1.8] text-[#526576]"><strong className="text-[#253D51]">What the data actually tells us:</strong> These are participant preferences in a concept-design exercise, not verified reductions in fare evasion, rider errors, or gate congestion. A 53.8% result is a narrow directional preference, and sample sizes for the last two tests were not specified in the source summary.</div>
   </section>
@@ -167,7 +167,7 @@ export default function BartCaseStudy(){
    <div className="mt-10 grid gap-5 md:grid-cols-3">
     {[["What worked","Research, sketches, and increasingly concrete prototypes prevented an early concept from becoming the automatic answer."],["What I would improve","Define behavioral success measures earlier and test accessibility, error states, and rider throughput in addition to preference."],["What comes next","Evaluate a functioning prototype in a real station, observe entry and exit, and measure actual behavior before claiming impact."]].map(([a,b])=><div key={a} className="border-t-2 border-[#0072FC] pt-5"><h3 className="text-lg font-bold text-[#223849]">{a}</h3><p className="mt-3 text-sm leading-[1.8] text-[#667887]">{b}</p></div>)}
    </div>
-   <p className="mt-11 max-w-4xl text-lg md:text-xl font-semibold leading-[1.55] tracking-tight text-[#243B4B]">The transferable skill is not designing fare gates. It's uncovering the real constraint, making alternatives visible, testing assumptions, and using results to reduce uncertainty before implementation.</p>
+   <p className="mt-11 max-w-4xl text-lg md:text-xl font-semibold leading-[1.55] tracking-tight text-[#243B4B]">What I carry into product design today is the process: identify the real constraint, make alternatives visible, test assumptions, and use feedback to reduce uncertainty before implementation.</p>
    <p className="mt-7 text-xs leading-relaxed text-[#82909A]">Team Pathfinders: Chris Cruz, Yuki Zhang, and Swathi Ayyagari · WNM 700: Human Centered Design, Fall 2019. Research, ideation, physical prototyping, testing, and the design direction were collaborative. An academic proof of concept, not a BART-commissioned or deployed system.</p>
   </section>
 
@@ -175,5 +175,5 @@ export default function BartCaseStudy(){
    <Link href="/projects" className="text-sm font-semibold text-[#0072FC] hover:underline">← All projects</Link>
    <Link href="/projects/visual-motion" className="group text-left sm:text-right"><span className="block text-xs uppercase tracking-[.18em] text-[#8695A2]">Next project</span><span className="mt-2 block text-2xl font-black text-[#172A3A] transition-colors group-hover:text-[#0072FC]">Motion & Visual Design ↗</span></Link>
   </div>
- </main>
+ </article>
 }
