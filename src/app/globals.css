@@ -520,3 +520,10 @@ html::-webkit-scrollbar { display: none; }
   .portfolio-page-enter .portfolio-enter-item,
   .portfolio-page-enter .portfolio-enter-portrait { animation: none !important; }
 }
+
+/* The older homepage-only mobile override was slightly larger than the shared scale. */
+@media (max-width: 640px) {
+ .portfolio-light .hero-entrance-title.portfolio-page-title {
+  font-size: clamp(2.5rem, 10.5vw, 3.15rem);
+ }
+}
