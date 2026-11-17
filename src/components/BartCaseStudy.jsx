@@ -83,10 +83,11 @@ export default function BartCaseStudy(){
    <div className="mt-10 grid gap-5 md:grid-cols-[1.2fr_.8fr]">
     <div className="rounded-[24px] border border-[#DDE5ED] bg-[#F5F8FC] p-7 md:p-10">
      <div className="flex items-end justify-between gap-6"><p className="text-xs font-bold uppercase tracking-[.18em] text-[#0072FC]">Explore</p><span className="text-xs font-medium text-[#8A99A7]">Multiple directions</span></div>
-     <div className="mt-8 grid grid-cols-3 items-end gap-4">
-      {[["01","Security"],["02","Entrance flow"],["03","Physical form"]].map(([k,l])=><div key={k} className="flex aspect-[.78] flex-col items-center justify-center rounded-2xl border-2 border-[#B6CDE8] bg-white p-3 text-center"><span className="text-3xl font-black text-[#0072FC]/65">{k}</span><span className="mt-3 text-xs font-semibold leading-snug text-[#486071]">{l}</span></div>)}
-     </div>
-     <p className="mt-7 text-sm text-[#6C7986]">Diagrammatic summary of exploration areas; see the original research and ideation artifacts in the accompanying portfolio asset pack.</p>
+     <figure className="mt-6 overflow-hidden rounded-[18px] border border-[#D8E4F0] bg-white">
+      <Image src="/portfolio-media/bart-ideation.webp" alt="Original team ideation sketches showing multiple hand-drawn fare-gate concepts and colorful voting dots" width={400} height={225} sizes="(max-width:767px) 90vw, 520px" className="h-auto w-full object-cover" unoptimized/>
+      <figcaption className="px-4 py-3 text-xs leading-relaxed text-[#647587]">Original ideation photograph and concept voting from the project presentation.</figcaption>
+     </figure>
+    </div>
     </div>
     <div className="flex flex-col justify-center rounded-[24px] bg-[#172B41] p-8 md:p-10 text-white">
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8DBEFF]">Selection method</p>
