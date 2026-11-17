@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import SafeShareCaseStudy from "@/components/SafeShareCaseStudy";
+import BartCaseStudy from "@/components/BartCaseStudy";
 import { FALLBACK_PROJECTS } from "@/app/work/content";
 
 // Keep the optional Instagram Figma gallery unpublished until its three image assets are uploaded.
@@ -71,6 +72,7 @@ function MediaPlaceholder({label,index,slug}) {
 }
 export default async function ProjectPage({params}){
  const {slug}=await params;
+ if (slug === "bart-fare-gates") return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]"><Cursor light/><Navbar/><BartCaseStudy/></main>;
  if (slug === "meta-image-privacy") return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]"><Cursor light/><Navbar/><SafeShareCaseStudy/></main>;
  const i=FALLBACK_PROJECTS.findIndex(p=>p.id===slug);
  if(i===-1)notFound();const project=FALLBACK_PROJECTS[i],data=studies[slug];const next=FALLBACK_PROJECTS[(i+1)%FALLBACK_PROJECTS.length];
