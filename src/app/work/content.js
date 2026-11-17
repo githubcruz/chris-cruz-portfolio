@@ -1,47 +1,38 @@
 export const SECTION = {
   label: "Selected Product & Visual Design Work",
-  heading: "Projects.",
+  heading: "Selected work.",
 };
 
-// Descriptions are intentionally conservative until images and supporting case-study material are added.
+// Three complete case studies, ordered to lead with professional shipped work.
+// Motion & Visual Design is intentionally unpublished until original work is ready.
 export const FALLBACK_PROJECTS = [
   {
-    id: "meta-image-privacy",
+    id: "meta-blueprint",
     num: "01",
-    category: "SafeShare Concept · Product UI · Motion",
-    title: "Screenshot Protection",
-    description: "SafeShare: a mobile image-protection concept exploring clearer controls for family photo sharing. UI design and concept video; not launched.",
-    tech: "UI Design · Interaction Design · Motion",
+    category: "Meta · Digital Learning · Web Design · Design Systems",
+    title: "Meta Blueprint",
+    description: "Designing and publishing learning experiences, web pages, and reusable systems across a large education catalog.",
+    tech: "Visual Design · CMS/LMS · Figma Systems · Motion",
     link: null,
     review: null,
   },
   {
-    id: "meta-blueprint",
+    id: "meta-image-privacy",
     num: "02",
-    category: "Digital Learning · Web Design · Motion",
-    title: "Meta Blueprint",
-    description: "Designing across hundreds of course updates, Blueprint home and landing pages, instructional videos, and reusable visual systems.",
-    tech: "Visual Design · Digital Experiences · Figma · Motion",
+    category: "Product UI · Interaction Design · Concept",
+    title: "Screenshot Protection",
+    description: "Exploring safer family-photo sharing through clear privacy controls, mobile interfaces, and interaction prototypes.",
+    tech: "UI Design · Interaction Design · Prototyping",
     link: null,
     review: null,
   },
   {
     id: "bart-fare-gates",
     num: "03",
-    category: "Human-Centered Design · Physical UX",
+    category: "Human-Centered Design · Collaborative Concept",
     title: "BART Fare Gates",
-    description: "A research-led transit entrance concept shaped by rider insights, physical prototyping, and A/B preference tests.",
-    tech: "User Research · Physical Prototyping · A/B Testing",
-    link: null,
-    review: null,
-  },
-  {
-    id: "visual-motion",
-    num: "04",
-    category: "Visual Craft · Motion",
-    title: "Motion & Visual Design",
-    description: "Selected work in motion graphics, visual storytelling, campaign assets, and digital content.",
-    tech: "After Effects · Illustrator · Photoshop",
+    description: "A fare-gate concept shaped by rider research, hands-on prototyping, and comparative preference tests.",
+    tech: "Research · Physical Prototyping · A/B Testing",
     link: null,
     review: null,
   },
