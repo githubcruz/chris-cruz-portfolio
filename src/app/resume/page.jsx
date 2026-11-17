@@ -4,7 +4,7 @@ import Cursor from "@/components/Cursor";
 const experience = [
  {
   name: "Meta",
-  role: "Creative Designer (Contractor)",
+  role: "Creative Designer",
   dates: "March 2020 – Present",
   location: "Menlo Park, California",
   bullets: [
