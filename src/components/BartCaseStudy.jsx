@@ -14,8 +14,15 @@ const researchThemes=[
   {heading:"Design opportunity",body:"Explore security without making the everyday entrance confusing or intimidating for riders."}
 ];
 
+const conceptFeatures = [
+ {index:"01",heading:"Visible card reading",text:"A Clipper reader on top of the gate places the tap point within easy reach. Its placement was explicitly compared in concept testing.",evidence:"Tested preference · 96.2%"},
+ {index:"02",heading:"Tall, transparent barrier",text:"A tempered-glass sliding barrier aimed to discourage bypassing while maintaining visibility of the entry path.",evidence:"Material preference · 92.3%"},
+ {index:"03",heading:"Information with privacy",text:"The proof of concept shows a fare balance appearing on the glass after a tap, then disappearing while the doors slide open.",evidence:"Proposed interaction · Not field-tested"},
+ {index:"04",heading:"Adaptive access & detection",text:"The concept included reversible entry/exit direction and a proposed sensor alarm if more than one passenger attempted to pass.",evidence:"Proposed behavior · Not field-tested"}
+];
+
 const prototypes=[
- {number:"01",heading:"Storyboard",question:"Does the proposed entrance interaction make sense before anything is built?",detail:"The team used a storyboard to explain the concept and discuss perceived ease of use."},
+ {number:"01",heading:"Storyboard",question:"Does the proposed entrance interaction make sense before anything is built?",detail:"The storyboard was reviewed with 21 participants. The archived presentation reports favorable impressions of ease of use and perceived safety."},
  {number:"02",heading:"Physical mockup",question:"How does a taller barrier feel in a real human-scale interaction?",detail:"An early cardboard prototype made size and physical form easier to respond to."},
  {number:"03",heading:"Configuration comparison",question:"Is a single- or double-gate approach clearer and more appealing?",detail:"A subsequent prototype compared different configurations before A/B preference testing."},
  {number:"04",heading:"Focused preference tests",question:"Which details make a specific direction easier to choose?",detail:"The team compared sensor position, barrier material, and opening motion."}
@@ -35,14 +42,14 @@ export default function BartCaseStudy(){
  return <main className="mx-auto max-w-[1340px] px-7 md:px-20 pb-24 pt-32 md:pt-40">
   <Link href="/projects" className="inline-flex text-xs font-semibold uppercase tracking-[.2em] text-[#0072FC] hover:underline underline-offset-4">← All projects</Link>
   <header className="mt-12 max-w-5xl">
-   <Eyebrow>03 / HUMAN-CENTERED PRODUCT DESIGN · TEAM CONCEPT</Eyebrow>
+   <Eyebrow>03 / HUMAN-CENTERED PRODUCT DESIGN · 2019 TEAM PROJECT</Eyebrow>
    <h1 className="mt-5 text-[clamp(3.2rem,7vw,7.3rem)] font-black leading-[.93] tracking-[-.075em] text-[#111]">BART <span className="text-[#0072FC]">Fare Gates.</span></h1>
    <p className="mt-7 max-w-4xl text-[clamp(1.45rem,2.7vw,2.5rem)] leading-[1.18] font-semibold tracking-tight text-[#263443]">Designing a safer, clearer entrance through research, prototyping, and iteration.</p>
-   <p className="mt-6 max-w-3xl text-base md:text-lg leading-[1.75] text-[#61707C]">A human-centered design team explored how to make bypassing transit fare gates more difficult while keeping the entry experience intuitive. The work moved from broad rider concerns to a physical concept shaped by comparative testing.</p>
+   <p className="mt-6 max-w-3xl text-base md:text-lg leading-[1.75] text-[#61707C]">In a Fall 2019 human-centered design course, our three-person team explored how to make bypassing transit fare gates more difficult while keeping the entry experience intuitive. We collaborated across research, ideation, physical prototyping, concept testing, and the final design.</p>
   </header>
 
   <div className="mt-12 grid grid-cols-2 gap-5 border-y border-[#E1E5EA] py-7 text-sm lg:grid-cols-4">
-    {[["Project type","Team concept · Not deployed"],["Approach","Research · Prototype · Test"],["My participation","Human-centered design team"],["Collaborators","Chris Cruz · Yuki Zhang · Swathi Ayyadari"]].map(([k,v])=><div key={k}><p className="mb-2 text-[10px] font-bold uppercase tracking-[.16em] text-[#0072FC]">{k}</p><p className="leading-relaxed text-[#2B3540]">{v}</p></div>)}
+    {[["Project type","Academic concept · Fall 2019"],["My role","Collaborative end-to-end design"],["Methods","Research · Prototyping · A/B tests"],["Team","Chris Cruz · Yuki Zhang · Swathi Ayyagari"]].map(([k,v])=><div key={k}><p className="mb-2 text-[10px] font-bold uppercase tracking-[.16em] text-[#0072FC]">{k}</p><p className="leading-relaxed text-[#2B3540]">{v}</p></div>)}
   </div>
   <figure className="mt-12">
    <div className="overflow-hidden rounded-[28px] border border-[#DFE6EE] bg-[#F3F5F7]">
@@ -58,6 +65,7 @@ export default function BartCaseStudy(){
    <a className="hover:underline underline-offset-4" href="#bart-research">Research ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-prototyping">Prototyping ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-results">Testing ↗</a>
+   <a className="hover:underline underline-offset-4" href="#bart-features">Interaction ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-reflection">Reflection ↗</a>
   </nav>
 
@@ -123,7 +131,7 @@ export default function BartCaseStudy(){
     <div>
      <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8ABBFF]">07 / Final concept · Bargate</p>
      <h2 className="mt-5 text-3xl md:text-4xl font-black tracking-tight">A more defensible entrance concept.</h2>
-     <p className="mt-5 text-base leading-[1.75] text-[#D8E4EF]">The resulting prototype combined a single-gate layout, a top-mounted Clipper sensor, a tempered-glass barrier, and a sliding opening motion.</p>
+     <p className="mt-5 text-base leading-[1.75] text-[#D8E4EF]">The team brought its preferred configuration, top-mounted Clipper sensor, tempered-glass doors, and sliding motion together into the Bargate proof of concept.</p>
      <p className="mt-6 text-sm leading-[1.7] text-[#A8C1D3]">The intended benefit was greater resistance to bypassing while maintaining an understandable entry path. Real-world performance remains unvalidated.</p>
     </div>
     <figure className="overflow-hidden rounded-2xl bg-white">
@@ -133,13 +141,34 @@ export default function BartCaseStudy(){
    </div>
   </section>
 
+  <section id="bart-features" className="scroll-mt-32 mt-24 md:mt-28">
+   <SectionHeading number="08 / Concept interaction" title="Make the secure path easy to understand.">The proof-of-concept presentation expanded the gate beyond its physical form into the rider's interaction: where to tap, what feedback appears, how the gate opens, and how the passage is monitored.</SectionHeading>
+   <div className="mt-10 grid gap-4 md:grid-cols-2">
+    {conceptFeatures.map(feature=><article key={feature.index} className="rounded-[22px] border border-[#DCE5F0] bg-white p-7 md:p-8">
+     <div className="flex items-center justify-between gap-4"><span className="text-sm font-black text-[#0072FC]">{feature.index}</span><span className="text-[10px] font-semibold uppercase tracking-wide text-[#758899]">{feature.evidence}</span></div>
+     <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#223747]">{feature.heading}</h3>
+     <p className="mt-4 text-sm leading-[1.8] text-[#627484]">{feature.text}</p>
+    </article>)}
+   </div>
+   <div className="mt-7 rounded-[22px] border border-[#DFE8F2] bg-[#F5F9FF] p-6 md:p-8">
+    <p className="text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Proposed rider flow · concept, not a verified live interaction</p>
+    <div className="mt-6 grid gap-3 sm:grid-cols-4">
+     {[["1","Tap","Use the top-mounted Clipper reader"],["2","Confirm","Fare and balance appear on the glass"],["3","Enter","Sliding barrier opens for passage"],["4","Protect","Fare information disappears as the gate opens"]].map(([i,title,detail])=><div key={i} className="relative rounded-xl border border-[#D4E3F5] bg-white px-5 py-5">
+      <span className="text-xs font-bold text-[#0072FC]">{i.padStart(2,"0")}</span>
+      <p className="mt-3 text-lg font-bold text-[#273C50]">{title}</p>
+      <p className="mt-2 text-xs leading-[1.65] text-[#6D8091]">{detail}</p>
+     </div>)}
+    </div>
+   </div>
+  </section>
+
   <section id="bart-reflection" className="scroll-mt-32 mt-24 md:mt-28">
-   <SectionHeading number="08 / Reflection" title="Design is a series of decisions made with evidence.">This team project made clear how useful research becomes when each round informs a more precise design choice.</SectionHeading>
+   <SectionHeading number="09 / Reflection" title="Design is a series of decisions made with evidence.">Working through every phase collaboratively reinforced how research becomes useful when each round informs a more precise design decision.</SectionHeading>
    <div className="mt-10 grid gap-5 md:grid-cols-3">
     {[["What worked","Research, sketches, and increasingly concrete prototypes prevented an early concept from becoming the automatic answer."],["What I would improve","Define behavioral success measures earlier and test accessibility, error states, and rider throughput in addition to preference."],["What comes next","Evaluate a functioning prototype in a real station, observe entry and exit, and measure actual behavior before claiming impact."]].map(([a,b])=><div key={a} className="border-t-2 border-[#0072FC] pt-5"><h3 className="text-lg font-bold text-[#223849]">{a}</h3><p className="mt-3 text-sm leading-[1.8] text-[#667887]">{b}</p></div>)}
    </div>
    <p className="mt-11 max-w-4xl text-lg md:text-xl font-semibold leading-[1.55] tracking-tight text-[#243B4B]">The transferable skill is not designing fare gates. It's uncovering the real constraint, making alternatives visible, testing assumptions, and using results to reduce uncertainty before implementation.</p>
-   <p className="mt-7 text-xs leading-relaxed text-[#82909A]">Credits: Chris Cruz, Yuki Zhang, and Swathi Ayyadari. This is a collaborative conceptual design project, not a BART-commissioned or deployed system. Individual responsibilities are described at the team level until confirmed.</p>
+   <p className="mt-7 text-xs leading-relaxed text-[#82909A]">Team Pathfinders: Chris Cruz, Yuki Zhang, and Swathi Ayyagari · WNM 700: Human Centered Design, Fall 2019. Research, ideation, physical prototyping, testing, and the design direction were collaborative. An academic proof of concept, not a BART-commissioned or deployed system.</p>
   </section>
 
   <div className="mt-20 flex flex-col gap-6 border-t border-[#DCE3EA] pt-10 sm:flex-row sm:items-center sm:justify-between">
