@@ -5,7 +5,7 @@ export default function Hero() {
         <p className="portfolio-eyebrow text-[#0072FC] mb-6 hero-entrance-label">
           Chris Cruz · Senior Visual & Product Designer
         </p>
-        <h1 className="portfolio-page-title text-white font-black mb-7 hero-entrance-title">
+        <h1 className="portfolio-page-title text-white font-bold mb-7 hero-entrance-title">
           Designing digital<br />products that <span className="text-[#0072FC]">scale.</span>
         </h1>
         <p className="text-white/80 text-lg md:text-[1.45rem] max-w-[690px] leading-snug hero-entrance-lead">
