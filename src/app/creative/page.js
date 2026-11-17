@@ -28,7 +28,7 @@ function ProjectIntro({project,count,featured=false}) {
       <p className="mt-5 max-w-[470px] text-sm leading-[1.85] text-[#596976] md:text-base">{project.intro}</p>
       <p className="mt-5 text-xs font-medium tracking-[.09em] text-[#83909B]">{count} ORIGINAL DESIGNS & APPLICATIONS</p>
       <Link href={`/creative/${project.slug}`} className="mt-8 inline-flex items-center gap-2 border-b border-[#0072FC] pb-1 text-sm font-semibold text-[#0072FC] transition-colors hover:border-[#111] hover:text-[#111]">
-        View all ${count} images <span aria-hidden="true">↗</span>
+        View all {count} images <span aria-hidden="true">↗</span>
       </Link>
     </div>
   );
