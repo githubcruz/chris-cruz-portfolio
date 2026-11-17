@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1810" height="1130" viewBox="0 0 1810 1130" role="img" aria-labelledby="t d">
+<title id="t">BART affinity map — five research themes</title>
+<desc id="d">Readable vector reconstruction of selected and paraphrased rider notes from the original team's 2019 BART affinity map. Groups: Schedule, Personal belongings, Riding experience, Clean BART, and BART safety.</desc>
+<rect width="1810" height="1130" fill="#ffffff"/>
+<rect x="0" width="14" height="1130" fill="#0072FC"/>
+<text x="73" y="92" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#0072fc" letter-spacing="3">BART / RESEARCH SYNTHESIS</text>
+<text x="73" y="178" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700" fill="#172433" letter-spacing="-2">Affinity mapping</text>
+<text x="74" y="233" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" fill="#5e7080" >Rider feedback grouped into five recurring themes</text>
+<line x1="74" y1="273" x2="1737" y2="273" stroke="#dce3ea" stroke-width="2"/>
+<rect x="74" y="312" width="322" height="719" rx="19" fill="#f9fafb" stroke="#dce5eb" stroke-width="1.5"/>
+<rect x="74" y="312" width="322" height="90" rx="19" fill="#edf3fa"/>
+<rect x="74" y="377" width="322" height="25" fill="#edf3fa"/>
+<text x="97" y="350" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1c3346">Schedule</text>
+<text x="97" y="377" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#698091">When and why riders travel</text>
+<rect x="89" y="418" width="292" height="137" rx="10" fill="#e9f6f4" stroke="#c8e6e1" stroke-width="1"/>
+ <rect x="89" y="418" width="5" height="137" rx="2" fill="#68b2a3"/>
+ <text x="112" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I take BART because it</text><text x="112" y="491" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >fits my schedule.</text><rect x="89" y="567" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="89" y="567" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="112" y="612" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I usually ride in the</text><text x="112" y="640" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >morning or afternoon.</text><rect x="89" y="716" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="89" y="716" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="112" y="761" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I wish BART had better</text><text x="112" y="789" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >hours.</text><rect x="89" y="865" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="89" y="865" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="112" y="910" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >The wait for the next</text><text x="112" y="938" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >train can be long.</text><rect x="413" y="312" width="322" height="719" rx="19" fill="#f9fafb" stroke="#dce5eb" stroke-width="1.5"/>
+<rect x="413" y="312" width="322" height="90" rx="19" fill="#edf3fa"/>
+<rect x="413" y="377" width="322" height="25" fill="#edf3fa"/>
+<text x="436" y="350" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1c3346">Personal belongings</text>
+<text x="436" y="377" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#698091">What people carry</text>
+<rect x="428" y="418" width="292" height="137" rx="10" fill="#e9f6f4" stroke="#c8e6e1" stroke-width="1"/>
+ <rect x="428" y="418" width="5" height="137" rx="2" fill="#68b2a3"/>
+ <text x="451" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I always carry personal</text><text x="451" y="491" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >belongings.</text><rect x="428" y="567" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="428" y="567" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="451" y="612" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I usually have a backpack</text><text x="451" y="640" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >with me.</text><rect x="428" y="716" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="428" y="716" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="451" y="761" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I wear earphones during</text><text x="451" y="789" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >my commute.</text><rect x="752" y="312" width="322" height="719" rx="19" fill="#f9fafb" stroke="#dce5eb" stroke-width="1.5"/>
+<rect x="752" y="312" width="322" height="90" rx="19" fill="#edf3fa"/>
+<rect x="752" y="377" width="322" height="25" fill="#edf3fa"/>
+<text x="775" y="350" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1c3346">Riding experience</text>
+<text x="775" y="377" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#698091">The day-to-day journey</text>
+<rect x="767" y="418" width="292" height="137" rx="10" fill="#e9f6f4" stroke="#c8e6e1" stroke-width="1"/>
+ <rect x="767" y="418" width="5" height="137" rx="2" fill="#68b2a3"/>
+ <text x="790" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I wish train information</text><text x="790" y="491" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >were clearer.</text><rect x="767" y="567" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="767" y="567" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="790" y="612" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I try to entertain myself</text><text x="790" y="640" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >during the ride.</text><rect x="767" y="716" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="767" y="716" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="790" y="761" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >Sometimes there is not</text><text x="790" y="789" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >enough space.</text><rect x="767" y="865" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="767" y="865" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="790" y="910" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I want to know when the</text><text x="790" y="938" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >train will arrive.</text><rect x="1091" y="312" width="322" height="719" rx="19" fill="#f9fafb" stroke="#dce5eb" stroke-width="1.5"/>
+<rect x="1091" y="312" width="322" height="90" rx="19" fill="#edf3fa"/>
+<rect x="1091" y="377" width="322" height="25" fill="#edf3fa"/>
+<text x="1114" y="350" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1c3346">Clean BART</text>
+<text x="1114" y="377" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#698091">Hygiene and comfort</text>
+<rect x="1106" y="418" width="292" height="137" rx="10" fill="#e9f6f4" stroke="#c8e6e1" stroke-width="1"/>
+ <rect x="1106" y="418" width="5" height="137" rx="2" fill="#68b2a3"/>
+ <text x="1129" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I wish BART had better</text><text x="1129" y="491" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >hygiene.</text><rect x="1106" y="567" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="1106" y="567" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="1129" y="612" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >The train sometimes</text><text x="1129" y="640" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >smells bad.</text><rect x="1106" y="716" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="1106" y="716" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="1129" y="761" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >Some surfaces feel dirty.</text><rect x="1430" y="312" width="322" height="719" rx="19" fill="#f9fafb" stroke="#dce5eb" stroke-width="1.5"/>
+<rect x="1430" y="312" width="322" height="90" rx="19" fill="#edf3fa"/>
+<rect x="1430" y="377" width="322" height="25" fill="#edf3fa"/>
+<text x="1453" y="350" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1c3346">BART safety</text>
+<text x="1453" y="377" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#698091">Confidence and personal space</text>
+<rect x="1445" y="418" width="292" height="137" rx="10" fill="#e9f6f4" stroke="#c8e6e1" stroke-width="1"/>
+ <rect x="1445" y="418" width="5" height="137" rx="2" fill="#68b2a3"/>
+ <text x="1468" y="463" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I wish my trip could be</text><text x="1468" y="491" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >safer.</text><rect x="1445" y="567" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="1445" y="567" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="1468" y="612" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >Some passengers make me</text><text x="1468" y="640" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >feel uncomfortable.</text><rect x="1445" y="716" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="1445" y="716" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="1468" y="761" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I need to be careful.</text><rect x="1445" y="865" width="292" height="137" rx="10" fill="#fff8e8" stroke="#eadfc1" stroke-width="1"/>
+ <rect x="1445" y="865" width="5" height="137" rx="2" fill="#e2be6a"/>
+ <text x="1468" y="910" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >I want better security</text><text x="1468" y="938" font-family="Arial, Helvetica, sans-serif" font-size="20.5" font-weight="400" fill="#2e4352" >when riding alone.</text><line x1="74" y1="1060" x2="1737" y2="1060" stroke="#dce3ea" stroke-width="2"/>
+<text x="74" y="1093" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#637688" >Selected comments paraphrased from the team's archived 2019 board. The categories are the original team groupings.</text>
+<text x="1737" y="1093" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#647c8c" text-anchor="end" letter-spacing="1">TEAM PATHFINDERS / 2019</text>
+</svg>
