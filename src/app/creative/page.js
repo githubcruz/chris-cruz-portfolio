@@ -18,10 +18,10 @@ function ArtworkTriptych({project}) {
   return (
     <div className="grid grid-cols-2 gap-2.5 md:gap-3">
       <div className="col-span-2">
-        <CreativeArtwork media={picks[0] ?? artwork[0]} aspect="wide"/>
+        <CreativeArtwork media={picks[0] ?? artwork[0]} aspect="wide" whiteBackground/>
       </div>
       {picks.slice(1).map((piece,i)=>(
-        <CreativeArtwork key={piece.src} media={piece} aspect="landscape" className={i===0&&picks.length===2?"col-span-2":""}/>
+        <CreativeArtwork key={piece.src} media={piece} aspect="landscape" whiteBackground className={i===0&&picks.length===2?"col-span-2":""}/>
       ))}
     </div>
   );
