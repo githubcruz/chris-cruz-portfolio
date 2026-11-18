@@ -43,25 +43,25 @@ export const creativeMedia = {
       "index": 7
     },
     {
-      "src": "/creative-media/cleaned/008_elite-barbershop.webp",
+      "src": "/creative-media/portfolio/008_elite-storefront.webp",
       "alt": "Storefront signage mockup",
       "type": "Conceptual application",
       "index": 8
     },
     {
-      "src": "/creative-media/cleaned/009_elite-barbershop.webp",
+      "src": "/creative-media/portfolio/009_elite-apparel.webp",
       "alt": "Apparel mockup",
       "type": "Conceptual application",
       "index": 9
     },
     {
-      "src": "/creative-media/cleaned/010_elite-barbershop.webp",
+      "src": "/creative-media/portfolio/010_elite-business-cards.webp",
       "alt": "Business card mockup",
       "type": "Conceptual application",
       "index": 10
     },
     {
-      "src": "/creative-media/cleaned/011_elite-barbershop.webp",
+      "src": "/creative-media/portfolio/011_elite-alternate-storefront.webp",
       "alt": "Alternate storefront mockup",
       "type": "Conceptual application",
       "index": 11
@@ -71,6 +71,18 @@ export const creativeMedia = {
       "alt": "Related Willy Barber lettering studies",
       "type": "Original source artwork",
       "index": 12
+    },
+    {
+      "src": "/creative-media/portfolio/012_elite-barber-cape.webp",
+      "alt": "Barber cape mockup",
+      "type": "Conceptual application",
+      "index": 60
+    },
+    {
+      "src": "/creative-media/portfolio/013_elite-poster.webp",
+      "alt": "Shop poster and signage concept",
+      "type": "Conceptual application",
+      "index": 61
     }
   ],
   "raices-real-estate": [
