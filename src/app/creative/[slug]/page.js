@@ -22,7 +22,7 @@ const sectionDefinitions={
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
-  "pekaboo":[["Logo & character explorations",43,44],["Cosmetics packaging / Concept",45,45]],
+  "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Logo, illustration & visual identity",46,47],["Identity refinement / Concept",48,48]],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
   "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
