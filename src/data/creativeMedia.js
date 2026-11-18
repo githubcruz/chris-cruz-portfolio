@@ -7,22 +7,10 @@ export const creativeMedia = {
       "index": 1
     },
     {
-      "src": "/creative-media/cleaned/002_elite-barbershop.webp",
-      "alt": "White circular badge",
+      "src": "/creative-media/cleaned/005_elite-barbershop.webp",
+      "alt": "Original logo exploration board",
       "type": "Original source artwork",
-      "index": 2
-    },
-    {
-      "src": "/creative-media/cleaned/003_elite-barbershop.webp",
-      "alt": "Black circular badge",
-      "type": "Original source artwork",
-      "index": 3
-    },
-    {
-      "src": "/creative-media/cleaned/004_elite-barbershop.webp",
-      "alt": "Compact circular lockup",
-      "type": "Original source artwork",
-      "index": 4
+      "index": 5
     },
     {
       "src": "/creative-media/cleaned/006_elite-barbershop.webp",
@@ -384,7 +372,7 @@ export const creativeMedia = {
 export const creativeHighlights = {
   "elite-barbershop": [
     1,
-    2,
+    5,
     8
   ],
   "raices-real-estate": [
