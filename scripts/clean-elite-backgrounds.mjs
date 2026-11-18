@@ -62,8 +62,29 @@ for (let index = 1; index <= 12; index++) {
     if (y < height - 1) visit(pixel + width);
   }
 
+  // Signage and wordmark exploration images (006/007) contain a baked-in
+  // #D4D4D4 screenshot frame. Normalize that near-neutral light-gray ink to
+  // the same white background as the portfolio card, retaining the intentional
+  // black/red/blue artwork and existing solid black wordmark panel.
+  // Avoid changing all assets: this is intentionally scoped to these two.
+  let grayFramePixels = 0;
+  if (index === 6 || index === 7) {
+    for (let pixel = 0; pixel < width * height; pixel++) {
+      const off = pixel * channels;
+      const r = data[off], g = data[off + 1], b = data[off + 2];
+      const hi = Math.max(r, g, b), lo = Math.min(r, g, b);
+      if (data[off + 3] > 0 && lo >= 180 && hi <= 249 && hi - lo <= 7) {
+        data[off] = 255;
+        data[off + 1] = 255;
+        data[off + 2] = 255;
+        data[off + 3] = 0;
+        grayFramePixels++;
+      }
+    }
+  }
+
   await sharp(data, { raw: { width, height, channels } })
     .webp({ quality: 95, alphaQuality: 100, effort: 5 })
     .toFile(join(cleanedDir, filename));
-  console.log(`Elite artwork ${index}: cleaned ${tail} connected matte pixels`);
+  console.log(`Elite artwork ${index}: cleaned ${tail} connected matte pixels; removed ${grayFramePixels} embedded gray-frame pixels`);
 }
