@@ -27,13 +27,13 @@ export const creativeProjects = [
   {
     slug: "pekaboo",
     title: "Pekaboo",
-    category: "Concept / Branding & illustration",
-    intro: "A playful beauty-brand character brought to life through expressive hairstyles, pink accents, and a minimalist wordmark.",
-    role: "Character illustration, logo variations, identity applications",
-    tags: ["Branding", "Character design", "Illustration"],
+    category: "Brand identity / Nails & cosmetics",
+    intro: "A playful visual identity for a nails and cosmetics brand, built around an expressive illustrated character, versatile logo explorations, and a clean beauty-focused aesthetic.",
+    role: "Logo design, character illustration, identity explorations, cosmetics packaging concepts",
+    tags: ["Beauty branding", "Nails & cosmetics", "Logo design", "Illustration"],
     visualLabels: ["Original character mark", "Alternate hairstyle exploration", "Cosmetics presentation study"],
     visualNotes: ["Original artwork", "Original exploration", "Conceptual presentation"],
-    details: ["Explored a series of character variations using changing hairstyles and silhouettes.", "Kept the core face, cosmetics cues, and illustrated linework consistent to make the character immediately recognizable.", "The cosmetics packaging studies are presentation concepts, not launched products."],
+    details: ["Designed a distinctive character-led identity for a nails and cosmetics brand, exploring logo variations and expressive hairstyle silhouettes.", "Preserved a recognizable illustration style across the character explorations, with pink accents and a minimal supporting wordmark.", "Packaging visuals are concept applications rather than verified manufactured or launched products."],
     status: "Independent concept",
   },
   {
