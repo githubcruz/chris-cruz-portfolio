@@ -10,7 +10,7 @@ export default function CreativeArtwork({
   whiteBackground = false,
 }) {
   if (!media) return null;
-  const isSmallSource = media.index >= 13 && media.index <= 16;
+  const isSmallSource = media.index >= 13 && media.index <= 16 && media.src.startsWith("/creative-media/work/");
   const frame = [
     "relative isolate flex w-full items-center justify-center overflow-hidden",
     elitePresentation

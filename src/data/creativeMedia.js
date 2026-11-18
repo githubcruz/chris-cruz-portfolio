@@ -69,28 +69,16 @@ export const creativeMedia = {
   ],
   "raices-real-estate": [
     {
-      "src": "/creative-media/work/013_ra-ces-real-estate.webp",
-      "alt": "Original shield logo on navy",
+      "src": "/creative-media/portfolio/raices-wordmark.webp",
+      "alt": "Raíces Real Estate — full wordmark and shield identity",
       "type": "Original source artwork",
       "index": 13
     },
     {
-      "src": "/creative-media/work/014_ra-ces-real-estate.webp",
-      "alt": "Original shield logo on white",
+      "src": "/creative-media/portfolio/raices-shield.webp",
+      "alt": "Raíces Real Estate — original shield monogram",
       "type": "Original source artwork",
       "index": 14
-    },
-    {
-      "src": "/creative-media/work/015_ra-ces-real-estate.webp",
-      "alt": "Original monogram artwork",
-      "type": "Original source artwork",
-      "index": 15
-    },
-    {
-      "src": "/creative-media/work/016_ra-ces-real-estate.webp",
-      "alt": "Original wordmark lockup",
-      "type": "Original source artwork",
-      "index": 16
     },
     {
       "src": "/creative-media/work/017_ra-ces-real-estate.webp",
@@ -376,9 +364,9 @@ export const creativeHighlights = {
     8
   ],
   "raices-real-estate": [
-    17,
-    18,
-    19
+    13,
+    14,
+    17
   ],
   "optik": [
     29,
