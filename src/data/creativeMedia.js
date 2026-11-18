@@ -1,43 +1,43 @@
 export const creativeMedia = {
   "elite-barbershop": [
     {
-      "src": "/creative-media/work/001_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/001_elite-barbershop.webp",
       "alt": "Original Elite script logo",
       "type": "Original source artwork",
       "index": 1
     },
     {
-      "src": "/creative-media/work/002_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/002_elite-barbershop.webp",
       "alt": "White circular badge",
       "type": "Original source artwork",
       "index": 2
     },
     {
-      "src": "/creative-media/work/003_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/003_elite-barbershop.webp",
       "alt": "Black circular badge",
       "type": "Original source artwork",
       "index": 3
     },
     {
-      "src": "/creative-media/work/004_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/004_elite-barbershop.webp",
       "alt": "Compact circular lockup",
       "type": "Original source artwork",
       "index": 4
     },
     {
-      "src": "/creative-media/work/005_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/005_elite-barbershop.webp",
       "alt": "Original logo exploration board",
       "type": "Original source artwork",
       "index": 5
     },
     {
-      "src": "/creative-media/work/006_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/006_elite-barbershop.webp",
       "alt": "Signage lettering directions",
       "type": "Original source artwork",
       "index": 6
     },
     {
-      "src": "/creative-media/work/007_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/007_elite-barbershop.webp",
       "alt": "Alternate wordmark directions",
       "type": "Original source artwork",
       "index": 7
