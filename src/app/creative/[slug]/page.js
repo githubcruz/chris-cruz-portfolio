@@ -20,7 +20,7 @@ export async function generateMetadata({params}){
 const sectionDefinitions={
   "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
-  "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
+  "optik":[["UX wireframes & mobile interface explorations",30,32],["Advertising & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum"].includes(slug);
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -115,6 +115,37 @@ export default async function CreativeProjectPage({params}){
               <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
                 <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">My design approach</h3>
                 <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.solution}</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {slug==="optik" && (
+          <section aria-labelledby="optik-design-system" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Identity direction</p>
+            <h2 id="optik-design-system" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Brand &amp; interface system</h2>
+            <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
+              <div>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Visual direction</h3>
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    {name:"Blue",color:"#1866A5"},
+                    {name:"White",color:"#FFFFFF"},
+                    {name:"Black",color:"#111111"},
+                  ].map(color=>(
+                    <div key={color.color}>
+                      <div className="h-20 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.color}}/>
+                      <p className="mt-2 text-xs font-semibold">{color.name}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-xs leading-[1.75] text-[#78848F]">Illustrative blue, white, and black swatches for this presentation; exact original brand hex codes have not been confirmed.</p>
+              </div>
+              <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Identity &amp; typography</h3>
+                <p className="text-[clamp(1.8rem,3vw,2.6rem)] font-semibold tracking-[-.05em]">Optik</p>
+                <p className="mt-4 text-sm leading-[1.85] text-[#566673]">A recognizable eye-inspired mark anchors the visual system. Clean sans-serif supporting typography keeps mobile layouts, advertising, and packaging straightforward and legible.</p>
+                <p className="mt-3 text-xs leading-[1.75] text-[#78848F]">The exact typeface used in the source artwork is not confirmed.</p>
               </div>
             </div>
           </section>
