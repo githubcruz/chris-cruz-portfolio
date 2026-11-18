@@ -25,12 +25,6 @@ export const creativeMedia = {
       "index": 4
     },
     {
-      "src": "/creative-media/cleaned/005_elite-barbershop.webp",
-      "alt": "Original logo exploration board",
-      "type": "Original source artwork",
-      "index": 5
-    },
-    {
       "src": "/creative-media/cleaned/006_elite-barbershop.webp",
       "alt": "Signage lettering directions",
       "type": "Original source artwork",
@@ -390,7 +384,7 @@ export const creativeMedia = {
 export const creativeHighlights = {
   "elite-barbershop": [
     1,
-    5,
+    2,
     8
   ],
   "raices-real-estate": [
