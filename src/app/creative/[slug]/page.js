@@ -20,7 +20,7 @@ export async function generateMetadata({params}){
 const sectionDefinitions={
   "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
-  "optik":[["UX wireframes & mobile interface explorations",30,32],["Advertising & packaging / Concepts",33,34]],
+  "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
@@ -108,7 +108,7 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">
-                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>The client vision
+                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{slug==="optik"?"The design goal":"The client vision"}
                 </h3>
                 <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.brief}</p>
               </div>
@@ -127,11 +127,12 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Visual direction</h3>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {[
-                    {name:"Blue",color:"#1866A5"},
+                    {name:"Optik blue",color:"#0072FC"},
+                    {name:"Ink",color:"#0B0B0B"},
                     {name:"White",color:"#FFFFFF"},
-                    {name:"Black",color:"#111111"},
+                    {name:"Mist",color:"#F5F7FA"},
                   ].map(color=>(
                     <div key={color.color}>
                       <div className="h-20 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.color}}/>
@@ -139,15 +140,36 @@ export default async function CreativeProjectPage({params}){
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-xs leading-[1.75] text-[#78848F]">Illustrative blue, white, and black swatches for this presentation; exact original brand hex codes have not been confirmed.</p>
+                <p className="mt-4 text-xs leading-[1.75] text-[#78848F]">Proposed concept palette from the approved identity boards; not verified as an original published brand guide.</p>
               </div>
               <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
                 <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Identity &amp; typography</h3>
                 <p className="text-[clamp(1.8rem,3vw,2.6rem)] font-semibold tracking-[-.05em]">Optik</p>
-                <p className="mt-4 text-sm leading-[1.85] text-[#566673]">A recognizable eye-inspired mark anchors the visual system. Clean sans-serif supporting typography keeps mobile layouts, advertising, and packaging straightforward and legible.</p>
-                <p className="mt-3 text-xs leading-[1.75] text-[#78848F]">The exact typeface used in the source artwork is not confirmed.</p>
+                <p className="mt-4 text-sm leading-[1.85] text-[#566673]">The eye symbol communicates vision directly, while the lightweight lowercase wordmark makes the identity approachable and tech-forward. Avenir Next is the proposed modern sans-serif direction shown in the concept boards.</p>
+                <p className="mt-3 text-xs leading-[1.75] text-[#78848F]">Exact original font files have not been confirmed; the displayed wordmark remains artwork.</p>
               </div>
             </div>
+          </section>
+        )}
+
+        {slug==="optik" && (
+          <section aria-labelledby="optik-visual-story" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Expanded brand identity</p>
+            <h2 id="optik-visual-story" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A visual system built for clarity.</h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {number:"01",title:"Immediate recognition",detail:"A simplified eye makes the link to vision care obvious without requiring supporting graphics."},
+                {number:"02",title:"Clean and approachable",detail:"Thin lowercase lettering, restrained spacing, and generous white space keep the identity direct and easy to use."},
+                {number:"03",title:"Modern and tech-forward",detail:"Blue focal points and a consistent icon language connect the logo to accessible digital product concepts."}
+              ].map(item=>(
+                <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
+                  <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
+                  <h3 className="mt-4 text-lg font-bold tracking-[-.025em]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.8] text-[#566673]">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">The application imagery shows proposed extensions of a student concept rather than manufactured products or a launched eye-care service.</p>
           </section>
         )}
 
