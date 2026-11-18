@@ -110,8 +110,8 @@ export default async function CreativeProjectPage({params}){
                 <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Color palette</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    {label:"Gold",color:"#C9A84C"},
                     {label:"Navy",color:"#021839"},
+                    {label:"Gold",color:"#C9A84C"},
                     {label:"White",color:"#FFFFFF"},
                     {label:"Black",color:"#000000"},
                   ].map(swatch=>(
