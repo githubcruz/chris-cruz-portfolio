@@ -287,25 +287,13 @@ export const creativeMedia = {
   ],
   "the-mexican-museum": [
     {
-      "src": "/creative-media/work/046_the-mexican-museum.webp",
-      "alt": "Original identity and cultural portrait artwork",
-      "type": "Original source artwork",
-      "index": 46
-    },
-    {
-      "src": "/creative-media/work/047_the-mexican-museum.webp",
-      "alt": "Original geometric logo and wordmark",
-      "type": "Original source artwork",
-      "index": 47
-    },
-    {
       "src": "/creative-media/work/048_the-mexican-museum.webp",
-      "alt": "Refinement concept",
-      "type": "Conceptual application",
+      "alt": "The Mexican Museum — redesigned geometric emblem and wordmark",
+      "type": "Original source artwork",
       "index": 48
     }
   ],
-  "foodpoint": [
+    "foodpoint": [
     {
       "src": "/creative-media/work/049_foodpoint.webp",
       "alt": "Wireframe studies",
