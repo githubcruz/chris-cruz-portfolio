@@ -43,31 +43,31 @@ export const creativeMedia = {
       "index": 7
     },
     {
-      "src": "/creative-media/work/008_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/008_elite-barbershop.webp",
       "alt": "Storefront signage mockup",
       "type": "Conceptual application",
       "index": 8
     },
     {
-      "src": "/creative-media/work/009_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/009_elite-barbershop.webp",
       "alt": "Apparel mockup",
       "type": "Conceptual application",
       "index": 9
     },
     {
-      "src": "/creative-media/work/010_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/010_elite-barbershop.webp",
       "alt": "Business card mockup",
       "type": "Conceptual application",
       "index": 10
     },
     {
-      "src": "/creative-media/work/011_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/011_elite-barbershop.webp",
       "alt": "Alternate storefront mockup",
       "type": "Conceptual application",
       "index": 11
     },
     {
-      "src": "/creative-media/work/012_elite-barbershop.webp",
+      "src": "/creative-media/cleaned/012_elite-barbershop.webp",
       "alt": "Related Willy Barber lettering studies",
       "type": "Original source artwork",
       "index": 12
