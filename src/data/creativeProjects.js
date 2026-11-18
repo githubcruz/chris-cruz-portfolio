@@ -4,7 +4,7 @@ export const creativeProjects = [
     title: "Elite Barbershop",
     category: "Client work / Brand identity",
     intro: "A bold barbershop identity built around elegant lettering, a classic barber pole, and versatile marks for physical applications.",
-    role: "Logo exploration, visual identity, signage concepts, print and apparel studies",
+    role: "Logo exploration, visual identity, storefront signage, business cards, apparel, cape and poster concepts",
     tags: ["Brand identity", "Logo exploration", "Signage", "Merchandise"],
     visualLabels: ["Original circular logo", "Original script wordmark", "Alternative identity explorations"],
     visualNotes: ["Original artwork", "Original artwork", "Original logo explorations"],
