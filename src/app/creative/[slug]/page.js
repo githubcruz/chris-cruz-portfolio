@@ -108,11 +108,12 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:p-9">
               <div>
                 <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Color palette</h3>
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-4">
                   {[
-                    {label:"Deep navy",color:"#021839"},
+                    {label:"Gold",color:"#C9A84C"},
+                    {label:"Navy",color:"#021839"},
                     {label:"White",color:"#FFFFFF"},
-                    {label:"Neutral",color:"#E7EAEE"},
+                    {label:"Black",color:"#000000"},
                   ].map(swatch=>(
                     <div key={swatch.color}>
                       <div className="h-24 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:swatch.color}}/>
@@ -121,7 +122,7 @@ export default async function CreativeProjectPage({params}){
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-xs leading-[1.7] text-[#78848F]">Navy and white are sampled from the supplied identity artwork; neutral gray is used for portfolio presentation.</p>
+                <p className="mt-4 text-xs leading-[1.7] text-[#78848F]">Official Raíces brand palette: gold, navy, white, and black.</p>
               </div>
               <div className="md:border-l md:border-[#E7EDF2] md:pl-8">
                 <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography direction</h3>
