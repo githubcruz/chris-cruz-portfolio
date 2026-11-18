@@ -23,7 +23,7 @@ const sectionDefinitions={
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
-  "the-mexican-museum":[],
+  "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
   "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
   "green-and-clean":[["Illustrated identity",56,56],["Product applications / Concepts",57,58]],
@@ -45,7 +45,7 @@ function MediaFigure({media,first=false,elite=false}){
           {elite && <span aria-hidden="true" className="h-[17px] w-[3px] shrink-0 rounded-full bg-[#0072FC]"/>}
           {media.alt}
         </h3>
-        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[.1em] text-[#8895A0]">{media.type==="Conceptual application"?"Concept mockup":"Original artwork"}</span>
+        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[.1em] text-[#8895A0]">{media.type==="Conceptual application"?"Concept mockup":media.type==="Independent redesign"?"Independent redesign":"Original artwork"}</span>
       </figcaption>
     </figure>
   );
@@ -234,9 +234,9 @@ export default async function CreativeProjectPage({params}){
               <h2 id="museum-elements" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Key design elements</h2>
               <div className="grid gap-5 md:grid-cols-3">
                 {[
-                  {no:"01",name:"Mirror symmetry",description:"A balanced, two-sided composition makes the identity recognizable and creates a consistent architectural feel.",bands:["#FC072C","#15EE97"]},
+                  {no:"01",name:"Ollin-inspired geometry",description:"A contemporary reinterpretation inspired by the Aztec Ollin symbol, using balanced, interlocking shapes to suggest motion, cultural continuity, and change.",bands:["#FC072C","#15EE97"]},
                   {no:"02",name:"Interlocking geometry",description:"Bold black outlines and repeated angles create rhythm and allow the emblem to work as a graphic anchor.",bands:["#050505","#FC0384"]},
-                  {no:"03",name:"Expressive color bands",description:"Vibrant horizontal stripes contrast with restrained black typography and generous white space.",bands:["#05DDEF","#FDD60C"]},
+                  {no:"03",name:"Vibrant cultural palette",description:"Brighter color bands evoke the breadth and richness of Mexican cultural identities, balanced by traditional serif lettering and generous white space.",bands:["#05DDEF","#FDD60C"]},
                 ].map(item=>(
                   <div key={item.no} className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
                     <div className="flex h-28 items-center justify-center bg-white px-7">
