@@ -23,7 +23,7 @@ const sectionDefinitions={
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
-  "the-mexican-museum":[["Logo, illustration & visual identity",46,47],["Identity refinement / Concept",48,48]],
+  "the-mexican-museum":[],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
   "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
   "green-and-clean":[["Illustrated identity",56,56],["Product applications / Concepts",57,58]],
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo"].includes(slug);
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -184,6 +184,79 @@ export default async function CreativeProjectPage({params}){
               </div>
             </div>
           </section>
+        )}
+
+        {slug==="the-mexican-museum" && (
+          <>
+            <section aria-labelledby="museum-brand-kit" className="border-b border-[#E0E5E9] py-12 md:py-16">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Proposed identity system</p>
+              <h2 id="museum-brand-kit" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Branding kit</h2>
+              <div className="rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:p-9">
+                <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Color palette</h3>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  {[
+                    {name:"Green",hex:"#15EE97"},
+                    {name:"Red",hex:"#FC072C"},
+                    {name:"Magenta",hex:"#FC0384"},
+                    {name:"Turquoise",hex:"#05DDEF"},
+                    {name:"Yellow",hex:"#FDD60C"},
+                    {name:"Deep green",hex:"#016111"},
+                    {name:"Black",hex:"#050505"},
+                    {name:"White",hex:"#FFFFFF"},
+                  ].map(color=>(
+                    <div key={color.hex}>
+                      <div className="h-24 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
+                      <p className="mt-3 text-sm font-semibold">{color.name}</p>
+                      <p className="text-xs text-[#78848F]">{color.hex}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-5 max-w-[760px] text-xs leading-[1.8] text-[#78848F]">Approximate colors sampled from the supplied redesign artwork. This is a proposed palette for the independent concept, not the museum's official brand guide.</p>
+              </div>
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
+                <div className="rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:p-9">
+                  <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Display typography · proposed</p>
+                  <p className="mt-7 font-serif text-[clamp(2rem,4vw,3.4rem)] leading-tight text-black">The Mexican Museum</p>
+                  <p className="mt-5 text-sm font-semibold">Georgia — classic serif</p>
+                  <p className="mt-2 text-xs leading-[1.8] text-[#78848F]">A practical serif pairing inspired by the logo's formal wordmark. The exact typeface used in the artwork is unconfirmed.</p>
+                </div>
+                <div className="rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:p-9">
+                  <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Supporting typography · proposed</p>
+                  <p className="mt-7 font-sans text-[clamp(2rem,4vw,3.4rem)] font-semibold leading-tight tracking-[-.04em]">Art & Culture</p>
+                  <p className="mt-5 text-sm font-semibold">Arial / system sans-serif</p>
+                  <p className="mt-2 text-xs leading-[1.8] text-[#78848F]">Clean, readable supporting type for exhibitions, wayfinding, digital content and educational materials.</p>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="museum-elements" className="border-b border-[#E0E5E9] py-12 md:py-16">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Visual language</p>
+              <h2 id="museum-elements" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Key design elements</h2>
+              <div className="grid gap-5 md:grid-cols-3">
+                {[
+                  {no:"01",name:"Mirror symmetry",description:"A balanced, two-sided composition makes the identity recognizable and creates a consistent architectural feel.",bands:["#FC072C","#15EE97"]},
+                  {no:"02",name:"Interlocking geometry",description:"Bold black outlines and repeated angles create rhythm and allow the emblem to work as a graphic anchor.",bands:["#050505","#FC0384"]},
+                  {no:"03",name:"Expressive color bands",description:"Vibrant horizontal stripes contrast with restrained black typography and generous white space.",bands:["#05DDEF","#FDD60C"]},
+                ].map(item=>(
+                  <div key={item.no} className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
+                    <div className="flex h-28 items-center justify-center bg-white px-7">
+                      <div className="w-full max-w-[220px] overflow-hidden border-[3px] border-black">
+                        <div className="h-4" style={{backgroundColor:item.bands[0]}}/>
+                        <div className="h-4" style={{backgroundColor:item.bands[1]}}/>
+                        <div className="h-2 bg-white"/>
+                      </div>
+                    </div>
+                    <div className="border-t border-[#E7EDF2] p-6">
+                      <p className="text-[11px] font-bold tracking-[.12em] text-[#0072FC]">{item.no}</p>
+                      <h3 className="mt-2 text-base font-bold">{item.name}</h3>
+                      <p className="mt-3 text-sm leading-[1.8] text-[#566673]">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">The color-band specimens demonstrate proposed graphic rules; they are not additional approved museum logo variations.</p>
+            </section>
+          </>
         )}
 
         {sections.map((section,sectionIndex)=>(
