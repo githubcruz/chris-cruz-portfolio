@@ -4,102 +4,91 @@ import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
 import CreativeArtwork from "@/components/CreativeArtwork";
 import {creativeProjects} from "@/data/creativeProjects";
-import creativeMedia from "@/data/creativeMedia.json";
+import {creativeMedia, creativeHighlights} from "@/data/creativeMedia";
 
 export const metadata = {
   title: "Creative Work",
-  description: "Visual and brand identity work by Chris Cruz: 10 projects, including logo variations, campaigns, print, illustration, and product concepts, displayed using original high-resolution images.",
+  description: "Explore original logos, visual identities, property campaigns, illustration and digital product explorations by Chris Cruz.",
   alternates: {canonical:"/creative"},
 };
-const featuredOrder = {
-  "elite-barbershop": [0,7,8],
-  "raices-real-estate": [4,5,6],
-};
 
-function ProjectIntro({project,count,featured=false}) {
+function ArtworkTriptych({project}) {
+  const artwork=creativeMedia[project.slug] ?? [];
+  const picks=(creativeHighlights[project.slug] ?? []).map(index=>artwork.find(a=>a.index===index)).filter(Boolean);
   return (
-    <div className="flex flex-col items-start">
-      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[.15em] text-[#0072FC]">{project.category}</p>
-      {featured?(
-        <h2 className="max-w-[550px] text-[clamp(2.6rem,5vw,4.8rem)] font-bold leading-[1.05] tracking-[-.055em]">{project.title}</h2>
-      ):(
-        <h3 className="text-[clamp(1.65rem,2.4vw,2.15rem)] font-semibold leading-[1.15] tracking-[-.04em]">{project.title}</h3>
-      )}
-      <p className="mt-5 max-w-[470px] text-sm leading-[1.85] text-[#596976] md:text-base">{project.intro}</p>
-      <p className="mt-5 text-xs font-medium tracking-[.09em] text-[#83909B]">{count} ORIGINAL DESIGNS & APPLICATIONS</p>
-      <Link href={`/creative/${project.slug}`} className="mt-8 inline-flex items-center gap-2 border-b border-[#0072FC] pb-1 text-sm font-semibold text-[#0072FC] transition-colors hover:border-[#111] hover:text-[#111]">
-        View all {count} images <span aria-hidden="true">↗</span>
-      </Link>
+    <div className="grid grid-cols-2 gap-2.5 md:gap-3">
+      <div className="col-span-2">
+        <CreativeArtwork media={picks[0] ?? artwork[0]} aspect="wide"/>
+      </div>
+      {picks.slice(1).map((piece,i)=>(
+        <CreativeArtwork key={piece.src} media={piece} aspect="landscape" className={i===0&&picks.length===2?"col-span-2":""}/>
+      ))}
     </div>
   );
 }
-
 function FeaturedProject({project}) {
-  const media = creativeMedia[project.slug].images;
-  const picks=featuredOrder[project.slug]||[0,1,2];
   return (
-    <article className="grid gap-10 border-b border-[#DFE5E9] py-14 lg:grid-cols-[minmax(240px,.7fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
-      <div className="lg:pt-3"><ProjectIntro project={project} count={media.length} featured/></div>
-      <div className="grid grid-cols-2 gap-3 sm:gap-5">
-        <CreativeArtwork item={media[picks[0]]} hero className="col-span-2"/>
-        <CreativeArtwork item={media[picks[1]]}/>
-        <CreativeArtwork item={media[picks[2]]}/>
+    <article className="grid gap-9 border-b border-[#DFE5EA] py-14 lg:grid-cols-[minmax(240px,.52fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
+      <div className="lg:pt-5">
+        <p className="mb-4 text-[11px] font-semibold uppercase tracking-[.15em] text-[#0072FC]">{project.category}</p>
+        <h2 className="max-w-[520px] text-[clamp(2.45rem,4.7vw,4.8rem)] font-bold leading-[1.05] tracking-[-.055em]">{project.title}</h2>
+        <p className="mt-6 max-w-[450px] text-base leading-[1.8] text-[#576775]">{project.intro}</p>
+        <p className="mt-6 text-[11px] font-medium uppercase leading-6 tracking-[.12em] text-[#8995A0]">{project.tags.join("  /  ")}</p>
+        <Link href={`/creative/${project.slug}`} className="mt-8 inline-flex border-b border-[#111] pb-2 text-sm font-semibold transition-colors hover:border-[#0072FC] hover:text-[#0072FC]">View all {(creativeMedia[project.slug]??[]).length} visuals ↗</Link>
       </div>
+      <Link href={`/creative/${project.slug}`} aria-label={`Explore all ${project.title} visual work`} className="block transition-transform duration-300 hover:-translate-y-1">
+        <ArtworkTriptych project={project}/>
+      </Link>
     </article>
   );
 }
-
 function ProjectCard({project}) {
-  const media=creativeMedia[project.slug].images;
-  const primary=project.slug==="foodpoint" ? media[3] : project.slug==="litter-free-foundation" ? media[1] : media[0];
-  const secondary=media[1]||null;
   return (
-    <article className="min-w-0 border-b border-[#E4E9ED] pb-12">
-      <div className="grid grid-cols-2 gap-3">
-        <CreativeArtwork item={primary} hero caption={false} className="col-span-2"/>
-        {secondary && <CreativeArtwork item={secondary} caption={false}/>}
-        {media[2] && <CreativeArtwork item={media[2]} caption={false}/>}
-      </div>
-      <div className="mt-7">
-        <ProjectIntro project={project} count={media.length}/>
-      </div>
+    <article className="group min-w-0">
+      <Link href={`/creative/${project.slug}`} className="block">
+        <ArtworkTriptych project={project}/>
+        <div className="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[.13em] text-[#0072FC]">{project.category}</p>
+            <h3 className="text-[clamp(1.4rem,2vw,1.9rem)] font-semibold leading-[1.16] tracking-[-.04em] transition-colors group-hover:text-[#0072FC]">{project.title}</h3>
+          </div>
+          <span className="pt-2 text-[#0072FC]" aria-hidden="true">↗</span>
+        </div>
+        <p className="mt-3 text-sm leading-[1.8] text-[#596875]">{project.intro}</p>
+        <p className="mt-3 text-xs font-medium text-[#8B98A2]">{(creativeMedia[project.slug]??[]).length} original visuals & variations</p>
+      </Link>
     </article>
   );
 }
 
 export default function CreativePage() {
-  const total=Object.values(creativeMedia).reduce((sum,p)=>sum+p.images.length,0);
   return (
     <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]">
       <Cursor light/><Navbar/>
-      <div className="mx-auto max-w-[1320px] px-6 pb-24 pt-36 md:px-12 lg:px-16 lg:pt-44">
-        <header className="border-b border-[#DDE4E8] pb-12 md:pb-16">
-          <p className="portfolio-eyebrow mb-6 text-[#0072FC]">CHRIS CRUZ / IDENTITY, CAMPAIGN, DIGITAL & PRINT</p>
-          <h1 className="portfolio-page-title max-w-[1000px] font-bold leading-[1.06] tracking-[-.06em]">Creative <span className="text-[#0072FC]">work.</span></h1>
-          <div className="mt-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <p className="max-w-[730px] text-base leading-[1.85] text-[#536573] md:text-lg">A broader look at my original designs, from the first marks and identity explorations to campaigns, interface work, and branding applications.</p>
-            <p className="shrink-0 text-xs font-semibold uppercase leading-loose tracking-[.14em] text-[#7B8995]">{creativeProjects.length} projects <span className="mx-2 text-[#CBD3DA]">/</span> {total} visuals</p>
+      <div className="mx-auto max-w-[1300px] px-7 pb-24 pt-36 md:px-12 lg:px-20 lg:pt-44">
+        <header className="border-b border-[#DFE5EB] pb-12 md:pb-16">
+          <p className="portfolio-eyebrow mb-5 text-[#0072FC]">IDENTITY / CAMPAIGNS / DIGITAL / ILLUSTRATION</p>
+          <h1 className="portfolio-page-title max-w-[980px] font-bold leading-[1.05] tracking-[-.055em]">Selected visual <span className="text-[#0072FC]">work.</span></h1>
+          <div className="mt-7 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <p className="max-w-[720px] text-base leading-[1.85] text-[#576775] md:text-lg">A broader look at my creative work—brand identities, lettering, campaigns, graphics and product explorations. Each project opens to more original designs and variations.</p>
+            <Link href="/projects" className="shrink-0 text-xs font-semibold uppercase tracking-[.12em] text-[#0072FC] hover:underline underline-offset-4">Product case studies ↗</Link>
           </div>
-          <Link href="/projects" className="mt-8 inline-block text-xs font-semibold uppercase tracking-[.12em] text-[#0072FC] hover:underline underline-offset-4">View product case studies ↗</Link>
         </header>
-
-        <section aria-label="Featured visual identity projects">
+        <section aria-label="Featured creative work">
           {creativeProjects.slice(0,2).map(project=><FeaturedProject key={project.slug} project={project}/>)}
         </section>
-
-        <section aria-label="More creative work" className="pt-12 md:pt-20">
+        <section aria-label="Additional creative projects" className="pt-14 md:pt-20">
           <div className="mb-11 flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold tracking-[-.055em]">More explorations</h2>
-            <p className="max-w-xs text-sm leading-relaxed text-[#768591]">Click a project to see all of its logos, artwork, variations, and applications.</p>
+            <h2 className="text-[clamp(1.9rem,3.1vw,2.8rem)] font-bold tracking-[-.045em]">More explorations</h2>
+            <p className="text-sm text-[#75828D]">{creativeProjects.length} projects · 59 visuals</p>
           </div>
-          <div className="grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-7 gap-y-16 sm:grid-cols-2 xl:grid-cols-3">
             {creativeProjects.slice(2).map(project=><ProjectCard key={project.slug} project={project}/>)}
           </div>
         </section>
-
-        <div className="mt-20 border-t border-[#DFE5EA] pt-10">
-          <p className="max-w-[820px] text-sm leading-[1.85] text-[#657583]">Portfolio artwork is displayed from the provided original files. Independent and academic concepts are identified, and unproduced mockups are labeled as conceptual applications. Smaller legacy logo exports are shown at modest sizes to avoid artificial upscaling.</p>
-          <Link href="/contact" className="mt-8 inline-flex items-center rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005DC8]">Work together ↗</Link>
+        <div className="mt-24 border-t border-[#DFE5EA] pt-10">
+          <p className="max-w-[840px] text-sm leading-[1.9] text-[#65717D]">Original project artwork is shown at its available source resolution. Concepts and unproduced applications are explicitly labeled on the individual project pages. Client assignments are distinguished from academic and independent explorations.</p>
+          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005DC8]">Get in touch ↗</Link>
         </div>
       </div>
       <Footer/>
