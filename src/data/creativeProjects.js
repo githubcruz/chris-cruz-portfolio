@@ -2,6 +2,10 @@ export const creativeProjects = [
   {
     slug: "elite-barbershop",
     title: "Elite Barbershop",
+    concept: {
+      brief: "The client wanted a modern, clean identity that would position the shop as a leading destination for quality barbering in the area.",
+      solution: "I explored elegant script lettering, a recognizable barber pole, and simplified circular marks to balance a premium feel with everyday versatility. Clear uppercase signage concepts help the identity stand out on a storefront.",
+    },
     category: "Client work / Brand identity",
     intro: "A bold barbershop identity built around elegant lettering, a classic barber pole, and versatile marks for physical applications.",
     role: "Logo exploration, visual identity, storefront signage, business cards, apparel, cape and poster concepts",
@@ -14,6 +18,10 @@ export const creativeProjects = [
   {
     slug: "raices-real-estate",
     title: "Raíces Real Estate",
+    concept: {
+      brief: "The client wanted the identity to reflect building equity through real estate, securing a family's legacy, and incorporating the letter R for both the family name and Raíces.",
+      solution: "I combined roots for long-term growth and equity, a shield for protection and family legacy, and the R into one distinctive monogram. The system carries those ideas from the logo through the website and property marketing.",
+    },
     category: "Client work / Brand identity & web design",
     intro: "Created the complete Raíces Real Estate brand identity and website, then extended the visual system across property marketing, listing graphics, and social campaigns.",
     role: "Full brand identity, logo system, website design and development, listing graphics, social campaigns, marketing collateral",
@@ -27,14 +35,18 @@ export const creativeProjects = [
   {
     slug: "pekaboo",
     title: "Pekaboo",
-    category: "Brand identity / Nails & cosmetics",
+    concept: {
+      brief: "The client envisioned a playful ghost holding nail polish, with her nails already done, as the face of a nails and cosmetics brand.",
+      solution: "I illustrated a character with polished pink nails, expressive lashes, and bold lips, then explored different hairstyles while keeping the core face recognizable. The result is a flexible identity that extends naturally to beauty packaging.",
+    },
+    category: "Client work / Nails & cosmetics",
     intro: "A playful visual identity for a nails and cosmetics brand, built around an expressive illustrated character, versatile logo explorations, and a clean beauty-focused aesthetic.",
     role: "Logo design, character illustration, identity explorations, cosmetics packaging concepts",
     tags: ["Beauty branding", "Nails & cosmetics", "Logo design", "Illustration"],
     visualLabels: ["Original character mark", "Alternate hairstyle exploration", "Cosmetics presentation study"],
     visualNotes: ["Original artwork", "Original exploration", "Conceptual presentation"],
     details: ["Designed a distinctive character-led identity for a nails and cosmetics brand, exploring logo variations and expressive hairstyle silhouettes.", "Preserved a recognizable illustration style across the character explorations, with pink accents and a minimal supporting wordmark.", "Packaging visuals are concept applications rather than verified manufactured or launched products."],
-    status: "Independent concept",
+    status: "Client identity design and concept applications",
   },
   {
     slug: "the-mexican-museum",
