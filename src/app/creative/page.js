@@ -12,20 +12,14 @@ export const metadata = {
   alternates: {canonical:"/creative"},
 };
 
-function ArtworkTriptych({project}) {
+function ArtworkPreview({project}) {
   const artwork=creativeMedia[project.slug] ?? [];
-  const picks=(creativeHighlights[project.slug] ?? []).map(index=>artwork.find(a=>a.index===index)).filter(Boolean);
-  return (
-    <div className="grid grid-cols-2 gap-2.5 md:gap-3">
-      <div className="col-span-2">
-        <CreativeArtwork media={picks[0] ?? artwork[0]} aspect="wide" whiteBackground/>
-      </div>
-      {picks.slice(1).map((piece,i)=>(
-        <CreativeArtwork key={piece.src} media={piece} aspect="landscape" whiteBackground className={i===0&&picks.length===2?"col-span-2":""}/>
-      ))}
-    </div>
-  );
+  const featuredIndex=(creativeHighlights[project.slug] ?? [])[0];
+  const featured=artwork.find(piece=>piece.index===featuredIndex) ?? artwork[0];
+  if(!featured)return null;
+  return <CreativeArtwork media={featured} aspect="wide" whiteBackground/>;
 }
+
 function FeaturedProject({project}) {
   return (
     <article className="grid gap-9 border-b border-[#DFE5EA] py-14 lg:grid-cols-[minmax(240px,.52fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
@@ -37,7 +31,7 @@ function FeaturedProject({project}) {
         <Link href={`/creative/${project.slug}`} className="mt-8 inline-flex border-b border-[#111] pb-2 text-sm font-semibold transition-colors hover:border-[#0072FC] hover:text-[#0072FC]">View all {(creativeMedia[project.slug]??[]).length} visuals ↗</Link>
       </div>
       <Link href={`/creative/${project.slug}`} aria-label={`Explore all ${project.title} visual work`} className="block transition-transform duration-300 hover:-translate-y-1">
-        <ArtworkTriptych project={project}/>
+        <ArtworkPreview project={project}/>
       </Link>
     </article>
   );
@@ -46,7 +40,7 @@ function ProjectCard({project}) {
   return (
     <article className="group min-w-0">
       <Link href={`/creative/${project.slug}`} className="block">
-        <ArtworkTriptych project={project}/>
+        <ArtworkPreview project={project}/>
         <div className="mt-5 flex items-start justify-between gap-3">
           <div>
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[.13em] text-[#0072FC]">{project.category}</p>
