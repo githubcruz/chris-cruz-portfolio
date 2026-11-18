@@ -287,13 +287,55 @@ export const creativeMedia = {
   ],
   "the-mexican-museum": [
     {
-      "src": "/creative-media/work/048_the-mexican-museum.webp",
-      "alt": "The Mexican Museum — redesigned geometric emblem and wordmark",
-      "type": "Original source artwork",
-      "index": 48
+      "src": "/creative-media/portfolio/066_museum-refined-ollin-logo.webp",
+      "alt": "Refined Ollin-inspired geometric emblem and museum wordmark",
+      "type": "Independent redesign",
+      "index": 66
+    },
+    {
+      "src": "/creative-media/portfolio/067_museum-branding-kit.webp",
+      "alt": "Museum redesign brand guideline presentation",
+      "type": "Conceptual application",
+      "index": 67
+    },
+    {
+      "src": "/creative-media/portfolio/068_museum-exhibition-poster.webp",
+      "alt": "Arte Cultura Herencia exhibition poster concept",
+      "type": "Conceptual application",
+      "index": 68
+    },
+    {
+      "src": "/creative-media/portfolio/069_museum-signage.webp",
+      "alt": "Museum entrance signage concept",
+      "type": "Conceptual application",
+      "index": 69
+    },
+    {
+      "src": "/creative-media/portfolio/070_museum-admission-passes.webp",
+      "alt": "Admission ticket and member pass concepts",
+      "type": "Conceptual application",
+      "index": 70
+    },
+    {
+      "src": "/creative-media/portfolio/071_museum-heritage-portrait-poster.webp",
+      "alt": "Mexican heritage portrait campaign poster",
+      "type": "Conceptual application",
+      "index": 71
+    },
+    {
+      "src": "/creative-media/portfolio/072_museum-heritage-catalog.webp",
+      "alt": "Arte Cultura Herencia exhibition catalog concept",
+      "type": "Conceptual application",
+      "index": 72
+    },
+    {
+      "src": "/creative-media/portfolio/073_museum-heritage-banner.webp",
+      "alt": "Mexican heritage cultural campaign banner",
+      "type": "Conceptual application",
+      "index": 73
     }
   ],
-    "foodpoint": [
+  "foodpoint": [
     {
       "src": "/creative-media/work/049_foodpoint.webp",
       "alt": "Wireframe studies",
@@ -396,7 +438,9 @@ export const creativeHighlights = {
     45
   ],
   "the-mexican-museum": [
-    48
+    66,
+    71,
+    69
   ],
   "foodpoint": [
     52,
