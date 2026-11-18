@@ -62,6 +62,23 @@ for (let index = 1; index <= 12; index++) {
     if (y < height - 1) visit(pixel + width);
   }
 
+  // Remove the small stray screenshot mark in the empty upper-right portion
+  // of the three-logo exploration board. This region contains no logo artwork.
+  // Preserve all three original circular marks and the source archive.
+  if (index === 5) {
+    const left = Math.floor(width * 0.74);
+    const bottom = Math.floor(height * 0.27);
+    for (let y = 0; y < bottom; y++) {
+      for (let x = left; x < width; x++) {
+        const off = (y * width + x) * channels;
+        data[off] = 255;
+        data[off + 1] = 255;
+        data[off + 2] = 255;
+        data[off + 3] = 0;
+      }
+    }
+  }
+
   // Signage and wordmark exploration images (006/007) contain a baked-in
   // #D4D4D4 screenshot frame. Normalize that near-neutral light-gray ink to
   // the same white background as the portfolio card, retaining the intentional
