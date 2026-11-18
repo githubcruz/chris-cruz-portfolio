@@ -70,13 +70,13 @@ export const creativeMedia = {
   "raices-real-estate": [
     {
       "src": "/creative-media/portfolio/raices-wordmark.webp",
-      "alt": "Ruiz Real Estate — full wordmark and shield identity",
+      "alt": "Raíces Real Estate — full wordmark and shield identity",
       "type": "Original source artwork",
       "index": 13
     },
     {
       "src": "/creative-media/portfolio/raices-shield.webp",
-      "alt": "Ruiz Real Estate — original shield monogram",
+      "alt": "Raíces Real Estate — original shield monogram",
       "type": "Original source artwork",
       "index": 14
     },
