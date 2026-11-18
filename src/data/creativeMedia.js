@@ -396,8 +396,6 @@ export const creativeHighlights = {
     45
   ],
   "the-mexican-museum": [
-    47,
-    46,
     48
   ],
   "foodpoint": [
