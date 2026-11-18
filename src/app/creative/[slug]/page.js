@@ -30,12 +30,21 @@ const sectionDefinitions={
   "drone-emblem":[["Original aviation emblem",59,59]],
 };
 
-function MediaFigure({media,first=false}){
+function MediaFigure({media,first=false,elite=false}){
   return (
-    <figure className="min-w-0">
-      <CreativeArtwork media={media} canOpen aspect={first?"wide":"landscape"}/>
-      <figcaption className="mt-4 flex flex-wrap items-start justify-between gap-3">
-        <h3 className="max-w-[420px] text-[15px] font-semibold leading-snug tracking-[-.015em]">{media.alt}</h3>
+    <figure className={elite ? "group min-w-0 overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)] transition-[border-color,box-shadow] duration-300 hover:border-[#B8D5FC] hover:shadow-[0_9px_28px_rgba(12,32,50,.065)]" : "min-w-0"}>
+      <CreativeArtwork
+        media={media}
+        canOpen
+        aspect={first?"wide":"landscape"}
+        elitePresentation={elite}
+        className={elite ? "!rounded-none !border-0 !shadow-none" : ""}
+      />
+      <figcaption className={elite ? "mx-4 flex flex-wrap items-center justify-between gap-3 border-t border-[#E7EDF2] py-4 md:mx-5" : "mt-4 flex flex-wrap items-start justify-between gap-3"}>
+        <h3 className={elite ? "flex max-w-[420px] items-center gap-2.5 text-[14px] font-semibold leading-snug tracking-[-.015em]" : "max-w-[420px] text-[15px] font-semibold leading-snug tracking-[-.015em]"}>
+          {elite && <span aria-hidden="true" className="h-[17px] w-[3px] shrink-0 rounded-full bg-[#0072FC]"/>}
+          {media.alt}
+        </h3>
         <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[.1em] text-[#8895A0]">{media.type==="Conceptual application"?"Concept mockup":"Original artwork"}</span>
       </figcaption>
     </figure>
@@ -47,6 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
+  const isElite=slug==="elite-barbershop";
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -79,7 +89,7 @@ export default async function CreativeProjectPage({params}){
 
         <section aria-labelledby="lead-artwork-heading" className="grid gap-8 border-b border-[#E0E5E9] py-12 md:py-16 lg:grid-cols-[minmax(0,1.65fr)_minmax(220px,.55fr)] lg:gap-14">
           <div>
-            <CreativeArtwork media={featured} aspect="wide" canOpen priority className="shadow-[0_12px_38px_rgba(12,32,50,.04)]"/>
+            <CreativeArtwork media={featured} aspect="wide" canOpen priority elitePresentation={isElite} className="shadow-[0_12px_38px_rgba(12,32,50,.04)]"/>
             <p className="mt-4 text-xs text-[#84919C]">{featured.alt} · Click to view the full-resolution file</p>
           </div>
           <div className="lg:self-center">
@@ -100,7 +110,7 @@ export default async function CreativeProjectPage({params}){
               <p className="text-xs font-medium text-[#7E8A96]">{section.items.length} {section.items.length===1?"image":"images"}</p>
             </div>
             <div className="grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2">
-              {section.items.map((media,i)=><MediaFigure key={media.src} media={media} first={false}/>)}
+              {section.items.map((media,i)=><MediaFigure key={media.src} media={media} first={false} elite={isElite}/>)}
             </div>
           </section>
         ))}
