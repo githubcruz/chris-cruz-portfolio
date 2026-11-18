@@ -255,10 +255,34 @@ export const creativeMedia = {
       "index": 44
     },
     {
-      "src": "/creative-media/work/045_pekaboo.webp",
-      "alt": "Additional packaging and brand visualization",
+      "src": "/creative-media/portfolio/045_pekaboo-product-collection.webp",
+      "alt": "Nail and cosmetic product collection",
       "type": "Conceptual application",
       "index": 45
+    },
+    {
+      "src": "/creative-media/portfolio/062_pekaboo-shopping-bag.webp",
+      "alt": "Branded shopping bag concept",
+      "type": "Conceptual application",
+      "index": 62
+    },
+    {
+      "src": "/creative-media/portfolio/063_pekaboo-poster.webp",
+      "alt": "Nails and cosmetics campaign poster",
+      "type": "Conceptual application",
+      "index": 63
+    },
+    {
+      "src": "/creative-media/portfolio/064_pekaboo-brand-applications.webp",
+      "alt": "Brand applications and retail collateral",
+      "type": "Conceptual application",
+      "index": 64
+    },
+    {
+      "src": "/creative-media/portfolio/065_pekaboo-nail-polish-packaging.webp",
+      "alt": "Nail polish and beauty packaging concepts",
+      "type": "Conceptual application",
+      "index": 65
     }
   ],
   "the-mexican-museum": [
