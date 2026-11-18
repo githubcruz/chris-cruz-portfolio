@@ -18,7 +18,7 @@ export async function generateMetadata({params}){
 }
 
 const sectionDefinitions={
-  "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11],["Additional lettering exploration",12,12]],
+  "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
   "raices-real-estate":[["Logo, monogram & wordmark",13,16],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
@@ -61,8 +61,9 @@ export default async function CreativeProjectPage({params}){
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
   const next=creativeProjects[(currentIndex+1)%creativeProjects.length];
-  const sections=(sectionDefinitions[slug]??[]).map(([heading,start,end])=>({
-    heading,items:artworks.filter(a=>a.index>=start&&a.index<=end),
+  const sections=(sectionDefinitions[slug]??[]).map(([heading,...ranges])=>({
+    heading,
+    items:artworks.filter(a=>ranges.some((start,i)=>i%2===0&&a.index>=start&&a.index<=ranges[i+1])),
   })).filter(s=>s.items.length);
 
   return (
