@@ -138,6 +138,18 @@ export default async function CreativeProjectPage({params}){
           </section>
         )}
 
+        {slug==="pekaboo" && (
+          <section aria-labelledby="pekaboo-typeface" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Identity system</p>
+            <h2 id="pekaboo-typeface" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Brand typography</h2>
+            <div className="rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Main typeface</p>
+              <h3 className="mt-5 text-[clamp(2.5rem,6vw,4.8rem)] font-medium tracking-[-.055em]">Broadacre</h3>
+              <p className="mt-4 max-w-[680px] text-sm leading-[1.8] text-[#566673]">Broadacre is the original font selected for Pekaboo's main wordmark. The exact letterforms are preserved in the supplied logo artwork; this text label uses the website's fallback font until a licensed webfont is provided.</p>
+            </div>
+          </section>
+        )}
+
         {sections.map((section,sectionIndex)=>(
           <section key={section.heading} className="border-b border-[#E0E5E9] py-12 md:py-16" aria-labelledby={`creative-section-${sectionIndex}`}>
             <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
