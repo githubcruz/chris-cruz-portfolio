@@ -111,14 +111,14 @@ export const creativeProjects = [
   {
     slug: "drone-emblem",
     title: "Drone Emblem",
-    category: "Independent logo / Aviation identity",
-    intro: "A standalone aviation-inspired emblem exploring a compact symbol with a technical visual language.",
-    role: "Logo illustration, symbol design",
-    tags: ["Logo", "Illustration", "Aviation"],
-    visualLabels: ["Original emblem"],
-    visualNotes: ["Original logo"],
-    details: ["A compact illustrated exploration using an aviation motif."],
-    status: "Independent logo exploration",
+    category: "Independent logo / Illustration",
+    intro: "A standalone aviation-inspired emblem that brings a technical subject into a compact graphic mark.",
+    role: "Logo and emblem exploration",
+    tags: ["Logo design", "Illustration", "Aviation"],
+    visualLabels: ["Original aviation emblem"],
+    visualNotes: ["Original source artwork"],
+    details: ["A focused illustration and identity study.", "The emblem is presented as an individual design exploration, not as a complete or launched identity system.", "No additional brand applications are represented as completed work."],
+    status: "Independent design exploration",
   },
 ];
 export function getCreativeProject(slug) {return creativeProjects.find(project=>project.slug===slug);}

@@ -1,42 +1,54 @@
 import Image from "next/image";
 
-function dimensionsFrom(item) {
-  const match = (item.dimensions || "").match(/(\d+)\s*[×x]\s*(\d+)/);
-  return match ? [Number(match[1]), Number(match[2])] : [1600, 1000];
-}
+export default function CreativeArtwork({
+  media,
+  aspect = "landscape",
+  priority = false,
+  className = "",
+  canOpen = false,
+}) {
+  if (!media) return null;
+  const isSmallSource = media.index >= 13 && media.index <= 16;
+  const frame = [
+    "relative isolate flex w-full items-center justify-center overflow-hidden",
+    "rounded-[10px] border border-[#E7EAEE] bg-[#F7F8F9]",
+    aspect === "square" ? "aspect-square" : aspect === "wide" ? "aspect-[16/10]" : "aspect-[4/3]",
+    className,
+  ].join(" ");
 
-/** Displays the actual source image, never an enlarged thumbnail atlas. */
-export default function CreativeArtwork({item, hero=false, caption=true, className=""}) {
-  if (!item) return null;
-  const [width,height] = dimensionsFrom(item);
-  const smallSource = Math.min(width,height) <= 320;
-  return (
-    <figure className={`min-w-0 ${className}`}>
+  const image = isSmallSource ? (
+    <Image
+      src={media.src}
+      alt={media.alt}
+      width={160}
+      height={160}
+      unoptimized
+      className="h-auto max-h-[160px] w-auto max-w-[160px] object-contain"
+    />
+  ) : (
+    <Image
+      src={media.src}
+      alt={media.alt}
+      fill
+      unoptimized
+      priority={priority}
+      sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px"
+      className="object-contain p-2.5 md:p-4"
+    />
+  );
+  if (canOpen) {
+    return (
       <a
-        href={item.src}
+        href={media.src}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Open full-size image: ${item.alt}`}
-        className="group block rounded-[12px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0072FC]"
+        className={frame + " focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0072FC]"}
+        aria-label={`Open full-size original: ${media.alt}`}
+        title="Open full-size image"
       >
-        <div className={`flex items-center justify-center overflow-hidden rounded-[12px] border border-[#E8EDEF] bg-[#F7F8F9] px-4 py-7 sm:px-8 ${hero?"min-h-[230px] sm:min-h-[360px]":"min-h-[190px] sm:min-h-[240px]"}`}>
-          <Image
-            src={item.src}
-            alt={item.alt}
-            width={width}
-            height={height}
-            unoptimized
-            loading={hero?"eager":"lazy"}
-            className={`h-auto w-auto object-contain transition-transform duration-300 group-hover:scale-[1.01] ${smallSource?"max-h-[130px] max-w-[130px] sm:max-h-[150px] sm:max-w-[150px]":hero?"max-h-[660px] max-w-full":"max-h-[460px] max-w-full"}`}
-          />
-        </div>
+        {image}
       </a>
-      {caption&&(
-        <figcaption className="mt-3 flex flex-wrap items-start justify-between gap-2">
-          <span className="max-w-[78%] text-xs font-medium leading-relaxed text-[#35424C]">{item.alt}</span>
-          <span className="text-[10px] uppercase tracking-[.06em] text-[#8E9AA4]">{item.type}</span>
-        </figcaption>
-      )}
-    </figure>
-  );
+    );
+  }
+  return <div className={frame}>{image}</div>;
 }
