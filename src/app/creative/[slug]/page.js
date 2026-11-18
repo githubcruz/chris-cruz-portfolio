@@ -101,6 +101,25 @@ export default async function CreativeProjectPage({params}){
           </div>
         </section>
 
+        {project.concept && (
+          <section aria-labelledby="creative-concept-heading" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Behind the identity</p>
+            <h2 id="creative-concept-heading" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">The Concept</h2>
+            <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
+              <div>
+                <h3 className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">
+                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>The client vision
+                </h3>
+                <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.brief}</p>
+              </div>
+              <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
+                <h3 className="mb-4 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">My design approach</h3>
+                <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.solution}</p>
+              </div>
+            </div>
+          </section>
+        )}
+
         {slug==="raices-real-estate" && (
           <section aria-labelledby="raices-brand-kit" className="border-b border-[#E0E5E9] py-12 md:py-16">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Identity system</p>
