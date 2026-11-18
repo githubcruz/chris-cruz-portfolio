@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const isElite=slug==="elite-barbershop";
+  const useCleanGallery=slug==="elite-barbershop"||slug==="raices-real-estate";
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -90,7 +90,7 @@ export default async function CreativeProjectPage({params}){
 
         <section aria-labelledby="lead-artwork-heading" className="grid gap-8 border-b border-[#E0E5E9] py-12 md:py-16 lg:grid-cols-[minmax(0,1.65fr)_minmax(220px,.55fr)] lg:gap-14">
           <div>
-            <CreativeArtwork media={featured} aspect="wide" canOpen priority elitePresentation={isElite} className="shadow-[0_12px_38px_rgba(12,32,50,.04)]"/>
+            <CreativeArtwork media={featured} aspect="wide" canOpen priority elitePresentation={useCleanGallery} className="shadow-[0_12px_38px_rgba(12,32,50,.04)]"/>
             <p className="mt-4 text-xs text-[#84919C]">{featured.alt} · Click to view the full-resolution file</p>
           </div>
           <div className="lg:self-center">
@@ -111,7 +111,7 @@ export default async function CreativeProjectPage({params}){
               <p className="text-xs font-medium text-[#7E8A96]">{section.items.length} {section.items.length===1?"image":"images"}</p>
             </div>
             <div className="grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2">
-              {section.items.map((media,i)=><MediaFigure key={media.src} media={media} first={false} elite={isElite}/>)}
+              {section.items.map((media,i)=><MediaFigure key={media.src} media={media} first={false} elite={useCleanGallery}/>)}
             </div>
           </section>
         ))}
