@@ -141,11 +141,28 @@ export default async function CreativeProjectPage({params}){
         {slug==="pekaboo" && (
           <section aria-labelledby="pekaboo-typeface" className="border-b border-[#E0E5E9] py-12 md:py-16">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Identity system</p>
-            <h2 id="pekaboo-typeface" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Brand typography</h2>
+            <h2 id="pekaboo-typeface" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Branding kit</h2>
             <div className="rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Main typeface</p>
+              <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Official color palette</h3>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  {label:"Hot pink",hex:"#FF1D79"},
+                  {label:"Soft pink",hex:"#FFC2E1"},
+                  {label:"Black",hex:"#000000"},
+                  {label:"White",hex:"#FFFFFF"},
+                ].map(color=>(
+                  <div key={color.hex}>
+                    <div className="h-24 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
+                    <p className="mt-3 text-sm font-semibold">{color.label}</p>
+                    <p className="text-xs text-[#78848F]">{color.hex}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-9 border-t border-[#E7EDF2] pt-8">
+                <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Main typeface</p>
               <h3 className="mt-5 text-[clamp(2.5rem,6vw,4.8rem)] font-medium tracking-[-.055em]">Broadacre</h3>
               <p className="mt-4 max-w-[680px] text-sm leading-[1.8] text-[#566673]">Broadacre is the original font selected for Pekaboo's main wordmark. The exact letterforms are preserved in the supplied logo artwork; this text label uses the website's fallback font until a licensed webfont is provided.</p>
+              </div>
             </div>
           </section>
         )}
