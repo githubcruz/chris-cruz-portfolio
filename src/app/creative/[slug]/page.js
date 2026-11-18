@@ -19,7 +19,7 @@ export async function generateMetadata({params}){
 
 const sectionDefinitions={
   "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
-  "raices-real-estate":[["Logo, monogram & wordmark",13,16],["Property marketing & social campaigns",17,28]],
+  "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
   "pekaboo":[["Original logo & character variations",43,44],["Packaging / Concept",45,45]],
@@ -100,6 +100,42 @@ export default async function CreativeProjectPage({params}){
             <p className="mt-4 text-sm leading-[1.85] text-[#566673]">{project.details[1]}</p>
           </div>
         </section>
+
+        {slug==="raices-real-estate" && (
+          <section aria-labelledby="raices-brand-kit" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Identity system</p>
+            <h2 id="raices-brand-kit" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Branding kit</h2>
+            <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:p-9">
+              <div>
+                <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Color palette</h3>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                  {[
+                    {label:"Deep navy",color:"#021839"},
+                    {label:"White",color:"#FFFFFF"},
+                    {label:"Neutral",color:"#E7EAEE"},
+                  ].map(swatch=>(
+                    <div key={swatch.color}>
+                      <div className="h-24 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:swatch.color}}/>
+                      <p className="mt-3 text-sm font-semibold">{swatch.label}</p>
+                      <p className="text-xs text-[#78848F]">{swatch.color}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-xs leading-[1.7] text-[#78848F]">Navy and white are sampled from the supplied identity artwork; neutral gray is used for portfolio presentation.</p>
+              </div>
+              <div className="md:border-l md:border-[#E7EDF2] md:pl-8">
+                <h3 className="mb-5 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography direction</h3>
+                <p className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-[.12em] text-[#021839]">Raíces</p>
+                <p className="mt-3 text-sm font-medium">Classic serif identity lettering</p>
+                <p className="mt-2 text-xs leading-[1.7] text-[#78848F]">The supplied logo uses a classic serif style. The precise licensed font family is not yet confirmed.</p>
+                <div className="mt-7 border-t border-[#E7EDF2] pt-5">
+                  <p className="text-[1.4rem] font-semibold tracking-[-.025em]">Modern sans-serif</p>
+                  <p className="mt-1 text-sm text-[#78848F]">Supporting website and marketing text</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {sections.map((section,sectionIndex)=>(
           <section key={section.heading} className="border-b border-[#E0E5E9] py-12 md:py-16" aria-labelledby={`creative-section-${sectionIndex}`}>
