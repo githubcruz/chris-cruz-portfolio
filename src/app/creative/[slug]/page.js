@@ -22,7 +22,7 @@ const sectionDefinitions={
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo system & mobile interface",29,32],["Campaigns & packaging / Concepts",33,34]],
   "steamboat":[["Identity, menu & interface",35,40],["Apparel & collateral / Concepts",41,42]],
-  "pekaboo":[["Original logo & character variations",43,44],["Packaging / Concept",45,45]],
+  "pekaboo":[["Logo & character explorations",43,44],["Cosmetics packaging / Concept",45,45]],
   "the-mexican-museum":[["Logo, illustration & visual identity",46,47],["Identity refinement / Concept",48,48]],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
   "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=slug==="elite-barbershop"||slug==="raices-real-estate";
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
