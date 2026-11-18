@@ -1,5 +1,5 @@
 // Preserve the source artwork archive. Only remove connected, near-neutral
-// screenshot matte pixels from the outside of original Elite logo studies.
+// screenshot matte pixels from the outside of original Elite artwork.
 // This cannot reconstruct any ring already clipped in an uploaded source.
 import sharp from "sharp";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -16,7 +16,7 @@ function looksLikeMatte(r, g, b, a) {
   return a > 0 && lowest >= 216 && highest - lowest <= 16;
 }
 
-for (let index = 1; index <= 7; index++) {
+for (let index = 1; index <= 12; index++) {
   const filename = `${String(index).padStart(3, "0")}_elite-barbershop.webp`;
   const original = await readFile(join(directory, filename));
   const { data, info } = await sharp(original)
