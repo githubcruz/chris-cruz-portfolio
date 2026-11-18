@@ -68,13 +68,17 @@ export const creativeProjects = [
   {
     slug: "optik",
     title: "Optik",
+    concept: {
+      brief: "Create an immediately recognizable eye-care identity that feels simple, clean, and technology-focused rather than complicated or overly clinical.",
+      solution: "I chose the eye as the central symbol to communicate vision at a glance. The minimal lowercase wordmark and open spacing make the identity accessible and digital-first, while a focused blue, black, and white palette suggests clarity, precision, and trust. The same elements extend across app interfaces, campaigns, and eyewear-related touchpoints.",
+    },
     category: "Student concept / Brand & product",
-    intro: "A student brand and product-design concept exploring how an eye-inspired identity can connect mobile experiences, advertising, and packaging.",
-    role: "Logo and visual identity exploration, UX wireframes, mobile UI concepts, advertising and packaging studies",
-    tags: ["Visual identity", "Wireframes", "Mobile UI", "Brand applications"],
+    intro: "An eye-care and vision-tech identity built around one simple idea: make vision instantly recognizable through a minimal symbol and a clear, connected visual system.",
+    role: "Brand identity, original wireframes and mobile UI, proposed digital experiences, marketing and product mockups",
+    tags: ["Identity system", "Logo exploration", "Digital product", "Campaigns & packaging"],
     visualLabels: ["Eye-inspired logo and icon system", "UX wireframes and mobile explorations", "Packaging and advertising concepts"],
     visualNotes: ["Original design exploration", "Original concept work", "Concept applications"],
-    details: ["Developed an eye-inspired logo system with a restrained blue-and-white visual direction.", "Explored wireframes and mobile screens, extending the same identity language across digital and physical touchpoints.", "This is a student concept; app screens, advertising, and packaging are explorations rather than launched products."],
+    details: ["Designed a simple eye-inspired mark and thin lowercase wordmark to connect the brand immediately to eye care, visual clarity, and technology.", "Expanded the blue, black, and white visual language across responsive screen concepts, promotional campaigns, and eyewear packaging applications.", "Student identity exploration, original UI studies, and newly visualized application concepts; these are not released products, live services, or real retail locations."],
     status: "Student concept",
   },
   {
