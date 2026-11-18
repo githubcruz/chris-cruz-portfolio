@@ -243,14 +243,14 @@ export const creativeMedia = {
   ],
   "pekaboo": [
     {
-      "src": "/creative-media/cleaned/043_pekaboo.webp",
-      "alt": "Original character logo explorations",
+      "src": "/creative-media/portfolio/043_pekaboo-main-logo.webp",
+      "alt": "Main Pekaboo logo",
       "type": "Original source artwork",
       "index": 43
     },
     {
-      "src": "/creative-media/cleaned/044_pekaboo.webp",
-      "alt": "Main character illustration",
+      "src": "/creative-media/portfolio/044_pekaboo-logo-explorations.webp",
+      "alt": "Original character logo explorations",
       "type": "Original source artwork",
       "index": 44
     },
