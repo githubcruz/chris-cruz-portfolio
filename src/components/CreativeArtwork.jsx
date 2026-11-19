@@ -8,6 +8,7 @@ export default function CreativeArtwork({
   canOpen = false,
   elitePresentation = false,
   whiteBackground = false,
+  darkBackground = false,
   coverInset = false,
 }) {
   if (!media) return null;
@@ -16,9 +17,11 @@ export default function CreativeArtwork({
     "relative isolate flex w-full items-center justify-center overflow-hidden",
     elitePresentation
       ? "rounded-[12px] border border-[#E2E8F0] bg-white transition-[border-color,box-shadow] duration-300 hover:border-[#B8D5FC] hover:shadow-[0_8px_26px_rgba(0,114,252,.055)]"
-      : whiteBackground
-        ? "rounded-[10px] border border-[#E7EAEE] bg-white"
-        : "rounded-[10px] border border-[#E7EAEE] bg-[#F7F8F9]",
+      : darkBackground
+        ? "rounded-[10px] border border-[#E7EAEE] bg-[#021839]"
+        : whiteBackground
+          ? "rounded-[10px] border border-[#E7EAEE] bg-white"
+          : "rounded-[10px] border border-[#E7EAEE] bg-[#F7F8F9]",
     aspect === "square" ? "aspect-square" : aspect === "wide" ? "aspect-[16/10]" : "aspect-[4/3]",
     className,
   ].join(" ");
