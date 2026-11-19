@@ -281,6 +281,54 @@ export const creativeMedia = {
       "alt": "Tote mockup",
       "type": "Conceptual application",
       "index": 42
+    },
+    {
+      "src": "/creative-media/portfolio/81_steamboat-refined-logo.webp",
+      "alt": "Final selected Steamboat hotpot symbol and wordmark",
+      "type": "Conceptual application",
+      "index": 81
+    },
+    {
+      "src": "/creative-media/portfolio/82_steamboat-logo-explorations.webp",
+      "alt": "Black-and-white yin-yang hotpot identity variations",
+      "type": "Conceptual application",
+      "index": 82
+    },
+    {
+      "src": "/creative-media/portfolio/83_steamboat-menu-concept.webp",
+      "alt": "Monochrome hotpot menu design concept",
+      "type": "Conceptual application",
+      "index": 83
+    },
+    {
+      "src": "/creative-media/portfolio/84_steamboat-poster-storefront.webp",
+      "alt": "Two flavors, one table poster and storefront graphic",
+      "type": "Conceptual application",
+      "index": 84
+    },
+    {
+      "src": "/creative-media/portfolio/85_steamboat-packaging.webp",
+      "alt": "Steamboat takeaway packaging concept",
+      "type": "Conceptual application",
+      "index": 85
+    },
+    {
+      "src": "/creative-media/portfolio/86_steamboat-menu-photography.webp",
+      "alt": "Selected logo design reasoning and proposed color palette",
+      "type": "Conceptual application",
+      "index": 86
+    },
+    {
+      "src": "/creative-media/portfolio/87_steamboat-brand-signage.webp",
+      "alt": "Hotpot restaurant signage and promotional poster concept",
+      "type": "Conceptual application",
+      "index": 87
+    },
+    {
+      "src": "/creative-media/portfolio/88_steamboat-restaurant-merch.webp",
+      "alt": "Steamboat takeaway bags, boxes and serving bowls",
+      "type": "Conceptual application",
+      "index": 88
     }
   ],
   "pekaboo": [
@@ -470,9 +518,9 @@ export const creativeHighlights = {
     78
   ],
   "steamboat": [
+    81,
     35,
-    36,
-    39
+    84
   ],
   "pekaboo": [
     43,
