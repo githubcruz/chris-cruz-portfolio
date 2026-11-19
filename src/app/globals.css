@@ -28,10 +28,14 @@ html, body {
   overflow-x: hidden;
 }
 
+/* A quiet scrollbar still shows readers where they are on long case studies. */
 html {
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
 }
-html::-webkit-scrollbar { display: none; }
+html::-webkit-scrollbar { width: 8px; }
+html::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 8px; }
+html::-webkit-scrollbar-track { background: transparent; }
 
 ::selection {
   background: var(--orange);
@@ -263,8 +267,15 @@ html::-webkit-scrollbar { display: none; }
 .portfolio-light [class~="border-white/30"] { border-color: rgba(17,17,17,.22) !important; }
 .portfolio-light [class~="bg-white/15"] { background-color: rgba(17,17,17,.17) !important; }
 .portfolio-light .ghost { -webkit-text-stroke-color: rgba(17,17,17,.5); }
+/* Keep navigation readable when long pages and thumbnail images scroll behind it. */
 .portfolio-light nav[aria-label="Main navigation"] {
-  background: linear-gradient(to bottom, rgba(255,255,255,.95), rgba(255,255,255,0));
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid rgba(226,232,240,.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+@supports not ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+  .portfolio-light nav[aria-label="Main navigation"] { background: #fff; }
 }
 .portfolio-light nav[aria-label="Main navigation"] > div[class*="bg-black"] { background: white !important; }
 .portfolio-light .about-skill.rounded-full:hover { background: #111 !important; color: #fff !important; border-color: #111 !important; }
@@ -526,4 +537,17 @@ html::-webkit-scrollbar { display: none; }
  .portfolio-light .hero-entrance-title.portfolio-page-title {
   font-size: clamp(2.5rem, 10.5vw, 3.15rem);
  }
+}
+
+/* Homepage / mobile QA: preserve comfortable tap targets and avoid page-width overflows. */
+@media (max-width: 639px) {
+  .portfolio-light .work-item .project-preview { border-radius: 16px; }
+  .portfolio-light .hero-entrance-title { overflow-wrap: normal; }
+}
+.portfolio-light nav[aria-label="Main navigation"] [aria-current="page"] {
+  color: #0072FC !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-light .work-item .project-preview,
+  .portfolio-light .work-item .project-preview img { transform: none !important; }
 }
