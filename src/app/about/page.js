@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 
 export const metadata = {
  title: "About",
@@ -12,6 +13,6 @@ export const metadata = {
 
 export default function AboutPage() {
  return <main className="portfolio-cursor portfolio-light min-h-screen bg-white text-[#111]">
-  <Cursor light/><Navbar/><About standalone/>
+  <Cursor light/><Navbar/><About standalone/><Footer/>
  </main>;
 }
