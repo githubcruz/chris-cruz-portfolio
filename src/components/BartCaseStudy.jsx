@@ -183,42 +183,57 @@ export default function BartCaseStudy(){
 
   <section id="bart-prototyping" className="scroll-mt-32 mt-24 md:mt-28">
    <SectionHeading number="04 / Prototype & learn" title="Increase fidelity only when the question demands it.">Storyboards, cardboard models, and later A/B concept comparisons each reduced a different kind of uncertainty.</SectionHeading>
-   <div className="mt-10 grid gap-4 md:grid-cols-2">
-    {prototypes.map(x=><div key={x.number} className="rounded-[22px] border border-[#DFE6ED] p-7 md:p-8"><span className="text-xs font-bold text-[#0072FC]">{x.number}</span><h3 className="mt-4 text-2xl font-bold tracking-tight text-[#182A3A]">{x.heading}</h3><p className="mt-4 text-lg font-medium leading-snug text-[#334A5D]">{x.question}</p><p className="mt-4 text-sm leading-[1.75] text-[#70808C]">{x.detail}</p></div>)}
-   </div>
-   <div className="mt-8 grid gap-5 md:grid-cols-2">
+   <div className="mt-10 grid gap-6 md:grid-cols-2">
     {[
-      {src:"/portfolio-media/bart-archival-storyboard.webp",title:"Storyboard testing",detail:"2019 storyboard and participant response summary."},
-      {src:"/portfolio-media/bart-archival-prototype-first.webp",title:"First physical mockup",detail:"Team testing a tall cardboard gate at human scale."},
-      {src:"/portfolio-media/bart-archival-prototype-second.webp",title:"Second physical mockup",detail:"Construction and feedback for the alternative configuration."}
-    ].map((item,index)=><figure key={item.src} className={`overflow-hidden rounded-[22px] border border-[#DDE6F0] bg-[#F8FAFC] ${index===0?"md:col-span-2":""}`}>
-     <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} archive image in a new tab`} className="block cursor-zoom-in">
-      <Image src={item.src} alt={item.detail} width={1400} height={788} sizes={index===0?"(max-width:767px) 92vw, 1100px":"(max-width:767px) 92vw, 540px"} className="h-auto w-full" unoptimized />
-     </a>
-     <figcaption className="p-5"><p className="text-base font-bold text-[#243949]">{item.title}</p><p className="mt-1 text-sm leading-relaxed text-[#6C7B88]">{item.detail} <span className="text-[#0072FC]">Open full size ↗</span></p></figcaption>
+      {number:"01",src:"/portfolio-media/bart-archival-storyboard.webp",title:"Storyboard: test the interaction",question:"Could riders understand the proposed entrance?",detail:"The 2019 storyboard was reviewed with 21 participants. The archived presentation described generally favorable impressions of ease of use and perceived safety.",wide:true},
+      {number:"02",src:"/portfolio-media/bart-archival-prototype-first.webp",title:"Prototype 01: understand scale",question:"How would a taller barrier feel at human scale?",detail:"A cardboard model gave the team a way to discuss height, accessibility and the physical entry experience.",wide:false},
+      {number:"03",src:"/portfolio-media/bart-archival-prototype-second.webp",title:"Prototype 02: compare configurations",question:"Would a different configuration improve the concept?",detail:"An alternative physical layout made the single-versus-double gate tradeoff easier to communicate and test.",wide:false}
+    ].map(item=><figure key={item.src} className={`overflow-hidden rounded-[22px] border border-[#DDE6F0] bg-white ${item.wide?"md:col-span-2":""}`}>
+      <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open original 2019 archive: ${item.title}`} className="group block bg-[#F6F8FA]">
+        <Image src={item.src} alt={item.title+" — original 2019 team project documentation"} width={1400} height={788} sizes={item.wide?"(max-width:767px) 92vw, 1100px":"(max-width:767px) 92vw, 560px"} className="h-auto w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.01]" unoptimized/>
+      </a>
+      <figcaption className="border-t border-[#E4EBF1] p-6 md:p-7">
+        <p className="text-xs font-bold uppercase tracking-[.16em] text-[#0072FC]">Stage {item.number} · Original project artifact</p>
+        <h3 className="mt-3 text-xl font-bold tracking-[-.03em] text-[#1F3345]">{item.title}</h3>
+        <p className="mt-3 text-base font-semibold leading-[1.5] text-[#334D60]">{item.question}</p>
+        <p className="mt-2 text-sm leading-[1.75] text-[#647887]">{item.detail}</p>
+      </figcaption>
     </figure>)}
+   </div>
+   <div className="mt-6 rounded-[20px] border border-[#D8E5F2] bg-[#F6FAFF] p-6 md:p-8">
+     <p className="text-xs font-bold uppercase tracking-[.15em] text-[#0072FC]">How the team moved forward</p>
+     <p className="mt-3 max-w-4xl text-base leading-[1.8] text-[#4D6375]">Storyboards tested the intended experience; cardboard prototypes explored scale and physical configuration. The next step was to isolate choices—gate count, reader placement, material and opening motion—in focused preference comparisons.</p>
    </div>
   </section>
 
   <section id="bart-results" className="scroll-mt-32 mt-24 md:mt-28">
    <SectionHeading number="05 / Concept testing" title="Turn preference into decisions—not inflated outcomes.">Later tests isolated design choices instead of relying on one broad vote for a finished gate.</SectionHeading>
-   <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    {decisionResults.map(x=><div key={x.name} className="rounded-[22px] border border-[#DCE6F2] bg-[#F6FAFF] p-6"><p className="min-h-9 text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">{x.name}</p><p className="mt-5 text-[clamp(2.3rem,3.8vw,3.5rem)] font-bold tracking-tight tabular-nums text-[#142C40]">{x.value}</p><div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DCE8F6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:x.value}}/></div><p className="mt-4 text-base font-bold text-[#213748]">{x.decision}</p><p className="mt-2 text-xs text-[#6D7C89]">{x.n}</p><p className="mt-4 border-t border-[#DDE6EE] pt-4 text-xs leading-relaxed text-[#72818D]">{x.note}</p></div>)}
+   <div className="mt-10 grid gap-6 md:grid-cols-2">
+     {conceptTestGallery.map((item,i)=>{
+       const result=decisionResults[i];
+       return <figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DFE8F0] bg-white">
+         <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open the recreated ${item.title} comparison`} className="group block overflow-hidden bg-[#F7F9FC]">
+           <Image src={item.src} alt={`${item.title}: recreated side-by-side concept comparison from the 2019 study`} width={1400} height={788} sizes="(max-width:767px) 92vw, 560px" className="h-auto w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.01]" unoptimized/>
+         </a>
+         <figcaption className="border-t border-[#E3EAF0] p-6 md:p-7">
+           <div className="flex flex-wrap items-start justify-between gap-4">
+             <div>
+               <p className="text-xs font-bold uppercase tracking-[.14em] text-[#0072FC]">Design decision {String(i+1).padStart(2,"0")}</p>
+               <h3 className="mt-2 text-xl font-bold tracking-[-.025em] text-[#1F3548]">{item.title}</h3>
+             </div>
+             <p className="text-3xl font-bold tabular-nums tracking-[-.045em] text-[#153954]">{result.value}</p>
+           </div>
+           <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-[#DFEAF6]" aria-hidden="true"><div className="h-full rounded-full bg-[#0072FC]" style={{width:result.value}}/></div>
+           <p className="mt-4 text-sm font-semibold text-[#344D61]">Preferred direction: {result.decision}</p>
+           <p className="mt-2 text-sm leading-[1.75] text-[#657787]">{result.note}. {result.n}.</p>
+           <p className="mt-3 text-xs leading-[1.65] text-[#8493A0]">Concept preference study · Recreated artwork based on archived comparison slides</p>
+         </figcaption>
+       </figure>;
+     })}
    </div>
-   <div className="mt-6 border-l-[3px] border-[#0072FC] bg-[#F4F8FD] px-6 py-5 text-sm leading-[1.8] text-[#526576]"><strong className="text-[#253D51]">What the data actually tells us:</strong> These are participant preferences in a concept-design exercise, not verified reductions in fare evasion, rider errors, or gate congestion. A 53.8% result is a narrow directional preference, and sample sizes for the last two tests were not specified in the source summary.</div>
-   <div className="mt-11">
-    <div className="flex flex-wrap items-end justify-between gap-4">
-      <div><h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#203748]">The design options, side by side.</h3><p className="mt-2 text-sm leading-relaxed text-[#637582]">Recreated comparison visuals, grounded in the team’s original 2019 testing slides and results.</p></div>
-      <span className="text-xs font-bold uppercase tracking-[.12em] text-[#0072FC]">Visual recreations · Not original test photographs</span>
-    </div>
-    <div className="mt-7 grid gap-6 md:grid-cols-2">
-      {conceptTestGallery.map(item=><figure key={item.src} className="overflow-hidden rounded-[22px] border border-[#DFE8F0] bg-[#F7F9FC]">
-        <a href={item.src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} recreated concept comparison in a new tab`} className="block cursor-zoom-in">
-          <Image src={item.src} alt={`${item.title}: illustrated concept comparison based on 2019 test results`} width={1400} height={788} sizes="(max-width:767px) 92vw, 560px" className="h-auto w-full" unoptimized/>
-        </a>
-        <figcaption className="p-5"><h4 className="text-base font-bold text-[#1D364A]">{item.title}</h4><p className="mt-1 text-sm text-[#516B7E]">{item.result} · {item.detail}</p><p className="mt-2 text-xs text-[#81909B]">Recreated for legibility from original project documentation. Open full size ↗</p></figcaption>
-      </figure>)}
-    </div>
+   <div className="mt-7 rounded-[20px] border-l-4 border-[#0072FC] bg-[#F3F8FD] p-6 md:p-8">
+     <h3 className="text-lg font-bold text-[#1D384D]">What these results do—and don't—tell us</h3>
+     <p className="mt-3 text-sm leading-[1.8] text-[#536A7B]">These are participants' preferences among proposed design options, not validated reductions in fare evasion, rider errors, or congestion. A 53.8% preference for sliding doors is directional rather than decisive. The archived summary does not establish sample sizes for the material and opening-motion tests.</p>
    </div>
   </section>
 
