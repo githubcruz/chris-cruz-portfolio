@@ -537,6 +537,36 @@ export const creativeMedia = {
       "alt": "Extended identity presentation concept",
       "type": "Conceptual application",
       "index": 58
+    },
+    {
+      "src": "/creative-media/portfolio/105_green-clean-brand-guidelines.webp",
+      "alt": "Green & Clean proposed identity guidelines board",
+      "type": "Conceptual application",
+      "index": 105
+    },
+    {
+      "src": "/creative-media/portfolio/106_green-clean-design-rationale.webp",
+      "alt": "Green & Clean visual design reasoning and symbol breakdown",
+      "type": "Conceptual application",
+      "index": 106
+    },
+    {
+      "src": "/creative-media/portfolio/107_green-clean-packaging-concept.webp",
+      "alt": "Green & Clean eco-oriented cleaner packaging concept",
+      "type": "Conceptual application",
+      "index": 107
+    },
+    {
+      "src": "/creative-media/portfolio/108_green-clean-campaign-poster.webp",
+      "alt": "Green & Clean Clean Spaces Greener Places awareness poster concept",
+      "type": "Conceptual application",
+      "index": 108
+    },
+    {
+      "src": "/creative-media/portfolio/109_green-clean-volunteer-outreach.webp",
+      "alt": "Green & Clean volunteer and community collateral mockups",
+      "type": "Conceptual application",
+      "index": 109
     }
   ],
   "drone-emblem": [
