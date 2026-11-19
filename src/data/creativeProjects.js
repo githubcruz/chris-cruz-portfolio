@@ -147,15 +147,23 @@ export const creativeProjects = [
   },
     {
     slug: "drone-emblem",
-    title: "Drone Emblem",
-    category: "Independent logo / Illustration",
-    intro: "A standalone aviation-inspired emblem that brings a technical subject into a compact graphic mark.",
-    role: "Logo and emblem exploration",
-    tags: ["Logo design", "Illustration", "Aviation"],
-    visualLabels: ["Original aviation emblem"],
-    visualNotes: ["Original source artwork"],
-    details: ["A focused illustration and identity study.", "The emblem is presented as an individual design exploration, not as a complete or launched identity system.", "No additional brand applications are represented as completed work."],
-    status: "Independent design exploration",
-  },
+    title: "Air Drone Visuals",
+    category: "Brand identity / Cinematic aerial visuals",
+    intro: "A visual identity for a drone company capturing cinematic aerial footage, combining an unmistakable aircraft silhouette with a vivid horizon-inspired emblem.",
+    role: "Original logo design, illustration, brand identity exploration, and proposed applications",
+    tags: ["Logo design", "Brand identity", "Aerial cinematography", "Visual storytelling"],
+    concept: {
+      brief: "Create an identity for Air Drone Visuals that expresses cinematic aerial photography and video, pairing a recognizable drone with a sense of perspective, discovery, and beautiful views from above.",
+      solution: "I placed a bold quadcopter silhouette across a circular, sunset-inspired horizon. The aircraft immediately communicates the company's service, while warm orange and yellow above and cool blue and green below suggest the sky, landscape, and the aerial perspectives the company captures. Light, spacious lettering keeps the Air Drone Visuals name clear while allowing the emblem to lead.",
+    },
+    visualLabels: ["Original Air Drone Visuals logo"],
+    visualNotes: ["Original company logo retained"],
+    details: [
+      "The extended quadcopter silhouette communicates drone capture immediately, while the central camera reinforces the connection to filmmaking and photography.",
+      "The circular sun and horizon bands evoke aerial viewpoints, sweeping landscapes, and cinematic compositions. The warm-to-cool gradient supplies energy without needing extra visual elements.",
+      "The Air Drone Visuals wordmark is kept separate from the detailed emblem for clarity. Suggested applications to equipment, apparel and collateral are conceptual mockups, not documented produced items."
+    ],
+    status: "Company logo / conceptual brand applications",
+  }
 ];
 export function getCreativeProject(slug) {return creativeProjects.find(project=>project.slug===slug);}
