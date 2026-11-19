@@ -179,13 +179,13 @@ export default async function CreativeProjectPage({params}){
             <h2 id="steamboat-identity" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Balance in every detail.</h2>
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
-                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Monochrome palette</h3>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Core palette · red accent</h3>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                   {[
                     {name:"Black",hex:"#000000"},
                     {name:"White",hex:"#FFFFFF"},
-                    {name:"Warm gray",hex:"#EDEBE8"},
-                    {name:"Graphite",hex:"#333333"},
+                    {name:"Accent red",hex:"#D71822"},
+                    {name:"Warm gray",hex:"#F7F7F6"},
                   ].map(color=>(
                     <div key={color.hex}>
                       <div className="h-20 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
@@ -194,20 +194,20 @@ export default async function CreativeProjectPage({params}){
                     </div>
                   ))}
                 </div>
-                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Black and white define the core identity. The two grays are optional neutral presentation tones, not official brand colors.</p>
+                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Black and white are the primary colors; a restrained red accent emphasizes warmth and steam. Warm gray is for presentation surfaces only.</p>
               </div>
               <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
                 <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography · proposed direction</h3>
                 <p className="text-[clamp(1.75rem,3vw,2.6rem)] font-bold uppercase tracking-[.10em]">Steamboat</p>
                 <p className="mt-3 text-xs font-semibold uppercase tracking-[.14em] text-[#78848F]">Modern sans-serif · strong letter spacing</p>
-                <p className="mt-5 text-sm leading-[1.85] text-[#566673]">A simple, geometric sans-serif gives the symbol room to lead and keeps the brand clear across menus, packaging, digital screens and large signs. Montserrat is a proposed pairing; the original artwork typeface is unconfirmed.</p>
+                <p className="mt-5 text-sm leading-[1.85] text-[#566673]">A simple, geometric sans-serif gives the symbol room to lead and keeps the brand clear across menus, packaging, digital screens and large signs. The updated wordmark uses a bold geometric sans-serif direction; the exact original font is unconfirmed.</p>
               </div>
             </div>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {[
                 {number:"01",title:"The hotpot",description:"A two-handled pot silhouette communicates the food and dining experience immediately."},
                 {number:"02",title:"Yin-yang balance",description:"A curved division echoes the yin-yang motif from Chinese philosophy and suggests two complementary broths."},
-                {number:"03",title:"Warmth and simplicity",description:"Steam gives the symbol warmth; black and white make the identity scalable and adaptable."},
+                {number:"03",title:"Warmth and simplicity",description:"A single red steam stroke adds warmth, while the symbol remains readable in solid black and white."},
               ].map(item=>(
                 <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
                   <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
