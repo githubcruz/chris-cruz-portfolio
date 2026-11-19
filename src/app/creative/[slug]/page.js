@@ -315,46 +315,27 @@ export default async function CreativeProjectPage({params}){
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Brand applications · conceptual studies</p>
               <h2 id="litter-free-applications" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A cleaner community, one action at a time.</h2>
               <div className="grid gap-6 md:grid-cols-3">
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
-                  <div className="flex aspect-[4/5] flex-col justify-between bg-[#215C36] p-7 text-white">
-                    <p className="text-[11px] font-semibold uppercase tracking-[.18em]">Community campaign</p>
-                    <div>
-                      <p className="text-[clamp(1.65rem,3vw,2.7rem)] font-bold leading-[1.03] tracking-[-.05em]">SMALL ACTIONS.<br/>CLEANER STREETS.</p>
-                      <div className="mt-6 inline-flex rounded-[8px] bg-white p-3">
-                        <img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation illustrated mark on cleanup poster concept" className="h-24 w-24 object-contain"/>
-                      </div>
-                    </div>
-                    <p className="text-xs font-medium tracking-[.06em]">Pick it up. Make a difference.</p>
-                  </div>
-                  <figcaption className="p-5"><p className="text-sm font-semibold">Cleanup awareness poster</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not an announced event</p></figcaption>
-                </figure>
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
-                  <div className="flex aspect-[4/5] items-center justify-center bg-[#EDF5F8] px-6 py-9">
-                    <div className="flex h-[88%] w-[72%] flex-col items-center justify-between rounded-[18px] border-[9px] border-[#25698A] bg-[#48BEDA] p-5 shadow-[12px_18px_30px_rgba(15,55,70,.14)]">
-                      <div className="h-3 w-20 rounded-full bg-[#215C36]"/>
-                      <div className="rounded-lg bg-white p-3 shadow-sm">
-                        <img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation emblem on proposed collection-bin label" className="h-28 w-28 object-contain"/>
-                        <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[.11em] text-[#215C36]">Keep it litter-free</p>
-                      </div>
-                      <p className="text-center text-xs font-semibold uppercase tracking-[.13em] text-white">Collect here</p>
-                    </div>
-                  </div>
-                  <figcaption className="p-5"><p className="text-sm font-semibold">Public collection-bin concept</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not an installed product</p></figcaption>
-                </figure>
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
-                  <div className="flex aspect-[4/5] flex-col items-center justify-center bg-[#F7FAF7] px-6 py-9">
-                    <div className="relative w-[84%]">
-                      <svg viewBox="0 0 220 250" className="w-full drop-shadow-[0_10px_15px_rgba(0,0,0,.08)]" aria-hidden="true">
-                        <path d="M65 22L87 12Q110 32 133 12L155 22L209 65L179 109L160 95L160 234L60 234L60 95L41 109L11 65Z" fill="#FFFFFF" stroke="#D3DDDA" strokeWidth="3"/>
-                      </svg>
-                      <div className="absolute inset-x-[25%] top-[27%] flex justify-center"><img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation emblem applied to volunteer T-shirt concept" className="w-full max-w-[110px] object-contain"/></div>
-                    </div>
-                    <p className="mt-7 text-center text-xs font-semibold uppercase tracking-[.16em] text-[#215C36]">Volunteer collection</p>
-                  </div>
-                  <figcaption className="p-5"><p className="text-sm font-semibold">Volunteer shirt concept</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
-                </figure>
+                {[
+                  {index:102,title:"Community awareness poster",note:"Conceptual poster application; no event announced"},
+                  {index:103,title:"Public collection-bin concept",note:"Conceptual environmental signage; not installed"},
+                  {index:104,title:"Volunteer apparel concept",note:"Conceptual garment application; not manufactured"},
+                ].map(item=>{
+                  const media=artworks.find(image=>image.index===item.index);
+                  if(!media)return null;
+                  return (
+                    <figure key={item.index} className="group overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)] transition-[border-color,box-shadow] duration-300 hover:border-[#B8D5FC] hover:shadow-[0_9px_28px_rgba(12,32,50,.065)]">
+                      <a href={media.src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#0072FC]" aria-label={`View full-size image: ${item.title}`}>
+                        <img src={media.src} alt={media.alt} className="block h-auto w-full object-contain" loading="lazy"/>
+                      </a>
+                      <figcaption className="mx-4 border-t border-[#E7EDF2] py-4 md:mx-5">
+                        <p className="flex items-center gap-2.5 text-[14px] font-semibold"><span aria-hidden="true" className="h-[17px] w-[3px] shrink-0 rounded-full bg-[#0072FC]"/>{item.title}</p>
+                        <p className="mt-2 text-xs leading-[1.6] text-[#8895A0]">{item.note}</p>
+                      </figcaption>
+                    </figure>
+                  );
+                })}
               </div>
-              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are new illustrative layout concepts using the original logo image. The logo itself has not been redrawn or replaced.</p>
+              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">New visual mockups based on the original Litter-Free Foundation identity. These images illustrate potential applications, not manufactured products or completed installations.</p>
             </section>
           </>
         )}
