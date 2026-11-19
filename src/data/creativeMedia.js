@@ -155,25 +155,25 @@ export const creativeMedia = {
   ],
   "optik": [
     {
-      "src": "/creative-media/work/029_optik.webp",
+      "src": "/creative-media/cleaned/029_optik.webp",
       "alt": "Logo and icon explorations",
       "type": "Original source artwork",
       "index": 29
     },
     {
-      "src": "/creative-media/work/030_optik.webp",
+      "src": "/creative-media/cleaned/030_optik.webp",
       "alt": "UX wireframes",
       "type": "Original source artwork",
       "index": 30
     },
     {
-      "src": "/creative-media/work/031_optik.webp",
+      "src": "/creative-media/cleaned/031_optik.webp",
       "alt": "Mobile interface concepts",
       "type": "Original source artwork",
       "index": 31
     },
     {
-      "src": "/creative-media/work/032_optik.webp",
+      "src": "/creative-media/cleaned/032_optik.webp",
       "alt": "Mobile screen explorations",
       "type": "Original source artwork",
       "index": 32
