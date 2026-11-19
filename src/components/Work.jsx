@@ -79,7 +79,7 @@ export default function Work() {
         <div className="min-w-0">
          <p className="mb-2 text-[11px] font-semibold uppercase leading-relaxed tracking-[.1em] text-[#0072FC]">{project.category}</p>
          <h3 className="text-[clamp(1.4rem,2vw,1.8rem)] font-semibold leading-tight tracking-[-.045em] text-[#17212B]">
-          <Link href={`/projects/${project.id}`} className="hover:text-[#0072FC] focus-visible:underline underline-offset-4">{project.title}</Link>
+          <Link href={`/projects/${project.id}`} className="transition-colors duration-200 hover:!text-[#4B5563] group-hover:!text-[#4B5563] focus-visible:!text-[#4B5563] focus-visible:underline underline-offset-4">{project.title}</Link>
          </h3>
         </div>
         <Link href={`/projects/${project.id}`} aria-label={`Read ${project.title} case study`} className="shrink-0 text-2xl text-[#0072FC] transition-transform motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1">↗</Link>
@@ -93,7 +93,7 @@ export default function Work() {
     <div className="mt-14 border-t border-[#E0E7EE] pt-8 md:mt-16">
      <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
       <div><p className="mb-2 text-[11px] font-semibold uppercase tracking-[.15em] text-[#0072FC]">Beyond the case studies</p><p className="max-w-lg text-sm leading-relaxed text-[#5E6D7A]">Brand identities, creative campaigns, illustration, and independent concepts.</p></div>
-      <Link href="/creative" className="inline-flex shrink-0 items-center justify-center rounded-full border border-[#0072FC] px-6 py-3 text-xs font-semibold uppercase tracking-[.12em] text-[#0072FC] transition-colors hover:bg-[#0072FC] hover:text-white">Explore creative work ↗</Link>
+      <Link href="/creative" className="group relative inline-flex min-h-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold !text-white hover:!text-white focus-visible:!text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0072FC]"><span aria-hidden="true" className="absolute inset-0 origin-left scale-x-0 bg-[#111111] transition-transform duration-500 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none"/><span className="relative z-10 !text-white">Explore creative work ↗</span></Link>
      </div>
     </div>
    </div>
