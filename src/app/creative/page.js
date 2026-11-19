@@ -82,7 +82,7 @@ export default function CreativePage() {
         </section>
         <div className="mt-24 border-t border-[#DFE5EA] pt-10">
           <p className="max-w-[840px] text-sm leading-[1.9] text-[#65717D]">Original project artwork is shown at its available source resolution. Concepts and unproduced applications are explicitly labeled on the individual project pages. Client assignments are distinguished from academic and independent explorations.</p>
-          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005DC8]">Get in touch ↗</Link>
+          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold !text-white transition-colors hover:bg-[#005DC8] hover:!text-white">Get in touch ↗</Link>
         </div>
       </div>
       <Footer/>
