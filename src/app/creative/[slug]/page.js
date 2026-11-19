@@ -24,7 +24,7 @@ const sectionDefinitions={
   "steamboat":[["Logo variations & brand identity",90,90],["Restaurant menu & promotional poster / Concepts",91,92],["Storefront signage / Concept",93,93],["Takeaway packaging & merchandise / Concepts",94,95],["Print, loyalty & tabletop collateral / Concepts",96,96],["Original logo, menu & interface explorations",35,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
-  "foodpoint":[["Research, branding & mobile UI",49,52]],
+  "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
   "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
   "green-and-clean":[["Illustrated identity",56,56],["Product applications / Concepts",57,58]],
   "drone-emblem":[["Original aviation emblem",59,59]],
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat"].includes(slug);
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -108,7 +108,7 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">
-                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat"].includes(slug)?"The design goal":"The client vision"}
+                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat","foodpoint"].includes(slug)?"The design goal":"The client vision"}
                 </h3>
                 <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.brief}</p>
               </div>
@@ -216,6 +216,53 @@ export default async function CreativeProjectPage({params}){
                 </div>
               ))}
             </div>
+          </section>
+        )}
+
+        {slug==="foodpoint" && (
+          <section aria-labelledby="foodpoint-identity" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Proposed brand identity</p>
+            <h2 id="foodpoint-identity" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Food meets location.</h2>
+            <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
+              <div>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Proposed color palette</h3>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  {[
+                    {name:"Red",hex:"#E53935"},
+                    {name:"Black",hex:"#111111"},
+                    {name:"White",hex:"#FFFFFF"},
+                    {name:"Light gray",hex:"#F3F3F3"},
+                  ].map(color=>(
+                    <div key={color.hex}>
+                      <div className="h-20 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
+                      <p className="mt-2 text-xs font-semibold">{color.name}</p>
+                      <p className="text-[11px] text-[#78848F]">{color.hex}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Palette values are proposed in the new concept guidelines; they do not replace the palette used in the original student artwork.</p>
+              </div>
+              <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography &amp; wordmark</h3>
+                <p className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-[-.055em]"><span>food</span><span className="text-[#E53935]">point</span></p>
+                <p className="mt-4 text-sm leading-[1.85] text-[#566673]">A bold, geometric lowercase sans-serif keeps the identity friendly, digital-first and easy to read. The word “point” in red emphasizes discovery and place.</p>
+                <p className="mt-3 text-xs leading-[1.75] text-[#78848F]">Type family is a proposed direction rather than a confirmed source font.</p>
+              </div>
+            </div>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {[
+                {number:"01",title:"Food + place",description:"The fork fits inside a map pin, combining the app's two key ideas in a single symbol."},
+                {number:"02",title:"Small-screen clarity",description:"A bold, simplified silhouette stays legible in app icons, map markers and navigation."},
+                {number:"03",title:"Energetic and friendly",description:"Warm red, dark contrast and rounded lowercase typography make finding food feel approachable."},
+              ].map(item=>(
+                <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
+                  <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
+                  <h3 className="mt-4 text-base font-bold tracking-[-.025em]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.8] text-[#566673]">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">FoodPoint remains an academic concept. New interface and business visuals demonstrate proposed directions, not a launched product or verified local listings.</p>
           </section>
         )}
 
