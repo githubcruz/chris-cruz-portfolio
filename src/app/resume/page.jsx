@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Cursor from "@/components/Cursor";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const experience = [
  {
@@ -40,13 +42,14 @@ export const metadata = {
 
 export default function ResumePage() {
  return (
-  <main className="portfolio-cursor resume-page min-h-screen bg-white text-[#17232f]">
+  <main className="portfolio-cursor portfolio-light resume-page min-h-screen bg-white text-[#17232f]">
    <Cursor light/>
-   <div className="mx-auto max-w-[900px] px-7 pb-24 pt-20 md:px-12 md:pt-24">
+   <Navbar/>
+   <div className="mx-auto max-w-[900px] px-6 pb-24 pt-32 sm:px-7 md:px-12 md:pt-40">
     <Link href="/" className="resume-link text-xs font-bold uppercase tracking-[.16em] text-[#0072FC]">← Portfolio</Link>
     <header className="mt-12 border-b border-[#E1E7EC] pb-8">
      <h1 className="portfolio-page-title font-bold tracking-[-.07em]">Chris Cruz<span className="text-[#0072FC]">.</span></h1>
-     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[#253849]">Senior Visual &amp; Product Designer</p>
+     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] font-semibold text-[#253849]">Senior Visual &amp; Product Designer <span className="font-normal text-[#637385]">/ Web, Design Systems &amp; Motion</span></p>
      <p className="mt-3 text-sm leading-[1.8] text-[#617182]">
       Bay Area, California · <a className="resume-link text-[#0072FC]" href="mailto:chrissscruz@gmail.com">chrissscruz@gmail.com</a> · <a className="resume-link text-[#0072FC]" href="https://www.linkedin.com/in/cruzchris/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <Link href="/" className="resume-link text-[#0072FC]">Portfolio</Link>
      </p>
@@ -55,7 +58,7 @@ export default function ResumePage() {
     <section className="mt-10">
      <h2 className="text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Profile</h2>
      <p className="mt-3 max-w-3xl text-[15px] leading-[1.85] text-[#354554]">
-      Multidisciplinary designer with 6+ years at Meta Blueprint creating responsive digital learning experiences, visual systems, and instructional media. I work across visual design, user interface patterns, Figma component systems, and front-end CMS production, collaborating with cross-functional teams from early concept through published experiences.
+      Senior visual designer with 6+ years building production-ready digital learning, web experiences, motion assets, and reusable systems for Meta Blueprint. My work spans Figma component libraries, responsive UI, HTML/CSS and CMS publishing, developed alongside instructional design, brand, legal, and creative partners.
      </p>
     </section>
 
@@ -90,7 +93,7 @@ export default function ResumePage() {
     <section className="mt-11">
      <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Skills &amp; tools</h2>
      <div className="mt-4 space-y-3 text-sm leading-[1.75] text-[#435668]">
-      <p><strong className="text-[#213347]">Design:</strong> Visual design, UI systems, responsive web design, typography, brand identity, prototyping, user research.</p>
+      <p><strong className="text-[#213347]">Design:</strong> Visual systems, typography, digital art direction, web/UI design, brand identity, iconography, prototyping.</p>
       <p><strong className="text-[#213347]">Software:</strong> Figma, Illustrator, Photoshop, After Effects, Premiere Pro, Sketch, Evolve.</p>
       <p><strong className="text-[#213347]">Production:</strong> HTML/CSS, CMS/LMS, instructional content, motion design, cross-functional delivery.</p>
      </div>
@@ -103,10 +106,12 @@ export default function ResumePage() {
       <p><strong className="text-[#24364A]">Bachelor's Degree, Management</strong></p>
      </div>
     </section>
-    <div className="mt-16 border-t border-[#E2E7EE] pt-6">
+    <div className="mt-16 border-t border-[#E2E7EE] pt-6 flex flex-wrap items-center justify-between gap-4">
      <Link href="/contact" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">Let's connect ↗</Link>
+     <Link href="/projects/meta-blueprint" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">See my Meta Blueprint work ↗</Link>
     </div>
    </div>
+   <Footer/>
   </main>
  );
 }
