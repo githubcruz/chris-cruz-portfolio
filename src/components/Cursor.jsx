@@ -53,7 +53,7 @@ export default function Cursor({ light = false }) {
     const leave = () => {
       element.style.opacity = "0";
       if (raf !== null) {
-        if (raf !== null) cancelAnimationFrame(raf);
+        cancelAnimationFrame(raf);
         raf = null;
       }
     };
@@ -62,7 +62,7 @@ export default function Cursor({ light = false }) {
     document.addEventListener("pointerleave", leave);
     document.addEventListener("pointerenter", enter);
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf !== null) cancelAnimationFrame(raf);
       document.removeEventListener("pointermove", move);
       document.removeEventListener("pointerleave", leave);
       document.removeEventListener("pointerenter", enter);
