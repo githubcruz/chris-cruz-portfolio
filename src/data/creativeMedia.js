@@ -283,52 +283,52 @@ export const creativeMedia = {
       "index": 42
     },
     {
-      "src": "/creative-media/portfolio/081_steamboat-refined-logo.webp",
-      "alt": "Final selected Steamboat hotpot symbol and wordmark",
+      "src": "/creative-media/portfolio/089_steamboat-original-refined-logo.webp",
+      "alt": "Refined original Steamboat bowl logo with flowing S-curve, wordmark and tagline",
       "type": "Conceptual application",
-      "index": 81
+      "index": 89
     },
     {
-      "src": "/creative-media/portfolio/082_steamboat-logo-explorations.webp",
-      "alt": "Black-and-white yin-yang hotpot identity variations",
+      "src": "/creative-media/portfolio/090_steamboat-brand-identity-board.webp",
+      "alt": "Steamboat logo variations, black white red palette, and typography",
       "type": "Conceptual application",
-      "index": 82
+      "index": 90
     },
     {
-      "src": "/creative-media/portfolio/083_steamboat-menu-concept.webp",
-      "alt": "Monochrome hotpot menu design concept",
+      "src": "/creative-media/portfolio/091_steamboat-restaurant-menu.webp",
+      "alt": "Steamboat restaurant menu concept with original bowl logo",
       "type": "Conceptual application",
-      "index": 83
+      "index": 91
     },
     {
-      "src": "/creative-media/portfolio/084_steamboat-poster-storefront.webp",
-      "alt": "Two flavors, one table poster and storefront graphic",
+      "src": "/creative-media/portfolio/092_steamboat-promotional-poster.webp",
+      "alt": "Steamboat promotional poster featuring the bowl icon and tagline",
       "type": "Conceptual application",
-      "index": 84
+      "index": 92
     },
     {
-      "src": "/creative-media/portfolio/085_steamboat-packaging.webp",
-      "alt": "Steamboat takeaway packaging concept",
+      "src": "/creative-media/portfolio/093_steamboat-storefront-signage.webp",
+      "alt": "Steamboat restaurant storefront signage concept",
       "type": "Conceptual application",
-      "index": 85
+      "index": 93
     },
     {
-      "src": "/creative-media/portfolio/086_steamboat-menu-photography.webp",
-      "alt": "Selected logo design reasoning and proposed color palette",
+      "src": "/creative-media/portfolio/094_steamboat-takeaway-packaging.webp",
+      "alt": "Steamboat takeout packaging and branded shopping bag concept",
       "type": "Conceptual application",
-      "index": 86
+      "index": 94
     },
     {
-      "src": "/creative-media/portfolio/087_steamboat-brand-signage.webp",
-      "alt": "Hotpot restaurant signage and promotional poster concept",
+      "src": "/creative-media/portfolio/095_steamboat-apron-and-merchandise.webp",
+      "alt": "Steamboat staff apron, T-shirt and mug concept",
       "type": "Conceptual application",
-      "index": 87
+      "index": 95
     },
     {
-      "src": "/creative-media/portfolio/088_steamboat-restaurant-merch.webp",
-      "alt": "Steamboat takeaway bags, boxes and serving bowls",
+      "src": "/creative-media/portfolio/096_steamboat-brand-touchpoints.webp",
+      "alt": "Steamboat business card, loyalty card, coaster and table tent concepts",
       "type": "Conceptual application",
-      "index": 88
+      "index": 96
     }
   ],
   "pekaboo": [
@@ -518,9 +518,9 @@ export const creativeHighlights = {
     78
   ],
   "steamboat": [
-    81,
-    35,
-    84
+    89,
+    90,
+    93
   ],
   "pekaboo": [
     43,
