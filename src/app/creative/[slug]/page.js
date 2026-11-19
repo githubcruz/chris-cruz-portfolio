@@ -21,7 +21,7 @@ const sectionDefinitions={
   "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
-  "steamboat":[["Logo variations & brand rationale / Concepts",82,82,86,86],["Original identity, menus & UI explorations",35,40],["Menu, poster & signage applications / Concepts",83,84,87,87],["Packaging, takeaway & merchandise / Concepts",85,85,88,88],["Earlier apparel & collateral concepts",41,42]],
+  "steamboat":[["Logo variations & brand identity",90,90],["Restaurant menu & promotional poster / Concepts",91,92],["Storefront signage / Concept",93,93],["Takeaway packaging & merchandise / Concepts",94,95],["Print, loyalty & tabletop collateral / Concepts",96,96],["Original logo, menu & interface explorations",35,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
@@ -176,7 +176,7 @@ export default async function CreativeProjectPage({params}){
         {slug==="steamboat" && (
           <section aria-labelledby="steamboat-identity" className="border-b border-[#E0E5E9] py-12 md:py-16">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Proposed identity system</p>
-            <h2 id="steamboat-identity" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Balance in every detail.</h2>
+            <h2 id="steamboat-identity" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A bowl of fun.</h2>
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Core palette · red accent</h3>
@@ -184,7 +184,7 @@ export default async function CreativeProjectPage({params}){
                   {[
                     {name:"Black",hex:"#000000"},
                     {name:"White",hex:"#FFFFFF"},
-                    {name:"Accent red",hex:"#D71822"},
+                    {name:"Accent red",hex:"#E60023"},
                     {name:"Warm gray",hex:"#F7F7F6"},
                   ].map(color=>(
                     <div key={color.hex}>
@@ -194,20 +194,20 @@ export default async function CreativeProjectPage({params}){
                     </div>
                   ))}
                 </div>
-                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Black and white are the primary colors; a restrained red accent emphasizes warmth and steam. Warm gray is for presentation surfaces only.</p>
+                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Black and white form the core logo. Red is a restrained secondary accent used for the underline and small highlights; warm gray is reserved for presentation surfaces.</p>
               </div>
               <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
                 <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography · proposed direction</h3>
                 <p className="text-[clamp(1.75rem,3vw,2.6rem)] font-bold uppercase tracking-[.10em]">Steamboat</p>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-[.14em] text-[#78848F]">Modern sans-serif · strong letter spacing</p>
-                <p className="mt-5 text-sm leading-[1.85] text-[#566673]">A simple, geometric sans-serif gives the symbol room to lead and keeps the brand clear across menus, packaging, digital screens and large signs. The updated wordmark uses a bold geometric sans-serif direction; the exact original font is unconfirmed.</p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-[.14em] text-[#78848F]">Bold condensed display lettering · clean supporting sans-serif</p>
+                <p className="mt-5 text-sm leading-[1.85] text-[#566673]">The original STEAMBOAT wordmark uses distinctive, bold condensed display lettering, balanced by a simpler sans-serif for the tagline and body copy. The exact original typeface is unconfirmed; keep the supplied wordmark as artwork.</p>
               </div>
             </div>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {[
-                {number:"01",title:"The hotpot",description:"A two-handled pot silhouette communicates the food and dining experience immediately."},
-                {number:"02",title:"Yin-yang balance",description:"A curved division echoes the yin-yang motif from Chinese philosophy and suggests two complementary broths."},
-                {number:"03",title:"Warmth and simplicity",description:"A single red steam stroke adds warmth, while the symbol remains readable in solid black and white."},
+                {number:"01",title:"The bowl",description:"A single recognizable bowl silhouette connects directly to hotpot without extra decorative details."},
+                {number:"02",title:"Two complementary flavors",description:"An S-shaped white cutout nods to yin-yang-inspired balance and brings two contrasting broth flavors into one mark."},
+                {number:"03",title:"Friendly, recognizable identity",description:"The bold original wordmark, playful tagline and restrained red underline create character while preserving simple reproduction."},
               ].map(item=>(
                 <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
                   <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
