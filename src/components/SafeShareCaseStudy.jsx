@@ -47,7 +47,7 @@ export default function SafeShareCaseStudy(){
   </header>
 
   <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 border-y border-[#DDD] py-7">
-   {[["MY ROLE","UI design · Concept video"],["PROJECT","SafeShare / Screenshot Protection"],["PLATFORM","Mobile · Social sharing"],["STATUS","Exploratory concept · Not launched"]].map(([k,v])=><div key={k}><p className="text-[#0072FC] text-[10px] font-bold tracking-[.16em]">{k}</p><p className="mt-2 text-sm leading-relaxed text-[#343434]">{v}</p></div>)}
+   {[["MY ROLE","UI design · Concept video"],["PROJECT","SafeShare / Screenshot Protection"],["VISIBILITY","Executive-level discussion · Project-reported"],["STATUS","Exploratory concept · Not launched"]].map(([k,v])=><div key={k}><p className="text-[#0072FC] text-[10px] font-bold tracking-[.16em]">{k}</p><p className="mt-2 text-sm leading-relaxed text-[#343434]">{v}</p></div>)}
   </div>
 
   <section className="mt-14 md:mt-20">
@@ -135,6 +135,7 @@ export default function SafeShareCaseStudy(){
    <div className="space-y-5 text-[#5C5C5C] leading-relaxed text-lg">
     <p>I designed the UI concepts and created the video presentation used to illustrate how screenshot protection might work within familiar social-sharing experiences.</p>
     <p>The broader project, including its problem framing and technical considerations, was a collaborative exploration. The designs communicated potential behavior; they were not evidence of a launched feature.</p>
+    <p>According to the project account, SafeShare advanced beyond the immediate design team to executive-level discussion. That level of visibility made the concept an opportunity to communicate the problem and proposed interaction clearly. It does not establish that the work was approved for development, that its technical behavior was validated, or that it is scheduled to launch.</p>
     <p className="text-sm text-[#888]">This case study focuses on the approved UI concepts; a motion walkthrough may be added separately.</p>
    </div>
   </section>

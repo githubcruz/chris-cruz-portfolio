@@ -23,13 +23,13 @@ const projects = [
   name: "SafeShare — Screenshot Protection",
   type: "Product UI concept · Not launched",
   href: "/projects/meta-image-privacy",
-  detail: "Explored a family-photo privacy interaction through mobile UI, prototype states, and visual design. The proposed platform capability was conceptual, not shipped.",
+  detail: "Designed privacy-focused mobile UI and concept-presentation assets. The concept reportedly reached executive-level discussion at Meta; it was not approved, launched, or validated as a shipping capability.",
  },
  {
   name: "BART Fare Gates",
   type: "Collaborative academic team project · 2019",
   href: "/projects/bart-fare-gates",
-  detail: "Researched rider needs, developed sketches and physical mockups, and compared gate concepts with A/B preference testing. This was not deployed to BART.",
+  detail: "Collaboratively researched, prototyped, and tested a taller fare-gate proposal in 2019. Later BART gates share some design principles, but no verified direct attribution connects the academic proposal to BART’s deployment.",
  },
 ];
 

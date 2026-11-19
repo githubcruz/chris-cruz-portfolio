@@ -301,8 +301,26 @@ export default function BartCaseStudy(){
    </div>
   </section>
 
+  <section id="bart-real-world-parallel" className="scroll-mt-32 mt-24 md:mt-28">
+   <SectionHeading number="09 / What happened afterward" title="A concept with parallels in BART's next-generation gates.">Our team proposed taller transparent barriers, clear payment interaction, and monitored passage in 2019. Years later, BART deployed a new generation of fare gates addressing some of those same challenges.</SectionHeading>
+   <div className="mt-8 grid gap-4 md:grid-cols-2">
+    <div className="rounded-[20px] border border-[#DCE5EF] p-6 md:p-8">
+     <p className="text-xs font-bold uppercase tracking-[.15em] text-[#0072FC]">Our 2019 academic concept</p>
+     <h3 className="mt-3 text-xl font-bold text-[#243C4D]">Bargate proposal</h3>
+     <p className="mt-3 text-sm leading-[1.8] text-[#607385]">Taller tempered-glass sliding barriers, a top-mounted Clipper reader, fare feedback, and proposed anti-tailgating detection.</p>
+    </div>
+    <div className="rounded-[20px] border border-[#DCE5EF] p-6 md:p-8">
+     <p className="text-xs font-bold uppercase tracking-[.15em] text-[#0072FC]">BART's publicly documented rollout</p>
+     <h3 className="mt-3 text-xl font-bold text-[#243C4D]">Next-generation fare gates · 2025</h3>
+     <p className="mt-3 text-sm leading-[1.8] text-[#607385]">Taller transparent swing barriers, mechanical locks, sensor-assisted passage, and modern Clipper-compatible payment. BART reports systemwide installation completed in August 2025.</p>
+    </div>
+   </div>
+   <p className="mt-6 max-w-5xl text-sm leading-[1.85] text-[#627484]">The similarities matter to our team's design story, but the installed system is not the same design: BART uses swing doors and polycarbonate-based barriers, rather than our proposed sliding tempered-glass doors. The team believes elements of its idea were reflected in later gates; public records reviewed here do not establish that BART received, licensed, or directly derived its implementation from our 2019 project. No BART performance metrics are attributed to our concept.</p>
+   <a href="https://www.bart.gov/about/projects/fare-gate" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex text-sm font-semibold text-[#0072FC] underline-offset-4 hover:underline">Source: BART's Next Generation Fare Gates project ↗</a>
+  </section>
+
   <section id="bart-reflection" className="scroll-mt-32 mt-24 md:mt-28">
-   <SectionHeading number="09 / Reflection" title="Design is a series of decisions made with evidence.">Working through every phase collaboratively reinforced how research becomes useful when each round informs a more precise design decision.</SectionHeading>
+   <SectionHeading number="10 / Reflection" title="Design is a series of decisions made with evidence.">Working through every phase collaboratively reinforced how research becomes useful when each round informs a more precise design decision.</SectionHeading>
    <div className="mt-10 grid gap-5 md:grid-cols-3">
     {[["What worked","Research, sketches, and increasingly concrete prototypes prevented an early concept from becoming the automatic answer."],["What I would improve","Define behavioral success measures earlier and test accessibility, error states, and rider throughput in addition to preference."],["What comes next","Evaluate a functioning prototype in a real station, observe entry and exit, and measure actual behavior before claiming impact."]].map(([a,b])=><div key={a} className="border-t-2 border-[#0072FC] pt-5"><h3 className="text-lg font-bold text-[#223849]">{a}</h3><p className="mt-3 text-sm leading-[1.8] text-[#667887]">{b}</p></div>)}
    </div>
