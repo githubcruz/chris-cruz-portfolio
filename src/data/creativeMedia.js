@@ -499,6 +499,24 @@ export const creativeMedia = {
       "alt": "Additional campaign visualization",
       "type": "Conceptual application",
       "index": 55
+    },
+    {
+      "src": "/creative-media/portfolio/102_litter-free-cleanup-poster.webp",
+      "alt": "Litter-Free Foundation community cleanup poster mockup",
+      "type": "Conceptual application",
+      "index": 102
+    },
+    {
+      "src": "/creative-media/portfolio/103_litter-free-collection-bin.webp",
+      "alt": "Litter-Free Foundation public collection bin mockup",
+      "type": "Conceptual application",
+      "index": 103
+    },
+    {
+      "src": "/creative-media/portfolio/104_litter-free-volunteer-shirt.webp",
+      "alt": "Litter-Free Foundation volunteer T-shirt mockup",
+      "type": "Conceptual application",
+      "index": 104
     }
   ],
   "green-and-clean": [
