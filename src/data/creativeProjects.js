@@ -147,23 +147,23 @@ export const creativeProjects = [
   },
     {
     slug: "drone-emblem",
-    title: "Drone Emblem",
-    category: "Independent concept / Aviation identity",
-    intro: "An illustrated drone emblem combining a recognizable quadcopter silhouette with a circular horizon and energetic color, expanded into a proposed aviation brand system.",
-    role: "Original emblem design, illustration, visual identity exploration, and conceptual brand applications",
-    tags: ["Logo design", "Illustration", "Aviation", "Brand concepts"],
+    title: "Air Drone Visuals",
+    category: "Brand identity / Cinematic aerial visuals",
+    intro: "A visual identity for a drone company capturing cinematic aerial footage, combining an unmistakable aircraft silhouette with a vivid horizon-inspired emblem.",
+    role: "Original logo design, illustration, brand identity exploration, and proposed applications",
+    tags: ["Logo design", "Brand identity", "Aerial cinematography", "Visual storytelling"],
     concept: {
-      brief: "Create a compact, distinctive emblem that immediately communicates flight while remaining expressive enough for apparel, flight cases, printed collateral and digital use.",
-      solution: "I centered a recognizable drone silhouette over a layered circular horizon. The aircraft shape anchors the subject, while the warm-to-cool color transition suggests motion, perspective and exploration. Rather than complicating the existing mark, I kept its illustrated character intact and explored how a disciplined visual system could make it work across different touchpoints.",
+      brief: "Create an identity for Air Drone Visuals that expresses cinematic aerial photography and video, pairing a recognizable drone with a sense of perspective, discovery, and beautiful views from above.",
+      solution: "I placed a bold quadcopter silhouette across a circular, sunset-inspired horizon. The aircraft immediately communicates the company's service, while warm orange and yellow above and cool blue and green below suggest the sky, landscape, and the aerial perspectives the company captures. Light, spacious lettering keeps the Air Drone Visuals name clear while allowing the emblem to lead.",
     },
-    visualLabels: ["Original drone emblem"],
-    visualNotes: ["Original artwork unchanged"],
+    visualLabels: ["Original Air Drone Visuals logo"],
+    visualNotes: ["Original company logo retained"],
     details: [
-      "The wide drone silhouette makes the subject instantly readable; the circular composition brings the aircraft and horizon into one compact emblem.",
-      "The warm upper colors contrast with cooler greens and blues below, giving the identity energy without losing clarity. Clean white surroundings keep the illustration as the focus.",
-      "The new applications in this project are independent concept studies, not manufactured products, commissioned work or an operating aviation service."
+      "The extended quadcopter silhouette communicates drone capture immediately, while the central camera reinforces the connection to filmmaking and photography.",
+      "The circular sun and horizon bands evoke aerial viewpoints, sweeping landscapes, and cinematic compositions. The warm-to-cool gradient supplies energy without needing extra visual elements.",
+      "The Air Drone Visuals wordmark is kept separate from the detailed emblem for clarity. Suggested applications to equipment, apparel and collateral are conceptual mockups, not documented produced items."
     ],
-    status: "Independent aviation identity study",
+    status: "Company logo / conceptual brand applications",
   }
 ];
 export function getCreativeProject(slug) {return creativeProjects.find(project=>project.slug===slug);}
