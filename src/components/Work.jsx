@@ -2,11 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SECTION, FALLBACK_PROJECTS } from "@/app/work/content";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const PROJECT_IMAGES = {
  "meta-blueprint": {
@@ -50,14 +46,17 @@ function ProjectPreview({ project }) {
 export default function Work() {
  const ref = useRef(null);
  useEffect(() => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const ctx = gsap.context(() => {
-   gsap.from(".work-item", {
-    scrollTrigger: { trigger: ref.current, start: "top 85%", once: true },
-    opacity: 0, y: 14, duration: .45, stagger: .08, clearProps: "all",
+  const root = ref.current;
+  if (!root || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const observer = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("work-item-entered");
+    observer.unobserve(entry.target);
    });
-  }, ref);
-  return () => ctx.revert();
+  }, { threshold: 0.08 });
+  root.querySelectorAll(".work-item").forEach(card => observer.observe(card));
+  return () => observer.disconnect();
  }, []);
 
  return (
