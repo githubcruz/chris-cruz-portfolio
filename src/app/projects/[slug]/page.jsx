@@ -24,8 +24,8 @@ const studies = {
   takeaway:"A concept project. Screens, tested findings, and outcomes will be included once the underlying artifacts are documented; this work is not presented as a shipped feature."
  },
  "meta-blueprint":{
-  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Visual design across the full learning experience.",
-  summary:"From updating hundreds of courses to designing home and landing pages, instructional videos, and reusable Figma components, my work helped keep Meta Blueprint consistent across formats and easier to produce at scale.",
+  eyebrow:"02 / VISUAL DESIGN · DIGITAL LEARNING",heading:"Designing learning experiences at scale.",
+  summary:"I designed and built learning experiences across Meta Blueprint—from hundreds of course updates and responsive web pages to instructional visuals and reusable Figma components. A 16-course revamp brought these systems together to make production more consistent.",
   status:"Professional work",role:"Visual design · Figma systems · CMS/LMS production",methods:["CMS/LMS course design","Responsive UI & HTML/CSS","Visual asset production","Reusable Figma components"],
   problem:"Meta Blueprint brings small-business learning to people through an evolving catalog of courses, web experiences, and instructional content. Frequent updates across formats called for a clear, cohesive visual language and efficient production.",
   strategy:"Create a consistent experience from discovery to learning: design course and web interfaces, establish reusable Figma patterns, develop visual assets, and support video and motion production across digital touchpoints.",
@@ -125,7 +125,8 @@ export default async function ProjectPage({params}){
       ["CMS course","#cms-course-heading"],
       ["LMS learning","#lms-course-heading"],
       ["Web experiences","#blueprint-web-experiences"],
-      ["Design guidelines","#blueprint-design-guidelines"]
+      ["Design guidelines","#blueprint-design-guidelines"],
+      ["My contributions","#blueprint-contributions"]
      ].map(([label,href])=>(
       <a key={href} href={href} className="font-semibold text-[#0072FC] underline-offset-4 hover:underline focus-visible:underline">{label} ↗</a>
      ))}
@@ -136,9 +137,9 @@ export default async function ProjectPage({params}){
      <h2 className="portfolio-eyebrow mb-4 text-[#0072FC]">Project at a glance</h2>
      <div className="grid gap-3 sm:grid-cols-3">
       {[
-       {metric:"16 courses",title:"Learning experience revamp",note:"Coordinated visual design and reusable patterns across the e-learning update."},
-       {metric:"Reusable Figma",title:"Shared visual components",note:"Course assets and patterns that made new work easier to assemble consistently."},
-       {metric:"Days saved",title:"Faster production",note:"The team reported saving several production days per course with fewer brand-review revisions."}
+       {metric:"16 courses",title:"E-learning revamp",note:"Led visual design and built reusable Figma components to support consistent course production."},
+       {metric:"Design system",title:"Reusable Figma components",note:"Shared layouts, visuals, and patterns helped align instructional design and brand reviews."},
+       {metric:"Days saved",title:"Faster publishing",note:"Project-reported savings of several days per course, with fewer brand-review hiccups."}
       ].map(item=>(
        <div key={item.title} className="rounded-[18px] border border-[#DDE6F0] bg-[#F6F9FE] p-5 md:p-6">
         <p className="text-[clamp(1.35rem,2.3vw,1.85rem)] font-bold tracking-[-.04em] text-[#172A3E]">{item.metric}</p>
@@ -466,7 +467,7 @@ export default async function ProjectPage({params}){
      <p className="mt-5 text-sm text-[#7A8591] leading-relaxed">Selected design references and production artifacts from the broader Meta Blueprint workflow. Platform and brand assets are shown to provide professional project context.</p>
     </section>
    )}
-   <section className="grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
+   <section id="blueprint-contributions" className="scroll-mt-32 grid lg:grid-cols-2 gap-10 md:gap-20 mt-20 md:mt-24 border-t border-[#DEDEDE] pt-14">
     <div><p className="text-[#0072FC] uppercase tracking-[.25em] text-xs font-bold">{slug === "meta-blueprint" ? "07 / Role and reflection" : "04 / Role and reflection"}</p><h2 className="portfolio-section-heading mt-4 font-bold">The thinking behind it.</h2></div>
     <div><h3 className="text-[#111] text-xl font-bold">My contribution</h3><p className="mt-4 text-[#616161] text-lg leading-relaxed">{data.contribution}</p><h3 className="mt-10 text-[#111] text-xl font-bold">Evidence and outcomes</h3><p className="mt-4 text-[#616161] leading-relaxed">{data.takeaway}</p></div>
    </section>
