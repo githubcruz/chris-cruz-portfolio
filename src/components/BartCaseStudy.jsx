@@ -67,6 +67,41 @@ export default function BartCaseStudy(){
    <figcaption className="mt-3 flex flex-wrap justify-between gap-2 text-xs text-[#71808E]"><span>Visual recreation of the team’s 2019 Bargate concept, using the original presentation as reference.</span><span>Academic concept · Not an official BART design or deployment.</span></figcaption>
   </figure>
 
+  <section aria-labelledby="bart-at-a-glance" className="mt-12 border-y border-[#E0E8F0] py-10 md:py-12">
+    <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <Eyebrow>Project at a glance</Eyebrow>
+        <h2 id="bart-at-a-glance" className="mt-3 text-[clamp(1.6rem,3vw,2.5rem)] font-bold leading-tight tracking-[-.045em] text-[#152A3D]">From rider concerns to a testable gate concept.</h2>
+      </div>
+      <a href="#bart-results" className="text-sm font-semibold text-[#0072FC] hover:underline underline-offset-4">Explore the testing ↗</a>
+    </div>
+    <div className="grid gap-4 md:grid-cols-3">
+      {[
+        {number:"01",label:"Challenge",heading:"Security without confusion",body:"Explore a more secure fare-gate entrance without making everyday station access harder to understand."},
+        {number:"02",label:"Approach",heading:"Research → prototype → test",body:"A three-person team synthesized rider concerns, sketched alternatives, built physical mockups, and compared key design choices."},
+        {number:"03",label:"Outcome",heading:"Bargate proof of concept",body:"The team combined preferred gate features into an academic design proposal. Real-world effectiveness was not validated."}
+      ].map(item=><div key={item.number} className="rounded-[18px] border border-[#E0E8F0] bg-white p-6 md:p-7">
+        <div className="flex items-center gap-3"><span className="text-xs font-bold text-[#0072FC]">{item.number}</span><span className="text-[10px] font-bold uppercase tracking-[.15em] text-[#82909E]">{item.label}</span></div>
+        <h3 className="mt-4 text-lg font-bold tracking-tight text-[#233647]">{item.heading}</h3>
+        <p className="mt-3 text-sm leading-[1.8] text-[#617381]">{item.body}</p>
+      </div>)}
+    </div>
+    <div className="mt-6 grid gap-6 overflow-hidden rounded-[18px] border border-[#D9E5F1] bg-[#F6FAFF] p-6 md:grid-cols-[1fr_1.1fr] md:items-center md:p-8">
+      <div>
+        <p className="text-[11px] font-bold uppercase tracking-[.15em] text-[#0072FC]">Decision evidence</p>
+        <p className="mt-3 text-2xl font-bold leading-tight tracking-[-.04em] text-[#1D3348]">The evidence shaped the details.</p>
+        <p className="mt-3 text-sm leading-[1.8] text-[#637685]">The strongest reported preferences favored a top-mounted Clipper reader and tempered-glass barrier. Other choices, especially opening motion, were less decisive.</p>
+        <p className="mt-3 text-xs leading-relaxed text-[#7A8A98]">Preferences from a 2019 student concept exercise; not measured station performance.</p>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {[{value:"96.2%",label:"Top-mounted reader"},{value:"92.3%",label:"Tempered glass"}].map(item=><div key={item.label} className="rounded-xl border border-[#DDE8F4] bg-white p-5">
+          <p className="text-3xl font-bold tabular-nums tracking-[-.045em] text-[#18364F]">{item.value}</p>
+          <p className="mt-2 text-xs leading-relaxed text-[#667988]">{item.label} · participant preference</p>
+        </div>)}
+      </div>
+    </div>
+  </section>
+
   <nav aria-label="Case study sections" className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-b border-[#E5EAF0] pb-6 text-sm font-semibold text-[#0072FC]">
    <a className="hover:underline underline-offset-4" href="#bart-challenge">Challenge ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-research">Research ↗</a>
