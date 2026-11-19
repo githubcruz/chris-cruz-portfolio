@@ -2,27 +2,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SECTION, FALLBACK_PROJECTS } from "@/app/work/content";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const PROJECT_IMAGES = {
  "meta-blueprint": {
   src: "/portfolio-media/meta-blueprint-featured.webp",
   alt: "Selected published Meta Blueprint learning and web design work",
   caption: "Professional work · Published experiences",
+  fit: "contain",
  },
  "meta-image-privacy": {
   src: "/portfolio-media/safeshare-hero-final.webp",
   alt: "SafeShare mobile interface and screenshot-protection concept screens",
   caption: "SafeShare · Unshipped product concept",
+  fit: "cover",
  },
  "bart-fare-gates": {
   src: "/portfolio-media/bart-final-recreated.webp",
   alt: "Recreated presentation rendering of the team's 2019 Bargate fare-gate concept",
   caption: "BART Bargate · 2019 concept reconstruction",
+  fit: "contain",
  },
 };
 
@@ -35,9 +34,9 @@ function ProjectPreview({ project }) {
     alt={image.alt}
     fill
     sizes="(max-width: 767px) 92vw, (max-width: 1199px) 46vw, 32vw"
-    className="object-cover object-center transition-transform duration-500 motion-safe:group-hover:scale-[1.025] motion-safe:group-focus-within:scale-[1.025]"
+    className={`${image.fit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 motion-safe:group-hover:scale-[1.025] motion-safe:group-focus-within:scale-[1.025]`}
    />
-   <span className="absolute bottom-3 left-3 right-3 inline-flex w-fit max-w-[calc(100%-24px)] rounded-full border border-white/80 bg-white/90 px-3 py-2 text-[10px] font-semibold leading-snug text-[#26384B] shadow-sm backdrop-blur-sm">
+   <span className="absolute bottom-3 left-3 right-3 inline-flex w-fit max-w-[calc(100%-24px)] rounded-full border border-white/80 bg-white/95 px-3 py-2 text-[10px] font-semibold leading-snug text-[#26384B] shadow-sm backdrop-blur-sm">
     {image.caption}
    </span>
   </div>
@@ -47,18 +46,21 @@ function ProjectPreview({ project }) {
 export default function Work() {
  const ref = useRef(null);
  useEffect(() => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const ctx = gsap.context(() => {
-   gsap.from(".work-item", {
-    scrollTrigger: { trigger: ref.current, start: "top 85%", once: true },
-    opacity: 0, y: 14, duration: .45, stagger: .08, clearProps: "all",
+  const root = ref.current;
+  if (!root || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const observer = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("work-item-entered");
+    observer.unobserve(entry.target);
    });
-  }, ref);
-  return () => ctx.revert();
+  }, { threshold: 0.08 });
+  root.querySelectorAll(".work-item").forEach(card => observer.observe(card));
+  return () => observer.disconnect();
  }, []);
 
  return (
-  <section id="work-section" ref={ref} className="relative px-7 py-16 md:px-20 md:py-20" aria-labelledby="selected-work-heading">
+  <section id="work-section" ref={ref} className="relative px-6 py-14 sm:px-7 md:px-20 md:py-20" aria-labelledby="selected-work-heading">
    <div className="mx-auto max-w-[1180px]">
     <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:mb-12">
      <div>
@@ -69,7 +71,7 @@ export default function Work() {
       Professional visual systems, product UI exploration, and research-led prototyping.
      </p>
     </div>
-    <div className="grid grid-cols-1 gap-x-6 gap-y-11 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:gap-y-14 md:grid-cols-2 xl:grid-cols-3">
      {FALLBACK_PROJECTS.map(project => (
       <article className="work-item group min-w-0" key={project.id}>
        <Link href={`/projects/${project.id}`} aria-label={`View ${project.title} case study`} className="block rounded-[1.25rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0072FC]">
