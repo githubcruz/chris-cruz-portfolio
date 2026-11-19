@@ -17,7 +17,7 @@ function ArtworkPreview({project}) {
   const featuredIndex=(creativeHighlights[project.slug] ?? [])[0];
   const featured=artwork.find(piece=>piece.index===featuredIndex) ?? artwork[0];
   if(!featured)return null;
-  return <CreativeArtwork media={featured} aspect="wide" whiteBackground/>;
+  return <CreativeArtwork media={featured} aspect="wide" whiteBackground coverInset={project.slug==="elite-barbershop"}/>;
 }
 
 function FeaturedProject({project}) {
