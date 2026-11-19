@@ -11,7 +11,7 @@ export const FALLBACK_PROJECTS = [
     num: "01",
     category: "Meta · Digital Learning · Web Design · Design Systems",
     title: "Meta Blueprint",
-    description: "Designing and publishing learning experiences, web pages, and reusable systems across a large education catalog.",
+    description: "Scaling Meta Blueprint learning through responsive course design, reusable Figma systems, and a 16-course revamp.",
     tech: "Visual Design · CMS/LMS · Figma Systems · Motion",
     link: null,
     review: null,
