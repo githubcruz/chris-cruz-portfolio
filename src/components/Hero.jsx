@@ -6,7 +6,7 @@ export default function Hero() {
           Chris Cruz · Senior Visual & Product Designer
         </p>
         <h1 className="portfolio-page-title text-white font-bold mb-5 sm:mb-7 hero-entrance-title">
-          Designing digital<br />products that <span className="text-[#0072FC]">scale.</span>
+          Designing digital<br className="hidden sm:block" />{" "}products that <span className="text-[#0072FC]">scale.</span>
         </h1>
         <p className="text-white/80 text-lg md:text-[1.45rem] max-w-[690px] leading-snug hero-entrance-lead">
           Making complex systems feel simple, intuitive, and human.
