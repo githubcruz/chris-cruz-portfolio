@@ -154,11 +154,12 @@ export default async function ProjectPage({params}){
    {slug === "meta-blueprint" ? (
     <figure className="mt-11 md:mt-14">
      <div className="relative w-full aspect-video overflow-hidden rounded-[28px] border border-[#E9EEF6] bg-white">
-      <Image src="/portfolio-media/meta-blueprint-gallery.webp" alt="A broad 21-design overview of Meta Blueprint learning experiences and visual design work" fill sizes="(max-width: 768px) 94vw, (max-width: 1400px) 85vw, 1200px" className="object-contain" unoptimized priority/>
+      <Image src="/portfolio-media/blueprint-cms-course-spotlight.webp" alt="Featured Meta Blueprint course layout and visual learning design shown on mobile" fill sizes="(max-width: 639px) 94vw, 1px" className="object-contain sm:hidden" unoptimized priority/>
+      <Image src="/portfolio-media/meta-blueprint-gallery.webp" alt="A broad 21-design overview of Meta Blueprint learning experiences and visual design work" fill sizes="(min-width: 640px) 85vw, 1px" className="hidden object-contain sm:block" unoptimized priority/>
      </div>
      <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[#707070] text-xs">
-      <span>Blueprint visual overview: selected course and business-learning design work.</span>
-      <a href="/portfolio-media/meta-blueprint-gallery.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] font-semibold hover:underline underline-offset-4">View full-size hero ↗</a>
+      <span><span className="sm:hidden">Featured Blueprint CMS course design. </span><span className="hidden sm:inline">Blueprint visual overview: selected course and business-learning design work.</span></span>
+      <a href="/portfolio-media/meta-blueprint-gallery.webp" target="_blank" rel="noopener noreferrer" className="text-[#0072FC] font-semibold hover:underline underline-offset-4">Explore the full design gallery ↗</a>
      </figcaption>
     </figure>
    ) : (
