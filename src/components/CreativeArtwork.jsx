@@ -8,6 +8,7 @@ export default function CreativeArtwork({
   canOpen = false,
   elitePresentation = false,
   whiteBackground = false,
+  coverInset = false,
 }) {
   if (!media) return null;
   const isSmallSource = media.index >= 13 && media.index <= 16 && media.src.startsWith("/creative-media/work/");
@@ -39,7 +40,7 @@ export default function CreativeArtwork({
       unoptimized
       priority={priority}
       sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px"
-      className={elitePresentation ? "object-contain p-4 md:p-7" : "object-contain p-2.5 md:p-4"}
+      className={coverInset ? "object-contain p-9 md:p-12 lg:p-16" : elitePresentation ? "object-contain p-4 md:p-7" : "object-contain p-2.5 md:p-4"}
     />
   );
   if (canOpen) {
