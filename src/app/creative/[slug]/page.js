@@ -26,7 +26,7 @@ const sectionDefinitions={
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
   "litter-free-foundation":[["Original illustrated identity",53,53],["Original environmental applications / Concepts",54,55]],
-  "green-and-clean":[["Illustrated identity",56,56],["Product applications / Concepts",57,58]],
+  "green-and-clean":[["Original illustrated logo",56,56],["Brand guidelines & design reasoning / Concepts",105,106],["Packaging & campaign studies / Concepts",107,108],["Volunteer merchandise & outreach / Concepts",109,109],["Earlier product concepts",57,58]],
   "drone-emblem":[["Original aviation emblem",59,59]],
 };
 
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint","litter-free-foundation"].includes(slug);
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint","litter-free-foundation","green-and-clean"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -108,7 +108,7 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">
-                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat","foodpoint","litter-free-foundation"].includes(slug)?"The design goal":"The client vision"}
+                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat","foodpoint","litter-free-foundation","green-and-clean"].includes(slug)?"The design goal":"The client vision"}
                 </h3>
                 <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.brief}</p>
               </div>
@@ -338,6 +338,53 @@ export default async function CreativeProjectPage({params}){
               <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">New visual mockups based on the original Litter-Free Foundation identity. These images illustrate potential applications, not manufactured products or completed installations.</p>
             </section>
           </>
+        )}
+
+        {slug==="green-and-clean" && (
+          <section aria-labelledby="green-clean-design-system" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Brand identity / proposed guidelines</p>
+            <h2 id="green-clean-design-system" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A cleaner space, a greener planet.</h2>
+            <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
+              <div>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Proposed supporting palette</h3>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-5">
+                  {[
+                    {name:"Fresh green",hex:"#34D85A"},
+                    {name:"Sky blue",hex:"#00B8FF"},
+                    {name:"Pale mint",hex:"#EAFBEF"},
+                    {name:"White",hex:"#FFFFFF"},
+                    {name:"Charcoal",hex:"#3F4447"},
+                  ].map(color=>(
+                    <div key={color.hex}>
+                      <div className="h-16 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
+                      <p className="mt-2 text-xs font-semibold">{color.name}</p>
+                      <p className="text-[11px] text-[#78848F]">{color.hex}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are suggested supporting colors, not sampled official hex values from the original artwork. The existing logo remains unchanged.</p>
+              </div>
+              <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography · proposed direction</h3>
+                <p className="text-[clamp(1.8rem,3vw,2.6rem)] font-semibold tracking-[-.055em]">Green &amp; Clean</p>
+                <p className="mt-4 text-sm leading-[1.85] text-[#566673]">Nunito is a friendly primary type recommendation, with Poppins as an alternative for headlines and supporting text. Both complement the illustration’s accessible tone without replacing the original logo lettering.</p>
+              </div>
+            </div>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {[
+                {number:"01",title:"Everyday cleaning",description:"The recognizable spray bottle and gloved hand communicate an understandable cleaning action."},
+                {number:"02",title:"Caring for the environment",description:"The globe emblem and green accents connect the concept to environmental awareness and responsible habits."},
+                {number:"03",title:"Friendly & reassuring",description:"The rounded frame and bright sparkles give the identity a welcoming, fresh feeling while keeping the original symbol intact."},
+              ].map(item=>(
+                <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
+                  <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
+                  <h3 className="mt-4 text-base font-bold tracking-[-.025em]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.8] text-[#566673]">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">All new visuals are proposed brand explorations; packaging specifications and environmental product claims shown in mockups are illustrative, not verified product information.</p>
+          </section>
         )}
 
         {slug==="raices-real-estate" && (
