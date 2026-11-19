@@ -449,6 +449,36 @@ export const creativeMedia = {
       "alt": "High-fidelity mobile UI",
       "type": "Original source artwork",
       "index": 52
+    },
+    {
+      "src": "/creative-media/portfolio/097_foodpoint-primary-logo.webp",
+      "alt": "FoodPoint fork location pin primary identity logo and wordmark",
+      "type": "Conceptual application",
+      "index": 97
+    },
+    {
+      "src": "/creative-media/portfolio/098_foodpoint-brand-guidelines.webp",
+      "alt": "FoodPoint brand guidelines including palette, typography and logo variations",
+      "type": "Conceptual application",
+      "index": 98
+    },
+    {
+      "src": "/creative-media/portfolio/099_foodpoint-logo-explorations.webp",
+      "alt": "FoodPoint primary logo, horizontal mark and app icon variations",
+      "type": "Conceptual application",
+      "index": 99
+    },
+    {
+      "src": "/creative-media/portfolio/100_foodpoint-mobile-app-concepts.webp",
+      "alt": "FoodPoint proposed map, listings and food vendor app interface concepts",
+      "type": "Conceptual application",
+      "index": 100
+    },
+    {
+      "src": "/creative-media/portfolio/101_foodpoint-design-rationale.webp",
+      "alt": "FoodPoint design rationale connecting a fork, location pin and visual clarity",
+      "type": "Conceptual application",
+      "index": 101
     }
   ],
   "litter-free-foundation": [
@@ -533,9 +563,9 @@ export const creativeHighlights = {
     69
   ],
   "foodpoint": [
-    52,
-    50,
-    51
+    97,
+    98,
+    100
   ],
   "litter-free-foundation": [
     53,
