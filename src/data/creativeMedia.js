@@ -284,7 +284,7 @@ export const creativeMedia = {
     },
     {
       "src": "/creative-media/portfolio/81_steamboat-refined-logo.webp",
-      "alt": "Refined Steamboat yin-yang hotpot symbol and wordmark",
+      "alt": "Final selected Steamboat hotpot symbol and wordmark",
       "type": "Conceptual application",
       "index": 81
     },
@@ -308,13 +308,13 @@ export const creativeMedia = {
     },
     {
       "src": "/creative-media/portfolio/85_steamboat-packaging.webp",
-      "alt": "Steamboat takeout containers and branded bag",
+      "alt": "Steamboat takeaway packaging concept",
       "type": "Conceptual application",
       "index": 85
     },
     {
       "src": "/creative-media/portfolio/86_steamboat-menu-photography.webp",
-      "alt": "Hotpot menu with split broth photography concept",
+      "alt": "Selected logo design reasoning and proposed color palette",
       "type": "Conceptual application",
       "index": 86
     },
