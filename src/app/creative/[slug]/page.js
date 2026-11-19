@@ -21,7 +21,7 @@ const sectionDefinitions={
   "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
-  "steamboat":[["Logo rationale & identity variations / Concepts",82,82],["Original identity, menus & UI explorations",35,40],["Menu, posters & signage / Concepts",83,84,86,87],["Packaging, takeaway & merchandise / Concepts",85,85,88,88],["Earlier apparel & collateral concepts",41,42]],
+  "steamboat":[["Logo variations & brand rationale / Concepts",82,82,86,86],["Original identity, menus & UI explorations",35,40],["Menu, poster & signage applications / Concepts",83,84,87,87],["Packaging, takeaway & merchandise / Concepts",85,85,88,88],["Earlier apparel & collateral concepts",41,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Research, branding & mobile UI",49,52]],
