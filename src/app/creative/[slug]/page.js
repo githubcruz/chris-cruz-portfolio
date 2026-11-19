@@ -25,7 +25,7 @@ const sectionDefinitions={
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
-  "litter-free-foundation":[["Original emblem",53,53],["Environmental applications / Concepts",54,55]],
+  "litter-free-foundation":[["Original illustrated identity",53,53],["Original environmental applications / Concepts",54,55]],
   "green-and-clean":[["Illustrated identity",56,56],["Product applications / Concepts",57,58]],
   "drone-emblem":[["Original aviation emblem",59,59]],
 };
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const project=getCreativeProject(slug);
   if(!project)notFound();
   const artworks=creativeMedia[slug]??[];
-  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint"].includes(slug);
+  const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint","litter-free-foundation"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
   const currentIndex=creativeProjects.findIndex(p=>p.slug===slug);
@@ -108,7 +108,7 @@ export default async function CreativeProjectPage({params}){
             <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-6 md:grid-cols-2 md:gap-12 md:p-9">
               <div>
                 <h3 className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.12em] text-[#566674]">
-                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat","foodpoint"].includes(slug)?"The design goal":"The client vision"}
+                  <span aria-hidden="true" className="h-[16px] w-[3px] rounded-full bg-[#0072FC]"/>{["optik","steamboat","foodpoint","litter-free-foundation"].includes(slug)?"The design goal":"The client vision"}
                 </h3>
                 <p className="text-[15px] leading-[1.85] text-[#566673]">{project.concept.brief}</p>
               </div>
@@ -264,6 +264,99 @@ export default async function CreativeProjectPage({params}){
             </div>
             <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">FoodPoint remains an academic concept. New interface and business visuals demonstrate proposed directions, not a launched product or verified local listings.</p>
           </section>
+        )}
+
+        {slug==="litter-free-foundation" && (
+          <>
+            <section aria-labelledby="litter-free-brand-system" className="border-b border-[#E0E5E9] py-12 md:py-16">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Brand guidelines · proposed extension</p>
+              <h2 id="litter-free-brand-system" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Keep the original. Build a system around it.</h2>
+              <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
+                <div>
+                  <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Suggested supporting palette</h3>
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                    {[
+                      {name:"Leaf green",hex:"#70B844"},
+                      {name:"Sky blue",hex:"#48BEDA"},
+                      {name:"Forest",hex:"#215C36"},
+                      {name:"White",hex:"#FFFFFF"},
+                    ].map(color=>(
+                      <div key={color.hex}>
+                        <div className="h-20 rounded-lg border border-[#E2E8F0]" style={{backgroundColor:color.hex}}/>
+                        <p className="mt-2 text-xs font-semibold">{color.name}</p>
+                        <p className="text-[11px] text-[#78848F]">{color.hex}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">Proposed companion colors inspired by the original artwork, not measured or confirmed official logo hex codes.</p>
+                </div>
+                <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
+                  <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography · proposed pairing</h3>
+                  <p className="text-[clamp(1.7rem,2.8vw,2.5rem)] font-bold tracking-[-.055em]">Litter-Free</p>
+                  <p className="mt-1 text-[13px] font-semibold uppercase tracking-[.24em] text-[#215C36]">Foundation</p>
+                  <p className="mt-4 text-sm leading-[1.85] text-[#566673]">A clean, friendly sans-serif provides a consistent voice for posters and volunteer materials. Use bold headlines, short action-led copy, and readable supporting text. The original logo's lettering is preserved without modification.</p>
+                </div>
+              </div>
+              <div className="mt-6 grid gap-5 md:grid-cols-3">
+                {[
+                  {title:"Human action",description:"The hand collecting litter emphasizes an achievable act of care rather than abstract sustainability symbolism."},
+                  {title:"Recognizable colors",description:"Green and blue echo the environment and support clear communication across different materials."},
+                  {title:"Consistency",description:"Use the original illustration intact, with generous clear space and no extra surrounding symbols or competing graphics."},
+                ].map((item,i)=>(
+                  <div key={item.title} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
+                    <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{String(i+1).padStart(2,"0")}</p>
+                    <h3 className="mt-4 text-base font-bold tracking-[-.025em]">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-[1.8] text-[#566673]">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section aria-labelledby="litter-free-applications" className="border-b border-[#E0E5E9] py-12 md:py-16">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Brand applications · conceptual studies</p>
+              <h2 id="litter-free-applications" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A cleaner community, one action at a time.</h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
+                  <div className="flex aspect-[4/5] flex-col justify-between bg-[#215C36] p-7 text-white">
+                    <p className="text-[11px] font-semibold uppercase tracking-[.18em]">Community campaign</p>
+                    <div>
+                      <p className="text-[clamp(1.65rem,3vw,2.7rem)] font-bold leading-[1.03] tracking-[-.05em]">SMALL ACTIONS.<br/>CLEANER STREETS.</p>
+                      <div className="mt-6 inline-flex rounded-[8px] bg-white p-3">
+                        <img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation illustrated mark on cleanup poster concept" className="h-24 w-24 object-contain"/>
+                      </div>
+                    </div>
+                    <p className="text-xs font-medium tracking-[.06em]">Pick it up. Make a difference.</p>
+                  </div>
+                  <figcaption className="p-5"><p className="text-sm font-semibold">Cleanup awareness poster</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not an announced event</p></figcaption>
+                </figure>
+                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
+                  <div className="flex aspect-[4/5] items-center justify-center bg-[#EDF5F8] px-6 py-9">
+                    <div className="flex h-[88%] w-[72%] flex-col items-center justify-between rounded-[18px] border-[9px] border-[#25698A] bg-[#48BEDA] p-5 shadow-[12px_18px_30px_rgba(15,55,70,.14)]">
+                      <div className="h-3 w-20 rounded-full bg-[#215C36]"/>
+                      <div className="rounded-lg bg-white p-3 shadow-sm">
+                        <img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation emblem on proposed collection-bin label" className="h-28 w-28 object-contain"/>
+                        <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[.11em] text-[#215C36]">Keep it litter-free</p>
+                      </div>
+                      <p className="text-center text-xs font-semibold uppercase tracking-[.13em] text-white">Collect here</p>
+                    </div>
+                  </div>
+                  <figcaption className="p-5"><p className="text-sm font-semibold">Public collection-bin concept</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not an installed product</p></figcaption>
+                </figure>
+                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
+                  <div className="flex aspect-[4/5] flex-col items-center justify-center bg-[#F7FAF7] px-6 py-9">
+                    <div className="relative w-[84%]">
+                      <svg viewBox="0 0 220 250" className="w-full drop-shadow-[0_10px_15px_rgba(0,0,0,.08)]" aria-hidden="true">
+                        <path d="M65 22L87 12Q110 32 133 12L155 22L209 65L179 109L160 95L160 234L60 234L60 95L41 109L11 65Z" fill="#FFFFFF" stroke="#D3DDDA" strokeWidth="3"/>
+                      </svg>
+                      <div className="absolute inset-x-[25%] top-[27%] flex justify-center"><img src="/creative-media/work/053_litter-free-foundation.webp" alt="Original Litter-Free Foundation emblem applied to volunteer T-shirt concept" className="w-full max-w-[110px] object-contain"/></div>
+                    </div>
+                    <p className="mt-7 text-center text-xs font-semibold uppercase tracking-[.16em] text-[#215C36]">Volunteer collection</p>
+                  </div>
+                  <figcaption className="p-5"><p className="text-sm font-semibold">Volunteer shirt concept</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
+                </figure>
+              </div>
+              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are new illustrative layout concepts using the original logo image. The logo itself has not been redrawn or replaced.</p>
+            </section>
+          </>
         )}
 
         {slug==="raices-real-estate" && (
