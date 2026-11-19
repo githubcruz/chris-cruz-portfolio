@@ -44,7 +44,7 @@ function ProjectCard({project}) {
         <div className="mt-5 flex items-start justify-between gap-3">
           <div>
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[.13em] text-[#0072FC]">{project.category}</p>
-            <h3 className="text-[clamp(1.4rem,2vw,1.9rem)] font-semibold leading-[1.16] tracking-[-.04em] transition-colors group-hover:text-[#0072FC]">{project.title}</h3>
+            <h3 className="text-[clamp(1.4rem,2vw,1.9rem)] font-semibold leading-[1.16] tracking-[-.04em] transition-colors group-hover:text-[#4B5563]">{project.title}</h3>
           </div>
           <span className="pt-2 text-[#0072FC]" aria-hidden="true">↗</span>
         </div>
@@ -82,7 +82,7 @@ export default function CreativePage() {
         </section>
         <div className="mt-24 border-t border-[#DFE5EA] pt-10">
           <p className="max-w-[840px] text-sm leading-[1.9] text-[#65717D]">Original project artwork is shown at its available source resolution. Concepts and unproduced applications are explicitly labeled on the individual project pages. Client assignments are distinguished from academic and independent explorations.</p>
-          <Link href="/contact" className="mt-8 inline-flex rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold !text-white transition-colors hover:bg-[#005DC8] hover:!text-white">Get in touch ↗</Link>
+          <Link href="/contact" className="group relative mt-8 inline-flex overflow-hidden rounded-full bg-[#0072FC] px-7 py-3 text-sm font-semibold !text-white hover:!text-white focus-visible:!text-white"><span aria-hidden="true" className="absolute inset-0 origin-left scale-x-0 bg-[#111111] transition-transform duration-500 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none"/><span className="relative z-10 !text-white">Get in touch ↗</span></Link>
         </div>
       </div>
       <Footer/>
