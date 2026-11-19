@@ -283,49 +283,49 @@ export const creativeMedia = {
       "index": 42
     },
     {
-      "src": "/creative-media/portfolio/81_steamboat-refined-logo.webp",
+      "src": "/creative-media/portfolio/081_steamboat-refined-logo.webp",
       "alt": "Final selected Steamboat hotpot symbol and wordmark",
       "type": "Conceptual application",
       "index": 81
     },
     {
-      "src": "/creative-media/portfolio/82_steamboat-logo-explorations.webp",
+      "src": "/creative-media/portfolio/082_steamboat-logo-explorations.webp",
       "alt": "Black-and-white yin-yang hotpot identity variations",
       "type": "Conceptual application",
       "index": 82
     },
     {
-      "src": "/creative-media/portfolio/83_steamboat-menu-concept.webp",
+      "src": "/creative-media/portfolio/083_steamboat-menu-concept.webp",
       "alt": "Monochrome hotpot menu design concept",
       "type": "Conceptual application",
       "index": 83
     },
     {
-      "src": "/creative-media/portfolio/84_steamboat-poster-storefront.webp",
+      "src": "/creative-media/portfolio/084_steamboat-poster-storefront.webp",
       "alt": "Two flavors, one table poster and storefront graphic",
       "type": "Conceptual application",
       "index": 84
     },
     {
-      "src": "/creative-media/portfolio/85_steamboat-packaging.webp",
+      "src": "/creative-media/portfolio/085_steamboat-packaging.webp",
       "alt": "Steamboat takeaway packaging concept",
       "type": "Conceptual application",
       "index": 85
     },
     {
-      "src": "/creative-media/portfolio/86_steamboat-menu-photography.webp",
+      "src": "/creative-media/portfolio/086_steamboat-menu-photography.webp",
       "alt": "Selected logo design reasoning and proposed color palette",
       "type": "Conceptual application",
       "index": 86
     },
     {
-      "src": "/creative-media/portfolio/87_steamboat-brand-signage.webp",
+      "src": "/creative-media/portfolio/087_steamboat-brand-signage.webp",
       "alt": "Hotpot restaurant signage and promotional poster concept",
       "type": "Conceptual application",
       "index": 87
     },
     {
-      "src": "/creative-media/portfolio/88_steamboat-restaurant-merch.webp",
+      "src": "/creative-media/portfolio/088_steamboat-restaurant-merch.webp",
       "alt": "Steamboat takeaway bags, boxes and serving bowls",
       "type": "Conceptual application",
       "index": 88
