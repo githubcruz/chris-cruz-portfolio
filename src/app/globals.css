@@ -551,3 +551,10 @@ html::-webkit-scrollbar-track { background: transparent; }
   .portfolio-light .work-item .project-preview,
   .portfolio-light .work-item .project-preview img { transform: none !important; }
 }
+
+/* Homepage cards reveal once using the native IntersectionObserver; no GSAP runtime needed. */
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio-light .work-item-entered {
+    animation: portfolio-rise .5s cubic-bezier(.2,.7,.2,1) both;
+  }
+}
