@@ -475,5 +475,6 @@ export default async function ProjectPage({params}){
     <Link href={`/projects/${next.id}`} className="group text-left md:text-right"><span className="block text-[#808080] text-xs uppercase tracking-widest">Next project ↗</span><span className="block text-2xl md:text-3xl font-bold mt-2 group-hover:text-[#0072FC] transition-colors">{next.title}</span></Link>
    </div>
   </article>
+  <Footer/>
  </main>;
 }
