@@ -27,7 +27,7 @@ const sectionDefinitions={
   "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
   "litter-free-foundation":[["Original illustrated identity",53,53],["Original environmental applications / Concepts",54,55]],
   "green-and-clean":[["Original illustrated logo",56,56],["Brand guidelines & design reasoning / Concepts",105,106],["Packaging & campaign studies / Concepts",107,108],["Volunteer merchandise & outreach / Concepts",109,109],["Earlier product concepts",57,58]],
-  "drone-emblem":[["Original aviation emblem",59,59]],
+  "drone-emblem":[["Original Air Drone Visuals identity",59,59],["Brand guidelines / Concept",110,110],["Safety cones and crew hat / Studio concept",111,111],["Aerial filming equipment / Field concept",112,112]],
 };
 
 function MediaFigure({media,first=false,elite=false}){
@@ -432,42 +432,7 @@ export default async function CreativeProjectPage({params}){
                 ))}
               </div>
             </section>
-            <section aria-labelledby="drone-brand-applications" className="border-b border-[#E0E5E9] py-12 md:py-16">
-              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Cinematic aerial brand applications / concepts</p>
-              <h2 id="drone-brand-applications" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A recognizable mark, wherever the camera goes.</h2>
-              <div className="grid gap-6 md:grid-cols-3">
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
-                  <div className="flex aspect-[4/5] items-center justify-center bg-[#F6F8FA] p-7">
-                    <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-[18px] border-[9px] border-[#222E38] bg-[#283744] shadow-[12px_20px_28px_rgba(20,35,45,.18)]">
-                      <div className="absolute inset-x-0 top-5 flex justify-center"><div className="h-2 w-16 rounded-full bg-[#17212B]"/></div>
-                      <div className="flex h-[62%] w-[64%] items-center justify-center rounded-lg bg-white p-5 shadow-inner"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original Air Drone Visuals logo applied unchanged to proposed equipment case" className="h-full w-full object-contain"/></div>
-                      <div className="absolute bottom-4 left-5 right-5 h-[2px] bg-[#617482]"/>
-                    </div>
-                  </div>
-                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Cinematography equipment case</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
-                </figure>
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
-                  <div className="flex aspect-[4/5] items-center justify-center bg-[#F9FAFB] p-6">
-                    <div className="relative w-[90%]">
-                      <svg viewBox="0 0 220 250" className="w-full drop-shadow-[0_10px_15px_rgba(0,0,0,.09)]" aria-hidden="true"><path d="M65 22L87 12Q110 32 133 12L155 22L209 65L179 109L160 95L160 234L60 234L60 95L41 109L11 65Z" fill="#FFFFFF" stroke="#DBE2E6" strokeWidth="3"/></svg>
-                      <div className="absolute inset-x-[30%] top-[28%] flex justify-center"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original Air Drone Visuals logo on proposed crew T-shirt" className="w-full object-contain"/></div>
-                    </div>
-                  </div>
-                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Crew apparel</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
-                </figure>
-                <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
-                  <div className="flex aspect-[4/5] items-center justify-center bg-[#F5F7F8] p-7">
-                    <div className="flex aspect-square w-[86%] flex-col items-center justify-center rounded-[20px] border border-[#DFE5E9] bg-white p-6 shadow-[0_15px_35px_rgba(20,40,55,.1)]">
-                      <img src="/creative-media/work/059_drone-emblem.webp" alt="Original drone illustration as an unaltered emblem sticker concept" className="h-[70%] w-[85%] object-contain"/>
-                      <div className="mt-4 h-[2px] w-16 bg-[#38A9D3]"/>
-                      <p className="mt-3 text-center text-[10px] font-semibold uppercase tracking-[.2em] text-[#65717D]">Aerial visual storytelling</p>
-                    </div>
-                  </div>
-                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Emblem sticker and collateral</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not produced</p></figcaption>
-                </figure>
-              </div>
-              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are layout concepts built around the existing original emblem image. They are illustrative applications, not evidence of manufactured products or commissioned installations.</p>
-            </section>
+
           </>
         )}
 

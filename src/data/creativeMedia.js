@@ -575,6 +575,24 @@ export const creativeMedia = {
       "alt": "Original aviation emblem",
       "type": "Original source artwork",
       "index": 59
+    },
+    {
+      "src": "/creative-media/portfolio/110_air-drone-brand-guidelines.webp",
+      "alt": "Air Drone Visuals brand guideline concept with logo use palette and typography",
+      "type": "Conceptual application",
+      "index": 110
+    },
+    {
+      "src": "/creative-media/portfolio/111_air-drone-cones-hat-studio.webp",
+      "alt": "Air Drone Visuals branded safety cone and crew cap studio concept",
+      "type": "Conceptual application",
+      "index": 111
+    },
+    {
+      "src": "/creative-media/portfolio/112_air-drone-cones-hat-field.webp",
+      "alt": "Air Drone Visuals safety cones hat and filming gear in outdoor cinematic concept",
+      "type": "Conceptual application",
+      "index": 112
     }
   ]
 };
