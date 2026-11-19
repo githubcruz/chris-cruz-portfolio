@@ -15,12 +15,16 @@ for(const number of [29,30,31,32]){
   const {width:w,height:h,channels:c}=info;
   const maxY=Math.floor(h*0.38);
   const points=[];
+  // Board 032 includes yellow pixels in its photographs; restrict cleanup
+  // to the blank upper-right canvas containing the remaining annotation.
+  const startX=number===32?Math.floor(w*.70):0;
+  const endX=number===32?Math.ceil(w*.94):w;
   for(let y=0;y<maxY;y++){
-    for(let x=0;x<w;x++){
+    for(let x=startX;x<endX;x++){
       const i=(y*w+x)*c;
       const [r,g,b]=[data[i],data[i+1],data[i+2]];
       // Yellow annotation strokes, not blue eye/gray wireframe art.
-      if(r>175 && g>125 && b<125 && r>g*0.95 && g>b*1.6)points.push([x,y]);
+      if(r>150 && g>105 && b<165 && r>g*.90 && g>b*1.32 && r>b*1.42)points.push([x,y]);
     }
   }
   // Group all yellow strokes; the little icon occupies one isolated region.
@@ -29,7 +33,7 @@ for(const number of [29,30,31,32]){
     const y0=Math.min(...points.map(p=>p[1])), y1=Math.max(...points.map(p=>p[1]));
     const spanX=x1-x0+1,spanY=y1-y0+1;
     if(spanX<w*.12 && spanY<h*.12){
-      const pad=Math.max(3,Math.round(Math.min(w,h)*.004));
+      const pad=Math.max(5,Math.round(Math.min(w,h)*.009));
       const left=Math.max(0,x0-pad),right=Math.min(w-1,x1+pad);
       const top=Math.max(0,y0-pad),bottom=Math.min(h-1,y1+pad);
       const sample=[];
