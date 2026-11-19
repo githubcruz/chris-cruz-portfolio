@@ -27,7 +27,7 @@ const sectionDefinitions={
   "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
   "litter-free-foundation":[["Original illustrated identity",53,53],["Original environmental applications / Concepts",54,55]],
   "green-and-clean":[["Original illustrated logo",56,56],["Brand guidelines & design reasoning / Concepts",105,106],["Packaging & campaign studies / Concepts",107,108],["Volunteer merchandise & outreach / Concepts",109,109],["Earlier product concepts",57,58]],
-  "drone-emblem":[["Original aviation emblem",59,59]],
+  "drone-emblem":[["Original Air Drone Visuals identity",59,59],["Brand guidelines / Concept",110,110],["Safety cones and crew hat / Studio concept",111,111],["Aerial filming equipment / Field concept",112,112]],
 };
 
 function MediaFigure({media,first=false,elite=false}){
