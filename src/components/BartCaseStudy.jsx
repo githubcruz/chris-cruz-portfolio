@@ -107,6 +107,7 @@ export default function BartCaseStudy(){
    <a className="hover:underline underline-offset-4" href="#bart-research">Research ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-prototyping">Prototyping ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-results">Testing ↗</a>
+   <a className="hover:underline underline-offset-4" href="#bart-final-concept">Final concept ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-features">Interaction ↗</a>
    <a className="hover:underline underline-offset-4" href="#bart-reflection">Reflection ↗</a>
   </nav>
@@ -244,19 +245,39 @@ export default function BartCaseStudy(){
    </div>
   </section>
 
-  <section className="mt-24 md:mt-28">
-   <div className="grid items-center gap-10 rounded-[28px] bg-[#102B45] p-8 text-[#FFFFFF] lg:grid-cols-[.85fr_1.15fr] md:p-12">
-    <div>
-     <p className="text-xs font-bold uppercase tracking-[.2em] text-[#8ABBFF]">07 / Final concept · Bargate</p>
-     <h2 className="mt-5 text-3xl md:text-4xl font-bold tracking-tight">A more defensible entrance concept.</h2>
-     <p className="mt-5 text-base leading-[1.75] text-[#D8E4EF]">The team brought its preferred configuration, top-mounted Clipper sensor, tempered-glass doors, and sliding motion together into the Bargate proof of concept.</p>
-     <p className="mt-6 text-sm leading-[1.7] text-[#A8C1D3]">The intended benefit was greater resistance to bypassing while maintaining an understandable entry path. Real-world performance remains unvalidated.</p>
-    </div>
-    <figure className="overflow-hidden rounded-2xl bg-white">
-     <Image src="/portfolio-media/bart-final-gate.webp" alt="Team's final Bargate concept rendering" width={760} height={428} className="h-auto w-full object-contain" unoptimized/>
-     <figcaption className="p-4 text-xs leading-relaxed text-[#6B7C8B]">Original 2019 archival rendering retained for source reference; the enhanced version appears above.</figcaption>
+  <section id="bart-final-concept" className="scroll-mt-32 mt-24 md:mt-28">
+    <SectionHeading number="07 / Final concept · Bargate" title="A proposed entrance shaped by the evidence.">The team synthesized preferences from iterative concept testing into one proof of concept. The goal was a harder-to-bypass entrance that still presented a clear path for paying riders.</SectionHeading>
+    <figure className="mt-10 overflow-hidden rounded-[24px] border border-[#DBE5EE] bg-white">
+      <a href="/portfolio-media/bart-final-recreated.webp" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden bg-[#F5F7FA]" aria-label="Open large visual recreation of the final Bargate design">
+        <Image src="/portfolio-media/bart-final-recreated.webp" alt="Recreated final 2019 Bargate concept with labeled reader, glass barriers, reversible entry sign, fare display, and evasion sensor" width={1600} height={900} sizes="(max-width:767px) 94vw, 1180px" className="h-auto w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.01]" unoptimized/>
+      </a>
+      <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E4EAF0] p-5 md:px-7">
+        <p className="max-w-3xl text-xs leading-[1.7] text-[#708391]">Visual recreation of the team's 2019 Bargate proposal, not a manufactured or deployed BART entrance.</p>
+        <a href="/portfolio-media/bart-final-recreated.webp" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-[#0072FC] hover:underline underline-offset-4">View full-size design ↗</a>
+      </figcaption>
     </figure>
-   </div>
+    <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {[
+        {n:"01",title:"Readable tap point",detail:"Top-mounted Clipper reader, favored in the preference comparison."},
+        {n:"02",title:"Transparent barrier",detail:"Taller glass doors aim to add resistance while keeping sightlines open."},
+        {n:"03",title:"Clear feedback",detail:"A proposed fare-and-balance display on the gate gives visual confirmation."},
+        {n:"04",title:"Monitored passage",detail:"A proposed anti-tailgating sensor and reversible direction expand the concept."},
+      ].map(item=><div key={item.n} className="rounded-[18px] border border-[#DDE7F0] bg-white p-6">
+        <span className="text-xs font-bold tracking-[.15em] text-[#0072FC]">{item.n}</span>
+        <h3 className="mt-3 text-base font-bold tracking-[-.02em] text-[#253C50]">{item.title}</h3>
+        <p className="mt-2 text-sm leading-[1.75] text-[#637787]">{item.detail}</p>
+      </div>)}
+    </div>
+    <div className="mt-7 flex flex-col gap-5 rounded-[18px] border border-[#E0E8EF] bg-[#F7F9FB] p-5 sm:flex-row sm:items-center md:p-6">
+      <a href="/portfolio-media/bart-final-gate.webp" target="_blank" rel="noopener noreferrer" className="block shrink-0 overflow-hidden rounded-lg border border-[#DCE5ED] bg-white sm:w-48" aria-label="Open original 2019 Bargate rendering">
+        <Image src="/portfolio-media/bart-final-gate.webp" alt="Original archived 2019 Bargate illustration" width={760} height={428} className="h-auto w-full object-contain" unoptimized/>
+      </a>
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[.13em] text-[#0072FC]">Original project source</p>
+        <p className="mt-2 text-sm leading-[1.8] text-[#586D7E]">The original 2019 concept rendering is retained here alongside the larger visual reconstruction so the presentation remains grounded in the team's archival work.</p>
+      </div>
+    </div>
+    <p className="mt-6 text-sm leading-[1.75] text-[#768794]">This is a design proposal. The project did not measure real-world fare-evasion prevention, station throughput, error rates, or accessibility performance.</p>
   </section>
 
   <section id="bart-features" className="scroll-mt-32 mt-24 md:mt-28">
