@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "node scripts/extract-creative-work.mjs && node scripts/clean-elite-backgrounds.mjs && node scripts/clean-pekaboo-backgrounds.mjs && next build",
+    "build": "node scripts/extract-creative-work.mjs && node scripts/clean-elite-backgrounds.mjs && node scripts/clean-pekaboo-backgrounds.mjs && node scripts/clean-optik-yellow-markers.mjs && next build",
     "start": "next start",
     "lint": "eslint"
   },
