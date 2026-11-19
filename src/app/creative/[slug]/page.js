@@ -391,7 +391,7 @@ export default async function CreativeProjectPage({params}){
           <>
             <section aria-labelledby="drone-identity-system" className="border-b border-[#E0E5E9] py-12 md:py-16">
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Proposed identity system</p>
-              <h2 id="drone-identity-system" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Flight, framed simply.</h2>
+              <h2 id="drone-identity-system" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">Cinematic views from above.</h2>
               <div className="grid gap-8 rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:grid-cols-2 md:gap-12 md:p-9">
                 <div>
                   <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Proposed supporting palette</h3>
@@ -414,15 +414,15 @@ export default async function CreativeProjectPage({params}){
                 </div>
                 <div className="md:border-l md:border-[#E7EDF2] md:pl-10">
                   <h3 className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Typography &amp; presentation</h3>
-                  <p className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold uppercase tracking-[-.04em]">DRONE <span className="text-[#38A9D3]">EMBLEM</span></p>
-                  <p className="mt-4 text-sm leading-[1.85] text-[#566673]">A restrained geometric sans-serif balances the detailed drone artwork. Use confident headlines, small technical labels and generous clear space; the original emblem remains the primary mark, without a new wordmark placed inside it.</p>
+                  <p className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold uppercase tracking-[-.04em]">AIR DRONE <span className="text-[#38A9D3]">VISUALS</span></p>
+                  <p className="mt-4 text-sm leading-[1.85] text-[#566673]">The original Air Drone Visuals lettering is light, geometric and spacious, balancing the detailed camera-drone emblem. Use clean typography and generous clear space around the original logo.</p>
                 </div>
               </div>
               <div className="mt-6 grid gap-5 md:grid-cols-3">
                 {[
-                  {number:"01",title:"Immediate recognition",description:"The quadcopter silhouette communicates aviation and drone technology at a glance."},
-                  {number:"02",title:"Horizon &amp; exploration",description:"Layered curves and contrasting color suggest perspective, movement and flight."},
-                  {number:"03",title:"Versatile illustration",description:"A balanced circular composition works as a standalone emblem on light surfaces and proposed branded objects."},
+                  {number:"01",title:"Immediate recognition",description:"The drone and central lens communicate aerial filmmaking and photography at a glance."},
+                  {number:"02",title:"Horizon &amp; exploration",description:"The sun and layered color bands suggest sweeping aerial views, perspective and cinematic landscapes."},
+                  {number:"03",title:"Versatile illustration",description:"The circular emblem and light wordmark create a recognizable identity across digital and physical touchpoints."},
                 ].map(item=>(
                   <div key={item.number} className="rounded-[12px] border border-[#E2E8F0] bg-white p-7">
                     <p className="text-xs font-bold tracking-[.14em] text-[#0072FC]">{item.number}</p>
@@ -433,40 +433,40 @@ export default async function CreativeProjectPage({params}){
               </div>
             </section>
             <section aria-labelledby="drone-brand-applications" className="border-b border-[#E0E5E9] py-12 md:py-16">
-              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Aviation applications / conceptual studies</p>
-              <h2 id="drone-brand-applications" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">One emblem, different surfaces.</h2>
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Cinematic aerial brand applications / concepts</p>
+              <h2 id="drone-brand-applications" className="mb-8 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">A recognizable mark, wherever the camera goes.</h2>
               <div className="grid gap-6 md:grid-cols-3">
                 <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
                   <div className="flex aspect-[4/5] items-center justify-center bg-[#F6F8FA] p-7">
                     <div className="relative flex aspect-[4/3] w-full items-center justify-center rounded-[18px] border-[9px] border-[#222E38] bg-[#283744] shadow-[12px_20px_28px_rgba(20,35,45,.18)]">
                       <div className="absolute inset-x-0 top-5 flex justify-center"><div className="h-2 w-16 rounded-full bg-[#17212B]"/></div>
-                      <div className="flex h-[62%] w-[64%] items-center justify-center rounded-lg bg-white p-5 shadow-inner"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original drone illustration applied unchanged to flight case concept" className="h-full w-full object-contain"/></div>
+                      <div className="flex h-[62%] w-[64%] items-center justify-center rounded-lg bg-white p-5 shadow-inner"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original Air Drone Visuals logo applied unchanged to proposed equipment case" className="h-full w-full object-contain"/></div>
                       <div className="absolute bottom-4 left-5 right-5 h-[2px] bg-[#617482]"/>
                     </div>
                   </div>
-                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Flight equipment case</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
+                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Cinematography equipment case</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
                 </figure>
                 <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
                   <div className="flex aspect-[4/5] items-center justify-center bg-[#F9FAFB] p-6">
                     <div className="relative w-[90%]">
                       <svg viewBox="0 0 220 250" className="w-full drop-shadow-[0_10px_15px_rgba(0,0,0,.09)]" aria-hidden="true"><path d="M65 22L87 12Q110 32 133 12L155 22L209 65L179 109L160 95L160 234L60 234L60 95L41 109L11 65Z" fill="#FFFFFF" stroke="#DBE2E6" strokeWidth="3"/></svg>
-                      <div className="absolute inset-x-[30%] top-[28%] flex justify-center"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original drone emblem on proposed pilot T-shirt" className="w-full object-contain"/></div>
+                      <div className="absolute inset-x-[30%] top-[28%] flex justify-center"><img src="/creative-media/work/059_drone-emblem.webp" alt="Original Air Drone Visuals logo on proposed crew T-shirt" className="w-full object-contain"/></div>
                     </div>
                   </div>
-                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Pilot apparel</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
+                  <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Crew apparel</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not manufactured</p></figcaption>
                 </figure>
                 <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white shadow-[0_3px_14px_rgba(12,32,50,.025)]">
                   <div className="flex aspect-[4/5] items-center justify-center bg-[#F5F7F8] p-7">
                     <div className="flex aspect-square w-[86%] flex-col items-center justify-center rounded-[20px] border border-[#DFE5E9] bg-white p-6 shadow-[0_15px_35px_rgba(20,40,55,.1)]">
                       <img src="/creative-media/work/059_drone-emblem.webp" alt="Original drone illustration as an unaltered emblem sticker concept" className="h-[70%] w-[85%] object-contain"/>
                       <div className="mt-4 h-[2px] w-16 bg-[#38A9D3]"/>
-                      <p className="mt-3 text-center text-[10px] font-semibold uppercase tracking-[.2em] text-[#65717D]">Flight &amp; exploration</p>
+                      <p className="mt-3 text-center text-[10px] font-semibold uppercase tracking-[.2em] text-[#65717D]">Aerial visual storytelling</p>
                     </div>
                   </div>
                   <figcaption className="border-t border-[#E7EDF2] p-5"><p className="text-sm font-semibold">Emblem sticker and collateral</p><p className="mt-1 text-xs text-[#8895A0]">Concept mockup · not produced</p></figcaption>
                 </figure>
               </div>
-              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are layout concepts built around the existing original emblem image. They do not imply a launched brand or manufactured products.</p>
+              <p className="mt-5 text-xs leading-[1.8] text-[#78848F]">These are layout concepts built around the existing original emblem image. They are illustrative applications, not evidence of manufactured products or commissioned installations.</p>
             </section>
           </>
         )}
