@@ -189,6 +189,48 @@ export const creativeMedia = {
       "alt": "Product packaging concepts",
       "type": "Conceptual application",
       "index": 34
+    },
+    {
+      "src": "/creative-media/portfolio/074_optik-primary-logo.webp",
+      "alt": "Optik primary eye logo and wordmark",
+      "type": "Conceptual application",
+      "index": 74
+    },
+    {
+      "src": "/creative-media/portfolio/075_optik-design-rationale.webp",
+      "alt": "Eye-inspired logo design rationale",
+      "type": "Conceptual application",
+      "index": 75
+    },
+    {
+      "src": "/creative-media/portfolio/076_optik-color-typography.webp",
+      "alt": "Optik color palette and typography direction",
+      "type": "Conceptual application",
+      "index": 76
+    },
+    {
+      "src": "/creative-media/portfolio/077_optik-logo-variations.webp",
+      "alt": "Optik primary, stacked, reverse and app-icon variations",
+      "type": "Conceptual application",
+      "index": 77
+    },
+    {
+      "src": "/creative-media/portfolio/078_optik-campaign-posters.webp",
+      "alt": "Eye-care campaign poster concepts",
+      "type": "Conceptual application",
+      "index": 78
+    },
+    {
+      "src": "/creative-media/portfolio/079_optik-digital-experience.webp",
+      "alt": "Responsive eye-care product experience on mobile, desktop and watch",
+      "type": "Conceptual application",
+      "index": 79
+    },
+    {
+      "src": "/creative-media/portfolio/080_optik-brand-applications.webp",
+      "alt": "Brand applications: business cards, retail bag, eyewear case and cleaning kit",
+      "type": "Conceptual application",
+      "index": 80
     }
   ],
   "steamboat": [
@@ -423,9 +465,9 @@ export const creativeHighlights = {
     17
   ],
   "optik": [
+    74,
     29,
-    31,
-    34
+    78
   ],
   "steamboat": [
     35,
