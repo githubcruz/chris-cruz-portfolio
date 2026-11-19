@@ -148,14 +148,22 @@ export const creativeProjects = [
     {
     slug: "drone-emblem",
     title: "Drone Emblem",
-    category: "Independent logo / Illustration",
-    intro: "A standalone aviation-inspired emblem that brings a technical subject into a compact graphic mark.",
-    role: "Logo and emblem exploration",
-    tags: ["Logo design", "Illustration", "Aviation"],
-    visualLabels: ["Original aviation emblem"],
-    visualNotes: ["Original source artwork"],
-    details: ["A focused illustration and identity study.", "The emblem is presented as an individual design exploration, not as a complete or launched identity system.", "No additional brand applications are represented as completed work."],
-    status: "Independent design exploration",
-  },
+    category: "Independent concept / Aviation identity",
+    intro: "An illustrated drone emblem combining a recognizable quadcopter silhouette with a circular horizon and energetic color, expanded into a proposed aviation brand system.",
+    role: "Original emblem design, illustration, visual identity exploration, and conceptual brand applications",
+    tags: ["Logo design", "Illustration", "Aviation", "Brand concepts"],
+    concept: {
+      brief: "Create a compact, distinctive emblem that immediately communicates flight while remaining expressive enough for apparel, flight cases, printed collateral and digital use.",
+      solution: "I centered a recognizable drone silhouette over a layered circular horizon. The aircraft shape anchors the subject, while the warm-to-cool color transition suggests motion, perspective and exploration. Rather than complicating the existing mark, I kept its illustrated character intact and explored how a disciplined visual system could make it work across different touchpoints.",
+    },
+    visualLabels: ["Original drone emblem"],
+    visualNotes: ["Original artwork unchanged"],
+    details: [
+      "The wide drone silhouette makes the subject instantly readable; the circular composition brings the aircraft and horizon into one compact emblem.",
+      "The warm upper colors contrast with cooler greens and blues below, giving the identity energy without losing clarity. Clean white surroundings keep the illustration as the focus.",
+      "The new applications in this project are independent concept studies, not manufactured products, commissioned work or an operating aviation service."
+    ],
+    status: "Independent aviation identity study",
+  }
 ];
 export function getCreativeProject(slug) {return creativeProjects.find(project=>project.slug===slug);}
