@@ -18,7 +18,7 @@ export async function generateMetadata({params}){
 }
 
 const sectionDefinitions={
-  "elite-barbershop":[["Original identity & lettering",1,7],["Signage, apparel & business cards / Concepts",8,11,60,61],["Additional lettering exploration",12,12]],
+  "elite-barbershop":[["Logo variations & lettering",5,7],["Brand applications / Concepts",8,11,60,61]],
   "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
   "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
   "steamboat":[["Logo variations & brand identity",90,90],["Restaurant menu & promotional poster / Concepts",91,92],["Storefront signage / Concept",93,93],["Takeaway packaging & merchandise / Concepts",94,95],["Print, loyalty & tabletop collateral / Concepts",96,96],["Original logo, menu & interface explorations",35,42]],
@@ -45,7 +45,7 @@ function MediaFigure({media,first=false,elite=false}){
           {elite && <span aria-hidden="true" className="h-[17px] w-[3px] shrink-0 rounded-full bg-[#0072FC]"/>}
           {media.alt}
         </h3>
-        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-[.1em] text-[#8895A0]">{media.type==="Conceptual application"?"Concept mockup":media.type==="Independent redesign"?"Independent redesign":"Original artwork"}</span>
+        <span className="shrink-0 text-[11px] font-semibold uppercase tracking-[.08em] text-[#64748B]">{media.type==="Conceptual application"?"Concept mockup":media.type==="Independent redesign"?"Independent redesign":"Original artwork"}</span>
       </figcaption>
     </figure>
   );
@@ -55,7 +55,7 @@ export default async function CreativeProjectPage({params}){
   const {slug}=await params;
   const project=getCreativeProject(slug);
   if(!project)notFound();
-  const artworks=creativeMedia[slug]??[];
+  const artworks=(creativeMedia[slug]??[]).filter(media=>slug!=="elite-barbershop"||media.index!==12);
   const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint","litter-free-foundation","green-and-clean","drone-emblem"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
