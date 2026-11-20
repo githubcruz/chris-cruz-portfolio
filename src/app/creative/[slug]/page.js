@@ -631,8 +631,18 @@ export default async function CreativeProjectPage({params}){
               </div>
               <p className="text-xs font-medium text-[#7E8A96]">{section.items.length} {section.items.length===1?"image":"images"}</p>
             </div>
-            <div className="grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2">
-              {section.items.map((media,i)=><MediaFigure key={media.src} media={media} first={false} elite={useCleanGallery}/>)}
+            <div className={slug==="pekaboo"&&section.items.length===3
+              ? "grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
+              : "grid grid-cols-1 gap-x-7 gap-y-12 sm:grid-cols-2"}>
+              {section.items.map((media)=><MediaFigure key={media.src} media={media} first={false} elite={useCleanGallery}/>)}
+              {slug==="pekaboo"&&section.items.length===1&&(
+                <aside className="flex flex-col justify-center rounded-[12px] border border-[#E2E8F0] bg-white p-7 md:p-10">
+                  <p className="text-[11px] font-semibold uppercase tracking-[.14em] text-[#FF1D79]">Character development</p>
+                  <h3 className="mt-4 text-[clamp(1.6rem,2.3vw,2.4rem)] font-bold leading-tight tracking-[-.04em]">One character. Multiple expressions.</h3>
+                  <p className="mt-5 text-sm leading-[1.85] text-[#566673]">The original ghost character brings personality to the cosmetics identity. I explored hairstyle variations while keeping its lashes, polished nails and playful expression recognizable.</p>
+                  <p className="mt-4 text-xs leading-[1.8] text-[#82909C]">Original character and lettering explorations.</p>
+                </aside>
+              )}
             </div>
           </section>
         ))}
