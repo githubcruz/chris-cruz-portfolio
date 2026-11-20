@@ -103,7 +103,6 @@ export default function ResumePage() {
      <h2 className="border-b border-[#C9DFF9] pb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0072FC]">Education</h2>
      <div className="mt-4 space-y-2 text-sm leading-relaxed text-[#435668]">
       <p><strong className="text-[#24364A]">MA, Web Design &amp; New Media</strong> — Academy of Art University, San Francisco</p>
-      <p><strong className="text-[#24364A]">Bachelor's Degree, Management</strong></p>
      </div>
     </section>
     <div className="mt-16 border-t border-[#E2E7EE] pt-6 flex flex-wrap items-center justify-between gap-4">
