@@ -19,7 +19,7 @@ export async function generateMetadata({params}){
 
 const sectionDefinitions={
   "elite-barbershop":[["Logo variations & lettering",5,7],["Brand applications / Concepts",8,11,60,61]],
-  "raices-real-estate":[["Logo & brand identity",13,14],["Property marketing & social campaigns",17,28]],
+  "raices-real-estate":[["Shield monogram detail",14,14],["Property listing graphics",17,20],["Campaigns & social content",21,24],["Additional marketing designs",25,28]],
   "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
   "steamboat":[["Logo variations & brand identity",90,90],["Restaurant menu & promotional poster / Concepts",91,92],["Storefront signage / Concept",93,93],["Takeaway packaging & merchandise / Concepts",94,95],["Print, loyalty & tabletop collateral / Concepts",96,96],["Original logo, menu & interface explorations",35,42]],
   "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
@@ -468,6 +468,32 @@ export default async function CreativeProjectPage({params}){
                   <p className="text-[1.4rem] font-semibold tracking-[-.025em]">Modern sans-serif</p>
                   <p className="mt-1 text-sm text-[#78848F]">Supporting website and marketing text</p>
                 </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {slug==="raices-real-estate" && project.external && (
+          <section aria-labelledby="raices-website-heading" className="border-b border-[#E0E5E9] py-12 md:py-16">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Digital brand experience</p>
+            <h2 id="raices-website-heading" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">From identity to website.</h2>
+            <div className="grid overflow-hidden rounded-[12px] border border-[#E2E8F0] md:grid-cols-[minmax(0,1fr)_minmax(0,.9fr)]">
+              <div className="flex min-h-[240px] flex-col justify-between bg-[#021839] p-8 text-white md:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[.17em] text-[#C9A84C]">Raíces Real Estate</p>
+                <div>
+                  <p className="font-serif text-[clamp(2.5rem,5vw,4.25rem)] leading-tight tracking-[.07em]">Raíces</p>
+                  <div className="mt-4 h-[2px] w-24 bg-[#C9A84C]"/>
+                  <p className="mt-5 max-w-[320px] text-sm leading-[1.8] text-white/80">An identity designed to connect roots, equity, and family legacy across digital and marketing touchpoints.</p>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center bg-white p-8 md:p-10">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Website design & development</p>
+                <h3 className="text-2xl font-bold tracking-[-.035em]">A connected brand experience.</h3>
+                <p className="mt-4 text-sm leading-[1.9] text-[#566674]">I extended the identity into the client's website, carrying the navy-and-gold visual language into a digital home for the real estate brand. The live site is linked below.</p>
+                <a href={project.external.url} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex w-fit items-center gap-2 border-b border-[#021839] pb-2 text-sm font-semibold text-[#021839] transition-colors hover:border-[#0072FC] hover:text-[#0072FC]">
+                  Visit the live website <span aria-hidden="true">↗</span>
+                </a>
+                <p className="mt-5 text-xs leading-[1.7] text-[#82909C]">Brand presentation above is a typographic layout, not a screenshot of the live website.</p>
               </div>
             </div>
           </section>
