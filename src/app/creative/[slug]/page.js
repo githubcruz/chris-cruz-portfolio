@@ -23,7 +23,7 @@ const sectionDefinitions={
   "raices-real-estate":[["Shield monogram detail",14,14],["Property listing graphics",17,20],["Campaigns & social content",21,24],["Additional marketing designs",25,28]],
   "optik":[["Logo rationale & variations / Concepts",75,77],["Original logo, wireframes & mobile UI",29,32],["Eye-care campaign posters / Concepts",78,78],["Digital product experience / Concepts",79,79],["Brand & product applications / Concepts",80,80],["Earlier campaign & packaging explorations",33,34]],
   "steamboat":[["Logo variations & brand identity",90,90],["Restaurant menu & promotional poster / Concepts",91,92],["Storefront signage / Concept",93,93],["Takeaway packaging & merchandise / Concepts",94,95],["Print, loyalty & tabletop collateral / Concepts",96,96],["Original logo, menu & interface explorations",35,42]],
-  "pekaboo":[["Logo & character explorations",43,44],["Beauty products & brand applications / Concepts",45,45,62,65]],
+  "pekaboo":[["Character & logo explorations",44,44],["Beauty packaging / Concepts",45,45,65,65],["Campaign & retail applications / Concepts",62,64]],
   "the-mexican-museum":[["Brand guidelines / Concept",67,67],["Exhibition & museum applications / Concepts",68,70],["Heritage portrait campaign / Concepts",71,73]],
   "foodpoint":[["Brand guidelines & logo directions / Concepts",98,99],["Design reasoning / Concept",101,101],["Product and mobile UI concepts",100,100],["Original research, identity & app explorations",49,52]],
   "litter-free-foundation":[["Original illustrated identity",53,53],["Original environmental applications / Concepts",54,55],["Additional campaign, bin & apparel applications / Concepts",102,104]],
@@ -56,7 +56,7 @@ export default async function CreativeProjectPage({params}){
   const {slug}=await params;
   const project=getCreativeProject(slug);
   if(!project)notFound();
-  const artworks=(creativeMedia[slug]??[]).filter(media=>slug!=="elite-barbershop"||media.index!==12);
+  const artworks=(creativeMedia[slug]??[]).filter(media=>!(slug==="elite-barbershop"&&media.index===12));
   const useCleanGallery=["elite-barbershop","raices-real-estate","pekaboo","the-mexican-museum","optik","steamboat","foodpoint","litter-free-foundation","green-and-clean","drone-emblem"].includes(slug);
   const coverIndex=(creativeHighlights[slug]??[])[0];
   const featured=artworks.find(a=>a.index===coverIndex)??artworks[0];
@@ -64,7 +64,7 @@ export default async function CreativeProjectPage({params}){
   const next=creativeProjects[(currentIndex+1)%creativeProjects.length];
   const sections=(sectionDefinitions[slug]??[]).map(([heading,...ranges])=>({
     heading,
-    items:artworks.filter(a=>ranges.some((start,i)=>i%2===0&&a.index>=start&&a.index<=ranges[i+1])),
+    items:artworks.filter(a=>a.index!==coverIndex&&ranges.some((start,i)=>i%2===0&&a.index>=start&&a.index<=ranges[i+1])),
   })).filter(s=>s.items.length);
 
   return (
