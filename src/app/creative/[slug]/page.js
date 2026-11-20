@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {notFound} from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
@@ -476,25 +477,45 @@ export default async function CreativeProjectPage({params}){
         {slug==="raices-real-estate" && project.external && (
           <section aria-labelledby="raices-website-heading" className="border-b border-[#E0E5E9] py-12 md:py-16">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[.14em] text-[#0072FC]">Digital brand experience</p>
-            <h2 id="raices-website-heading" className="mb-7 text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">From identity to website.</h2>
-            <div className="grid overflow-hidden rounded-[12px] border border-[#E2E8F0] md:grid-cols-[minmax(0,1fr)_minmax(0,.9fr)]">
-              <div className="flex min-h-[240px] flex-col justify-between bg-[#021839] p-8 text-white md:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[.17em] text-[#C9A84C]">Raíces Real Estate</p>
-                <div>
-                  <p className="font-serif text-[clamp(2.5rem,5vw,4.25rem)] leading-tight tracking-[.07em]">Raíces</p>
-                  <div className="mt-4 h-[2px] w-24 bg-[#C9A84C]"/>
-                  <p className="mt-5 max-w-[320px] text-sm leading-[1.8] text-white/80">An identity designed to connect roots, equity, and family legacy across digital and marketing touchpoints.</p>
+            <h2 id="raices-website-heading" className="text-[clamp(1.7rem,3.2vw,2.75rem)] font-bold leading-tight tracking-[-.04em]">From identity to website.</h2>
+            <p className="mt-5 max-w-[760px] text-sm leading-[1.9] text-[#566674]">I designed and developed the Raíces brand website, translating its navy-and-gold identity into listings, agent storytelling, community content, and ways for clients to connect.</p>
+            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+              <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-[#F7F5EF]">
+                <div className="flex min-h-[340px] items-start justify-center overflow-hidden p-5 sm:p-7">
+                  <Image
+                    src="/creative-media/portfolio/raices-website-homepage-preview.jpg"
+                    alt="Raíces Real Estate homepage with Building Roots Creating Legacy hero and featured property listings"
+                    width={404}
+                    height={742}
+                    unoptimized
+                    className="h-auto w-full max-w-[404px] border border-[#E6E8EB] shadow-[0_8px_30px_rgba(2,24,57,.08)]"
+                  />
                 </div>
+                <figcaption className="border-t border-[#E2E8F0] bg-white px-5 py-4 text-sm font-semibold">Homepage · Brand storytelling and featured listings</figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-[12px] border border-[#E2E8F0] bg-white">
+                <div className="h-[480px] overflow-y-auto bg-[#F7F5EF] p-5 sm:h-[600px] sm:p-7" tabIndex={0} aria-label="Scroll to explore Raíces full-page website screenshot">
+                  <Image
+                    src="/creative-media/portfolio/raices-website-full.jpg"
+                    alt="Full Raíces website showing listings, agent profile, services, testimonials, community, booking, and contact sections"
+                    width={404}
+                    height={2048}
+                    unoptimized
+                    className="mx-auto h-auto w-full max-w-[404px] border border-[#E6E8EB] shadow-[0_8px_30px_rgba(2,24,57,.08)]"
+                  />
+                </div>
+                <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E2E8F0] px-5 py-4">
+                  <span className="text-sm font-semibold">Full website · Scroll to explore</span>
+                  <a href="/creative-media/portfolio/raices-website-full.jpg" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-[#0072FC] hover:underline underline-offset-4">View screenshot ↗</a>
+                </figcaption>
+              </figure>
+            </div>
+            <div className="mt-7 flex flex-wrap items-center justify-between gap-4 rounded-[12px] border border-[#E2E8F0] px-6 py-5">
+              <div>
+                <p className="text-sm font-semibold">See the website in action</p>
+                <p className="mt-1 text-xs leading-[1.7] text-[#78848F]">Screenshots are from the actual live website; source captures are limited in resolution.</p>
               </div>
-              <div className="flex flex-col justify-center bg-white p-8 md:p-10">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[.14em] text-[#82909C]">Website design & development</p>
-                <h3 className="text-2xl font-bold tracking-[-.035em]">A connected brand experience.</h3>
-                <p className="mt-4 text-sm leading-[1.9] text-[#566674]">I extended the identity into the client's website, carrying the navy-and-gold visual language into a digital home for the real estate brand. The live site is linked below.</p>
-                <a href={project.external.url} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex w-fit items-center gap-2 border-b border-[#021839] pb-2 text-sm font-semibold text-[#021839] transition-colors hover:border-[#0072FC] hover:text-[#0072FC]">
-                  Visit the live website <span aria-hidden="true">↗</span>
-                </a>
-                <p className="mt-5 text-xs leading-[1.7] text-[#82909C]">Brand presentation above is a typographic layout, not a screenshot of the live website.</p>
-              </div>
+              <a href={project.external.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-b border-[#021839] pb-2 text-sm font-semibold text-[#021839] transition-colors hover:border-[#0072FC] hover:text-[#0072FC]">Visit live website ↗</a>
             </div>
           </section>
         )}
